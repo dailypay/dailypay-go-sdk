@@ -15,7 +15,7 @@ generation:
     sharedErrorComponentsApr2025: true
   auth:
     oAuth2ClientCredentialsEnabled: true
-    oAuth2PasswordEnabled: true
+    oAuth2PasswordEnabled: false
   sdkHooksConfigAccess: true
   tests:
     generateTests: false
@@ -38,9 +38,9 @@ go:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  maxMethodParams: 4
+  maxMethodParams: 0
   methodArguments: require-security-and-request
   modulePath: ""
   outputModelSuffix: output
   responseFormat: envelope-http
-  sdkPackageName: ""
+  sdkPackageName: "dailypay"
