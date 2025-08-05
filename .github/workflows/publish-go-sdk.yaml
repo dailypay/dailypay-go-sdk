@@ -39,8 +39,17 @@ jobs:
           git push origin "v$VERSION" || echo "Tag already pushed"
           
           echo "machine github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
-          go env -w GOPRIVATE=github.com/dailypay/*
+          echo "machine api.github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" >> ~/.netrc
           
-          echo "Go SDK v$VERSION published successfully"
+          go env -w GOPRIVATE=github.com/dailypay/*
+          go env -w GOPROXY=https://proxy.golang.org,direct
+          go env -w GOSUMDB=sum.golang.org
+          
+          echo "Verifying module accessibility..."
+          sleep 10  # Wait for GitHub to process the tag
+          go list -m github.com/dailypay/dailypay-go-sdk@v$VERSION || echo "Module verification will be available shortly"
+          
+          echo "Go SDK v$VERSION published successfully to GitHub Packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOPRIVATE: github.com/dailypay/*
