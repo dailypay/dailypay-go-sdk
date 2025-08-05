@@ -43,4 +43,4 @@ go:
   modulePath: ""
   outputModelSuffix: output
   responseFormat: envelope-http
-  sdkPackageName: "dailypay"
+  sdkPackageName: dailypay
