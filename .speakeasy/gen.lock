@@ -5,8 +5,8 @@ management:
   docVersion: 3.0.0-beta01
   speakeasyVersion: 1.596.1
   generationVersion: 2.672.0
-  releaseVersion: 0.0.1
-  configChecksum: f51294b20a03ab83dadd06356b717608
+  releaseVersion: 0.0.2
+  configChecksum: 474f061d5603e9351c5a249b3c367b70
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
@@ -519,7 +519,7 @@ examples:
           DailyPay-API-Version: 3
       responses:
         "200":
-          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "SETTLED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": []}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "SETTLED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": []}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
         "400":
           application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
         "401":
