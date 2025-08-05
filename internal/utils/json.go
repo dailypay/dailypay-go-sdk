@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"undefined/types"
+	"github.com/dailypay/dailypay-go-sdk/types"
 
 	"github.com/ericlagergren/decimal"
 )

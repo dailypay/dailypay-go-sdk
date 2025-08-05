@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 type PersonResource struct {

@@ -9,6 +9,8 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/config"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 	"golang.org/x/sync/singleflight"
 	"io"
 	"net/http"
@@ -17,8 +19,6 @@ import (
 	"strings"
 	"sync"
 	"time"
-	"undefined/internal/config"
-	"undefined/models/components"
 )
 
 type session struct {

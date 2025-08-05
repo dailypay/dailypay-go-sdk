@@ -13,8 +13,8 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -54,9 +54,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -90,8 +90,8 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
             	"log"
             )
 
@@ -145,9 +145,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -181,8 +181,8 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
             	"log"
             )
 
@@ -213,9 +213,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -247,9 +247,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -283,9 +283,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -339,9 +339,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -373,9 +373,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -409,10 +409,10 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/types"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/types"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -451,9 +451,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -487,9 +487,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -523,9 +523,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -567,9 +567,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -601,9 +601,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 
@@ -665,9 +665,9 @@ actions:
 
             import(
             	"context"
-            	"undefined"
-            	"undefined/models/components"
-            	"undefined/models/operations"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
+            	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
 

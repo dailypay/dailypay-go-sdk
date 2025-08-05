@@ -3,9 +3,9 @@
 package operations
 
 import (
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 	"time"
-	"undefined/internal/utils"
-	"undefined/models/components"
 )
 
 type ListPaychecksGlobals struct {

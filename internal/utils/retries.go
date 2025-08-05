@@ -6,6 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"math"
 	"math/rand"
 	"net/http"
@@ -13,7 +14,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"undefined/retry"
 )
 
 // Deprecated: Use retry.BackoffStrategy instead.

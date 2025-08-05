@@ -8,14 +8,14 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/config"
+	"github.com/dailypay/dailypay-go-sdk/internal/globals"
+	"github.com/dailypay/dailypay-go-sdk/internal/hooks"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"net/http"
 	"time"
-	"undefined/internal/config"
-	"undefined/internal/globals"
-	"undefined/internal/hooks"
-	"undefined/internal/utils"
-	"undefined/models/components"
-	"undefined/retry"
 )
 
 // ServerList contains the list of servers available to the SDK
@@ -293,9 +293,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.0.9",
+		SDKVersion: "0.0.10",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.0.9 2.673.1 3.0.0-beta01 undefined",
+			UserAgent:  "speakeasy-sdk/go 0.0.10 2.673.1 3.0.0-beta01 github.com/dailypay/dailypay-go-sdk",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 			ServerVariables: []map[string]string{

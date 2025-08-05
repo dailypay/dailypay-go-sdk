@@ -5,8 +5,8 @@ package components
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 	"time"
-	"undefined/internal/utils"
 )
 
 // PaycheckAttributesStatus - A paycheck expected for an open pay period will have the status ESTIMATED. At the end of the pay period, the paycheck will begin PROCESSING. When it is sent, it will become IN_TRANSIT. Finally, once deposited in an account it will have the status DEPOSITED.

@@ -26,8 +26,8 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 	"log"
 )
 
