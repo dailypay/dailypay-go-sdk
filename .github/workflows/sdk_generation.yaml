@@ -9,7 +9,7 @@ on:
         default: false
   push:
     branches:
-      - main
+      - DBI-291
 permissions:
   contents: write
   pull-requests: write
