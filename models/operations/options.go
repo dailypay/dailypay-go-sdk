@@ -4,9 +4,9 @@ package operations
 
 import (
 	"errors"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"time"
-	"undefined/internal/utils"
-	"undefined/retry"
 )
 
 var ErrUnsupportedOption = errors.New("unsupported option")

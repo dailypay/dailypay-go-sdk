@@ -8,10 +8,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -46,10 +46,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {

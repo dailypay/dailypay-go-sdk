@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"undefined/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 // AccountAttributesDepositoryVerificationStatus - A code that indicates the status of an account that is a destination for funds.

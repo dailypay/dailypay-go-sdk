@@ -5,7 +5,7 @@ package components
 import (
 	"errors"
 	"fmt"
-	"undefined/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 type OriginType string

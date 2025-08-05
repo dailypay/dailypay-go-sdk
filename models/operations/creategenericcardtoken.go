@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"undefined/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 )
 
 var CreateGenericCardTokenServerList = []string{

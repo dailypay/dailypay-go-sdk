@@ -51,7 +51,7 @@ Here are some links to help you get familiar with the DailyPay basics:
 
 To add the SDK as a dependency to your project:
 ```bash
-go get undefined
+go get github.com/dailypay/dailypay-go-sdk
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -67,10 +67,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -105,10 +105,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -181,10 +181,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -273,12 +273,12 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"log"
 	"models/operations"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
-	"undefined/retry"
 )
 
 func main() {
@@ -320,11 +320,11 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
-	"undefined/retry"
 )
 
 func main() {
@@ -388,11 +388,11 @@ package main
 import (
 	"context"
 	"errors"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/apierrors"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/apierrors"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -469,10 +469,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -507,10 +507,10 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -545,9 +545,9 @@ package main
 
 import (
 	"context"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
-	"undefined"
-	"undefined/models/operations"
 )
 
 func main() {
@@ -598,7 +598,7 @@ import (
 	"net/http"
 	"time"
 
-	"undefined"
+	"github.com/dailypay/dailypay-go-sdk"
 )
 
 var (

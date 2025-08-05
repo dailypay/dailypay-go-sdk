@@ -4,10 +4,10 @@ package config
 
 import (
 	"context"
+	"github.com/dailypay/dailypay-go-sdk/internal/globals"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"net/http"
 	"time"
-	"undefined/internal/globals"
-	"undefined/retry"
 )
 
 type HTTPClient interface {
