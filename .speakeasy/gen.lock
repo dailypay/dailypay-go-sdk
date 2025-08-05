@@ -5,8 +5,8 @@ management:
   docVersion: 3.0.0-beta01
   speakeasyVersion: 1.596.1
   generationVersion: 2.672.0
-  releaseVersion: 0.0.4
-  configChecksum: 8754cb3b0c650856198ff141c2562ed8
+  releaseVersion: 0.0.5
+  configChecksum: 98733a3f2bcdbddcc07eb467f7f7e013
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
