@@ -9,7 +9,6 @@ on:
         default: false
   push:
     branches:
-      - DBI-291
       - main
 permissions:
   contents: write
