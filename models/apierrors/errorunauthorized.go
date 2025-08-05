@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"undefined/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 )
 
 // ErrorUnauthorized - Invalid authentication credentials

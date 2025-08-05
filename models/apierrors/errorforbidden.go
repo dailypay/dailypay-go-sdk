@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"undefined/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 )
 
 // ErrorForbidden - Not authorized to perform this operation

@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"undefined/internal/utils"
-	"undefined/models/components"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 )
 
 type ListJobsGlobals struct {

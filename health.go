@@ -6,15 +6,15 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/config"
+	"github.com/dailypay/dailypay-go-sdk/internal/hooks"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/models/apierrors"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"github.com/dailypay/dailypay-go-sdk/retry"
 	"net/http"
 	"net/url"
-	"undefined/internal/config"
-	"undefined/internal/hooks"
-	"undefined/internal/utils"
-	"undefined/models/apierrors"
-	"undefined/models/components"
-	"undefined/models/operations"
-	"undefined/retry"
 )
 
 // Health - The _health_ endpoint provides a simple health check for the API.

@@ -5,8 +5,8 @@ package components
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 	"time"
-	"undefined/internal/utils"
 )
 
 // TransferAttributesStatus - The status of the transfer.

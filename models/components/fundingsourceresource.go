@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 // FundingSourceResource - A source describes how transfers with an origin of EARNINGS_BALANCE account are funded.

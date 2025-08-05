@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 // Data - A job describes the financial relationship between a person and an organization.

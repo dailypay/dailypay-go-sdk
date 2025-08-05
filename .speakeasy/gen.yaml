@@ -22,7 +22,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.0.9
+  version: 0.0.10
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -40,7 +40,7 @@ go:
   inputModelSuffix: input
   maxMethodParams: 0
   methodArguments: require-security-and-request
-  modulePath: "github.com/dailypay/dailypay-go-sdk"
+  modulePath: github.com/dailypay/dailypay-go-sdk
   outputModelSuffix: output
   responseFormat: envelope-http
   sdkPackageName: dailypay

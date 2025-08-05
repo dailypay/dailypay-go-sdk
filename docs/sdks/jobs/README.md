@@ -28,9 +28,9 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
 )
 
@@ -93,9 +93,9 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
 )
 
@@ -178,9 +178,9 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
 )
 

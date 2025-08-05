@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"undefined/models/components"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
 )
 
 // ErrorNotFound - Resource was not found
