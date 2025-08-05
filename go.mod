@@ -1,4 +1,4 @@
-module undefined
+module github.com/dailypay/dailypay-go-sdk
 
 go 1.22
 
