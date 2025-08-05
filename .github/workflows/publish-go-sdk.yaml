@@ -30,27 +30,17 @@ jobs:
         run: |
           VERSION=$(grep "version:" .speakeasy/gen.yaml | head -1 | awk '{print $2}')
           TAG="v$VERSION"
-          echo ":package: Publishing version: $TAG"
+          echo "Publishing version: $TAG"
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          # Ensure go.mod exists and is correct
-          if [ ! -f go.mod ]; then
-            echo ":wrench: Creating go.mod..."
-            go mod init github.com/dailypay/dailypay-go-sdk
-          fi
-          MODULE_NAME=$(head -1 go.mod | awk '{print $2}')
-          if [ "$MODULE_NAME" != "github.com/dailypay/dailypay-go-sdk" ]; then
-            echo ":wrench: Fixing module name: $MODULE_NAME → github.com/dailypay/dailypay-go-sdk"
-            sed -i '1s/.*/module github.com\/dailypay\/dailypay-go-sdk/' go.mod
-          fi
           go mod tidy
           git add go.mod go.sum
           git commit -m "Update go.mod for $TAG" || echo "No changes to commit"
           git tag "$TAG" || echo "Tag already exists"
           git push origin "$TAG" || echo "Tag already pushed"
           git push origin HEAD || echo "Changes already pushed"
-          echo ":memo: Creating GitHub Release for $TAG..."
+          echo "Creating GitHub Release for $TAG..."
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
@@ -61,12 +51,12 @@ jobs:
               \"body\": \"Automated release of DailyPay Go SDK $TAG\",
               \"draft\": false,
               \"prerelease\": false
-            }" || echo ":warning: Release might already exist"
-          echo ":rocket: Triggering Go proxy indexing..."
-          curl -f "https://proxy.golang.org/github.com/dailypay/dailypay-go-sdk/@v/$TAG.info" || echo ":hourglass: Proxy indexing in progress"
-          curl -f "https://sum.golang.org/lookup/github.com/dailypay/dailypay-go-sdk@$TAG" || echo ":hourglass: Checksum will be available soon"
-          echo ":white_check_mark: Go SDK $TAG published successfully"
-          echo ":package: Use with: go get github.com/dailypay/dailypay-go-sdk@$TAG"
+            }" || echo "Release might already exist"
+          echo "Triggering Go proxy indexing..."
+          curl -f "https://proxy.golang.org/github.com/dailypay/dailypay-go-sdk/@v/$TAG.info" || echo "Proxy indexing in progress"
+          curl -f "https://sum.golang.org/lookup/github.com/dailypay/dailypay-go-sdk@$TAG" || echo "Checksum will be available soon"
+          echo "Go SDK $TAG published successfully"
+          echo "Use with: go get github.com/dailypay/dailypay-go-sdk@$TAG"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOPRIVATE: github.com/dailypay/*
