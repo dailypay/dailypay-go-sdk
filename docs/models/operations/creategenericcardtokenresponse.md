@@ -1,0 +1,9 @@
+# CreateGenericCardTokenResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `Object`                                                                                                        | [*operations.CreateGenericCardTokenResponseBody](../../models/operations/creategenericcardtokenresponsebody.md) | :heavy_minus_sign:                                                                                              | Returns an opaque string representing the card details.<br/>                                                    |
