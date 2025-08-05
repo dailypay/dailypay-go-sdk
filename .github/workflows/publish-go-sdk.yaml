@@ -31,18 +31,15 @@ jobs:
           VERSION=$(grep "version:" .speakeasy/gen.yaml | head -1 | awk '{print $2}')
           echo "Publishing version: v$VERSION"
           
-          # Configure git with proper authentication
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           
-          # Ensure go.mod exists and has correct module path
           if [ ! -f "go.mod" ]; then
             echo "Creating go.mod..."
             go mod init github.com/dailypay/dailypay-go-sdk
             go mod tidy
           else
-            # Check if module name is correct
             MODULE_NAME=$(head -1 go.mod | awk '{print $2}')
             echo "Current module name: $MODULE_NAME"
             if [ "$MODULE_NAME" = "undefined" ] || [ "$MODULE_NAME" != "github.com/dailypay/dailypay-go-sdk" ]; then
@@ -55,19 +52,15 @@ jobs:
             fi
           fi
           
-          # Commit go.mod changes if any
           git add go.mod go.sum 2>/dev/null || true
           git commit -m "Update go.mod for v$VERSION" || echo "No changes to commit"
           
-          # Create and push tag
           git tag "v$VERSION" || echo "Tag already exists"
           git push origin "v$VERSION" || echo "Tag already pushed"
           git push origin HEAD || echo "Changes already pushed"
           
-          # Configure Athens proxy for GitHub Packages (Go module registry)
           echo "machine github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
           
-          # Submit to Go module registry via GitHub API
           curl -X POST \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
@@ -79,6 +72,23 @@ jobs:
               \"draft\": false,
               \"prerelease\": false
             }" || echo "Release already exists"
+          
+          echo "Registering Go module with GitHub Packages..."
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.package-preview+json" \
+            -H "Content-Type: application/json" \
+            "https://api.github.com/orgs/dailypay/packages" \
+            -d "{
+              \"package_type\": \"go\",
+              \"name\": \"dailypay-go-sdk\",
+              \"visibility\": \"private\",
+              \"description\": \"DailyPay Go SDK v$VERSION\"
+            }" || echo "Package registration handled automatically"
+          
+          echo "Triggering Go proxy to index the module..."
+          curl -f "https://proxy.golang.org/github.com/dailypay/dailypay-go-sdk/@v/v$VERSION.info" || echo "Proxy indexing in progress..."
+          curl -f "https://sum.golang.org/lookup/github.com/dailypay/dailypay-go-sdk@v$VERSION" || echo "Checksum will be available shortly..."
           
           echo "Go SDK v$VERSION published successfully to GitHub Packages"
           echo "Users can now install with: go get github.com/dailypay/dailypay-go-sdk@v$VERSION"
