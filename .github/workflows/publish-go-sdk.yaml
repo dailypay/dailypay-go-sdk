@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
   packages: write
 jobs:
   publish:
@@ -28,12 +28,19 @@ jobs:
         run: go build ./...
       - name: Publish to GitHub Packages
         run: |
-          # Get version from .speakeasy/gen.yaml
           VERSION=$(grep "version:" .speakeasy/gen.yaml | head -1 | awk '{print $2}')
           echo "Publishing version: v$VERSION"
+          
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          
           git tag "v$VERSION" || echo "Tag already exists"
           git push origin "v$VERSION" || echo "Tag already pushed"
+          
+          echo "machine github.com login ${{ github.actor }} password ${{ secrets.GITHUB_TOKEN }}" > ~/.netrc
+          go env -w GOPRIVATE=github.com/dailypay/*
+          
+          echo "Go SDK v$VERSION published successfully"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
