@@ -29,7 +29,14 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *dailypay
 
 <!-- End Table of Contents [toc] -->
 
-<!-- No SDK Installation [installation] -->
+<!-- Start SDK Installation [installation] -->
+## SDK Installation
+
+To add the SDK as a dependency to your project:
+```bash
+go get github.com/dailypay/dailypay-go-sdk
+```
+<!-- End SDK Installation [installation] -->
 
 <!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
