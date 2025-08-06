@@ -40,7 +40,7 @@ go:
   inputModelSuffix: input
   maxMethodParams: 0
   methodArguments: require-security-and-request
-  modulePath: ""
+  modulePath: github.com/dailypay/dailypay-go-sdk
   outputModelSuffix: output
   responseFormat: envelope-http
-  sdkPackageName: "dailypay"
+  sdkPackageName: dailypay

@@ -1,0 +1,61 @@
+name: 'Publish Go SDK'
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+permissions:
+  contents: write
+  packages: write
+jobs:
+  publish:
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.head_commit.message, 'ci: regenerated with OpenAPI Doc') ||
+      contains(github.event.head_commit.message, 'speakeasy-sdk-regen-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
+      - name: Install dependencies
+        run: go mod download
+      - name: Build SDK
+        run: go build ./...
+      - name: Publish SDK and create release
+        run: |
+          VERSION=$(grep "version:" .speakeasy/gen.yaml | head -1 | awk '{print $2}')
+          TAG="v$VERSION"
+          echo "Publishing version: $TAG"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          go mod tidy
+          git add go.mod go.sum
+          git commit -m "Update go.mod for $TAG" || echo "No changes to commit"
+          git tag "$TAG" || echo "Tag already exists"
+          git push origin "$TAG" || echo "Tag already pushed"
+          git push origin HEAD || echo "Changes already pushed"
+          echo "Creating GitHub Release for $TAG..."
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/releases" \
+            -d "{
+              \"tag_name\": \"$TAG\",
+              \"name\": \"Go SDK $TAG\",
+              \"body\": \"Automated release of DailyPay Go SDK $TAG\",
+              \"draft\": false,
+              \"prerelease\": false
+            }" || echo "Release might already exist"
+          echo "Triggering Go proxy indexing..."
+          curl -f "https://proxy.golang.org/github.com/dailypay/dailypay-go-sdk/@v/$TAG.info" || echo "Proxy indexing in progress"
+          curl -f "https://sum.golang.org/lookup/github.com/dailypay/dailypay-go-sdk@$TAG" || echo "Checksum will be available soon"
+          echo "Go SDK $TAG published successfully"
+          echo "Use with: go get github.com/dailypay/dailypay-go-sdk@$TAG"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOPRIVATE: github.com/dailypay/*
