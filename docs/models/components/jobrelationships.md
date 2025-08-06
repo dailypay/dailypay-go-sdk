@@ -1,0 +1,13 @@
+# JobRelationships
+
+The relationships between the job and other resources, including the accounts to which paychecks from this job are deposited.
+
+
+## Fields
+
+| Field                                                                                          | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `Person`                                                                                       | [components.PersonRelationshipReadOnly](../../models/components/personrelationshipreadonly.md) | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `Organization`                                                                                 | [components.OrganizationRelationship](../../models/components/organizationrelationship.md)     | :heavy_check_mark:                                                                             | N/A                                                                                            |
+| `DirectDepositDefaultDepository`                                                               | [*components.AccountRelationship](../../models/components/accountrelationship.md)              | :heavy_minus_sign:                                                                             | N/A                                                                                            |
+| `DirectDepositDefaultCard`                                                                     | [*components.AccountRelationship](../../models/components/accountrelationship.md)              | :heavy_minus_sign:                                                                             | N/A                                                                                            |
