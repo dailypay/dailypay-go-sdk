@@ -194,6 +194,51 @@ func main() {
 ```
 <!-- End Authentication [security] -->
 
+<!-- Suggested: Use a Callback for Access Tokens -->
+## Suggested: Use a Callback for Access Tokens
+
+You can use a callback to automatically refresh and retrieve user access tokens from secure storage. Pass a callback as a security source when initializing the SDK:
+
+```go
+package main
+
+import (
+    "context"
+    sdk "github.com/dailypay/dailypay-go-sdk"
+    "github.com/dailypay/dailypay-go-sdk/models/components"
+    "github.com/dailypay/dailypay-go-sdk/models/operations"
+    "log"
+)
+
+// Example callback function to retrieve the latest access token
+func securityCallback(ctx context.Context) (components.Security, error) {
+    // Retrieve token from secure storage or refresh logic
+    token := "<YOUR_OAUTH_USER_TOKEN_HERE>"
+    return components.Security{
+        OauthUserToken: sdk.String(token),
+    }, nil
+}
+
+func main() {
+    ctx := context.Background()
+
+    s := sdk.New(
+        sdk.WithSecuritySource(securityCallback),
+        sdk.WithVersion(3),
+    )
+
+    req := operations.ReadJobRequest{
+        JobID: "aa860051-c411-4709-9685-c1b716df611b",
+    }
+
+    res, err := s.Jobs.Read(ctx, req)
+    if err != nil {
+        log.Fatal(err)
+    }
+    // handle response
+}
+```
+
 <!-- Start Available Resources and Operations [operations] -->
 ## Available Resources and Operations
 
