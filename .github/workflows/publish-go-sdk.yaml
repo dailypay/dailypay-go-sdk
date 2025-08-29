@@ -59,3 +59,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOPRIVATE: github.com/dailypay/*
+  tag:
+    uses: speakeasy-api/sdk-generation-action/.github/workflows/tag.yaml@v15
+    with:
+      registry_tags: main
+    secrets:
+      github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
