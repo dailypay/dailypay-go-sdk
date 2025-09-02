@@ -61,6 +61,7 @@ jobs:
           GOPRIVATE: github.com/dailypay/*
   tag:
     uses: speakeasy-api/sdk-generation-action/.github/workflows/tag.yaml@v15
+    needs: publish
     with:
       registry_tags: main
     secrets:
