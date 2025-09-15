@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: e98ec2843f59af8ed4d7565f52cd7f26
+  docChecksum: 0475d19e352063cd624aa24f8ba7b606
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.598.2
-  generationVersion: 2.674.3
-  releaseVersion: 0.0.1
-  configChecksum: 5774144dba6f46f308cca73b94ae9950
+  speakeasyVersion: 1.615.2
+  generationVersion: 2.698.4
+  releaseVersion: 0.0.2
+  configChecksum: e652de3a22046e677b27799e6c764192
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.9.3
+    core: 3.9.6
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
-    globalSecurity: 2.82.11
+    globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.3
     globals: 2.82.2
@@ -30,9 +30,9 @@ features:
     nullables: 0.1.1
     oauth2ClientCredentials: 0.4.0
     responseFormat: 0.1.2
-    retries: 2.84.0
+    retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.12
+    unions: 2.85.14
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
@@ -267,7 +267,6 @@ generatedFiles:
   - docs/models/components/personrelationshipreadonly.md
   - docs/models/components/personresource.md
   - docs/models/components/personresourceinput.md
-  - docs/models/components/product.md
   - docs/models/components/schemeoauthclientcredentialstoken.md
   - docs/models/components/security.md
   - docs/models/components/transferattributes.md
@@ -703,3 +702,7 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `Sdk.Organizations.Read()`:  `response.Data.Attributes.Products.[]` **Changed** **Breaking** :warning:
+  * `Sdk.Organizations.List()`:  `response.Data.[].Attributes.Products.[]` **Changed** **Breaking** :warning:

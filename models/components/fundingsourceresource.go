@@ -19,7 +19,7 @@ func (f FundingSourceResource) MarshalJSON() ([]byte, error) {
 }
 
 func (f *FundingSourceResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &f, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &f, "", false, []string{"id", "type", "attributes", "relationships"}); err != nil {
 		return err
 	}
 	return nil

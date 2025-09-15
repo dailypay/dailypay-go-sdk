@@ -21,7 +21,7 @@ func (j JobResource) MarshalJSON() ([]byte, error) {
 }
 
 func (j *JobResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &j, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &j, "", false, []string{"type", "id", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil

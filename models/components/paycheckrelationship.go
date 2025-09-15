@@ -2,8 +2,23 @@
 
 package components
 
+import (
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+)
+
 type PaycheckRelationship struct {
 	Data PaycheckIdentifier `json:"data"`
+}
+
+func (p PaycheckRelationship) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(p, "", false)
+}
+
+func (p *PaycheckRelationship) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"data"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *PaycheckRelationship) GetData() PaycheckIdentifier {

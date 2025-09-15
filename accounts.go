@@ -77,7 +77,7 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readAccount",
-		OAuth2Scopes:     []string{"client:admin", "client:admin", "client:lookup"},
+		OAuth2Scopes:     []string{"client:admin", "client:lookup", "client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -415,7 +415,7 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "listAccounts",
-		OAuth2Scopes:     []string{"client:admin", "client:admin", "client:lookup"},
+		OAuth2Scopes:     []string{"client:admin", "client:lookup", "client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

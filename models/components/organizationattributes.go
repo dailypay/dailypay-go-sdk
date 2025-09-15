@@ -2,45 +2,11 @@
 
 package components
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
-type Product string
-
-const (
-	ProductOdp          Product = "ODP"
-	ProductDailypayCard Product = "DAILYPAY_CARD"
-	ProductFriday       Product = "FRIDAY"
-)
-
-func (e Product) ToPointer() *Product {
-	return &e
-}
-func (e *Product) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "ODP":
-		fallthrough
-	case "DAILYPAY_CARD":
-		fallthrough
-	case "FRIDAY":
-		*e = Product(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for Product: %v", v)
-	}
-}
-
 type OrganizationAttributes struct {
 	// Organization's name
 	Name *string `json:"name,omitempty"`
 	// List of the names of products available for this organization.
-	Products []Product `json:"products,omitempty"`
+	Products []string `json:"products,omitempty"`
 }
 
 func (o *OrganizationAttributes) GetName() *string {
@@ -50,7 +16,7 @@ func (o *OrganizationAttributes) GetName() *string {
 	return o.Name
 }
 
-func (o *OrganizationAttributes) GetProducts() []Product {
+func (o *OrganizationAttributes) GetProducts() []string {
 	if o == nil {
 		return nil
 	}

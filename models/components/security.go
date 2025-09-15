@@ -3,15 +3,8 @@
 package components
 
 type Security struct {
-	OauthUserToken              *string                            `security:"scheme,type=oauth2,name=Authorization"`
 	OauthClientCredentialsToken *SchemeOauthClientCredentialsToken `security:"scheme,type=oauth2,subtype=client_credentials"`
-}
-
-func (o *Security) GetOauthUserToken() *string {
-	if o == nil {
-		return nil
-	}
-	return o.OauthUserToken
+	OauthUserToken              *string                            `security:"scheme,type=oauth2,name=Authorization"`
 }
 
 func (o *Security) GetOauthClientCredentialsToken() *SchemeOauthClientCredentialsToken {
@@ -19,4 +12,11 @@ func (o *Security) GetOauthClientCredentialsToken() *SchemeOauthClientCredential
 		return nil
 	}
 	return o.OauthClientCredentialsToken
+}
+
+func (o *Security) GetOauthUserToken() *string {
+	if o == nil {
+		return nil
+	}
+	return o.OauthUserToken
 }

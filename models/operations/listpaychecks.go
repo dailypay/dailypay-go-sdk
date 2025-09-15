@@ -19,7 +19,7 @@ func (l ListPaychecksGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListPaychecksGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
@@ -58,7 +58,7 @@ func (l ListPaychecksRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListPaychecksRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil

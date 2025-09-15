@@ -16,7 +16,7 @@ func (p PaycheckIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaycheckIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil

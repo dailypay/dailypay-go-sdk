@@ -16,7 +16,7 @@ func (o OrganizationIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (o *OrganizationIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &o, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &o, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil

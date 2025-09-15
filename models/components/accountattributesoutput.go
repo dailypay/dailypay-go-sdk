@@ -78,6 +78,17 @@ type AccountAttributesDepositoryAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
+func (a AccountAttributesDepositoryAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesDepositoryAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *AccountAttributesDepositoryAccountBalances) GetAvailable() *int64 {
 	if o == nil {
 		return nil
@@ -108,6 +119,17 @@ type AccountAttributesDepositoryAccountCapabilities struct {
 	// for any given transfer.
 	//
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
+}
+
+func (a AccountAttributesDepositoryAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesDepositoryAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AccountAttributesDepositoryAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
@@ -154,6 +176,17 @@ type DepositoryAccountDetails struct {
 	RoutingNumber string `json:"routing_number"`
 	// The account number. Responses from this API that return this number are masked to the last four digits.
 	AccountNumber string `json:"account_number"`
+}
+
+func (d DepositoryAccountDetails) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(d, "", false)
+}
+
+func (d *DepositoryAccountDetails) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"first_name", "last_name", "routing_number", "account_number"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *DepositoryAccountDetails) GetFirstName() string {
@@ -205,7 +238,7 @@ func (d Depository) MarshalJSON() ([]byte, error) {
 }
 
 func (d *Depository) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
@@ -326,6 +359,17 @@ type AccountAttributesEarningsBalanceAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
+func (a AccountAttributesEarningsBalanceAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesEarningsBalanceAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *AccountAttributesEarningsBalanceAccountBalances) GetAvailable() *int64 {
 	if o == nil {
 		return nil
@@ -358,6 +402,17 @@ type AccountAttributesEarningsBalanceAccountCapabilities struct {
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
 }
 
+func (a AccountAttributesEarningsBalanceAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesEarningsBalanceAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *AccountAttributesEarningsBalanceAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
 	if o == nil {
 		return []TransferDestinationCapability{}
@@ -367,6 +422,17 @@ func (o *AccountAttributesEarningsBalanceAccountCapabilities) GetTransferDestina
 
 // Details - An empty object for earnings balance accounts.
 type Details struct {
+}
+
+func (d Details) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(d, "", false)
+}
+
+func (d *Details) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &d, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 // EarningsBalanceReadOnly - An account with type `EARNINGS_BALANCE` and subtype `ODP`.
@@ -390,7 +456,7 @@ func (e EarningsBalanceReadOnly) MarshalJSON() ([]byte, error) {
 }
 
 func (e *EarningsBalanceReadOnly) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &e, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &e, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
@@ -508,6 +574,17 @@ type AccountAttributesCardAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
+func (a AccountAttributesCardAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesCardAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
+	}
+	return nil
+}
+
 func (o *AccountAttributesCardAccountBalances) GetAvailable() *int64 {
 	if o == nil {
 		return nil
@@ -538,6 +615,17 @@ type AccountAttributesCardAccountCapabilities struct {
 	// for any given transfer.
 	//
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
+}
+
+func (a AccountAttributesCardAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesCardAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *AccountAttributesCardAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
@@ -588,6 +676,17 @@ type CardAccountDetailsOutput struct {
 	ExpirationMonth string `json:"expiration_month"`
 	// The year of the expiration date for the card.
 	ExpirationYear string `json:"expiration_year"`
+}
+
+func (c CardAccountDetailsOutput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CardAccountDetailsOutput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"last_four", "issuer", "first_name", "last_name", "expiration_month", "expiration_year"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CardAccountDetailsOutput) GetLastFour() string {
@@ -653,7 +752,7 @@ func (c CardOutput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CardOutput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
@@ -715,9 +814,9 @@ const (
 
 // AccountAttributesOutput - The details of the account.
 type AccountAttributesOutput struct {
-	CardOutput              *CardOutput              `queryParam:"inline"`
-	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline"`
-	Depository              *Depository              `queryParam:"inline"`
+	CardOutput              *CardOutput              `queryParam:"inline" name:"AccountAttributes"`
+	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline" name:"AccountAttributes"`
+	Depository              *Depository              `queryParam:"inline" name:"AccountAttributes"`
 
 	Type AccountAttributesOutputType
 }
@@ -752,21 +851,21 @@ func CreateAccountAttributesOutputDepository(depository Depository) AccountAttri
 func (u *AccountAttributesOutput) UnmarshalJSON(data []byte) error {
 
 	var cardOutput CardOutput = CardOutput{}
-	if err := utils.UnmarshalJSON(data, &cardOutput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &cardOutput, "", true, nil); err == nil {
 		u.CardOutput = &cardOutput
 		u.Type = AccountAttributesOutputTypeCardOutput
 		return nil
 	}
 
 	var earningsBalanceReadOnly EarningsBalanceReadOnly = EarningsBalanceReadOnly{}
-	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnly, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnly, "", true, nil); err == nil {
 		u.EarningsBalanceReadOnly = &earningsBalanceReadOnly
 		u.Type = AccountAttributesOutputTypeEarningsBalanceReadOnly
 		return nil
 	}
 
 	var depository Depository = Depository{}
-	if err := utils.UnmarshalJSON(data, &depository, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &depository, "", true, nil); err == nil {
 		u.Depository = &depository
 		u.Type = AccountAttributesOutputTypeDepository
 		return nil
@@ -808,7 +907,7 @@ func (d DepositoryInput) MarshalJSON() ([]byte, error) {
 }
 
 func (d *DepositoryInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
@@ -843,6 +942,17 @@ func (o *DepositoryInput) GetDepositoryAccountDetails() DepositoryAccountDetails
 type EarningsBalanceReadOnlyInput struct {
 }
 
+func (e EarningsBalanceReadOnlyInput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(e, "", false)
+}
+
+func (e *EarningsBalanceReadOnlyInput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &e, "", false, nil); err != nil {
+		return err
+	}
+	return nil
+}
+
 // CardAccountDetailsInput - The banking details of the account and account holder.
 type CardAccountDetailsInput struct {
 	// A tokenized string replacement for the card data.
@@ -869,6 +979,17 @@ type CardAccountDetailsInput struct {
 	AddressZipCode string `json:"address_zip_code"`
 	// The country code of the address for the card.
 	AddressCountry string `json:"address_country"`
+}
+
+func (c CardAccountDetailsInput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
+}
+
+func (c *CardAccountDetailsInput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "issuer", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *CardAccountDetailsInput) GetToken() string {
@@ -972,7 +1093,7 @@ func (c CardInput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CardInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
@@ -1013,9 +1134,9 @@ const (
 
 // AccountAttributesInput - The details of the account.
 type AccountAttributesInput struct {
-	CardInput                    *CardInput                    `queryParam:"inline"`
-	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline"`
-	DepositoryInput              *DepositoryInput              `queryParam:"inline"`
+	CardInput                    *CardInput                    `queryParam:"inline" name:"AccountAttributes"`
+	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline" name:"AccountAttributes"`
+	DepositoryInput              *DepositoryInput              `queryParam:"inline" name:"AccountAttributes"`
 
 	Type AccountAttributesInputType
 }
@@ -1049,24 +1170,24 @@ func CreateAccountAttributesInputDepositoryInput(depositoryInput DepositoryInput
 
 func (u *AccountAttributesInput) UnmarshalJSON(data []byte) error {
 
-	var earningsBalanceReadOnlyInput EarningsBalanceReadOnlyInput = EarningsBalanceReadOnlyInput{}
-	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnlyInput, "", true, true); err == nil {
-		u.EarningsBalanceReadOnlyInput = &earningsBalanceReadOnlyInput
-		u.Type = AccountAttributesInputTypeEarningsBalanceReadOnlyInput
-		return nil
-	}
-
 	var cardInput CardInput = CardInput{}
-	if err := utils.UnmarshalJSON(data, &cardInput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &cardInput, "", true, nil); err == nil {
 		u.CardInput = &cardInput
 		u.Type = AccountAttributesInputTypeCardInput
 		return nil
 	}
 
 	var depositoryInput DepositoryInput = DepositoryInput{}
-	if err := utils.UnmarshalJSON(data, &depositoryInput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &depositoryInput, "", true, nil); err == nil {
 		u.DepositoryInput = &depositoryInput
 		u.Type = AccountAttributesInputTypeDepositoryInput
+		return nil
+	}
+
+	var earningsBalanceReadOnlyInput EarningsBalanceReadOnlyInput = EarningsBalanceReadOnlyInput{}
+	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnlyInput, "", true, nil); err == nil {
+		u.EarningsBalanceReadOnlyInput = &earningsBalanceReadOnlyInput
+		u.Type = AccountAttributesInputTypeEarningsBalanceReadOnlyInput
 		return nil
 	}
 

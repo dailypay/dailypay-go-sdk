@@ -72,7 +72,7 @@ func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readJob",
-		OAuth2Scopes:     []string{"client:admin", "client:admin", "client:lookup"},
+		OAuth2Scopes:     []string{"client:admin", "client:lookup", "client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -755,7 +755,7 @@ func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opt
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "listJobs",
-		OAuth2Scopes:     []string{"client:admin", "client:admin", "client:lookup"},
+		OAuth2Scopes:     []string{"client:admin", "client:lookup", "client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

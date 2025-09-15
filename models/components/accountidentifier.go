@@ -16,7 +16,7 @@ func (a AccountIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil

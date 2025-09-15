@@ -16,7 +16,7 @@ func (p PersonIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PersonIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil

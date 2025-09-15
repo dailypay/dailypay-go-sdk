@@ -23,7 +23,7 @@ func (t TransferResource) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"type", "id", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil

@@ -5,6 +5,7 @@ package components
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 // TransferDestinationCapabilitySchedule - The expected time for the transfer to be completed.
@@ -47,6 +48,17 @@ type TransferDestinationCapability struct {
 	Fee int64 `json:"fee"`
 	// A three-letter ISO 4217 currency code. For example, `USD` for US Dollars, `EUR` for Euros, or `JPY` for Japanese Yen.
 	Currency string `json:"currency"`
+}
+
+func (t TransferDestinationCapability) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TransferDestinationCapability) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"schedule", "fee", "currency"}); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *TransferDestinationCapability) GetSchedule() TransferDestinationCapabilitySchedule {

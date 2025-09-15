@@ -22,7 +22,7 @@ func (a AccountResourceOutput) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountResourceOutput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"id", "type", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil

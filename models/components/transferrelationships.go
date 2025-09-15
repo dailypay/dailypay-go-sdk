@@ -22,8 +22,8 @@ const (
 // A transfer that originates from a Paycheck is a
 // system-created record that describes a credit of earnings to an account with `account_type` `EARNINGS_BALANCE`.
 type Origin struct {
-	AccountRelationship  *AccountRelationship  `queryParam:"inline"`
-	PaycheckRelationship *PaycheckRelationship `queryParam:"inline"`
+	AccountRelationship  *AccountRelationship  `queryParam:"inline" name:"origin"`
+	PaycheckRelationship *PaycheckRelationship `queryParam:"inline" name:"origin"`
 
 	Type OriginType
 }
@@ -49,14 +49,14 @@ func CreateOriginPaycheckRelationship(paycheckRelationship PaycheckRelationship)
 func (u *Origin) UnmarshalJSON(data []byte) error {
 
 	var accountRelationship AccountRelationship = AccountRelationship{}
-	if err := utils.UnmarshalJSON(data, &accountRelationship, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &accountRelationship, "", true, nil); err == nil {
 		u.AccountRelationship = &accountRelationship
 		u.Type = OriginTypeAccountRelationship
 		return nil
 	}
 
 	var paycheckRelationship PaycheckRelationship = PaycheckRelationship{}
-	if err := utils.UnmarshalJSON(data, &paycheckRelationship, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &paycheckRelationship, "", true, nil); err == nil {
 		u.PaycheckRelationship = &paycheckRelationship
 		u.Type = OriginTypePaycheckRelationship
 		return nil
