@@ -3,10 +3,10 @@ id: 076bba32-46fe-4128-8c2b-225112756310
 management:
   docChecksum: e46e93532757c919514e87097084dba4
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.617.1
-  generationVersion: 2.701.8
-  releaseVersion: 0.1.0
-  configChecksum: 0697a22a63d18a2ff0ca0e60d0a9606c
+  speakeasyVersion: 1.618.0
+  generationVersion: 2.702.0
+  releaseVersion: 0.1.1
+  configChecksum: 77bc47604b62f0834c51bc3fbc9d3b9c
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
@@ -706,9 +706,3 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes Detected:
-  * `Sdk.Organizations.Read()`:  `response.Data.Attributes.Products.[]` **Changed** **Breaking** :warning:
-  * `Sdk.Organizations.List()`:  `response.Data.[].Attributes.Products.[]` **Changed** **Breaking** :warning:
-  * `Sdk.People.Read()`:  `response.Data.Attributes.Products` **Added**
-  * `Sdk.People.Update()`:  `response.Data.Attributes.Products` **Added**
