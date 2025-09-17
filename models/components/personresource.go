@@ -19,33 +19,33 @@ func (p PersonResource) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PersonResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id", "attributes", "links"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PersonResource) GetType() string {
+func (p *PersonResource) GetType() string {
 	return "people"
 }
 
-func (o *PersonResource) GetID() string {
-	if o == nil {
+func (p *PersonResource) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PersonResource) GetAttributes() PersonAttributes {
-	if o == nil {
+func (p *PersonResource) GetAttributes() PersonAttributes {
+	if p == nil {
 		return PersonAttributes{}
 	}
-	return o.Attributes
+	return p.Attributes
 }
 
-func (o *PersonResource) GetLinks() PersonLinks {
-	if o == nil {
+func (p *PersonResource) GetLinks() PersonLinks {
+	if p == nil {
 		return PersonLinks{}
 	}
-	return o.Links
+	return p.Links
 }

@@ -9,16 +9,16 @@ type FundingSourceAttributes struct {
 	Currency string `json:"currency"`
 }
 
-func (o *FundingSourceAttributes) GetAmount() int64 {
-	if o == nil {
+func (f *FundingSourceAttributes) GetAmount() int64 {
+	if f == nil {
 		return 0
 	}
-	return o.Amount
+	return f.Amount
 }
 
-func (o *FundingSourceAttributes) GetCurrency() string {
-	if o == nil {
+func (f *FundingSourceAttributes) GetCurrency() string {
+	if f == nil {
 		return ""
 	}
-	return o.Currency
+	return f.Currency
 }

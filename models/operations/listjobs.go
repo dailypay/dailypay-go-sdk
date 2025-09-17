@@ -18,17 +18,17 @@ func (l ListJobsGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListJobsGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListJobsGlobals) GetVersion() *int64 {
-	if o == nil {
+func (l *ListJobsGlobals) GetVersion() *int64 {
+	if l == nil {
 		return nil
 	}
-	return o.Version
+	return l.Version
 }
 
 type ListJobsRequest struct {
@@ -46,46 +46,46 @@ type ListJobsRequest struct {
 	FilterBy *string `queryParam:"style=form,explode=true,name=filter"`
 }
 
-func (o *ListJobsRequest) GetFilterExternalIdentifiersPrimaryIdentifier() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterExternalIdentifiersPrimaryIdentifier() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterExternalIdentifiersPrimaryIdentifier
+	return l.FilterExternalIdentifiersPrimaryIdentifier
 }
 
-func (o *ListJobsRequest) GetFilterExternalIdentifiersEmployeeID() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterExternalIdentifiersEmployeeID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterExternalIdentifiersEmployeeID
+	return l.FilterExternalIdentifiersEmployeeID
 }
 
-func (o *ListJobsRequest) GetFilterExternalIdentifiersGroup() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterExternalIdentifiersGroup() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterExternalIdentifiersGroup
+	return l.FilterExternalIdentifiersGroup
 }
 
-func (o *ListJobsRequest) GetFilterPersonID() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterPersonID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPersonID
+	return l.FilterPersonID
 }
 
-func (o *ListJobsRequest) GetFilterOrganizationID() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterOrganizationID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterOrganizationID
+	return l.FilterOrganizationID
 }
 
-func (o *ListJobsRequest) GetFilterBy() *string {
-	if o == nil {
+func (l *ListJobsRequest) GetFilterBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterBy
+	return l.FilterBy
 }
 
 type ListJobsResponse struct {
@@ -94,16 +94,16 @@ type ListJobsResponse struct {
 	JobsData *components.JobsData
 }
 
-func (o *ListJobsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (l *ListJobsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if l == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return l.HTTPMeta
 }
 
-func (o *ListJobsResponse) GetJobsData() *components.JobsData {
-	if o == nil {
+func (l *ListJobsResponse) GetJobsData() *components.JobsData {
+	if l == nil {
 		return nil
 	}
-	return o.JobsData
+	return l.JobsData
 }

@@ -1,5 +1,13 @@
-speakeasyVersion: 1.598.2
+speakeasyVersion: 1.617.1
 sources:
+    cloud:
+        sourceNamespace: xapi
+        sourceRevisionDigest: sha256:15080505fed7751d9669c0205dcbaf1f47613b1e94c531c3a07a57e570a265b4
+        sourceBlobDigest: sha256:df79c6083ab50b27bf086799275b969de4047372361572a07a3df33a89318a8a
+        tags:
+            - latest
+            - speakeasy-sdk-regen-1757549579
+            - 3.0.0-beta01
     local:
         sourceNamespace: xapi
         sourceRevisionDigest: sha256:22ac5fa45f8a149986459f020e3272b727a32b0c6a7078e5c0b371bf7939e7d6
@@ -10,26 +18,26 @@ sources:
             - 3.0.0-beta01
 targets:
     go:
-        source: local
+        source: cloud
         sourceNamespace: xapi
-        sourceRevisionDigest: sha256:22ac5fa45f8a149986459f020e3272b727a32b0c6a7078e5c0b371bf7939e7d6
-        sourceBlobDigest: sha256:3ddf92b54817366bce1bfff769b02c2b01d2aead268b0b98ad5ce423240689ce
-        codeSamplesNamespace: xapi
-        codeSamplesRevisionDigest: sha256:f33e53efa91343743331206fade2fe699c8c8e33b4bbdb44695e669641df8786
+        sourceRevisionDigest: sha256:15080505fed7751d9669c0205dcbaf1f47613b1e94c531c3a07a57e570a265b4
+        sourceBlobDigest: sha256:df79c6083ab50b27bf086799275b969de4047372361572a07a3df33a89318a8a
+        codeSamplesNamespace: xapi-go-code-samples
+        codeSamplesRevisionDigest: sha256:57d22081b632d6c639b27a297796470bad1da3fde8537eeccb36ee3d27470ef9
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        local:
+        cloud:
             inputs:
-                - location: source/sdks.openapi.yaml
+                - location: https://s3.amazonaws.com/dp-devportal-images/oas/openapi.yml
             registry:
                 location: registry.speakeasyapi.dev/dailypay/dailypay/xapi
     targets:
         go:
             target: go
-            source: local
+            source: cloud
             codeSamples:
                 output: codeSamples.yaml
                 registry:
-                    location: registry.speakeasyapi.dev/dailypay/dailypay/xapi
+                    location: registry.speakeasyapi.dev/dailypay/dailypay/xapi-go-code-samples

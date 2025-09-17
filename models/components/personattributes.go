@@ -41,6 +41,44 @@ func (e *DisallowReason) UnmarshalJSON(data []byte) error {
 	}
 }
 
+// DailyPayCardProductEntitlement - The DailyPay Visa®️ Prepaid Card program.
+type DailyPayCardProductEntitlement struct {
+	// Whether the person is eligible to enroll in the DailyPay Visa®️ Prepaid Card program.
+	//
+	Eligible bool `json:"eligible"`
+	// Whether the person is enrolled in the DailyPay Visa®️ Prepaid Card program.
+	//
+	Enrolled bool `json:"enrolled"`
+}
+
+func (d *DailyPayCardProductEntitlement) GetEligible() bool {
+	if d == nil {
+		return false
+	}
+	return d.Eligible
+}
+
+func (d *DailyPayCardProductEntitlement) GetEnrolled() bool {
+	if d == nil {
+		return false
+	}
+	return d.Enrolled
+}
+
+// Products that the person is enrolled in or eligible for.
+type Products struct {
+	// The DailyPay Visa®️ Prepaid Card program.
+	//
+	DailyPayCardProductEntitlement DailyPayCardProductEntitlement `json:"dailypay_card"`
+}
+
+func (p *Products) GetDailyPayCardProductEntitlement() DailyPayCardProductEntitlement {
+	if p == nil {
+		return DailyPayCardProductEntitlement{}
+	}
+	return p.DailyPayCardProductEntitlement
+}
+
 // PersonAttributes - A person is a record of someone known to DailyPay. There will only ever be one person record per human being.
 type PersonAttributes struct {
 	// The statuses and required actions are:
@@ -53,18 +91,28 @@ type PersonAttributes struct {
 	// The two-letter abbreviation for the state in which the person resides, if located in the United States.  This is used for regulatory compliance purposes.
 	//
 	StateOfResidence *string `json:"state_of_residence,omitempty"`
+	// Products that the person is enrolled in or eligible for.
+	//
+	Products Products `json:"products"`
 }
 
-func (o *PersonAttributes) GetDisallowReason() *DisallowReason {
-	if o == nil {
+func (p *PersonAttributes) GetDisallowReason() *DisallowReason {
+	if p == nil {
 		return nil
 	}
-	return o.DisallowReason
+	return p.DisallowReason
 }
 
-func (o *PersonAttributes) GetStateOfResidence() *string {
-	if o == nil {
+func (p *PersonAttributes) GetStateOfResidence() *string {
+	if p == nil {
 		return nil
 	}
-	return o.StateOfResidence
+	return p.StateOfResidence
+}
+
+func (p *PersonAttributes) GetProducts() Products {
+	if p == nil {
+		return Products{}
+	}
+	return p.Products
 }

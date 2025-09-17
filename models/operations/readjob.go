@@ -18,17 +18,17 @@ func (r ReadJobGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadJobGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadJobGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadJobGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadJobRequest struct {
@@ -36,11 +36,11 @@ type ReadJobRequest struct {
 	JobID string `pathParam:"style=simple,explode=false,name=job_id"`
 }
 
-func (o *ReadJobRequest) GetJobID() string {
-	if o == nil {
+func (r *ReadJobRequest) GetJobID() string {
+	if r == nil {
 		return ""
 	}
-	return o.JobID
+	return r.JobID
 }
 
 type ReadJobResponse struct {
@@ -49,16 +49,16 @@ type ReadJobResponse struct {
 	JobData *components.JobData
 }
 
-func (o *ReadJobResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadJobResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadJobResponse) GetJobData() *components.JobData {
-	if o == nil {
+func (r *ReadJobResponse) GetJobData() *components.JobData {
+	if r == nil {
 		return nil
 	}
-	return o.JobData
+	return r.JobData
 }

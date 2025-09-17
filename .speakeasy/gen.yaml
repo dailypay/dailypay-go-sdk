@@ -1,6 +1,3 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/speakeasy-api/sdk-gen-config/refs/heads/main/schemas/gen.config.schema.json
-# $schema=https://raw.githubusercontent.com/speakeasy-api/sdk-gen-config/refs/heads/main/schemas/gen.config.schema.json
-
 configVersion: 2.0.0
 generation:
   sdkClassName: SDK
@@ -19,13 +16,14 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: false
+    hoistGlobalSecurity: true
   sdkHooksConfigAccess: true
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.0.1
+  version: 0.1.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -44,6 +42,8 @@ go:
   maxMethodParams: 0
   methodArguments: require-security-and-request
   modulePath: github.com/dailypay/dailypay-go-sdk
+  nullableOptionalWrapper: false
   outputModelSuffix: output
+  respectRequiredFields: false
   responseFormat: envelope-http
   sdkPackageName: dailypay

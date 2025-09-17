@@ -2,13 +2,28 @@
 
 package components
 
+import (
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
+)
+
 type AccountRelationship struct {
 	Data AccountIdentifier `json:"data"`
 }
 
-func (o *AccountRelationship) GetData() AccountIdentifier {
-	if o == nil {
+func (a AccountRelationship) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountRelationship) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"data"}); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (a *AccountRelationship) GetData() AccountIdentifier {
+	if a == nil {
 		return AccountIdentifier{}
 	}
-	return o.Data
+	return a.Data
 }

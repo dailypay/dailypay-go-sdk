@@ -23,33 +23,33 @@ func (t TransferCreateResource) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferCreateResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"type", "attributes", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *TransferCreateResource) GetType() string {
+func (t *TransferCreateResource) GetType() string {
 	return "transfers"
 }
 
-func (o *TransferCreateResource) GetID() *string {
-	if o == nil {
+func (t *TransferCreateResource) GetID() *string {
+	if t == nil {
 		return nil
 	}
-	return o.ID
+	return t.ID
 }
 
-func (o *TransferCreateResource) GetAttributes() TransferAttributesInput {
-	if o == nil {
+func (t *TransferCreateResource) GetAttributes() TransferAttributesInput {
+	if t == nil {
 		return TransferAttributesInput{}
 	}
-	return o.Attributes
+	return t.Attributes
 }
 
-func (o *TransferCreateResource) GetRelationships() TransferCreateRelationships {
-	if o == nil {
+func (t *TransferCreateResource) GetRelationships() TransferCreateRelationships {
+	if t == nil {
 		return TransferCreateRelationships{}
 	}
-	return o.Relationships
+	return t.Relationships
 }

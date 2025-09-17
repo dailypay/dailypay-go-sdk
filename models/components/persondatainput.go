@@ -6,9 +6,9 @@ type PersonDataInput struct {
 	Data PersonResourceInput `json:"data"`
 }
 
-func (o *PersonDataInput) GetData() PersonResourceInput {
-	if o == nil {
+func (p *PersonDataInput) GetData() PersonResourceInput {
+	if p == nil {
 		return PersonResourceInput{}
 	}
-	return o.Data
+	return p.Data
 }

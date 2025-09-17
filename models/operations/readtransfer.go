@@ -18,17 +18,17 @@ func (r ReadTransferGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadTransferGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadTransferGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadTransferGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadTransferRequest struct {
@@ -41,18 +41,18 @@ type ReadTransferRequest struct {
 	TransferID string `pathParam:"style=simple,explode=false,name=transfer_id"`
 }
 
-func (o *ReadTransferRequest) GetInclude() *string {
-	if o == nil {
+func (r *ReadTransferRequest) GetInclude() *string {
+	if r == nil {
 		return nil
 	}
-	return o.Include
+	return r.Include
 }
 
-func (o *ReadTransferRequest) GetTransferID() string {
-	if o == nil {
+func (r *ReadTransferRequest) GetTransferID() string {
+	if r == nil {
 		return ""
 	}
-	return o.TransferID
+	return r.TransferID
 }
 
 type ReadTransferResponse struct {
@@ -61,16 +61,16 @@ type ReadTransferResponse struct {
 	TransferData *components.TransferData
 }
 
-func (o *ReadTransferResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadTransferResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadTransferResponse) GetTransferData() *components.TransferData {
-	if o == nil {
+func (r *ReadTransferResponse) GetTransferData() *components.TransferData {
+	if r == nil {
 		return nil
 	}
-	return o.TransferData
+	return r.TransferData
 }

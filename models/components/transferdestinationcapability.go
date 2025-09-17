@@ -5,6 +5,7 @@ package components
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
 // TransferDestinationCapabilitySchedule - The expected time for the transfer to be completed.
@@ -49,23 +50,34 @@ type TransferDestinationCapability struct {
 	Currency string `json:"currency"`
 }
 
-func (o *TransferDestinationCapability) GetSchedule() TransferDestinationCapabilitySchedule {
-	if o == nil {
+func (t TransferDestinationCapability) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(t, "", false)
+}
+
+func (t *TransferDestinationCapability) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"schedule", "fee", "currency"}); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (t *TransferDestinationCapability) GetSchedule() TransferDestinationCapabilitySchedule {
+	if t == nil {
 		return TransferDestinationCapabilitySchedule("")
 	}
-	return o.Schedule
+	return t.Schedule
 }
 
-func (o *TransferDestinationCapability) GetFee() int64 {
-	if o == nil {
+func (t *TransferDestinationCapability) GetFee() int64 {
+	if t == nil {
 		return 0
 	}
-	return o.Fee
+	return t.Fee
 }
 
-func (o *TransferDestinationCapability) GetCurrency() string {
-	if o == nil {
+func (t *TransferDestinationCapability) GetCurrency() string {
+	if t == nil {
 		return ""
 	}
-	return o.Currency
+	return t.Currency
 }

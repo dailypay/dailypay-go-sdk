@@ -18,17 +18,17 @@ func (c CreateTransferGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateTransferGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CreateTransferGlobals) GetVersion() *int64 {
-	if o == nil {
+func (c *CreateTransferGlobals) GetVersion() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }
 
 type CreateTransferRequest struct {
@@ -44,25 +44,25 @@ type CreateTransferRequest struct {
 	TransferCreateData components.TransferCreateData `request:"mediaType=application/vnd.api+json"`
 }
 
-func (o *CreateTransferRequest) GetIdempotencyKey() string {
-	if o == nil {
+func (c *CreateTransferRequest) GetIdempotencyKey() string {
+	if c == nil {
 		return ""
 	}
-	return o.IdempotencyKey
+	return c.IdempotencyKey
 }
 
-func (o *CreateTransferRequest) GetInclude() *string {
-	if o == nil {
+func (c *CreateTransferRequest) GetInclude() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Include
+	return c.Include
 }
 
-func (o *CreateTransferRequest) GetTransferCreateData() components.TransferCreateData {
-	if o == nil {
+func (c *CreateTransferRequest) GetTransferCreateData() components.TransferCreateData {
+	if c == nil {
 		return components.TransferCreateData{}
 	}
-	return o.TransferCreateData
+	return c.TransferCreateData
 }
 
 type CreateTransferResponse struct {
@@ -71,16 +71,16 @@ type CreateTransferResponse struct {
 	TransferData *components.TransferData
 }
 
-func (o *CreateTransferResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CreateTransferResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CreateTransferResponse) GetTransferData() *components.TransferData {
-	if o == nil {
+func (c *CreateTransferResponse) GetTransferData() *components.TransferData {
+	if c == nil {
 		return nil
 	}
-	return o.TransferData
+	return c.TransferData
 }

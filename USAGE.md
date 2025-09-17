@@ -20,7 +20,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -58,7 +62,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -66,9 +74,9 @@ func main() {
 		IdempotencyKey: "ea9f2225-403b-4e2c-93b0-0eda090ffa65",
 		TransferCreateData: components.TransferCreateData{
 			Data: components.TransferCreateResource{
-				ID: dailypay.String("aba332a2-24a2-46de-8257-5040e71ab210"),
+				ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
 				Attributes: components.TransferAttributesInput{
-					Preview:  dailypay.Bool(true),
+					Preview:  dailypay.Pointer(true),
 					Amount:   2500,
 					Currency: "USD",
 					Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,

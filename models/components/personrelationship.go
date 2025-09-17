@@ -6,9 +6,9 @@ type PersonRelationship struct {
 	Data PersonIdentifier `json:"data"`
 }
 
-func (o *PersonRelationship) GetData() PersonIdentifier {
-	if o == nil {
+func (p *PersonRelationship) GetData() PersonIdentifier {
+	if p == nil {
 		return PersonIdentifier{}
 	}
-	return o.Data
+	return p.Data
 }

@@ -78,25 +78,36 @@ type AccountAttributesDepositoryAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
-func (o *AccountAttributesDepositoryAccountBalances) GetAvailable() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.Available
+func (a AccountAttributesDepositoryAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
 }
 
-func (o *AccountAttributesDepositoryAccountBalances) GetCurrent() *int64 {
-	if o == nil {
-		return nil
+func (a *AccountAttributesDepositoryAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
 	}
-	return o.Current
+	return nil
 }
 
-func (o *AccountAttributesDepositoryAccountBalances) GetCurrency() string {
-	if o == nil {
+func (a *AccountAttributesDepositoryAccountBalances) GetAvailable() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Available
+}
+
+func (a *AccountAttributesDepositoryAccountBalances) GetCurrent() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Current
+}
+
+func (a *AccountAttributesDepositoryAccountBalances) GetCurrency() string {
+	if a == nil {
 		return ""
 	}
-	return o.Currency
+	return a.Currency
 }
 
 type AccountAttributesDepositoryAccountCapabilities struct {
@@ -110,11 +121,22 @@ type AccountAttributesDepositoryAccountCapabilities struct {
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
 }
 
-func (o *AccountAttributesDepositoryAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
-	if o == nil {
+func (a AccountAttributesDepositoryAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesDepositoryAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (a *AccountAttributesDepositoryAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
+	if a == nil {
 		return []TransferDestinationCapability{}
 	}
-	return o.TransferDestination
+	return a.TransferDestination
 }
 
 // AccountAttributesDepositorySubtype - The subtype of the account.
@@ -156,32 +178,43 @@ type DepositoryAccountDetails struct {
 	AccountNumber string `json:"account_number"`
 }
 
-func (o *DepositoryAccountDetails) GetFirstName() string {
-	if o == nil {
-		return ""
-	}
-	return o.FirstName
+func (d DepositoryAccountDetails) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(d, "", false)
 }
 
-func (o *DepositoryAccountDetails) GetLastName() string {
-	if o == nil {
-		return ""
+func (d *DepositoryAccountDetails) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"first_name", "last_name", "routing_number", "account_number"}); err != nil {
+		return err
 	}
-	return o.LastName
+	return nil
 }
 
-func (o *DepositoryAccountDetails) GetRoutingNumber() string {
-	if o == nil {
+func (d *DepositoryAccountDetails) GetFirstName() string {
+	if d == nil {
 		return ""
 	}
-	return o.RoutingNumber
+	return d.FirstName
 }
 
-func (o *DepositoryAccountDetails) GetAccountNumber() string {
-	if o == nil {
+func (d *DepositoryAccountDetails) GetLastName() string {
+	if d == nil {
 		return ""
 	}
-	return o.AccountNumber
+	return d.LastName
+}
+
+func (d *DepositoryAccountDetails) GetRoutingNumber() string {
+	if d == nil {
+		return ""
+	}
+	return d.RoutingNumber
+}
+
+func (d *DepositoryAccountDetails) GetAccountNumber() string {
+	if d == nil {
+		return ""
+	}
+	return d.AccountNumber
 }
 
 // Depository - An account with type `DEPOSITORY` and subtype `SAVINGS` or `CHECKING`.
@@ -205,56 +238,56 @@ func (d Depository) MarshalJSON() ([]byte, error) {
 }
 
 func (d *Depository) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *Depository) GetVerificationStatus() AccountAttributesDepositoryVerificationStatus {
-	if o == nil {
+func (d *Depository) GetVerificationStatus() AccountAttributesDepositoryVerificationStatus {
+	if d == nil {
 		return AccountAttributesDepositoryVerificationStatus("")
 	}
-	return o.VerificationStatus
+	return d.VerificationStatus
 }
 
-func (o *Depository) GetAccountBalances() AccountAttributesDepositoryAccountBalances {
-	if o == nil {
+func (d *Depository) GetAccountBalances() AccountAttributesDepositoryAccountBalances {
+	if d == nil {
 		return AccountAttributesDepositoryAccountBalances{}
 	}
-	return o.AccountBalances
+	return d.AccountBalances
 }
 
-func (o *Depository) GetAccountCapabilities() AccountAttributesDepositoryAccountCapabilities {
-	if o == nil {
+func (d *Depository) GetAccountCapabilities() AccountAttributesDepositoryAccountCapabilities {
+	if d == nil {
 		return AccountAttributesDepositoryAccountCapabilities{}
 	}
-	return o.AccountCapabilities
+	return d.AccountCapabilities
 }
 
-func (o *Depository) GetName() string {
-	if o == nil {
+func (d *Depository) GetName() string {
+	if d == nil {
 		return ""
 	}
-	return o.Name
+	return d.Name
 }
 
-func (o *Depository) GetAccountType() string {
+func (d *Depository) GetAccountType() string {
 	return "DEPOSITORY"
 }
 
-func (o *Depository) GetSubtype() AccountAttributesDepositorySubtype {
-	if o == nil {
+func (d *Depository) GetSubtype() AccountAttributesDepositorySubtype {
+	if d == nil {
 		return AccountAttributesDepositorySubtype("")
 	}
-	return o.Subtype
+	return d.Subtype
 }
 
-func (o *Depository) GetDepositoryAccountDetails() DepositoryAccountDetails {
-	if o == nil {
+func (d *Depository) GetDepositoryAccountDetails() DepositoryAccountDetails {
+	if d == nil {
 		return DepositoryAccountDetails{}
 	}
-	return o.DepositoryAccountDetails
+	return d.DepositoryAccountDetails
 }
 
 // AccountAttributesEarningsBalanceVerificationStatus - A code that indicates the status of an account that is a destination for funds.
@@ -326,25 +359,36 @@ type AccountAttributesEarningsBalanceAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
-func (o *AccountAttributesEarningsBalanceAccountBalances) GetAvailable() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.Available
+func (a AccountAttributesEarningsBalanceAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
 }
 
-func (o *AccountAttributesEarningsBalanceAccountBalances) GetCurrent() *int64 {
-	if o == nil {
-		return nil
+func (a *AccountAttributesEarningsBalanceAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
 	}
-	return o.Current
+	return nil
 }
 
-func (o *AccountAttributesEarningsBalanceAccountBalances) GetCurrency() string {
-	if o == nil {
+func (a *AccountAttributesEarningsBalanceAccountBalances) GetAvailable() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Available
+}
+
+func (a *AccountAttributesEarningsBalanceAccountBalances) GetCurrent() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Current
+}
+
+func (a *AccountAttributesEarningsBalanceAccountBalances) GetCurrency() string {
+	if a == nil {
 		return ""
 	}
-	return o.Currency
+	return a.Currency
 }
 
 type AccountAttributesEarningsBalanceAccountCapabilities struct {
@@ -358,15 +402,37 @@ type AccountAttributesEarningsBalanceAccountCapabilities struct {
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
 }
 
-func (o *AccountAttributesEarningsBalanceAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
-	if o == nil {
+func (a AccountAttributesEarningsBalanceAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesEarningsBalanceAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (a *AccountAttributesEarningsBalanceAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
+	if a == nil {
 		return []TransferDestinationCapability{}
 	}
-	return o.TransferDestination
+	return a.TransferDestination
 }
 
 // Details - An empty object for earnings balance accounts.
 type Details struct {
+}
+
+func (d Details) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(d, "", false)
+}
+
+func (d *Details) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &d, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 // EarningsBalanceReadOnly - An account with type `EARNINGS_BALANCE` and subtype `ODP`.
@@ -390,53 +456,53 @@ func (e EarningsBalanceReadOnly) MarshalJSON() ([]byte, error) {
 }
 
 func (e *EarningsBalanceReadOnly) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &e, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &e, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *EarningsBalanceReadOnly) GetVerificationStatus() AccountAttributesEarningsBalanceVerificationStatus {
-	if o == nil {
+func (e *EarningsBalanceReadOnly) GetVerificationStatus() AccountAttributesEarningsBalanceVerificationStatus {
+	if e == nil {
 		return AccountAttributesEarningsBalanceVerificationStatus("")
 	}
-	return o.VerificationStatus
+	return e.VerificationStatus
 }
 
-func (o *EarningsBalanceReadOnly) GetAccountBalances() AccountAttributesEarningsBalanceAccountBalances {
-	if o == nil {
+func (e *EarningsBalanceReadOnly) GetAccountBalances() AccountAttributesEarningsBalanceAccountBalances {
+	if e == nil {
 		return AccountAttributesEarningsBalanceAccountBalances{}
 	}
-	return o.AccountBalances
+	return e.AccountBalances
 }
 
-func (o *EarningsBalanceReadOnly) GetAccountCapabilities() AccountAttributesEarningsBalanceAccountCapabilities {
-	if o == nil {
+func (e *EarningsBalanceReadOnly) GetAccountCapabilities() AccountAttributesEarningsBalanceAccountCapabilities {
+	if e == nil {
 		return AccountAttributesEarningsBalanceAccountCapabilities{}
 	}
-	return o.AccountCapabilities
+	return e.AccountCapabilities
 }
 
-func (o *EarningsBalanceReadOnly) GetName() string {
-	if o == nil {
+func (e *EarningsBalanceReadOnly) GetName() string {
+	if e == nil {
 		return ""
 	}
-	return o.Name
+	return e.Name
 }
 
-func (o *EarningsBalanceReadOnly) GetAccountType() string {
+func (e *EarningsBalanceReadOnly) GetAccountType() string {
 	return "EARNINGS_BALANCE"
 }
 
-func (o *EarningsBalanceReadOnly) GetSubtype() string {
+func (e *EarningsBalanceReadOnly) GetSubtype() string {
 	return "ODP"
 }
 
-func (o *EarningsBalanceReadOnly) GetDetails() Details {
-	if o == nil {
+func (e *EarningsBalanceReadOnly) GetDetails() Details {
+	if e == nil {
 		return Details{}
 	}
-	return o.Details
+	return e.Details
 }
 
 // AccountAttributesCardVerificationStatus - A code that indicates the status of an account that is a destination for funds.
@@ -508,25 +574,36 @@ type AccountAttributesCardAccountBalances struct {
 	Currency string `json:"currency"`
 }
 
-func (o *AccountAttributesCardAccountBalances) GetAvailable() *int64 {
-	if o == nil {
-		return nil
-	}
-	return o.Available
+func (a AccountAttributesCardAccountBalances) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
 }
 
-func (o *AccountAttributesCardAccountBalances) GetCurrent() *int64 {
-	if o == nil {
-		return nil
+func (a *AccountAttributesCardAccountBalances) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+		return err
 	}
-	return o.Current
+	return nil
 }
 
-func (o *AccountAttributesCardAccountBalances) GetCurrency() string {
-	if o == nil {
+func (a *AccountAttributesCardAccountBalances) GetAvailable() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Available
+}
+
+func (a *AccountAttributesCardAccountBalances) GetCurrent() *int64 {
+	if a == nil {
+		return nil
+	}
+	return a.Current
+}
+
+func (a *AccountAttributesCardAccountBalances) GetCurrency() string {
+	if a == nil {
 		return ""
 	}
-	return o.Currency
+	return a.Currency
 }
 
 type AccountAttributesCardAccountCapabilities struct {
@@ -540,11 +617,22 @@ type AccountAttributesCardAccountCapabilities struct {
 	TransferDestination []TransferDestinationCapability `json:"transfer_destination"`
 }
 
-func (o *AccountAttributesCardAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
-	if o == nil {
+func (a AccountAttributesCardAccountCapabilities) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(a, "", false)
+}
+
+func (a *AccountAttributesCardAccountCapabilities) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"transfer_destination"}); err != nil {
+		return err
+	}
+	return nil
+}
+
+func (a *AccountAttributesCardAccountCapabilities) GetTransferDestination() []TransferDestinationCapability {
+	if a == nil {
 		return []TransferDestinationCapability{}
 	}
-	return o.TransferDestination
+	return a.TransferDestination
 }
 
 // AccountAttributesCardSubtype - The subtype of the account. Additional subtypes may be added over time
@@ -590,46 +678,57 @@ type CardAccountDetailsOutput struct {
 	ExpirationYear string `json:"expiration_year"`
 }
 
-func (o *CardAccountDetailsOutput) GetLastFour() string {
-	if o == nil {
-		return ""
-	}
-	return o.LastFour
+func (c CardAccountDetailsOutput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
 }
 
-func (o *CardAccountDetailsOutput) GetIssuer() string {
-	if o == nil {
-		return ""
+func (c *CardAccountDetailsOutput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"last_four", "issuer", "first_name", "last_name", "expiration_month", "expiration_year"}); err != nil {
+		return err
 	}
-	return o.Issuer
+	return nil
 }
 
-func (o *CardAccountDetailsOutput) GetFirstName() string {
-	if o == nil {
+func (c *CardAccountDetailsOutput) GetLastFour() string {
+	if c == nil {
 		return ""
 	}
-	return o.FirstName
+	return c.LastFour
 }
 
-func (o *CardAccountDetailsOutput) GetLastName() string {
-	if o == nil {
+func (c *CardAccountDetailsOutput) GetIssuer() string {
+	if c == nil {
 		return ""
 	}
-	return o.LastName
+	return c.Issuer
 }
 
-func (o *CardAccountDetailsOutput) GetExpirationMonth() string {
-	if o == nil {
+func (c *CardAccountDetailsOutput) GetFirstName() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationMonth
+	return c.FirstName
 }
 
-func (o *CardAccountDetailsOutput) GetExpirationYear() string {
-	if o == nil {
+func (c *CardAccountDetailsOutput) GetLastName() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationYear
+	return c.LastName
+}
+
+func (c *CardAccountDetailsOutput) GetExpirationMonth() string {
+	if c == nil {
+		return ""
+	}
+	return c.ExpirationMonth
+}
+
+func (c *CardAccountDetailsOutput) GetExpirationYear() string {
+	if c == nil {
+		return ""
+	}
+	return c.ExpirationYear
 }
 
 // CardOutput - An account with type `CARD` and subtype `DAILYPAY` or `DEBIT`.
@@ -653,56 +752,56 @@ func (c CardOutput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CardOutput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"verification_status", "balances", "capabilities", "name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CardOutput) GetVerificationStatus() AccountAttributesCardVerificationStatus {
-	if o == nil {
+func (c *CardOutput) GetVerificationStatus() AccountAttributesCardVerificationStatus {
+	if c == nil {
 		return AccountAttributesCardVerificationStatus("")
 	}
-	return o.VerificationStatus
+	return c.VerificationStatus
 }
 
-func (o *CardOutput) GetAccountBalances() AccountAttributesCardAccountBalances {
-	if o == nil {
+func (c *CardOutput) GetAccountBalances() AccountAttributesCardAccountBalances {
+	if c == nil {
 		return AccountAttributesCardAccountBalances{}
 	}
-	return o.AccountBalances
+	return c.AccountBalances
 }
 
-func (o *CardOutput) GetAccountCapabilities() AccountAttributesCardAccountCapabilities {
-	if o == nil {
+func (c *CardOutput) GetAccountCapabilities() AccountAttributesCardAccountCapabilities {
+	if c == nil {
 		return AccountAttributesCardAccountCapabilities{}
 	}
-	return o.AccountCapabilities
+	return c.AccountCapabilities
 }
 
-func (o *CardOutput) GetName() string {
-	if o == nil {
+func (c *CardOutput) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CardOutput) GetAccountType() string {
+func (c *CardOutput) GetAccountType() string {
 	return "CARD"
 }
 
-func (o *CardOutput) GetSubtype() AccountAttributesCardSubtype {
-	if o == nil {
+func (c *CardOutput) GetSubtype() AccountAttributesCardSubtype {
+	if c == nil {
 		return AccountAttributesCardSubtype("")
 	}
-	return o.Subtype
+	return c.Subtype
 }
 
-func (o *CardOutput) GetCardAccountDetails() CardAccountDetailsOutput {
-	if o == nil {
+func (c *CardOutput) GetCardAccountDetails() CardAccountDetailsOutput {
+	if c == nil {
 		return CardAccountDetailsOutput{}
 	}
-	return o.CardAccountDetails
+	return c.CardAccountDetails
 }
 
 type AccountAttributesOutputType string
@@ -715,9 +814,9 @@ const (
 
 // AccountAttributesOutput - The details of the account.
 type AccountAttributesOutput struct {
-	CardOutput              *CardOutput              `queryParam:"inline"`
-	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline"`
-	Depository              *Depository              `queryParam:"inline"`
+	CardOutput              *CardOutput              `queryParam:"inline" name:"AccountAttributes"`
+	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline" name:"AccountAttributes"`
+	Depository              *Depository              `queryParam:"inline" name:"AccountAttributes"`
 
 	Type AccountAttributesOutputType
 }
@@ -752,21 +851,21 @@ func CreateAccountAttributesOutputDepository(depository Depository) AccountAttri
 func (u *AccountAttributesOutput) UnmarshalJSON(data []byte) error {
 
 	var cardOutput CardOutput = CardOutput{}
-	if err := utils.UnmarshalJSON(data, &cardOutput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &cardOutput, "", true, nil); err == nil {
 		u.CardOutput = &cardOutput
 		u.Type = AccountAttributesOutputTypeCardOutput
 		return nil
 	}
 
 	var earningsBalanceReadOnly EarningsBalanceReadOnly = EarningsBalanceReadOnly{}
-	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnly, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnly, "", true, nil); err == nil {
 		u.EarningsBalanceReadOnly = &earningsBalanceReadOnly
 		u.Type = AccountAttributesOutputTypeEarningsBalanceReadOnly
 		return nil
 	}
 
 	var depository Depository = Depository{}
-	if err := utils.UnmarshalJSON(data, &depository, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &depository, "", true, nil); err == nil {
 		u.Depository = &depository
 		u.Type = AccountAttributesOutputTypeDepository
 		return nil
@@ -808,39 +907,50 @@ func (d DepositoryInput) MarshalJSON() ([]byte, error) {
 }
 
 func (d *DepositoryInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *DepositoryInput) GetName() string {
-	if o == nil {
+func (d *DepositoryInput) GetName() string {
+	if d == nil {
 		return ""
 	}
-	return o.Name
+	return d.Name
 }
 
-func (o *DepositoryInput) GetAccountType() string {
+func (d *DepositoryInput) GetAccountType() string {
 	return "DEPOSITORY"
 }
 
-func (o *DepositoryInput) GetSubtype() AccountAttributesDepositorySubtype {
-	if o == nil {
+func (d *DepositoryInput) GetSubtype() AccountAttributesDepositorySubtype {
+	if d == nil {
 		return AccountAttributesDepositorySubtype("")
 	}
-	return o.Subtype
+	return d.Subtype
 }
 
-func (o *DepositoryInput) GetDepositoryAccountDetails() DepositoryAccountDetails {
-	if o == nil {
+func (d *DepositoryInput) GetDepositoryAccountDetails() DepositoryAccountDetails {
+	if d == nil {
 		return DepositoryAccountDetails{}
 	}
-	return o.DepositoryAccountDetails
+	return d.DepositoryAccountDetails
 }
 
 // EarningsBalanceReadOnlyInput - An account with type `EARNINGS_BALANCE` and subtype `ODP`.
 type EarningsBalanceReadOnlyInput struct {
+}
+
+func (e EarningsBalanceReadOnlyInput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(e, "", false)
+}
+
+func (e *EarningsBalanceReadOnlyInput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &e, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 // CardAccountDetailsInput - The banking details of the account and account holder.
@@ -871,88 +981,99 @@ type CardAccountDetailsInput struct {
 	AddressCountry string `json:"address_country"`
 }
 
-func (o *CardAccountDetailsInput) GetToken() string {
-	if o == nil {
-		return ""
-	}
-	return o.Token
+func (c CardAccountDetailsInput) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
 }
 
-func (o *CardAccountDetailsInput) GetIssuer() string {
-	if o == nil {
-		return ""
+func (c *CardAccountDetailsInput) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "issuer", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country"}); err != nil {
+		return err
 	}
-	return o.Issuer
+	return nil
 }
 
-func (o *CardAccountDetailsInput) GetFirstName() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetToken() string {
+	if c == nil {
 		return ""
 	}
-	return o.FirstName
+	return c.Token
 }
 
-func (o *CardAccountDetailsInput) GetLastName() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetIssuer() string {
+	if c == nil {
 		return ""
 	}
-	return o.LastName
+	return c.Issuer
 }
 
-func (o *CardAccountDetailsInput) GetExpirationMonth() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetFirstName() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationMonth
+	return c.FirstName
 }
 
-func (o *CardAccountDetailsInput) GetExpirationYear() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetLastName() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationYear
+	return c.LastName
 }
 
-func (o *CardAccountDetailsInput) GetAddressLineOne() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetExpirationMonth() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressLineOne
+	return c.ExpirationMonth
 }
 
-func (o *CardAccountDetailsInput) GetAddressLineTwo() *string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetExpirationYear() string {
+	if c == nil {
+		return ""
+	}
+	return c.ExpirationYear
+}
+
+func (c *CardAccountDetailsInput) GetAddressLineOne() string {
+	if c == nil {
+		return ""
+	}
+	return c.AddressLineOne
+}
+
+func (c *CardAccountDetailsInput) GetAddressLineTwo() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AddressLineTwo
+	return c.AddressLineTwo
 }
 
-func (o *CardAccountDetailsInput) GetAddressCity() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetAddressCity() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressCity
+	return c.AddressCity
 }
 
-func (o *CardAccountDetailsInput) GetAddressState() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetAddressState() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressState
+	return c.AddressState
 }
 
-func (o *CardAccountDetailsInput) GetAddressZipCode() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetAddressZipCode() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressZipCode
+	return c.AddressZipCode
 }
 
-func (o *CardAccountDetailsInput) GetAddressCountry() string {
-	if o == nil {
+func (c *CardAccountDetailsInput) GetAddressCountry() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressCountry
+	return c.AddressCountry
 }
 
 // CardInput - An account with type `CARD` and subtype `DAILYPAY` or `DEBIT`.
@@ -972,35 +1093,35 @@ func (c CardInput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CardInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, true); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"name", "account_type", "subtype", "details"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CardInput) GetName() string {
-	if o == nil {
+func (c *CardInput) GetName() string {
+	if c == nil {
 		return ""
 	}
-	return o.Name
+	return c.Name
 }
 
-func (o *CardInput) GetAccountType() string {
+func (c *CardInput) GetAccountType() string {
 	return "CARD"
 }
 
-func (o *CardInput) GetSubtype() AccountAttributesCardSubtype {
-	if o == nil {
+func (c *CardInput) GetSubtype() AccountAttributesCardSubtype {
+	if c == nil {
 		return AccountAttributesCardSubtype("")
 	}
-	return o.Subtype
+	return c.Subtype
 }
 
-func (o *CardInput) GetCardAccountDetails() CardAccountDetailsInput {
-	if o == nil {
+func (c *CardInput) GetCardAccountDetails() CardAccountDetailsInput {
+	if c == nil {
 		return CardAccountDetailsInput{}
 	}
-	return o.CardAccountDetails
+	return c.CardAccountDetails
 }
 
 type AccountAttributesInputType string
@@ -1013,9 +1134,9 @@ const (
 
 // AccountAttributesInput - The details of the account.
 type AccountAttributesInput struct {
-	CardInput                    *CardInput                    `queryParam:"inline"`
-	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline"`
-	DepositoryInput              *DepositoryInput              `queryParam:"inline"`
+	CardInput                    *CardInput                    `queryParam:"inline" name:"AccountAttributes"`
+	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline" name:"AccountAttributes"`
+	DepositoryInput              *DepositoryInput              `queryParam:"inline" name:"AccountAttributes"`
 
 	Type AccountAttributesInputType
 }
@@ -1049,24 +1170,24 @@ func CreateAccountAttributesInputDepositoryInput(depositoryInput DepositoryInput
 
 func (u *AccountAttributesInput) UnmarshalJSON(data []byte) error {
 
-	var earningsBalanceReadOnlyInput EarningsBalanceReadOnlyInput = EarningsBalanceReadOnlyInput{}
-	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnlyInput, "", true, true); err == nil {
-		u.EarningsBalanceReadOnlyInput = &earningsBalanceReadOnlyInput
-		u.Type = AccountAttributesInputTypeEarningsBalanceReadOnlyInput
-		return nil
-	}
-
 	var cardInput CardInput = CardInput{}
-	if err := utils.UnmarshalJSON(data, &cardInput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &cardInput, "", true, nil); err == nil {
 		u.CardInput = &cardInput
 		u.Type = AccountAttributesInputTypeCardInput
 		return nil
 	}
 
 	var depositoryInput DepositoryInput = DepositoryInput{}
-	if err := utils.UnmarshalJSON(data, &depositoryInput, "", true, true); err == nil {
+	if err := utils.UnmarshalJSON(data, &depositoryInput, "", true, nil); err == nil {
 		u.DepositoryInput = &depositoryInput
 		u.Type = AccountAttributesInputTypeDepositoryInput
+		return nil
+	}
+
+	var earningsBalanceReadOnlyInput EarningsBalanceReadOnlyInput = EarningsBalanceReadOnlyInput{}
+	if err := utils.UnmarshalJSON(data, &earningsBalanceReadOnlyInput, "", true, nil); err == nil {
+		u.EarningsBalanceReadOnlyInput = &earningsBalanceReadOnlyInput
+		u.Type = AccountAttributesInputTypeEarningsBalanceReadOnlyInput
 		return nil
 	}
 

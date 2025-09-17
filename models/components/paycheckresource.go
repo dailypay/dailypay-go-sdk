@@ -19,40 +19,40 @@ func (p PaycheckResource) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaycheckResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PaycheckResource) GetType() string {
+func (p *PaycheckResource) GetType() string {
 	return "paychecks"
 }
 
-func (o *PaycheckResource) GetID() string {
-	if o == nil {
+func (p *PaycheckResource) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }
 
-func (o *PaycheckResource) GetAttributes() PaycheckAttributes {
-	if o == nil {
+func (p *PaycheckResource) GetAttributes() PaycheckAttributes {
+	if p == nil {
 		return PaycheckAttributes{}
 	}
-	return o.Attributes
+	return p.Attributes
 }
 
-func (o *PaycheckResource) GetLinks() PaycheckLinks {
-	if o == nil {
+func (p *PaycheckResource) GetLinks() PaycheckLinks {
+	if p == nil {
 		return PaycheckLinks{}
 	}
-	return o.Links
+	return p.Links
 }
 
-func (o *PaycheckResource) GetRelationships() PaycheckRelationships {
-	if o == nil {
+func (p *PaycheckResource) GetRelationships() PaycheckRelationships {
+	if p == nil {
 		return PaycheckRelationships{}
 	}
-	return o.Relationships
+	return p.Relationships
 }

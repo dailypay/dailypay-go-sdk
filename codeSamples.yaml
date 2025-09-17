@@ -29,9 +29,9 @@ actions:
                     CardNumber: "4007589999999912",
                     ExpirationYear: "2027",
                     ExpirationMonth: "02",
-                    Cvv: dailypay.String("123"),
+                    Cvv: dailypay.Pointer("123"),
                     AddressLineOne: "123 Kebly Street",
-                    AddressLineTwo: dailypay.String("Unit C"),
+                    AddressLineTwo: dailypay.Pointer("Unit C"),
                     AddressCity: "Fort Lee",
                     AddressState: "NJ",
                     AddressZipCode: "07237",
@@ -66,7 +66,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -101,7 +105,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -157,7 +165,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -191,7 +203,11 @@ actions:
 
                 s := dailypay.New(
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -225,7 +241,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -259,7 +279,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -295,7 +319,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -351,7 +379,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -385,7 +417,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -422,7 +458,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -463,7 +503,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -499,7 +543,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -535,7 +583,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -545,7 +597,7 @@ actions:
                         Data: components.PersonResourceInput{
                             ID: "aa860051-c411-4709-9685-c1b716df611b",
                             Attributes: components.PersonAttributesInput{
-                                StateOfResidence: dailypay.String("NY"),
+                                StateOfResidence: dailypay.Pointer("NY"),
                             },
                         },
                     },
@@ -579,7 +631,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -613,7 +669,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 
@@ -621,9 +681,9 @@ actions:
                     IdempotencyKey: "ea9f2225-403b-4e2c-93b0-0eda090ffa65",
                     TransferCreateData: components.TransferCreateData{
                         Data: components.TransferCreateResource{
-                            ID: dailypay.String("aba332a2-24a2-46de-8257-5040e71ab210"),
+                            ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
                             Attributes: components.TransferAttributesInput{
-                                Preview: dailypay.Bool(true),
+                                Preview: dailypay.Pointer(true),
                                 Amount: 2500,
                                 Currency: "USD",
                                 Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,
@@ -677,7 +737,11 @@ actions:
                 s := dailypay.New(
                     dailypay.WithVersion(3),
                     dailypay.WithSecurity(components.Security{
-                        OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+                        OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                            ClientID: "<YOUR_CLIENT_ID_HERE>",
+                            ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                            TokenURL: "<YOUR_TOKEN_URL_HERE>",
+                        },
                     }),
                 )
 

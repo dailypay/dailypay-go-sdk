@@ -7,11 +7,11 @@ type ErrorBadRequestErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorBadRequestErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorBadRequestErrorSource - Location in the request that may have caused the error.
@@ -24,25 +24,25 @@ type ErrorBadRequestErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorBadRequestErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorBadRequestErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorBadRequestErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorBadRequestErrorMeta - Additional information about the error.
@@ -53,18 +53,18 @@ type ErrorBadRequestErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorBadRequestErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorBadRequestErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorBadRequestErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 type ErrorBadRequestError struct {
@@ -82,44 +82,44 @@ type ErrorBadRequestError struct {
 	Meta ErrorBadRequestErrorMeta `json:"meta"`
 }
 
-func (o *ErrorBadRequestError) GetCode() string {
-	if o == nil {
+func (e *ErrorBadRequestError) GetCode() string {
+	if e == nil {
 		return ""
 	}
-	return o.Code
+	return e.Code
 }
 
-func (o *ErrorBadRequestError) GetStatus() string {
-	if o == nil {
+func (e *ErrorBadRequestError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorBadRequestError) GetDetail() string {
-	if o == nil {
+func (e *ErrorBadRequestError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorBadRequestError) GetLinks() ErrorBadRequestErrorLinks {
-	if o == nil {
+func (e *ErrorBadRequestError) GetLinks() ErrorBadRequestErrorLinks {
+	if e == nil {
 		return ErrorBadRequestErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorBadRequestError) GetSource() *ErrorBadRequestErrorSource {
-	if o == nil {
+func (e *ErrorBadRequestError) GetSource() *ErrorBadRequestErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorBadRequestError) GetMeta() ErrorBadRequestErrorMeta {
-	if o == nil {
+func (e *ErrorBadRequestError) GetMeta() ErrorBadRequestErrorMeta {
+	if e == nil {
 		return ErrorBadRequestErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }

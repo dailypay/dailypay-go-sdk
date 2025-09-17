@@ -19,33 +19,33 @@ func (f FundingSourceResource) MarshalJSON() ([]byte, error) {
 }
 
 func (f *FundingSourceResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &f, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &f, "", false, []string{"id", "type", "attributes", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *FundingSourceResource) GetID() string {
-	if o == nil {
+func (f *FundingSourceResource) GetID() string {
+	if f == nil {
 		return ""
 	}
-	return o.ID
+	return f.ID
 }
 
-func (o *FundingSourceResource) GetType() string {
+func (f *FundingSourceResource) GetType() string {
 	return "funding_sources"
 }
 
-func (o *FundingSourceResource) GetAttributes() FundingSourceAttributes {
-	if o == nil {
+func (f *FundingSourceResource) GetAttributes() FundingSourceAttributes {
+	if f == nil {
 		return FundingSourceAttributes{}
 	}
-	return o.Attributes
+	return f.Attributes
 }
 
-func (o *FundingSourceResource) GetRelationships() FundingSourceRelationships {
-	if o == nil {
+func (f *FundingSourceResource) GetRelationships() FundingSourceRelationships {
+	if f == nil {
 		return FundingSourceRelationships{}
 	}
-	return o.Relationships
+	return f.Relationships
 }

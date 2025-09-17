@@ -18,17 +18,17 @@ func (r ReadOrganizationGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadOrganizationGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadOrganizationGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadOrganizationGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadOrganizationRequest struct {
@@ -36,11 +36,11 @@ type ReadOrganizationRequest struct {
 	OrganizationID string `pathParam:"style=simple,explode=false,name=organization_id"`
 }
 
-func (o *ReadOrganizationRequest) GetOrganizationID() string {
-	if o == nil {
+func (r *ReadOrganizationRequest) GetOrganizationID() string {
+	if r == nil {
 		return ""
 	}
-	return o.OrganizationID
+	return r.OrganizationID
 }
 
 type ReadOrganizationResponse struct {
@@ -49,16 +49,16 @@ type ReadOrganizationResponse struct {
 	OrganizationData *components.OrganizationData
 }
 
-func (o *ReadOrganizationResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadOrganizationResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadOrganizationResponse) GetOrganizationData() *components.OrganizationData {
-	if o == nil {
+func (r *ReadOrganizationResponse) GetOrganizationData() *components.OrganizationData {
+	if r == nil {
 		return nil
 	}
-	return o.OrganizationData
+	return r.OrganizationData
 }

@@ -10,30 +10,30 @@ type JobRelationships struct {
 	DirectDepositDefaultCard       *AccountRelationship       `json:"direct_deposit_default_card,omitempty"`
 }
 
-func (o *JobRelationships) GetPerson() PersonRelationshipReadOnly {
-	if o == nil {
+func (j *JobRelationships) GetPerson() PersonRelationshipReadOnly {
+	if j == nil {
 		return PersonRelationshipReadOnly{}
 	}
-	return o.Person
+	return j.Person
 }
 
-func (o *JobRelationships) GetOrganization() OrganizationRelationship {
-	if o == nil {
+func (j *JobRelationships) GetOrganization() OrganizationRelationship {
+	if j == nil {
 		return OrganizationRelationship{}
 	}
-	return o.Organization
+	return j.Organization
 }
 
-func (o *JobRelationships) GetDirectDepositDefaultDepository() *AccountRelationship {
-	if o == nil {
+func (j *JobRelationships) GetDirectDepositDefaultDepository() *AccountRelationship {
+	if j == nil {
 		return nil
 	}
-	return o.DirectDepositDefaultDepository
+	return j.DirectDepositDefaultDepository
 }
 
-func (o *JobRelationships) GetDirectDepositDefaultCard() *AccountRelationship {
-	if o == nil {
+func (j *JobRelationships) GetDirectDepositDefaultCard() *AccountRelationship {
+	if j == nil {
 		return nil
 	}
-	return o.DirectDepositDefaultCard
+	return j.DirectDepositDefaultCard
 }

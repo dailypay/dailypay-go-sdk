@@ -18,17 +18,17 @@ func (r ReadAccountGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadAccountGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadAccountGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadAccountGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadAccountRequest struct {
@@ -36,11 +36,11 @@ type ReadAccountRequest struct {
 	AccountID string `pathParam:"style=simple,explode=false,name=account_id"`
 }
 
-func (o *ReadAccountRequest) GetAccountID() string {
-	if o == nil {
+func (r *ReadAccountRequest) GetAccountID() string {
+	if r == nil {
 		return ""
 	}
-	return o.AccountID
+	return r.AccountID
 }
 
 type ReadAccountResponse struct {
@@ -49,16 +49,16 @@ type ReadAccountResponse struct {
 	AccountData *components.AccountDataOutput
 }
 
-func (o *ReadAccountResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadAccountResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadAccountResponse) GetAccountData() *components.AccountDataOutput {
-	if o == nil {
+func (r *ReadAccountResponse) GetAccountData() *components.AccountDataOutput {
+	if r == nil {
 		return nil
 	}
-	return o.AccountData
+	return r.AccountData
 }

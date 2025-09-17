@@ -7,9 +7,9 @@ type JobsData struct {
 	Data []JobResource `json:"data"`
 }
 
-func (o *JobsData) GetData() []JobResource {
-	if o == nil {
+func (j *JobsData) GetData() []JobResource {
+	if j == nil {
 		return []JobResource{}
 	}
-	return o.Data
+	return j.Data
 }

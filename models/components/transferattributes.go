@@ -99,66 +99,66 @@ func (t TransferAttributes) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferAttributes) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"amount", "currency", "status", "schedule", "submitted_at", "resolved_at", "fee"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *TransferAttributes) GetPreview() *bool {
-	if o == nil {
+func (t *TransferAttributes) GetPreview() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.Preview
+	return t.Preview
 }
 
-func (o *TransferAttributes) GetAmount() int64 {
-	if o == nil {
+func (t *TransferAttributes) GetAmount() int64 {
+	if t == nil {
 		return 0
 	}
-	return o.Amount
+	return t.Amount
 }
 
-func (o *TransferAttributes) GetCurrency() string {
-	if o == nil {
+func (t *TransferAttributes) GetCurrency() string {
+	if t == nil {
 		return ""
 	}
-	return o.Currency
+	return t.Currency
 }
 
-func (o *TransferAttributes) GetStatus() TransferAttributesStatus {
-	if o == nil {
+func (t *TransferAttributes) GetStatus() TransferAttributesStatus {
+	if t == nil {
 		return TransferAttributesStatus("")
 	}
-	return o.Status
+	return t.Status
 }
 
-func (o *TransferAttributes) GetSchedule() TransferAttributesSchedule {
-	if o == nil {
+func (t *TransferAttributes) GetSchedule() TransferAttributesSchedule {
+	if t == nil {
 		return TransferAttributesSchedule("")
 	}
-	return o.Schedule
+	return t.Schedule
 }
 
-func (o *TransferAttributes) GetSubmittedAt() time.Time {
-	if o == nil {
+func (t *TransferAttributes) GetSubmittedAt() time.Time {
+	if t == nil {
 		return time.Time{}
 	}
-	return o.SubmittedAt
+	return t.SubmittedAt
 }
 
-func (o *TransferAttributes) GetResolvedAt() *time.Time {
-	if o == nil {
+func (t *TransferAttributes) GetResolvedAt() *time.Time {
+	if t == nil {
 		return nil
 	}
-	return o.ResolvedAt
+	return t.ResolvedAt
 }
 
-func (o *TransferAttributes) GetFee() int64 {
-	if o == nil {
+func (t *TransferAttributes) GetFee() int64 {
+	if t == nil {
 		return 0
 	}
-	return o.Fee
+	return t.Fee
 }
 
 // TransferAttributesInput - An object representing a transfer of money from one account to another.
@@ -184,36 +184,36 @@ func (t TransferAttributesInput) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferAttributesInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"amount", "currency", "schedule"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *TransferAttributesInput) GetPreview() *bool {
-	if o == nil {
+func (t *TransferAttributesInput) GetPreview() *bool {
+	if t == nil {
 		return nil
 	}
-	return o.Preview
+	return t.Preview
 }
 
-func (o *TransferAttributesInput) GetAmount() int64 {
-	if o == nil {
+func (t *TransferAttributesInput) GetAmount() int64 {
+	if t == nil {
 		return 0
 	}
-	return o.Amount
+	return t.Amount
 }
 
-func (o *TransferAttributesInput) GetCurrency() string {
-	if o == nil {
+func (t *TransferAttributesInput) GetCurrency() string {
+	if t == nil {
 		return ""
 	}
-	return o.Currency
+	return t.Currency
 }
 
-func (o *TransferAttributesInput) GetSchedule() TransferAttributesSchedule {
-	if o == nil {
+func (t *TransferAttributesInput) GetSchedule() TransferAttributesSchedule {
+	if t == nil {
 		return TransferAttributesSchedule("")
 	}
-	return o.Schedule
+	return t.Schedule
 }

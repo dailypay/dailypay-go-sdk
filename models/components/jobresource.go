@@ -21,40 +21,40 @@ func (j JobResource) MarshalJSON() ([]byte, error) {
 }
 
 func (j *JobResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &j, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &j, "", false, []string{"type", "id", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *JobResource) GetType() string {
+func (j *JobResource) GetType() string {
 	return "jobs"
 }
 
-func (o *JobResource) GetID() string {
-	if o == nil {
+func (j *JobResource) GetID() string {
+	if j == nil {
 		return ""
 	}
-	return o.ID
+	return j.ID
 }
 
-func (o *JobResource) GetAttributes() JobAttributes {
-	if o == nil {
+func (j *JobResource) GetAttributes() JobAttributes {
+	if j == nil {
 		return JobAttributes{}
 	}
-	return o.Attributes
+	return j.Attributes
 }
 
-func (o *JobResource) GetLinks() JobLinks {
-	if o == nil {
+func (j *JobResource) GetLinks() JobLinks {
+	if j == nil {
 		return JobLinks{}
 	}
-	return o.Links
+	return j.Links
 }
 
-func (o *JobResource) GetRelationships() JobRelationships {
-	if o == nil {
+func (j *JobResource) GetRelationships() JobRelationships {
+	if j == nil {
 		return JobRelationships{}
 	}
-	return o.Relationships
+	return j.Relationships
 }

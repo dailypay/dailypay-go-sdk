@@ -18,17 +18,17 @@ func (u UpdateJobGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (u *UpdateJobGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &u, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *UpdateJobGlobals) GetVersion() *int64 {
-	if o == nil {
+func (u *UpdateJobGlobals) GetVersion() *int64 {
+	if u == nil {
 		return nil
 	}
-	return o.Version
+	return u.Version
 }
 
 type UpdateJobRequest struct {
@@ -37,18 +37,18 @@ type UpdateJobRequest struct {
 	JobUpdateData components.JobUpdateData `request:"mediaType=application/vnd.api+json"`
 }
 
-func (o *UpdateJobRequest) GetJobID() string {
-	if o == nil {
+func (u *UpdateJobRequest) GetJobID() string {
+	if u == nil {
 		return ""
 	}
-	return o.JobID
+	return u.JobID
 }
 
-func (o *UpdateJobRequest) GetJobUpdateData() components.JobUpdateData {
-	if o == nil {
+func (u *UpdateJobRequest) GetJobUpdateData() components.JobUpdateData {
+	if u == nil {
 		return components.JobUpdateData{}
 	}
-	return o.JobUpdateData
+	return u.JobUpdateData
 }
 
 type UpdateJobResponse struct {
@@ -57,16 +57,16 @@ type UpdateJobResponse struct {
 	JobData *components.JobData
 }
 
-func (o *UpdateJobResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UpdateJobResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UpdateJobResponse) GetJobData() *components.JobData {
-	if o == nil {
+func (u *UpdateJobResponse) GetJobData() *components.JobData {
+	if u == nil {
 		return nil
 	}
-	return o.JobData
+	return u.JobData
 }

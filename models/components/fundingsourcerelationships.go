@@ -7,16 +7,16 @@ type FundingSourceRelationships struct {
 	Transfer TransferRelationship `json:"transfer"`
 }
 
-func (o *FundingSourceRelationships) GetSource() PaycheckRelationship {
-	if o == nil {
+func (f *FundingSourceRelationships) GetSource() PaycheckRelationship {
+	if f == nil {
 		return PaycheckRelationship{}
 	}
-	return o.Source
+	return f.Source
 }
 
-func (o *FundingSourceRelationships) GetTransfer() TransferRelationship {
-	if o == nil {
+func (f *FundingSourceRelationships) GetTransfer() TransferRelationship {
+	if f == nil {
 		return TransferRelationship{}
 	}
-	return o.Transfer
+	return f.Transfer
 }

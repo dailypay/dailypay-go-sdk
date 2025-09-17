@@ -91,25 +91,25 @@ type WageRate struct {
 	Frequency Frequency `json:"frequency"`
 }
 
-func (o *WageRate) GetAmount() int64 {
-	if o == nil {
+func (w *WageRate) GetAmount() int64 {
+	if w == nil {
 		return 0
 	}
-	return o.Amount
+	return w.Amount
 }
 
-func (o *WageRate) GetCurrency() string {
-	if o == nil {
+func (w *WageRate) GetCurrency() string {
+	if w == nil {
 		return ""
 	}
-	return o.Currency
+	return w.Currency
 }
 
-func (o *WageRate) GetFrequency() Frequency {
-	if o == nil {
+func (w *WageRate) GetFrequency() Frequency {
+	if w == nil {
 		return Frequency("")
 	}
-	return o.Frequency
+	return w.Frequency
 }
 
 // DirectDepositStatus - - `SETUP_REQUIRED` Direct deposit is not set up for this Job. Update this resource's relationships to set up direct deposit.
@@ -167,67 +167,67 @@ type JobAttributes struct {
 	DirectDepositStatus DirectDepositStatus `json:"direct_deposit_status"`
 }
 
-func (o *JobAttributes) GetExternalIdentifiers() map[string]string {
-	if o == nil {
+func (j *JobAttributes) GetExternalIdentifiers() map[string]string {
+	if j == nil {
 		return nil
 	}
-	return o.ExternalIdentifiers
+	return j.ExternalIdentifiers
 }
 
-func (o *JobAttributes) GetFirstName() *string {
-	if o == nil {
+func (j *JobAttributes) GetFirstName() *string {
+	if j == nil {
 		return nil
 	}
-	return o.FirstName
+	return j.FirstName
 }
 
-func (o *JobAttributes) GetLastName() *string {
-	if o == nil {
+func (j *JobAttributes) GetLastName() *string {
+	if j == nil {
 		return nil
 	}
-	return o.LastName
+	return j.LastName
 }
 
-func (o *JobAttributes) GetActivationStatus() *ActivationStatus {
-	if o == nil {
+func (j *JobAttributes) GetActivationStatus() *ActivationStatus {
+	if j == nil {
 		return nil
 	}
-	return o.ActivationStatus
+	return j.ActivationStatus
 }
 
-func (o *JobAttributes) GetWageRate() WageRate {
-	if o == nil {
+func (j *JobAttributes) GetWageRate() WageRate {
+	if j == nil {
 		return WageRate{}
 	}
-	return o.WageRate
+	return j.WageRate
 }
 
-func (o *JobAttributes) GetTitle() *string {
-	if o == nil {
+func (j *JobAttributes) GetTitle() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Title
+	return j.Title
 }
 
-func (o *JobAttributes) GetDepartment() *string {
-	if o == nil {
+func (j *JobAttributes) GetDepartment() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Department
+	return j.Department
 }
 
-func (o *JobAttributes) GetLocation() *string {
-	if o == nil {
+func (j *JobAttributes) GetLocation() *string {
+	if j == nil {
 		return nil
 	}
-	return o.Location
+	return j.Location
 }
 
-func (o *JobAttributes) GetDirectDepositStatus() DirectDepositStatus {
-	if o == nil {
+func (j *JobAttributes) GetDirectDepositStatus() DirectDepositStatus {
+	if j == nil {
 		return DirectDepositStatus("")
 	}
-	return o.DirectDepositStatus
+	return j.DirectDepositStatus
 }
 
 type JobAttributesInput struct {
@@ -238,9 +238,9 @@ type JobAttributesInput struct {
 	ActivationStatus *ActivationStatus `json:"activation_status,omitempty"`
 }
 
-func (o *JobAttributesInput) GetActivationStatus() *ActivationStatus {
-	if o == nil {
+func (j *JobAttributesInput) GetActivationStatus() *ActivationStatus {
+	if j == nil {
 		return nil
 	}
-	return o.ActivationStatus
+	return j.ActivationStatus
 }

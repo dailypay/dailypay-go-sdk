@@ -16,19 +16,19 @@ func (j JobIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (j *JobIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &j, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &j, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *JobIdentifier) GetType() string {
+func (j *JobIdentifier) GetType() string {
 	return "jobs"
 }
 
-func (o *JobIdentifier) GetID() string {
-	if o == nil {
+func (j *JobIdentifier) GetID() string {
+	if j == nil {
 		return ""
 	}
-	return o.ID
+	return j.ID
 }

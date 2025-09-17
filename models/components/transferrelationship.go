@@ -6,9 +6,9 @@ type TransferRelationship struct {
 	Data TransferIdentifier `json:"data"`
 }
 
-func (o *TransferRelationship) GetData() TransferIdentifier {
-	if o == nil {
+func (t *TransferRelationship) GetData() TransferIdentifier {
+	if t == nil {
 		return TransferIdentifier{}
 	}
-	return o.Data
+	return t.Data
 }

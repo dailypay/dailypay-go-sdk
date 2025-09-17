@@ -68,71 +68,71 @@ func (p PaycheckAttributes) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaycheckAttributes) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"status", "pay_period_ends_at", "pay_period_starts_at", "deposit_expected_at", "total_debited", "gross_earnings", "employer_withholdings", "net_earnings", "currency"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PaycheckAttributes) GetStatus() PaycheckAttributesStatus {
-	if o == nil {
+func (p *PaycheckAttributes) GetStatus() PaycheckAttributesStatus {
+	if p == nil {
 		return PaycheckAttributesStatus("")
 	}
-	return o.Status
+	return p.Status
 }
 
-func (o *PaycheckAttributes) GetPayPeriodEndsAt() time.Time {
-	if o == nil {
+func (p *PaycheckAttributes) GetPayPeriodEndsAt() time.Time {
+	if p == nil {
 		return time.Time{}
 	}
-	return o.PayPeriodEndsAt
+	return p.PayPeriodEndsAt
 }
 
-func (o *PaycheckAttributes) GetPayPeriodStartsAt() time.Time {
-	if o == nil {
+func (p *PaycheckAttributes) GetPayPeriodStartsAt() time.Time {
+	if p == nil {
 		return time.Time{}
 	}
-	return o.PayPeriodStartsAt
+	return p.PayPeriodStartsAt
 }
 
-func (o *PaycheckAttributes) GetDepositExpectedAt() time.Time {
-	if o == nil {
+func (p *PaycheckAttributes) GetDepositExpectedAt() time.Time {
+	if p == nil {
 		return time.Time{}
 	}
-	return o.DepositExpectedAt
+	return p.DepositExpectedAt
 }
 
-func (o *PaycheckAttributes) GetTotalDebited() *int64 {
-	if o == nil {
+func (p *PaycheckAttributes) GetTotalDebited() *int64 {
+	if p == nil {
 		return nil
 	}
-	return o.TotalDebited
+	return p.TotalDebited
 }
 
-func (o *PaycheckAttributes) GetGrossEarnings() int64 {
-	if o == nil {
+func (p *PaycheckAttributes) GetGrossEarnings() int64 {
+	if p == nil {
 		return 0
 	}
-	return o.GrossEarnings
+	return p.GrossEarnings
 }
 
-func (o *PaycheckAttributes) GetEmployerWithholdings() *int64 {
-	if o == nil {
+func (p *PaycheckAttributes) GetEmployerWithholdings() *int64 {
+	if p == nil {
 		return nil
 	}
-	return o.EmployerWithholdings
+	return p.EmployerWithholdings
 }
 
-func (o *PaycheckAttributes) GetNetEarnings() *int64 {
-	if o == nil {
+func (p *PaycheckAttributes) GetNetEarnings() *int64 {
+	if p == nil {
 		return nil
 	}
-	return o.NetEarnings
+	return p.NetEarnings
 }
 
-func (o *PaycheckAttributes) GetCurrency() string {
-	if o == nil {
+func (p *PaycheckAttributes) GetCurrency() string {
+	if p == nil {
 		return ""
 	}
-	return o.Currency
+	return p.Currency
 }
