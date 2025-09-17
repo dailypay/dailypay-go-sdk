@@ -16,19 +16,19 @@ func (a AccountIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *AccountIdentifier) GetType() string {
+func (a *AccountIdentifier) GetType() string {
 	return "accounts"
 }
 
-func (o *AccountIdentifier) GetID() string {
-	if o == nil {
+func (a *AccountIdentifier) GetID() string {
+	if a == nil {
 		return ""
 	}
-	return o.ID
+	return a.ID
 }

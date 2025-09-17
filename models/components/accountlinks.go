@@ -7,9 +7,9 @@ type AccountLinks struct {
 	Self string `json:"self"`
 }
 
-func (o *AccountLinks) GetSelf() string {
-	if o == nil {
+func (a *AccountLinks) GetSelf() string {
+	if a == nil {
 		return ""
 	}
-	return o.Self
+	return a.Self
 }

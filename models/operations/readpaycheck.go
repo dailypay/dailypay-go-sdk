@@ -18,17 +18,17 @@ func (r ReadPaycheckGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadPaycheckGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadPaycheckGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadPaycheckGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadPaycheckRequest struct {
@@ -36,11 +36,11 @@ type ReadPaycheckRequest struct {
 	PaycheckID string `pathParam:"style=simple,explode=false,name=paycheck_id"`
 }
 
-func (o *ReadPaycheckRequest) GetPaycheckID() string {
-	if o == nil {
+func (r *ReadPaycheckRequest) GetPaycheckID() string {
+	if r == nil {
 		return ""
 	}
-	return o.PaycheckID
+	return r.PaycheckID
 }
 
 type ReadPaycheckResponse struct {
@@ -49,16 +49,16 @@ type ReadPaycheckResponse struct {
 	PaycheckData *components.PaycheckData
 }
 
-func (o *ReadPaycheckResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadPaycheckResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadPaycheckResponse) GetPaycheckData() *components.PaycheckData {
-	if o == nil {
+func (r *ReadPaycheckResponse) GetPaycheckData() *components.PaycheckData {
+	if r == nil {
 		return nil
 	}
-	return o.PaycheckData
+	return r.PaycheckData
 }

@@ -6,9 +6,9 @@ type PaycheckLinks struct {
 	Self string `json:"self"`
 }
 
-func (o *PaycheckLinks) GetSelf() string {
-	if o == nil {
+func (p *PaycheckLinks) GetSelf() string {
+	if p == nil {
 		return ""
 	}
-	return o.Self
+	return p.Self
 }

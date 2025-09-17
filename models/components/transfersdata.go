@@ -8,16 +8,16 @@ type TransfersData struct {
 	Included []FundingSourceResource `json:"included,omitempty"`
 }
 
-func (o *TransfersData) GetData() []TransferResource {
-	if o == nil {
+func (t *TransfersData) GetData() []TransferResource {
+	if t == nil {
 		return []TransferResource{}
 	}
-	return o.Data
+	return t.Data
 }
 
-func (o *TransfersData) GetIncluded() []FundingSourceResource {
-	if o == nil {
+func (t *TransfersData) GetIncluded() []FundingSourceResource {
+	if t == nil {
 		return nil
 	}
-	return o.Included
+	return t.Included
 }

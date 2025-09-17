@@ -18,17 +18,17 @@ func (c CreateAccountGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateAccountGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *CreateAccountGlobals) GetVersion() *int64 {
-	if o == nil {
+func (c *CreateAccountGlobals) GetVersion() *int64 {
+	if c == nil {
 		return nil
 	}
-	return o.Version
+	return c.Version
 }
 
 type CreateAccountResponse struct {
@@ -37,16 +37,16 @@ type CreateAccountResponse struct {
 	AccountData *components.AccountDataOutput
 }
 
-func (o *CreateAccountResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CreateAccountResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CreateAccountResponse) GetAccountData() *components.AccountDataOutput {
-	if o == nil {
+func (c *CreateAccountResponse) GetAccountData() *components.AccountDataOutput {
+	if c == nil {
 		return nil
 	}
-	return o.AccountData
+	return c.AccountData
 }

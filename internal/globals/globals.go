@@ -17,15 +17,15 @@ func (g Globals) MarshalJSON() ([]byte, error) {
 }
 
 func (g *Globals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &g, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &g, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *Globals) GetVersion() *int64 {
-	if o == nil {
+func (g *Globals) GetVersion() *int64 {
+	if g == nil {
 		return nil
 	}
-	return o.Version
+	return g.Version
 }

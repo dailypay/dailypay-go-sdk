@@ -6,9 +6,9 @@ type TransferLinks struct {
 	Self string `json:"self"`
 }
 
-func (o *TransferLinks) GetSelf() string {
-	if o == nil {
+func (t *TransferLinks) GetSelf() string {
+	if t == nil {
 		return ""
 	}
-	return o.Self
+	return t.Self
 }

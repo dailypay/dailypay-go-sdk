@@ -18,17 +18,17 @@ func (l ListTransfersGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListTransfersGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListTransfersGlobals) GetVersion() *int64 {
-	if o == nil {
+func (l *ListTransfersGlobals) GetVersion() *int64 {
+	if l == nil {
 		return nil
 	}
-	return o.Version
+	return l.Version
 }
 
 type ListTransfersRequest struct {
@@ -43,25 +43,25 @@ type ListTransfersRequest struct {
 	FilterBy *string `queryParam:"style=form,explode=true,name=filter"`
 }
 
-func (o *ListTransfersRequest) GetFilterPersonID() *string {
-	if o == nil {
+func (l *ListTransfersRequest) GetFilterPersonID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPersonID
+	return l.FilterPersonID
 }
 
-func (o *ListTransfersRequest) GetInclude() *string {
-	if o == nil {
+func (l *ListTransfersRequest) GetInclude() *string {
+	if l == nil {
 		return nil
 	}
-	return o.Include
+	return l.Include
 }
 
-func (o *ListTransfersRequest) GetFilterBy() *string {
-	if o == nil {
+func (l *ListTransfersRequest) GetFilterBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterBy
+	return l.FilterBy
 }
 
 type ListTransfersResponse struct {
@@ -70,16 +70,16 @@ type ListTransfersResponse struct {
 	TransfersData *components.TransfersData
 }
 
-func (o *ListTransfersResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (l *ListTransfersResponse) GetHTTPMeta() components.HTTPMetadata {
+	if l == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return l.HTTPMeta
 }
 
-func (o *ListTransfersResponse) GetTransfersData() *components.TransfersData {
-	if o == nil {
+func (l *ListTransfersResponse) GetTransfersData() *components.TransfersData {
+	if l == nil {
 		return nil
 	}
-	return o.TransfersData
+	return l.TransfersData
 }

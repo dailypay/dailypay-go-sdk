@@ -18,17 +18,17 @@ func (r ReadPersonGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (r *ReadPersonGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &r, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &r, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ReadPersonGlobals) GetVersion() *int64 {
-	if o == nil {
+func (r *ReadPersonGlobals) GetVersion() *int64 {
+	if r == nil {
 		return nil
 	}
-	return o.Version
+	return r.Version
 }
 
 type ReadPersonRequest struct {
@@ -36,11 +36,11 @@ type ReadPersonRequest struct {
 	PersonID string `pathParam:"style=simple,explode=false,name=person_id"`
 }
 
-func (o *ReadPersonRequest) GetPersonID() string {
-	if o == nil {
+func (r *ReadPersonRequest) GetPersonID() string {
+	if r == nil {
 		return ""
 	}
-	return o.PersonID
+	return r.PersonID
 }
 
 type ReadPersonResponse struct {
@@ -49,16 +49,16 @@ type ReadPersonResponse struct {
 	PersonData *components.PersonData
 }
 
-func (o *ReadPersonResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (r *ReadPersonResponse) GetHTTPMeta() components.HTTPMetadata {
+	if r == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return r.HTTPMeta
 }
 
-func (o *ReadPersonResponse) GetPersonData() *components.PersonData {
-	if o == nil {
+func (r *ReadPersonResponse) GetPersonData() *components.PersonData {
+	if r == nil {
 		return nil
 	}
-	return o.PersonData
+	return r.PersonData
 }

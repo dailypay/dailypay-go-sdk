@@ -7,11 +7,11 @@ type ErrorTransferCreateErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorTransferCreateErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorTransferCreateErrorSource - Location in the request that may have caused the error.
@@ -24,25 +24,25 @@ type ErrorTransferCreateErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorTransferCreateErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorTransferCreateErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorTransferCreateErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorTransferCreateErrorMeta - Additional information about the error.
@@ -53,18 +53,18 @@ type ErrorTransferCreateErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorTransferCreateErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorTransferCreateErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorTransferCreateErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 type ErrorTransferCreateError struct {
@@ -82,44 +82,44 @@ type ErrorTransferCreateError struct {
 	Meta ErrorTransferCreateErrorMeta `json:"meta"`
 }
 
-func (o *ErrorTransferCreateError) GetCode() string {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetCode() string {
+	if e == nil {
 		return ""
 	}
-	return o.Code
+	return e.Code
 }
 
-func (o *ErrorTransferCreateError) GetStatus() string {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorTransferCreateError) GetDetail() string {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorTransferCreateError) GetLinks() ErrorTransferCreateErrorLinks {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetLinks() ErrorTransferCreateErrorLinks {
+	if e == nil {
 		return ErrorTransferCreateErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorTransferCreateError) GetSource() *ErrorTransferCreateErrorSource {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetSource() *ErrorTransferCreateErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorTransferCreateError) GetMeta() ErrorTransferCreateErrorMeta {
-	if o == nil {
+func (e *ErrorTransferCreateError) GetMeta() ErrorTransferCreateErrorMeta {
+	if e == nil {
 		return ErrorTransferCreateErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }

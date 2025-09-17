@@ -16,19 +16,19 @@ func (p PersonIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PersonIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PersonIdentifier) GetType() string {
+func (p *PersonIdentifier) GetType() string {
 	return "people"
 }
 
-func (o *PersonIdentifier) GetID() string {
-	if o == nil {
+func (p *PersonIdentifier) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }

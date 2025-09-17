@@ -10,16 +10,16 @@ type Health200 struct {
 	Version string `json:"version"`
 }
 
-func (o *Health200) GetStatus() string {
-	if o == nil {
+func (h *Health200) GetStatus() string {
+	if h == nil {
 		return ""
 	}
-	return o.Status
+	return h.Status
 }
 
-func (o *Health200) GetVersion() string {
-	if o == nil {
+func (h *Health200) GetVersion() string {
+	if h == nil {
 		return ""
 	}
-	return o.Version
+	return h.Version
 }

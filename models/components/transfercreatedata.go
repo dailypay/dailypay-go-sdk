@@ -6,9 +6,9 @@ type TransferCreateData struct {
 	Data TransferCreateResource `json:"data"`
 }
 
-func (o *TransferCreateData) GetData() TransferCreateResource {
-	if o == nil {
+func (t *TransferCreateData) GetData() TransferCreateResource {
+	if t == nil {
 		return TransferCreateResource{}
 	}
-	return o.Data
+	return t.Data
 }

@@ -19,26 +19,26 @@ func (a AccountResourceInput) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountResourceInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"type", "attributes", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *AccountResourceInput) GetType() string {
+func (a *AccountResourceInput) GetType() string {
 	return "accounts"
 }
 
-func (o *AccountResourceInput) GetAttributes() AccountAttributesInput {
-	if o == nil {
+func (a *AccountResourceInput) GetAttributes() AccountAttributesInput {
+	if a == nil {
 		return AccountAttributesInput{}
 	}
-	return o.Attributes
+	return a.Attributes
 }
 
-func (o *AccountResourceInput) GetRelationships() AccountRelationships {
-	if o == nil {
+func (a *AccountResourceInput) GetRelationships() AccountRelationships {
+	if a == nil {
 		return AccountRelationships{}
 	}
-	return o.Relationships
+	return a.Relationships
 }

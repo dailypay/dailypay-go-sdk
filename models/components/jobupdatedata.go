@@ -20,35 +20,35 @@ func (d Data) MarshalJSON() ([]byte, error) {
 }
 
 func (d *Data) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &d, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *Data) GetType() string {
+func (d *Data) GetType() string {
 	return "jobs"
 }
 
-func (o *Data) GetID() string {
-	if o == nil {
+func (d *Data) GetID() string {
+	if d == nil {
 		return ""
 	}
-	return o.ID
+	return d.ID
 }
 
-func (o *Data) GetAttributes() *JobAttributesInput {
-	if o == nil {
+func (d *Data) GetAttributes() *JobAttributesInput {
+	if d == nil {
 		return nil
 	}
-	return o.Attributes
+	return d.Attributes
 }
 
-func (o *Data) GetRelationships() *JobRelationshipsInput {
-	if o == nil {
+func (d *Data) GetRelationships() *JobRelationshipsInput {
+	if d == nil {
 		return nil
 	}
-	return o.Relationships
+	return d.Relationships
 }
 
 type JobUpdateData struct {
@@ -56,9 +56,9 @@ type JobUpdateData struct {
 	Data Data `json:"data"`
 }
 
-func (o *JobUpdateData) GetData() Data {
-	if o == nil {
+func (j *JobUpdateData) GetData() Data {
+	if j == nil {
 		return Data{}
 	}
-	return o.Data
+	return j.Data
 }

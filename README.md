@@ -62,7 +62,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -100,7 +104,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -108,9 +116,9 @@ func main() {
 		IdempotencyKey: "ea9f2225-403b-4e2c-93b0-0eda090ffa65",
 		TransferCreateData: components.TransferCreateData{
 			Data: components.TransferCreateResource{
-				ID: dailypay.String("aba332a2-24a2-46de-8257-5040e71ab210"),
+				ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
 				Attributes: components.TransferAttributesInput{
-					Preview:  dailypay.Bool(true),
+					Preview:  dailypay.Pointer(true),
 					Amount:   2500,
 					Currency: "USD",
 					Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,
@@ -155,8 +163,8 @@ This SDK supports the following security schemes globally:
 
 | Name                          | Type   | Scheme       |
 | ----------------------------- | ------ | ------------ |
-| `OauthUserToken`              | oauth2 | OAuth2 token |
 | `OauthClientCredentialsToken` | oauth2 | OAuth2 token |
+| `OauthUserToken`              | oauth2 | OAuth2 token |
 
 You can set the security parameters through the `WithSecurity` option when initializing the SDK client instance. The selected scheme will be used by default to authenticate with the API for all operations that support it. For example:
 ```go
@@ -175,7 +183,11 @@ func main() {
 
 	s := dailypay.New(
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 		dailypay.WithVersion(3),
 	)
@@ -315,7 +327,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -372,7 +388,11 @@ func main() {
 			}),
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -429,7 +449,11 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -510,7 +534,11 @@ func main() {
 		dailypay.WithEnvironment("dailypayuat"),
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -548,7 +576,11 @@ func main() {
 		dailypay.WithServerURL("https://api.dailypay.com"),
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthUserToken: dailypay.String("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+				ClientID:     "<YOUR_CLIENT_ID_HERE>",
+				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
+			},
 		}),
 	)
 
@@ -589,9 +621,9 @@ func main() {
 		CardNumber:      "4007589999999912",
 		ExpirationYear:  "2027",
 		ExpirationMonth: "02",
-		Cvv:             dailypay.String("123"),
+		Cvv:             dailypay.Pointer("123"),
 		AddressLineOne:  "123 Kebly Street",
-		AddressLineTwo:  dailypay.String("Unit C"),
+		AddressLineTwo:  dailypay.Pointer("Unit C"),
 		AddressCity:     "Fort Lee",
 		AddressState:    "NJ",
 		AddressZipCode:  "07237",

@@ -37,88 +37,88 @@ type CreateGenericCardTokenRequest struct {
 	AddressCountry string `json:"address_country"`
 }
 
-func (o *CreateGenericCardTokenRequest) GetFirstName() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetFirstName() string {
+	if c == nil {
 		return ""
 	}
-	return o.FirstName
+	return c.FirstName
 }
 
-func (o *CreateGenericCardTokenRequest) GetLastName() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetLastName() string {
+	if c == nil {
 		return ""
 	}
-	return o.LastName
+	return c.LastName
 }
 
-func (o *CreateGenericCardTokenRequest) GetCardNumber() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetCardNumber() string {
+	if c == nil {
 		return ""
 	}
-	return o.CardNumber
+	return c.CardNumber
 }
 
-func (o *CreateGenericCardTokenRequest) GetExpirationYear() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetExpirationYear() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationYear
+	return c.ExpirationYear
 }
 
-func (o *CreateGenericCardTokenRequest) GetExpirationMonth() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetExpirationMonth() string {
+	if c == nil {
 		return ""
 	}
-	return o.ExpirationMonth
+	return c.ExpirationMonth
 }
 
-func (o *CreateGenericCardTokenRequest) GetCvv() *string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetCvv() *string {
+	if c == nil {
 		return nil
 	}
-	return o.Cvv
+	return c.Cvv
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressLineOne() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressLineOne() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressLineOne
+	return c.AddressLineOne
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressLineTwo() *string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressLineTwo() *string {
+	if c == nil {
 		return nil
 	}
-	return o.AddressLineTwo
+	return c.AddressLineTwo
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressCity() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressCity() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressCity
+	return c.AddressCity
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressState() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressState() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressState
+	return c.AddressState
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressZipCode() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressZipCode() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressZipCode
+	return c.AddressZipCode
 }
 
-func (o *CreateGenericCardTokenRequest) GetAddressCountry() string {
-	if o == nil {
+func (c *CreateGenericCardTokenRequest) GetAddressCountry() string {
+	if c == nil {
 		return ""
 	}
-	return o.AddressCountry
+	return c.AddressCountry
 }
 
 // CreateGenericCardTokenResponseBody - Returns an opaque string representing the card details.
@@ -129,11 +129,11 @@ type CreateGenericCardTokenResponseBody struct {
 	Token string `json:"token"`
 }
 
-func (o *CreateGenericCardTokenResponseBody) GetToken() string {
-	if o == nil {
+func (c *CreateGenericCardTokenResponseBody) GetToken() string {
+	if c == nil {
 		return ""
 	}
-	return o.Token
+	return c.Token
 }
 
 type CreateGenericCardTokenResponse struct {
@@ -143,16 +143,16 @@ type CreateGenericCardTokenResponse struct {
 	Object *CreateGenericCardTokenResponseBody
 }
 
-func (o *CreateGenericCardTokenResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (c *CreateGenericCardTokenResponse) GetHTTPMeta() components.HTTPMetadata {
+	if c == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return c.HTTPMeta
 }
 
-func (o *CreateGenericCardTokenResponse) GetObject() *CreateGenericCardTokenResponseBody {
-	if o == nil {
+func (c *CreateGenericCardTokenResponse) GetObject() *CreateGenericCardTokenResponseBody {
+	if c == nil {
 		return nil
 	}
-	return o.Object
+	return c.Object
 }

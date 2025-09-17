@@ -16,19 +16,19 @@ func (t TransferIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *TransferIdentifier) GetType() string {
+func (t *TransferIdentifier) GetType() string {
 	return "transfers"
 }
 
-func (o *TransferIdentifier) GetID() string {
-	if o == nil {
+func (t *TransferIdentifier) GetID() string {
+	if t == nil {
 		return ""
 	}
-	return o.ID
+	return t.ID
 }

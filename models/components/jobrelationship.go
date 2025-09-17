@@ -6,9 +6,9 @@ type JobRelationship struct {
 	Data JobIdentifier `json:"data"`
 }
 
-func (o *JobRelationship) GetData() JobIdentifier {
-	if o == nil {
+func (j *JobRelationship) GetData() JobIdentifier {
+	if j == nil {
 		return JobIdentifier{}
 	}
-	return o.Data
+	return j.Data
 }

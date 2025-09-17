@@ -12,11 +12,11 @@ type ErrorForbiddenErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorForbiddenErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorForbiddenErrorSource - Location in the request that may have caused the error.
@@ -29,25 +29,25 @@ type ErrorForbiddenErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorForbiddenErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorForbiddenErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorForbiddenErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorForbiddenErrorMeta - Additional information about the error.
@@ -58,18 +58,18 @@ type ErrorForbiddenErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorForbiddenErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorForbiddenErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorForbiddenErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 // ErrorForbiddenErrorCode - A code that indicates what went wrong.
@@ -111,44 +111,44 @@ type ErrorForbiddenError struct {
 	Code ErrorForbiddenErrorCode `json:"code"`
 }
 
-func (o *ErrorForbiddenError) GetStatus() string {
-	if o == nil {
+func (e *ErrorForbiddenError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorForbiddenError) GetDetail() string {
-	if o == nil {
+func (e *ErrorForbiddenError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorForbiddenError) GetLinks() ErrorForbiddenErrorLinks {
-	if o == nil {
+func (e *ErrorForbiddenError) GetLinks() ErrorForbiddenErrorLinks {
+	if e == nil {
 		return ErrorForbiddenErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorForbiddenError) GetSource() *ErrorForbiddenErrorSource {
-	if o == nil {
+func (e *ErrorForbiddenError) GetSource() *ErrorForbiddenErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorForbiddenError) GetMeta() ErrorForbiddenErrorMeta {
-	if o == nil {
+func (e *ErrorForbiddenError) GetMeta() ErrorForbiddenErrorMeta {
+	if e == nil {
 		return ErrorForbiddenErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }
 
-func (o *ErrorForbiddenError) GetCode() ErrorForbiddenErrorCode {
-	if o == nil {
+func (e *ErrorForbiddenError) GetCode() ErrorForbiddenErrorCode {
+	if e == nil {
 		return ErrorForbiddenErrorCode("")
 	}
-	return o.Code
+	return e.Code
 }

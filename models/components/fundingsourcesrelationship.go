@@ -6,9 +6,9 @@ type FundingSourcesRelationship struct {
 	Data []FundingSourceIdentifier `json:"data"`
 }
 
-func (o *FundingSourcesRelationship) GetData() []FundingSourceIdentifier {
-	if o == nil {
+func (f *FundingSourcesRelationship) GetData() []FundingSourceIdentifier {
+	if f == nil {
 		return []FundingSourceIdentifier{}
 	}
-	return o.Data
+	return f.Data
 }

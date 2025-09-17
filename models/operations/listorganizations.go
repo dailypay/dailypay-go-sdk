@@ -18,17 +18,17 @@ func (l ListOrganizationsGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListOrganizationsGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListOrganizationsGlobals) GetVersion() *int64 {
-	if o == nil {
+func (l *ListOrganizationsGlobals) GetVersion() *int64 {
+	if l == nil {
 		return nil
 	}
-	return o.Version
+	return l.Version
 }
 
 type ListOrganizationsRequest struct {
@@ -36,11 +36,11 @@ type ListOrganizationsRequest struct {
 	FilterBy *string `queryParam:"style=form,explode=true,name=filter"`
 }
 
-func (o *ListOrganizationsRequest) GetFilterBy() *string {
-	if o == nil {
+func (l *ListOrganizationsRequest) GetFilterBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterBy
+	return l.FilterBy
 }
 
 type ListOrganizationsResponse struct {
@@ -49,16 +49,16 @@ type ListOrganizationsResponse struct {
 	OrganizationsData *components.OrganizationsData
 }
 
-func (o *ListOrganizationsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (l *ListOrganizationsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if l == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return l.HTTPMeta
 }
 
-func (o *ListOrganizationsResponse) GetOrganizationsData() *components.OrganizationsData {
-	if o == nil {
+func (l *ListOrganizationsResponse) GetOrganizationsData() *components.OrganizationsData {
+	if l == nil {
 		return nil
 	}
-	return o.OrganizationsData
+	return l.OrganizationsData
 }

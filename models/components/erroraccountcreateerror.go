@@ -7,11 +7,11 @@ type ErrorAccountCreateErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorAccountCreateErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorAccountCreateErrorSource - Location in the request that may have caused the error.
@@ -24,25 +24,25 @@ type ErrorAccountCreateErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorAccountCreateErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorAccountCreateErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorAccountCreateErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorAccountCreateErrorMeta - Additional information about the error.
@@ -53,18 +53,18 @@ type ErrorAccountCreateErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorAccountCreateErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorAccountCreateErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorAccountCreateErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 type ErrorAccountCreateError struct {
@@ -82,44 +82,44 @@ type ErrorAccountCreateError struct {
 	Meta ErrorAccountCreateErrorMeta `json:"meta"`
 }
 
-func (o *ErrorAccountCreateError) GetCode() string {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetCode() string {
+	if e == nil {
 		return ""
 	}
-	return o.Code
+	return e.Code
 }
 
-func (o *ErrorAccountCreateError) GetStatus() string {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorAccountCreateError) GetDetail() string {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorAccountCreateError) GetLinks() ErrorAccountCreateErrorLinks {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetLinks() ErrorAccountCreateErrorLinks {
+	if e == nil {
 		return ErrorAccountCreateErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorAccountCreateError) GetSource() *ErrorAccountCreateErrorSource {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetSource() *ErrorAccountCreateErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorAccountCreateError) GetMeta() ErrorAccountCreateErrorMeta {
-	if o == nil {
+func (e *ErrorAccountCreateError) GetMeta() ErrorAccountCreateErrorMeta {
+	if e == nil {
 		return ErrorAccountCreateErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }

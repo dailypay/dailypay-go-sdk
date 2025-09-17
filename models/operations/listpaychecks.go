@@ -19,17 +19,17 @@ func (l ListPaychecksGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListPaychecksGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListPaychecksGlobals) GetVersion() *int64 {
-	if o == nil {
+func (l *ListPaychecksGlobals) GetVersion() *int64 {
+	if l == nil {
 		return nil
 	}
-	return o.Version
+	return l.Version
 }
 
 type ListPaychecksRequest struct {
@@ -58,73 +58,73 @@ func (l ListPaychecksRequest) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListPaychecksRequest) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListPaychecksRequest) GetFilterJobID() *string {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterJobID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterJobID
+	return l.FilterJobID
 }
 
-func (o *ListPaychecksRequest) GetFilterStatus() *components.FilterPaycheckStatus {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterStatus() *components.FilterPaycheckStatus {
+	if l == nil {
 		return nil
 	}
-	return o.FilterStatus
+	return l.FilterStatus
 }
 
-func (o *ListPaychecksRequest) GetFilterDepositExpectedAtGte() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterDepositExpectedAtGte() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterDepositExpectedAtGte
+	return l.FilterDepositExpectedAtGte
 }
 
-func (o *ListPaychecksRequest) GetFilterDepositExpectedAtLt() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterDepositExpectedAtLt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterDepositExpectedAtLt
+	return l.FilterDepositExpectedAtLt
 }
 
-func (o *ListPaychecksRequest) GetFilterPayPeriodEndsAtGte() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterPayPeriodEndsAtGte() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPayPeriodEndsAtGte
+	return l.FilterPayPeriodEndsAtGte
 }
 
-func (o *ListPaychecksRequest) GetFilterPayPeriodEndsAtLt() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterPayPeriodEndsAtLt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPayPeriodEndsAtLt
+	return l.FilterPayPeriodEndsAtLt
 }
 
-func (o *ListPaychecksRequest) GetFilterPayPeriodStartsAtGte() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterPayPeriodStartsAtGte() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPayPeriodStartsAtGte
+	return l.FilterPayPeriodStartsAtGte
 }
 
-func (o *ListPaychecksRequest) GetFilterPayPeriodStartsAtLt() *time.Time {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterPayPeriodStartsAtLt() *time.Time {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPayPeriodStartsAtLt
+	return l.FilterPayPeriodStartsAtLt
 }
 
-func (o *ListPaychecksRequest) GetFilterBy() *string {
-	if o == nil {
+func (l *ListPaychecksRequest) GetFilterBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterBy
+	return l.FilterBy
 }
 
 type ListPaychecksResponse struct {
@@ -133,16 +133,16 @@ type ListPaychecksResponse struct {
 	PaychecksData *components.PaychecksData
 }
 
-func (o *ListPaychecksResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (l *ListPaychecksResponse) GetHTTPMeta() components.HTTPMetadata {
+	if l == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return l.HTTPMeta
 }
 
-func (o *ListPaychecksResponse) GetPaychecksData() *components.PaychecksData {
-	if o == nil {
+func (l *ListPaychecksResponse) GetPaychecksData() *components.PaychecksData {
+	if l == nil {
 		return nil
 	}
-	return o.PaychecksData
+	return l.PaychecksData
 }

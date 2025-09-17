@@ -7,11 +7,11 @@ type ErrorJobUpdateErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorJobUpdateErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorJobUpdateErrorSource - Location in the request that may have caused the error.
@@ -24,25 +24,25 @@ type ErrorJobUpdateErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorJobUpdateErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorJobUpdateErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorJobUpdateErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorJobUpdateErrorMeta - Additional information about the error.
@@ -53,18 +53,18 @@ type ErrorJobUpdateErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorJobUpdateErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorJobUpdateErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorJobUpdateErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 type ErrorJobUpdateError struct {
@@ -82,44 +82,44 @@ type ErrorJobUpdateError struct {
 	Meta ErrorJobUpdateErrorMeta `json:"meta"`
 }
 
-func (o *ErrorJobUpdateError) GetCode() string {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetCode() string {
+	if e == nil {
 		return ""
 	}
-	return o.Code
+	return e.Code
 }
 
-func (o *ErrorJobUpdateError) GetStatus() string {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorJobUpdateError) GetDetail() string {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorJobUpdateError) GetLinks() ErrorJobUpdateErrorLinks {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetLinks() ErrorJobUpdateErrorLinks {
+	if e == nil {
 		return ErrorJobUpdateErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorJobUpdateError) GetSource() *ErrorJobUpdateErrorSource {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetSource() *ErrorJobUpdateErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorJobUpdateError) GetMeta() ErrorJobUpdateErrorMeta {
-	if o == nil {
+func (e *ErrorJobUpdateError) GetMeta() ErrorJobUpdateErrorMeta {
+	if e == nil {
 		return ErrorJobUpdateErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }

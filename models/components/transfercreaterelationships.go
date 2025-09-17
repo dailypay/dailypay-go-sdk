@@ -9,23 +9,23 @@ type TransferCreateRelationships struct {
 	Person      PersonRelationship  `json:"person"`
 }
 
-func (o *TransferCreateRelationships) GetOrigin() AccountRelationship {
-	if o == nil {
+func (t *TransferCreateRelationships) GetOrigin() AccountRelationship {
+	if t == nil {
 		return AccountRelationship{}
 	}
-	return o.Origin
+	return t.Origin
 }
 
-func (o *TransferCreateRelationships) GetDestination() AccountRelationship {
-	if o == nil {
+func (t *TransferCreateRelationships) GetDestination() AccountRelationship {
+	if t == nil {
 		return AccountRelationship{}
 	}
-	return o.Destination
+	return t.Destination
 }
 
-func (o *TransferCreateRelationships) GetPerson() PersonRelationship {
-	if o == nil {
+func (t *TransferCreateRelationships) GetPerson() PersonRelationship {
+	if t == nil {
 		return PersonRelationship{}
 	}
-	return o.Person
+	return t.Person
 }

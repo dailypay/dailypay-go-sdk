@@ -7,16 +7,16 @@ type PaycheckRelationships struct {
 	Job    JobRelationship    `json:"job"`
 }
 
-func (o *PaycheckRelationships) GetPerson() PersonRelationship {
-	if o == nil {
+func (p *PaycheckRelationships) GetPerson() PersonRelationship {
+	if p == nil {
 		return PersonRelationship{}
 	}
-	return o.Person
+	return p.Person
 }
 
-func (o *PaycheckRelationships) GetJob() JobRelationship {
-	if o == nil {
+func (p *PaycheckRelationships) GetJob() JobRelationship {
+	if p == nil {
 		return JobRelationship{}
 	}
-	return o.Job
+	return p.Job
 }

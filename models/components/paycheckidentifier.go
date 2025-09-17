@@ -16,19 +16,19 @@ func (p PaycheckIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaycheckIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PaycheckIdentifier) GetType() string {
+func (p *PaycheckIdentifier) GetType() string {
 	return "paychecks"
 }
 
-func (o *PaycheckIdentifier) GetID() string {
-	if o == nil {
+func (p *PaycheckIdentifier) GetID() string {
+	if p == nil {
 		return ""
 	}
-	return o.ID
+	return p.ID
 }

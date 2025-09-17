@@ -7,9 +7,9 @@ type PersonData struct {
 	Data PersonResource `json:"data"`
 }
 
-func (o *PersonData) GetData() PersonResource {
-	if o == nil {
+func (p *PersonData) GetData() PersonResource {
+	if p == nil {
 		return PersonResource{}
 	}
-	return o.Data
+	return p.Data
 }

@@ -16,19 +16,19 @@ func (f FundingSourceIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (f *FundingSourceIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &f, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &f, "", false, []string{"type", "id"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *FundingSourceIdentifier) GetType() string {
+func (f *FundingSourceIdentifier) GetType() string {
 	return "funding_sources"
 }
 
-func (o *FundingSourceIdentifier) GetID() string {
-	if o == nil {
+func (f *FundingSourceIdentifier) GetID() string {
+	if f == nil {
 		return ""
 	}
-	return o.ID
+	return f.ID
 }

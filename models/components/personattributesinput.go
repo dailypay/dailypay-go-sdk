@@ -9,9 +9,9 @@ type PersonAttributesInput struct {
 	StateOfResidence *string `json:"state_of_residence,omitempty"`
 }
 
-func (o *PersonAttributesInput) GetStateOfResidence() *string {
-	if o == nil {
+func (p *PersonAttributesInput) GetStateOfResidence() *string {
+	if p == nil {
 		return nil
 	}
-	return o.StateOfResidence
+	return p.StateOfResidence
 }

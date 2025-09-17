@@ -12,11 +12,11 @@ type ErrorUnexpectedErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorUnexpectedErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorUnexpectedErrorSource - Location in the request that may have caused the error.
@@ -29,25 +29,25 @@ type ErrorUnexpectedErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorUnexpectedErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorUnexpectedErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorUnexpectedErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorUnexpectedErrorMeta - Additional information about the error.
@@ -58,18 +58,18 @@ type ErrorUnexpectedErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorUnexpectedErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorUnexpectedErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorUnexpectedErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 // ErrorUnexpectedErrorCode - A code that indicates what went wrong.
@@ -111,44 +111,44 @@ type ErrorUnexpectedError struct {
 	Code ErrorUnexpectedErrorCode `json:"code"`
 }
 
-func (o *ErrorUnexpectedError) GetStatus() string {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorUnexpectedError) GetDetail() string {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorUnexpectedError) GetLinks() ErrorUnexpectedErrorLinks {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetLinks() ErrorUnexpectedErrorLinks {
+	if e == nil {
 		return ErrorUnexpectedErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorUnexpectedError) GetSource() *ErrorUnexpectedErrorSource {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetSource() *ErrorUnexpectedErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorUnexpectedError) GetMeta() ErrorUnexpectedErrorMeta {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetMeta() ErrorUnexpectedErrorMeta {
+	if e == nil {
 		return ErrorUnexpectedErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }
 
-func (o *ErrorUnexpectedError) GetCode() ErrorUnexpectedErrorCode {
-	if o == nil {
+func (e *ErrorUnexpectedError) GetCode() ErrorUnexpectedErrorCode {
+	if e == nil {
 		return ErrorUnexpectedErrorCode("")
 	}
-	return o.Code
+	return e.Code
 }

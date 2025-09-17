@@ -12,11 +12,11 @@ type ErrorNotFoundErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorNotFoundErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorNotFoundErrorSource - Location in the request that may have caused the error.
@@ -29,25 +29,25 @@ type ErrorNotFoundErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorNotFoundErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorNotFoundErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorNotFoundErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorNotFoundErrorMeta - Additional information about the error.
@@ -58,18 +58,18 @@ type ErrorNotFoundErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorNotFoundErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorNotFoundErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorNotFoundErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 // ErrorNotFoundErrorCode - A code that indicates what went wrong.
@@ -114,44 +114,44 @@ type ErrorNotFoundError struct {
 	Code ErrorNotFoundErrorCode `json:"code"`
 }
 
-func (o *ErrorNotFoundError) GetStatus() string {
-	if o == nil {
+func (e *ErrorNotFoundError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorNotFoundError) GetDetail() string {
-	if o == nil {
+func (e *ErrorNotFoundError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorNotFoundError) GetLinks() ErrorNotFoundErrorLinks {
-	if o == nil {
+func (e *ErrorNotFoundError) GetLinks() ErrorNotFoundErrorLinks {
+	if e == nil {
 		return ErrorNotFoundErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorNotFoundError) GetSource() *ErrorNotFoundErrorSource {
-	if o == nil {
+func (e *ErrorNotFoundError) GetSource() *ErrorNotFoundErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorNotFoundError) GetMeta() ErrorNotFoundErrorMeta {
-	if o == nil {
+func (e *ErrorNotFoundError) GetMeta() ErrorNotFoundErrorMeta {
+	if e == nil {
 		return ErrorNotFoundErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }
 
-func (o *ErrorNotFoundError) GetCode() ErrorNotFoundErrorCode {
-	if o == nil {
+func (e *ErrorNotFoundError) GetCode() ErrorNotFoundErrorCode {
+	if e == nil {
 		return ErrorNotFoundErrorCode("")
 	}
-	return o.Code
+	return e.Code
 }

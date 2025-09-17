@@ -7,9 +7,9 @@ type AccountDataOutput struct {
 	Data AccountResourceOutput `json:"data"`
 }
 
-func (o *AccountDataOutput) GetData() AccountResourceOutput {
-	if o == nil {
+func (a *AccountDataOutput) GetData() AccountResourceOutput {
+	if a == nil {
 		return AccountResourceOutput{}
 	}
-	return o.Data
+	return a.Data
 }

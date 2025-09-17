@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: e98ec2843f59af8ed4d7565f52cd7f26
+  docChecksum: e46e93532757c919514e87097084dba4
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.598.2
-  generationVersion: 2.674.3
-  releaseVersion: 0.0.1
-  configChecksum: 5774144dba6f46f308cca73b94ae9950
+  speakeasyVersion: 1.617.1
+  generationVersion: 2.701.8
+  releaseVersion: 0.1.0
+  configChecksum: 0697a22a63d18a2ff0ca0e60d0a9606c
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.9.3
+    core: 3.10.0
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
-    globalSecurity: 2.82.11
+    globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.82.3
     globals: 2.82.2
@@ -27,12 +27,12 @@ features:
     intellisenseMarkdownSupport: 0.1.0
     methodServerURLs: 2.82.1
     nameOverrides: 2.81.2
-    nullables: 0.1.1
+    nullables: 0.2.0
     oauth2ClientCredentials: 0.4.0
     responseFormat: 0.1.2
-    retries: 2.84.0
+    retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.12
+    unions: 2.85.14
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
@@ -174,6 +174,7 @@ generatedFiles:
   - docs/models/components/cardaccountdetailsoutput.md
   - docs/models/components/cardinput.md
   - docs/models/components/cardoutput.md
+  - docs/models/components/dailypaycardproductentitlement.md
   - docs/models/components/data.md
   - docs/models/components/depository.md
   - docs/models/components/depositoryaccountdetails.md
@@ -267,7 +268,7 @@ generatedFiles:
   - docs/models/components/personrelationshipreadonly.md
   - docs/models/components/personresource.md
   - docs/models/components/personresourceinput.md
-  - docs/models/components/product.md
+  - docs/models/components/products.md
   - docs/models/components/schemeoauthclientcredentialstoken.md
   - docs/models/components/security.md
   - docs/models/components/transferattributes.md
@@ -367,6 +368,8 @@ generatedFiles:
   - jobs.go
   - models/apierrors/apiexception.go
   - models/operations/options.go
+  - optionalnullable/optionalnullable.go
+  - optionalnullable/optionalnullable_test.go
   - organizations.go
   - paychecks.go
   - people.go
@@ -653,7 +656,7 @@ examples:
           DailyPay-API-Version: 3
       responses:
         "200":
-          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY"}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
+          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
         "400":
           application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
         "401":
@@ -675,7 +678,7 @@ examples:
         application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"state_of_residence": "NY"}}}
       responses:
         "200":
-          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY"}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
+          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
         "400":
           application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
         "401":
@@ -703,3 +706,9 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `Sdk.Organizations.Read()`:  `response.Data.Attributes.Products.[]` **Changed** **Breaking** :warning:
+  * `Sdk.Organizations.List()`:  `response.Data.[].Attributes.Products.[]` **Changed** **Breaking** :warning:
+  * `Sdk.People.Read()`:  `response.Data.Attributes.Products` **Added**
+  * `Sdk.People.Update()`:  `response.Data.Attributes.Products` **Added**

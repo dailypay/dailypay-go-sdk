@@ -18,17 +18,17 @@ func (l ListAccountsGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (l *ListAccountsGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &l, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *ListAccountsGlobals) GetVersion() *int64 {
-	if o == nil {
+func (l *ListAccountsGlobals) GetVersion() *int64 {
+	if l == nil {
 		return nil
 	}
-	return o.Version
+	return l.Version
 }
 
 type ListAccountsRequest struct {
@@ -42,32 +42,32 @@ type ListAccountsRequest struct {
 	FilterBy *string `queryParam:"style=form,explode=true,name=filter"`
 }
 
-func (o *ListAccountsRequest) GetFilterPersonID() *string {
-	if o == nil {
+func (l *ListAccountsRequest) GetFilterPersonID() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterPersonID
+	return l.FilterPersonID
 }
 
-func (o *ListAccountsRequest) GetFilterAccountType() *components.FilterAccountType {
-	if o == nil {
+func (l *ListAccountsRequest) GetFilterAccountType() *components.FilterAccountType {
+	if l == nil {
 		return nil
 	}
-	return o.FilterAccountType
+	return l.FilterAccountType
 }
 
-func (o *ListAccountsRequest) GetFilterSubtype() *string {
-	if o == nil {
+func (l *ListAccountsRequest) GetFilterSubtype() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterSubtype
+	return l.FilterSubtype
 }
 
-func (o *ListAccountsRequest) GetFilterBy() *string {
-	if o == nil {
+func (l *ListAccountsRequest) GetFilterBy() *string {
+	if l == nil {
 		return nil
 	}
-	return o.FilterBy
+	return l.FilterBy
 }
 
 type ListAccountsResponse struct {
@@ -76,16 +76,16 @@ type ListAccountsResponse struct {
 	AccountsData *components.AccountsData
 }
 
-func (o *ListAccountsResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (l *ListAccountsResponse) GetHTTPMeta() components.HTTPMetadata {
+	if l == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return l.HTTPMeta
 }
 
-func (o *ListAccountsResponse) GetAccountsData() *components.AccountsData {
-	if o == nil {
+func (l *ListAccountsResponse) GetAccountsData() *components.AccountsData {
+	if l == nil {
 		return nil
 	}
-	return o.AccountsData
+	return l.AccountsData
 }

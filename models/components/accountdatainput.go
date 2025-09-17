@@ -6,9 +6,9 @@ type AccountDataInput struct {
 	Data AccountResourceInput `json:"data"`
 }
 
-func (o *AccountDataInput) GetData() AccountResourceInput {
-	if o == nil {
+func (a *AccountDataInput) GetData() AccountResourceInput {
+	if a == nil {
 		return AccountResourceInput{}
 	}
-	return o.Data
+	return a.Data
 }

@@ -8,16 +8,16 @@ type JobRelationshipsInput struct {
 	DirectDepositDefaultCard       *AccountRelationship `json:"direct_deposit_default_card,omitempty"`
 }
 
-func (o *JobRelationshipsInput) GetDirectDepositDefaultDepository() *AccountRelationship {
-	if o == nil {
+func (j *JobRelationshipsInput) GetDirectDepositDefaultDepository() *AccountRelationship {
+	if j == nil {
 		return nil
 	}
-	return o.DirectDepositDefaultDepository
+	return j.DirectDepositDefaultDepository
 }
 
-func (o *JobRelationshipsInput) GetDirectDepositDefaultCard() *AccountRelationship {
-	if o == nil {
+func (j *JobRelationshipsInput) GetDirectDepositDefaultCard() *AccountRelationship {
+	if j == nil {
 		return nil
 	}
-	return o.DirectDepositDefaultCard
+	return j.DirectDepositDefaultCard
 }

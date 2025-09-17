@@ -7,9 +7,9 @@ type PaycheckData struct {
 	Data PaycheckResource `json:"data"`
 }
 
-func (o *PaycheckData) GetData() PaycheckResource {
-	if o == nil {
+func (p *PaycheckData) GetData() PaycheckResource {
+	if p == nil {
 		return PaycheckResource{}
 	}
-	return o.Data
+	return p.Data
 }

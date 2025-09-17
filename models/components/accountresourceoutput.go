@@ -22,40 +22,40 @@ func (a AccountResourceOutput) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountResourceOutput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"id", "type", "attributes", "links", "relationships"}); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *AccountResourceOutput) GetID() string {
-	if o == nil {
+func (a *AccountResourceOutput) GetID() string {
+	if a == nil {
 		return ""
 	}
-	return o.ID
+	return a.ID
 }
 
-func (o *AccountResourceOutput) GetType() string {
+func (a *AccountResourceOutput) GetType() string {
 	return "accounts"
 }
 
-func (o *AccountResourceOutput) GetAttributes() AccountAttributesOutput {
-	if o == nil {
+func (a *AccountResourceOutput) GetAttributes() AccountAttributesOutput {
+	if a == nil {
 		return AccountAttributesOutput{}
 	}
-	return o.Attributes
+	return a.Attributes
 }
 
-func (o *AccountResourceOutput) GetLinks() AccountLinks {
-	if o == nil {
+func (a *AccountResourceOutput) GetLinks() AccountLinks {
+	if a == nil {
 		return AccountLinks{}
 	}
-	return o.Links
+	return a.Links
 }
 
-func (o *AccountResourceOutput) GetRelationships() AccountRelationships {
-	if o == nil {
+func (a *AccountResourceOutput) GetRelationships() AccountRelationships {
+	if a == nil {
 		return AccountRelationships{}
 	}
-	return o.Relationships
+	return a.Relationships
 }

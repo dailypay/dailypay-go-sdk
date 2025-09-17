@@ -18,17 +18,17 @@ func (u UpdatePersonGlobals) MarshalJSON() ([]byte, error) {
 }
 
 func (u *UpdatePersonGlobals) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &u, "", false, false); err != nil {
+	if err := utils.UnmarshalJSON(data, &u, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *UpdatePersonGlobals) GetVersion() *int64 {
-	if o == nil {
+func (u *UpdatePersonGlobals) GetVersion() *int64 {
+	if u == nil {
 		return nil
 	}
-	return o.Version
+	return u.Version
 }
 
 type UpdatePersonRequest struct {
@@ -37,18 +37,18 @@ type UpdatePersonRequest struct {
 	PersonData components.PersonDataInput `request:"mediaType=application/vnd.api+json"`
 }
 
-func (o *UpdatePersonRequest) GetPersonID() string {
-	if o == nil {
+func (u *UpdatePersonRequest) GetPersonID() string {
+	if u == nil {
 		return ""
 	}
-	return o.PersonID
+	return u.PersonID
 }
 
-func (o *UpdatePersonRequest) GetPersonData() components.PersonDataInput {
-	if o == nil {
+func (u *UpdatePersonRequest) GetPersonData() components.PersonDataInput {
+	if u == nil {
 		return components.PersonDataInput{}
 	}
-	return o.PersonData
+	return u.PersonData
 }
 
 type UpdatePersonResponse struct {
@@ -57,16 +57,16 @@ type UpdatePersonResponse struct {
 	PersonData *components.PersonData
 }
 
-func (o *UpdatePersonResponse) GetHTTPMeta() components.HTTPMetadata {
-	if o == nil {
+func (u *UpdatePersonResponse) GetHTTPMeta() components.HTTPMetadata {
+	if u == nil {
 		return components.HTTPMetadata{}
 	}
-	return o.HTTPMeta
+	return u.HTTPMeta
 }
 
-func (o *UpdatePersonResponse) GetPersonData() *components.PersonData {
-	if o == nil {
+func (u *UpdatePersonResponse) GetPersonData() *components.PersonData {
+	if u == nil {
 		return nil
 	}
-	return o.PersonData
+	return u.PersonData
 }

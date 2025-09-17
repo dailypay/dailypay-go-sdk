@@ -12,11 +12,11 @@ type ErrorUnauthorizedErrorLinks struct {
 	About *string `json:"about,omitempty"`
 }
 
-func (o *ErrorUnauthorizedErrorLinks) GetAbout() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorLinks) GetAbout() *string {
+	if e == nil {
 		return nil
 	}
-	return o.About
+	return e.About
 }
 
 // ErrorUnauthorizedErrorSource - Location in the request that may have caused the error.
@@ -29,25 +29,25 @@ type ErrorUnauthorizedErrorSource struct {
 	Header *string `json:"header,omitempty"`
 }
 
-func (o *ErrorUnauthorizedErrorSource) GetParameter() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorSource) GetParameter() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Parameter
+	return e.Parameter
 }
 
-func (o *ErrorUnauthorizedErrorSource) GetPointer() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorSource) GetPointer() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Pointer
+	return e.Pointer
 }
 
-func (o *ErrorUnauthorizedErrorSource) GetHeader() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorSource) GetHeader() *string {
+	if e == nil {
 		return nil
 	}
-	return o.Header
+	return e.Header
 }
 
 // ErrorUnauthorizedErrorMeta - Additional information about the error.
@@ -58,18 +58,18 @@ type ErrorUnauthorizedErrorMeta struct {
 	TraceID *string `json:"trace_id,omitempty"`
 }
 
-func (o *ErrorUnauthorizedErrorMeta) GetRequestID() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorMeta) GetRequestID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.RequestID
+	return e.RequestID
 }
 
-func (o *ErrorUnauthorizedErrorMeta) GetTraceID() *string {
-	if o == nil {
+func (e *ErrorUnauthorizedErrorMeta) GetTraceID() *string {
+	if e == nil {
 		return nil
 	}
-	return o.TraceID
+	return e.TraceID
 }
 
 // ErrorUnauthorizedErrorCode - A code that indicates what went wrong.
@@ -114,44 +114,44 @@ type ErrorUnauthorizedError struct {
 	Code ErrorUnauthorizedErrorCode `json:"code"`
 }
 
-func (o *ErrorUnauthorizedError) GetStatus() string {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetStatus() string {
+	if e == nil {
 		return ""
 	}
-	return o.Status
+	return e.Status
 }
 
-func (o *ErrorUnauthorizedError) GetDetail() string {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetDetail() string {
+	if e == nil {
 		return ""
 	}
-	return o.Detail
+	return e.Detail
 }
 
-func (o *ErrorUnauthorizedError) GetLinks() ErrorUnauthorizedErrorLinks {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetLinks() ErrorUnauthorizedErrorLinks {
+	if e == nil {
 		return ErrorUnauthorizedErrorLinks{}
 	}
-	return o.Links
+	return e.Links
 }
 
-func (o *ErrorUnauthorizedError) GetSource() *ErrorUnauthorizedErrorSource {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetSource() *ErrorUnauthorizedErrorSource {
+	if e == nil {
 		return nil
 	}
-	return o.Source
+	return e.Source
 }
 
-func (o *ErrorUnauthorizedError) GetMeta() ErrorUnauthorizedErrorMeta {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetMeta() ErrorUnauthorizedErrorMeta {
+	if e == nil {
 		return ErrorUnauthorizedErrorMeta{}
 	}
-	return o.Meta
+	return e.Meta
 }
 
-func (o *ErrorUnauthorizedError) GetCode() ErrorUnauthorizedErrorCode {
-	if o == nil {
+func (e *ErrorUnauthorizedError) GetCode() ErrorUnauthorizedErrorCode {
+	if e == nil {
 		return ErrorUnauthorizedErrorCode("")
 	}
-	return o.Code
+	return e.Code
 }
