@@ -71,7 +71,7 @@ func (s *People) Read(ctx context.Context, request operations.ReadPersonRequest,
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readPerson",
-		OAuth2Scopes:     []string{"client:admin", "client:admin"},
+		OAuth2Scopes:     []string{"client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

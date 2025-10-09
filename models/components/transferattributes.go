@@ -99,7 +99,7 @@ func (t TransferAttributes) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferAttributes) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"amount", "currency", "status", "schedule", "submitted_at", "resolved_at", "fee"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"amount", "currency", "status", "schedule", "submitted_at", "fee"}); err != nil {
 		return err
 	}
 	return nil

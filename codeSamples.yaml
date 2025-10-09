@@ -6,8 +6,7 @@ actions:
   - target: $["paths"]["/cards/generic"]["post"]
     update:
       x-codeSamples:
-        - lang: go
-          label: createGenericCardToken
+        - lang: Go
           source: |-
             package main
 
@@ -47,15 +46,14 @@ actions:
   - target: $["paths"]["/rest/accounts"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: listAccounts
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -87,15 +85,14 @@ actions:
   - target: $["paths"]["/rest/accounts"]["post"]
     update:
       x-codeSamples:
-        - lang: go
-          label: createAccount
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"log"
             )
 
@@ -146,15 +143,14 @@ actions:
   - target: $["paths"]["/rest/accounts/{account_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readAccount
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -186,15 +182,14 @@ actions:
   - target: $["paths"]["/rest/health"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: getHealth
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"log"
             )
 
@@ -222,15 +217,14 @@ actions:
   - target: $["paths"]["/rest/jobs"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: listJobs
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -260,15 +254,14 @@ actions:
   - target: $["paths"]["/rest/jobs/{job_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readJob
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -300,15 +293,14 @@ actions:
   - target: $["paths"]["/rest/jobs/{job_id}"]["patch"]
     update:
       x-codeSamples:
-        - lang: go
-          label: updateJob
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -360,15 +352,14 @@ actions:
   - target: $["paths"]["/rest/organizations"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: listOrganizations
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -398,15 +389,14 @@ actions:
   - target: $["paths"]["/rest/organizations/{organization_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readOrganization
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -438,15 +428,14 @@ actions:
   - target: $["paths"]["/rest/paychecks"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: listPaychecks
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/types"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
@@ -484,15 +473,14 @@ actions:
   - target: $["paths"]["/rest/paychecks/{paycheck_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readPaycheck
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -524,15 +512,14 @@ actions:
   - target: $["paths"]["/rest/people/{person_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readPerson
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -564,15 +551,14 @@ actions:
   - target: $["paths"]["/rest/people/{person_id}"]["patch"]
     update:
       x-codeSamples:
-        - lang: go
-          label: updatePerson
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -612,15 +598,14 @@ actions:
   - target: $["paths"]["/rest/transfers"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: listTransfers
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -650,15 +635,14 @@ actions:
   - target: $["paths"]["/rest/transfers"]["post"]
     update:
       x-codeSamples:
-        - lang: go
-          label: createTransfer
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )
@@ -718,15 +702,14 @@ actions:
   - target: $["paths"]["/rest/transfers/{transfer_id}"]["get"]
     update:
       x-codeSamples:
-        - lang: go
-          label: readTransfer
+        - lang: Go
           source: |-
             package main
 
             import(
             	"context"
-            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/components"
+            	dailypay "github.com/dailypay/dailypay-go-sdk"
             	"github.com/dailypay/dailypay-go-sdk/models/operations"
             	"log"
             )

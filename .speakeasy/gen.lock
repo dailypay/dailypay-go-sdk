@@ -3,17 +3,17 @@ id: 076bba32-46fe-4128-8c2b-225112756310
 management:
   docChecksum: e46e93532757c919514e87097084dba4
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.618.0
-  generationVersion: 2.702.0
-  releaseVersion: 0.1.1
-  configChecksum: 77bc47604b62f0834c51bc3fbc9d3b9c
+  speakeasyVersion: 1.636.2
+  generationVersion: 2.723.8
+  releaseVersion: 0.2.0
+  configChecksum: d1fbf3ee675c4332cdb89a9e5fa05586
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.10.0
+    core: 3.11.1
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -27,12 +27,12 @@ features:
     intellisenseMarkdownSupport: 0.1.0
     methodServerURLs: 2.82.1
     nameOverrides: 2.81.2
-    nullables: 0.2.0
-    oauth2ClientCredentials: 0.4.0
+    nullables: 0.2.1
+    oauth2ClientCredentials: 1.1.0
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.85.14
+    unions: 2.86.0
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
@@ -344,7 +344,6 @@ generatedFiles:
   - docs/sdks/organizations/README.md
   - docs/sdks/paychecks/README.md
   - docs/sdks/people/README.md
-  - docs/sdks/sdk/README.md
   - docs/sdks/transfers/README.md
   - go.mod
   - health.go
@@ -379,7 +378,6 @@ generatedFiles:
   - types/bigint.go
   - types/date.go
   - types/datetime.go
-  - types/decimal.go
   - types/pointers.go
 examples:
   readJob:
