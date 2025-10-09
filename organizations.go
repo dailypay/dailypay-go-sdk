@@ -73,7 +73,7 @@ func (s *Organizations) Read(ctx context.Context, request operations.ReadOrganiz
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readOrganization",
-		OAuth2Scopes:     []string{"client:admin", "client:admin"},
+		OAuth2Scopes:     []string{"client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -410,7 +410,7 @@ func (s *Organizations) List(ctx context.Context, request operations.ListOrganiz
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "listOrganizations",
-		OAuth2Scopes:     []string{"client:admin", "client:admin"},
+		OAuth2Scopes:     []string{"client:admin"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 

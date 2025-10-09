@@ -83,7 +83,7 @@ func (a AccountAttributesDepositoryAccountBalances) MarshalJSON() ([]byte, error
 }
 
 func (a *AccountAttributesDepositoryAccountBalances) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"currency"}); err != nil {
 		return err
 	}
 	return nil
@@ -364,7 +364,7 @@ func (a AccountAttributesEarningsBalanceAccountBalances) MarshalJSON() ([]byte, 
 }
 
 func (a *AccountAttributesEarningsBalanceAccountBalances) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"currency"}); err != nil {
 		return err
 	}
 	return nil
@@ -579,7 +579,7 @@ func (a AccountAttributesCardAccountBalances) MarshalJSON() ([]byte, error) {
 }
 
 func (a *AccountAttributesCardAccountBalances) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"available", "current", "currency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &a, "", false, []string{"currency"}); err != nil {
 		return err
 	}
 	return nil
@@ -814,9 +814,9 @@ const (
 
 // AccountAttributesOutput - The details of the account.
 type AccountAttributesOutput struct {
-	CardOutput              *CardOutput              `queryParam:"inline" name:"AccountAttributes"`
-	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline" name:"AccountAttributes"`
-	Depository              *Depository              `queryParam:"inline" name:"AccountAttributes"`
+	CardOutput              *CardOutput              `queryParam:"inline,name=AccountAttributes"`
+	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline,name=AccountAttributes"`
+	Depository              *Depository              `queryParam:"inline,name=AccountAttributes"`
 
 	Type AccountAttributesOutputType
 }
@@ -1134,9 +1134,9 @@ const (
 
 // AccountAttributesInput - The details of the account.
 type AccountAttributesInput struct {
-	CardInput                    *CardInput                    `queryParam:"inline" name:"AccountAttributes"`
-	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline" name:"AccountAttributes"`
-	DepositoryInput              *DepositoryInput              `queryParam:"inline" name:"AccountAttributes"`
+	CardInput                    *CardInput                    `queryParam:"inline,name=AccountAttributes"`
+	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline,name=AccountAttributes"`
+	DepositoryInput              *DepositoryInput              `queryParam:"inline,name=AccountAttributes"`
 
 	Type AccountAttributesInputType
 }

@@ -12,8 +12,8 @@ targets:
         source: cloud
         codeSamples:
             output: codeSamples.yaml
-            labelOverride:
-              omit: true
-            langOverride: Go
             registry:
                 location: registry.speakeasyapi.dev/dailypay/dailypay/xapi-go-code-samples
+            langOverride: Go
+            labelOverride:
+                omit: true

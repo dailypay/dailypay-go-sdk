@@ -67,7 +67,7 @@ func (s *Health) GetHealth(ctx context.Context, opts ...operations.Option) (*ope
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "getHealth",
-		OAuth2Scopes:     []string{"client:admin", "health:read"},
+		OAuth2Scopes:     []string{"health:read"},
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
