@@ -25,7 +25,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.3.0
+  version: 0.4.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -49,3 +49,4 @@ go:
   respectRequiredFields: false
   responseFormat: envelope-http
   sdkPackageName: dailypay
+  unionDeserializationStrategy: left-to-right
