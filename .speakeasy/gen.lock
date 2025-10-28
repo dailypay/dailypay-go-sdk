@@ -3,10 +3,10 @@ id: 076bba32-46fe-4128-8c2b-225112756310
 management:
   docChecksum: e46e93532757c919514e87097084dba4
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.640.0
-  generationVersion: 2.730.5
-  releaseVersion: 0.4.0
-  configChecksum: eb6daa4e4f07c1f19ac7cbf370d7ba91
+  speakeasyVersion: 1.642.1
+  generationVersion: 2.731.4
+  releaseVersion: 0.4.1
+  configChecksum: 11d7fc17fa94753ca941d350219d7a06
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
