@@ -530,6 +530,7 @@ func main() {
 	ctx := context.Background()
 
 	s := dailypay.New(
+		dailypay.WithServerIndex(0),
 		dailypay.WithEnvironment("dailypayuat"),
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{

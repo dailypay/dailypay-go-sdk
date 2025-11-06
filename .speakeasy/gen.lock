@@ -3,24 +3,24 @@ id: 076bba32-46fe-4128-8c2b-225112756310
 management:
   docChecksum: e46e93532757c919514e87097084dba4
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.642.2
-  generationVersion: 2.731.6
-  releaseVersion: 0.4.3
-  configChecksum: 1edbd7c4b9c5b310a90764f374e6843f
+  speakeasyVersion: 1.650.0
+  generationVersion: 2.743.2
+  releaseVersion: 0.5.0
+  configChecksum: 0ba47ab588cd451c2f5380a07a1cbcc4
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.12.0
+    core: 3.13.1
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
     globalSecurity: 2.82.12
     globalSecurityCallbacks: 0.1.0
-    globalServerURLs: 2.82.3
+    globalServerURLs: 2.83.0
     globals: 2.82.2
     hiddenGlobals: 0.1.0
     inputOutputModels: 2.83.0
