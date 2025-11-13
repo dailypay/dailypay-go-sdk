@@ -2,7 +2,7 @@
 
 package dailypay
 
-// Generated from OpenAPI doc version 3.0.0-beta01 and generator version 2.743.2
+// Generated from OpenAPI doc version 3.0.0-beta01 and generator version 2.753.6
 
 import (
 	"context"
@@ -20,6 +20,7 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
+	// DailyPay REST API server
 	"https://api.{environment}.com",
 }
 
@@ -49,15 +50,7 @@ func Float64(f float64) *float64 { return &f }
 // Pointer provides a helper function to return a pointer to a type
 func Pointer[T any](v T) *T { return &v }
 
-// SDK - DailyPay Public Rest API: # Welcome
-//
-// This site contains information on basic DailyPay concepts and instructions for using the endpoints of each API. We are just now getting started with our public documentation - please let us know if you have any feedback or questions via Suggested Edits, where you can suggest changes to the documentation directly from the portal.
-//
-// Here are some links to help you get familiar with the DailyPay basics:
-//
-// [API Versioning](/tag/Getting-Started#section/DailyPay's-API-Versioning) — Find out how we version our APIs.
-// [Environments](/tag/Getting-Started#section/Environments) — Get an overview of the different environments in the DailyPay API.
-// [Glossary](/tag/Glossary) — Explore a list of terms used in the DailyPay API.
+// SDK - DailyPay Rest API: Embed DailyPay and On Demand Pay features into your application.
 type SDK struct {
 	SDKVersion string
 	// The _jobs_ endpoint provides access to comprehensive information
@@ -113,61 +106,8 @@ type SDK struct {
 	// their name, global status, and state of residence.
 	//
 	People *People
-	// ## What is the Payments API?
-	//
-	// **_Note: You may also process debit card data and obtain a token using the [Toolkit Tokenization Component](/#tag/Tokenization)_**
-	//
-	// The Payments API is a PCI compliant endpoint and allows for secure debit card token creation. These tokens are used within DailyPay's APIs. When a tokenized debit card is added to a user’s account they can begin to take instant transfers.
-	//
-	// **How does this work?** A user's debit card data is sent via POST request to the Payments API. The debit card data is encrypted and tokenized before being returned. This tokenized card data is used for instant transfers via the Extend API.
-	//
-	// ### What is PCI compliance?
-	//
-	// It’s how we keep card data secure. DailyPay has a responsibility and legal requirement to protect debit card data therefore the Payments API endpoint complies with the Payment Card Industry Data Security Standards [PCI DSS](https://www.pcisecuritystandards.org/).
-	//
-	// > 📘 **Info**
-	// > DailyPay only handles card data during encryption and tokenization
-	// > **The Payments server is DailyPay’s only PCI compliant API.**
-	//
-	// ## Create a Debit Card Token
-	//
-	// Steps to create a tokenized debit card for use within DailyPay's APIs.
-	//
-	// ### 1. POST debit card data to the Payments API
-	//
-	// After you have securely collected the debit card data for a user, create a POST to the PCI compliant [Cards API](/#tag/Cards/Create-a-Debit-Card-Token) with the following required parameters in this example.
-	//
-	// ```json
-	// {
-	//   "first_name": "Edith",
-	//   "last_name": "Clarke",
-	//   "card_number": "4007589999999912",
-	//   "expiration_year": "2027",
-	//   "expiration_month": "02",
-	//   "cvv": "123",
-	//   "address_line_one": "1234 Street",
-	//   "address_city": "Fort Lee",
-	//   "address_state": "NJ",
-	//   "address_zip_code": "07237",
-	//   "address_country": "US"
-	// }
-	// ```
-	//
-	// ### 2. Receive and handle the tokenized card data
-	//
-	// The [Cards API](/#tag/Cards/Create-a-Debit-Card-Token) returns an opaque string representing the card details. This token is encrypted and complies with PCI DSS. You will need the token for step 3, after which it can be discarded. The token is a long string and will look similar to below:
-	//
-	// ```json
-	// {"token":"eyJhbGciOiJSU0Et.....T0FFU”}
-	// ```
-	//
-	// ### 3. POST the token to the Extend API
-	//
-	// > 📘 **Important** > [Proper authorization](/#tag/Authentication) is required to create a transfer account.
-	//
-	// Send the encrypted token in a POST request to the [accounts endpoint](/#tag/Accounts/operation/createAccount) as the value for the `token` field in the `details` object. This will create a transfer account and allow a user to start taking transfers.
-	//
-	Cards *Cards
+	// Securely tokenize personal cards for use in the accounts API.
+	CardTokenization *CardTokenization
 	// The _health_ endpoint provides a simple health check for the API.
 	//
 	// **Functionality:** Check the status of the API to ensure it is functioning
@@ -295,9 +235,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.5.0",
+		SDKVersion: "0.5.1",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.5.0 2.743.2 3.0.0-beta01 github.com/dailypay/dailypay-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.5.1 2.753.6 3.0.0-beta01 github.com/dailypay/dailypay-go-sdk",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 			ServerVariables: []map[string]string{
@@ -325,7 +265,7 @@ func New(opts ...SDKOption) *SDK {
 	sdk.Paychecks = newPaychecks(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Organizations = newOrganizations(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.People = newPeople(sdk, sdk.sdkConfiguration, sdk.hooks)
-	sdk.Cards = newCards(sdk, sdk.sdkConfiguration, sdk.hooks)
+	sdk.CardTokenization = newCardTokenization(sdk, sdk.sdkConfiguration, sdk.hooks)
 	sdk.Health = newHealth(sdk, sdk.sdkConfiguration, sdk.hooks)
 
 	return sdk

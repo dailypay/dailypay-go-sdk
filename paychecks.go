@@ -379,7 +379,6 @@ func (s *Paychecks) Read(ctx context.Context, request operations.ReadPaycheckReq
 
 // List - Get a list of paycheck objects
 // Returns a collection of paycheck objects. This object details a person's pay and pay period.
-// See [Filtering Paychecks](https://developer.dailypay.com/tag/Filtering#section/Supported-Endpoint-Filters) for a description of filterable fields.
 func (s *Paychecks) List(ctx context.Context, request operations.ListPaychecksRequest, opts ...operations.Option) (*operations.ListPaychecksResponse, error) {
 	globals := operations.ListPaychecksGlobals{
 		Version: s.sdkConfiguration.Globals.Version,

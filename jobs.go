@@ -720,7 +720,6 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 
 // List - Get a list of job objects
 // Returns a collection of job objects. This object represents a person's employment details.
-// See [Filtering Jobs](https://developer.dailypay.com/tag/Filtering#section/Supported-Endpoint-Filters) for a description of filterable fields.
 func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opts ...operations.Option) (*operations.ListJobsResponse, error) {
 	globals := operations.ListJobsGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
