@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: e46e93532757c919514e87097084dba4
+  docChecksum: 2d24d99543d5376427756737ba505990
   docVersion: 3.0.0-beta01
-  speakeasyVersion: 1.650.0
-  generationVersion: 2.743.2
-  releaseVersion: 0.5.0
-  configChecksum: 0ba47ab588cd451c2f5380a07a1cbcc4
+  speakeasyVersion: 1.656.2
+  generationVersion: 2.753.6
+  releaseVersion: 0.5.1
+  configChecksum: 8e8362cda2c9e9b569b5320aab3cead3
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.1
+    core: 3.13.2
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -32,11 +32,12 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.87.0
+    unions: 2.87.1
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
   - /models/apierrors/errorbadrequest.go
+  - /models/apierrors/errorconflict.go
   - /models/apierrors/errorforbidden.go
   - /models/apierrors/errornotfound.go
   - /models/apierrors/errorunauthorized.go
@@ -55,6 +56,7 @@ generatedFiles:
   - /models/components/accountsdata.go
   - /models/components/erroraccountcreateerror.go
   - /models/components/errorbadrequesterror.go
+  - /models/components/errorconflicterror.go
   - /models/components/errorforbiddenerror.go
   - /models/components/errorjobupdateerror.go
   - /models/components/errornotfounderror.go
@@ -138,9 +140,10 @@ generatedFiles:
   - /models/operations/updateperson.go
   - USAGE.md
   - accounts.go
-  - cards.go
+  - cardtokenization.go
   - docs/models/apierrors/accountcreateerror.md
   - docs/models/apierrors/errorbadrequest.md
+  - docs/models/apierrors/errorconflict.md
   - docs/models/apierrors/errorforbidden.md
   - docs/models/apierrors/errornotfound.md
   - docs/models/apierrors/errorunauthorized.md
@@ -192,6 +195,10 @@ generatedFiles:
   - docs/models/components/errorbadrequesterrorlinks.md
   - docs/models/components/errorbadrequesterrormeta.md
   - docs/models/components/errorbadrequesterrorsource.md
+  - docs/models/components/errorconflicterror.md
+  - docs/models/components/errorconflicterrorlinks.md
+  - docs/models/components/errorconflicterrormeta.md
+  - docs/models/components/errorconflicterrorsource.md
   - docs/models/components/errorforbiddenerror.md
   - docs/models/components/errorforbiddenerrorcode.md
   - docs/models/components/errorforbiddenerrorlinks.md
@@ -338,7 +345,7 @@ generatedFiles:
   - docs/models/operations/updatepersonrequest.md
   - docs/models/operations/updatepersonresponse.md
   - docs/sdks/accounts/README.md
-  - docs/sdks/cards/README.md
+  - docs/sdks/cardtokenization/README.md
   - docs/sdks/health/README.md
   - docs/sdks/jobs/README.md
   - docs/sdks/organizations/README.md
@@ -566,6 +573,8 @@ examples:
           application/vnd.api+json: {"errors": []}
         "500":
           application/vnd.api+json: {"errors": []}
+        "409":
+          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
   readPaycheck:
     speakeasy-default-read-paycheck:
       parameters:
@@ -704,3 +713,8 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes Detected:
+  * `Sdk.CardTokenization.Create()`: **Added**
+  * `Sdk.Cards.Create()`: **Deleted** **Breaking** :warning:
+  * `Sdk.Transfers.Create()`:  `error.status[409]` **Added**

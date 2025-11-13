@@ -9,7 +9,7 @@ import (
 type SchemeOauthClientCredentialsToken struct {
 	ClientID     string `security:"name=clientID"`
 	ClientSecret string `security:"name=clientSecret"`
-	TokenURL     string `default:"https://api.dailypay.com/oauth/token"`
+	TokenURL     string `default:"https://auth.dailypay.com/oauth2/token"`
 }
 
 func (s SchemeOauthClientCredentialsToken) MarshalJSON() ([]byte, error) {

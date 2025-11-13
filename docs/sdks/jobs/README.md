@@ -175,7 +175,6 @@ func main() {
 ## List
 
 Returns a collection of job objects. This object represents a person's employment details.
-See [Filtering Jobs](https://developer.dailypay.com/tag/Filtering#section/Supported-Endpoint-Filters) for a description of filterable fields.
 
 
 ### Example Usage

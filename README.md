@@ -263,9 +263,9 @@ func main() {
 * [List](docs/sdks/accounts/README.md#list) - Get a list of Account objects
 * [Create](docs/sdks/accounts/README.md#create) - Create an Account object
 
-### [Cards](docs/sdks/cards/README.md)
+### [CardTokenization](docs/sdks/cardtokenization/README.md)
 
-* [Create](docs/sdks/cards/README.md#create) - Obtain a card token
+* [Create](docs/sdks/cardtokenization/README.md#create) - Obtain a card token
 
 ### [Health](docs/sdks/health/README.md)
 
@@ -615,7 +615,7 @@ func main() {
 
 	s := dailypay.New()
 
-	res, err := s.Cards.Create(ctx, operations.CreateGenericCardTokenRequest{
+	res, err := s.CardTokenization.Create(ctx, operations.CreateGenericCardTokenRequest{
 		FirstName:       "Edith",
 		LastName:        "Clarke",
 		CardNumber:      "4007589999999912",

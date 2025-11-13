@@ -89,7 +89,6 @@ func main() {
 ## List
 
 Returns a list of transfer objects.
-See [Filtering Transfers](https://developer.dailypay.com/tag/Filtering#section/Supported-Endpoint-Filters) for a description of filterable fields.
 
 
 ### Example Usage
@@ -245,5 +244,6 @@ func main() {
 | apierrors.TransferCreateError | 400                           | application/vnd.api+json      |
 | apierrors.ErrorUnauthorized   | 401                           | application/vnd.api+json      |
 | apierrors.ErrorForbidden      | 403                           | application/vnd.api+json      |
+| apierrors.ErrorConflict       | 409                           | application/vnd.api+json      |
 | apierrors.ErrorUnexpected     | 500                           | application/vnd.api+json      |
 | apierrors.APIException        | 4XX, 5XX                      | \*/\*                         |

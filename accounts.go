@@ -380,7 +380,6 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 
 // List - Get a list of Account objects
 // Returns a list of account objects. An account object represents a person's bank accounts, debit and pay cards, and earnings balance accounts.
-// See [Filtering Accounts](https://developer.dailypay.com/tag/Filtering#section/Supported-Endpoint-Filters) for a description of filterable fields.
 func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequest, opts ...operations.Option) (*operations.ListAccountsResponse, error) {
 	globals := operations.ListAccountsGlobals{
 		Version: s.sdkConfiguration.Globals.Version,

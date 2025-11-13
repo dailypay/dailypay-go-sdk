@@ -22,7 +22,7 @@ actions:
 
                 s := dailypay.New()
 
-                res, err := s.Cards.Create(ctx, operations.CreateGenericCardTokenRequest{
+                res, err := s.CardTokenization.Create(ctx, operations.CreateGenericCardTokenRequest{
                     FirstName: "Edith",
                     LastName: "Clarke",
                     CardNumber: "4007589999999912",

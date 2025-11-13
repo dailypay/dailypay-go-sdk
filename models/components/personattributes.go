@@ -41,7 +41,7 @@ func (e *DisallowReason) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// DailyPayCardProductEntitlement - The DailyPay Visa®️ Prepaid Card program.
+// DailyPayCardProductEntitlement - The DailyPay Visa®️ Prepaid Card program. A person can be either eligible or enrolled, but not both.
 type DailyPayCardProductEntitlement struct {
 	// Whether the person is eligible to enroll in the DailyPay Visa®️ Prepaid Card program.
 	//
@@ -65,9 +65,9 @@ func (d *DailyPayCardProductEntitlement) GetEnrolled() bool {
 	return d.Enrolled
 }
 
-// Products that the person is enrolled in or eligible for.
+// Products that the person is enrolled in or eligible for. This data is refreshed nightly.
 type Products struct {
-	// The DailyPay Visa®️ Prepaid Card program.
+	// The DailyPay Visa®️ Prepaid Card program. A person can be either eligible or enrolled, but not both.
 	//
 	DailyPayCardProductEntitlement DailyPayCardProductEntitlement `json:"dailypay_card"`
 }
@@ -91,7 +91,7 @@ type PersonAttributes struct {
 	// The two-letter abbreviation for the state in which the person resides, if located in the United States.  This is used for regulatory compliance purposes.
 	//
 	StateOfResidence *string `json:"state_of_residence,omitempty"`
-	// Products that the person is enrolled in or eligible for.
+	// Products that the person is enrolled in or eligible for. This data is refreshed nightly.
 	//
 	Products Products `json:"products"`
 }
