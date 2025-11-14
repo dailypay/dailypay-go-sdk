@@ -121,6 +121,8 @@ func main() {
     )
 
     res, err := s.Paychecks.List(ctx, operations.ListPaychecksRequest{
+        FilterJobID: dailypay.Pointer("e9d84b0d-92ba-43c9-93bf-7c993313fa6f"),
+        FilterStatus: components.FilterPaycheckStatusDeposited.ToPointer(),
         FilterDepositExpectedAtGte: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
         FilterDepositExpectedAtLt: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
         FilterPayPeriodEndsAtGte: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),

@@ -205,7 +205,13 @@ func main() {
         }),
     )
 
-    res, err := s.Jobs.List(ctx, operations.ListJobsRequest{})
+    res, err := s.Jobs.List(ctx, operations.ListJobsRequest{
+        FilterExternalIdentifiersPrimaryIdentifier: dailypay.Pointer("PRIMARY_ID_98765"),
+        FilterExternalIdentifiersEmployeeID: dailypay.Pointer("EMP123456"),
+        FilterExternalIdentifiersGroup: dailypay.Pointer("12345"),
+        FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
+        FilterOrganizationID: dailypay.Pointer("f0b30634-108c-439c-a8c1-c6a91197f022"),
+    })
     if err != nil {
         log.Fatal(err)
     }

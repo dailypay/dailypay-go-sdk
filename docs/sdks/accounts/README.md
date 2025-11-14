@@ -123,7 +123,9 @@ func main() {
     )
 
     res, err := s.Accounts.List(ctx, operations.ListAccountsRequest{
+        FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
         FilterAccountType: components.FilterAccountTypeEarningsBalance.ToPointer(),
+        FilterSubtype: dailypay.Pointer("ODP"),
     })
     if err != nil {
         log.Fatal(err)

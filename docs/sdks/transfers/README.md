@@ -119,7 +119,9 @@ func main() {
         }),
     )
 
-    res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{})
+    res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{
+        FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -186,7 +188,7 @@ func main() {
     )
 
     res, err := s.Transfers.Create(ctx, operations.CreateTransferRequest{
-        IdempotencyKey: "ea9f2225-403b-4e2c-93b0-0eda090ffa65",
+        IdempotencyKey: "e2736aa1-78c4-4cc6-b0a6-848e733f232a",
         TransferCreateData: components.TransferCreateData{
             Data: components.TransferCreateResource{
                 ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
