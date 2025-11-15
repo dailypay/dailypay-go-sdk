@@ -73,9 +73,7 @@ actions:
                 )
 
                 res, err := s.Accounts.List(ctx, operations.ListAccountsRequest{
-                    FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
                     FilterAccountType: components.FilterAccountTypeEarningsBalance.ToPointer(),
-                    FilterSubtype: dailypay.Pointer("ODP"),
                 })
                 if err != nil {
                     log.Fatal(err)
@@ -245,13 +243,7 @@ actions:
                     }),
                 )
 
-                res, err := s.Jobs.List(ctx, operations.ListJobsRequest{
-                    FilterExternalIdentifiersPrimaryIdentifier: dailypay.Pointer("PRIMARY_ID_98765"),
-                    FilterExternalIdentifiersEmployeeID: dailypay.Pointer("EMP123456"),
-                    FilterExternalIdentifiersGroup: dailypay.Pointer("12345"),
-                    FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
-                    FilterOrganizationID: dailypay.Pointer("f0b30634-108c-439c-a8c1-c6a91197f022"),
-                })
+                res, err := s.Jobs.List(ctx, operations.ListJobsRequest{})
                 if err != nil {
                     log.Fatal(err)
                 }
@@ -464,8 +456,6 @@ actions:
                 )
 
                 res, err := s.Paychecks.List(ctx, operations.ListPaychecksRequest{
-                    FilterJobID: dailypay.Pointer("e9d84b0d-92ba-43c9-93bf-7c993313fa6f"),
-                    FilterStatus: components.FilterPaycheckStatusDeposited.ToPointer(),
                     FilterDepositExpectedAtGte: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
                     FilterDepositExpectedAtLt: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
                     FilterPayPeriodEndsAtGte: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
@@ -634,9 +624,7 @@ actions:
                     }),
                 )
 
-                res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{
-                    FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
-                })
+                res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{})
                 if err != nil {
                     log.Fatal(err)
                 }
@@ -674,7 +662,7 @@ actions:
                 )
 
                 res, err := s.Transfers.Create(ctx, operations.CreateTransferRequest{
-                    IdempotencyKey: "e2736aa1-78c4-4cc6-b0a6-848e733f232a",
+                    IdempotencyKey: "ea9f2225-403b-4e2c-93b0-0eda090ffa65",
                     TransferCreateData: components.TransferCreateData{
                         Data: components.TransferCreateResource{
                             ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
