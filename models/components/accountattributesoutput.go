@@ -957,8 +957,6 @@ func (e *EarningsBalanceReadOnlyInput) UnmarshalJSON(data []byte) error {
 type CardAccountDetailsInput struct {
 	// A tokenized string replacement for the card data.
 	Token string `json:"token"`
-	// The issuer of the card.
-	Issuer string `json:"issuer"`
 	// The first name of the account holder.
 	FirstName string `json:"first_name"`
 	// The last name of the account holder.
@@ -986,7 +984,7 @@ func (c CardAccountDetailsInput) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CardAccountDetailsInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "issuer", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country"}); err != nil {
 		return err
 	}
 	return nil
@@ -997,13 +995,6 @@ func (c *CardAccountDetailsInput) GetToken() string {
 		return ""
 	}
 	return c.Token
-}
-
-func (c *CardAccountDetailsInput) GetIssuer() string {
-	if c == nil {
-		return ""
-	}
-	return c.Issuer
 }
 
 func (c *CardAccountDetailsInput) GetFirstName() string {
