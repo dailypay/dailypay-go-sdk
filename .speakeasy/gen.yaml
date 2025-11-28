@@ -26,7 +26,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.5.4
+  version: 0.5.5
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -42,10 +42,12 @@ go:
       shared: models/components
       webhooks: models/webhooks
   includeEmptyObjects: false
+  inferUnionDiscriminators: false
   inputModelSuffix: input
   maxMethodParams: 0
   methodArguments: require-security-and-request
   modulePath: github.com/dailypay/dailypay-go-sdk
+  multipartArrayFormat: legacy
   nullableOptionalWrapper: false
   outputModelSuffix: output
   respectRequiredFields: false
