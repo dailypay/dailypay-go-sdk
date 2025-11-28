@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: a9c33e466fad7a1e8249ff3254d6c1fc
-  docVersion: 3.0.0-beta95
-  speakeasyVersion: 1.660.0
-  generationVersion: 2.760.2
-  releaseVersion: 0.5.4
-  configChecksum: e8dd3aaa98c1f35e01f6234171dbcd59
+  docChecksum: 76ec3e0eec63f06d3f5e0050d59893f1
+  docVersion: 3.0.0-beta96
+  speakeasyVersion: 1.664.0
+  generationVersion: 2.766.1
+  releaseVersion: 0.5.5
+  configChecksum: 8959f2433e48366fa89b9205b02f1ffa
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.2
+    core: 3.13.5
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -32,7 +32,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.2.0
-    unions: 2.87.1
+    unions: 2.87.2
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
@@ -725,4 +725,3 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
-releaseNotes: "## Go SDK Changes Detected:\n* `Sdk.Accounts.Create()`: \n  *  `request.Request.Data.Attributes.[card].CardAccountDetails.Issuer` **Removed** **Breaking** :warning:\n"
