@@ -732,7 +732,7 @@ func (s *Transfers) Create(ctx context.Context, request operations.CreateTransfe
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createTransfer",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TransferCreateData", "json", `request:"mediaType=application/vnd.api+json"`)

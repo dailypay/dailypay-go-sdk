@@ -410,7 +410,7 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updateJob",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "JobUpdateData", "json", `request:"mediaType=application/vnd.api+json"`)

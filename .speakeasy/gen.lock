@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 76ec3e0eec63f06d3f5e0050d59893f1
-  docVersion: 3.0.0-beta96
-  speakeasyVersion: 1.664.0
-  generationVersion: 2.766.1
-  releaseVersion: 0.5.5
-  configChecksum: 8959f2433e48366fa89b9205b02f1ffa
+  docChecksum: e5523e894b66a18737191a9f822a486c
+  docVersion: 3.0.0-beta97
+  speakeasyVersion: 1.666.0
+  generationVersion: 2.768.0
+  releaseVersion: 0.6.0
+  configChecksum: cb43fd3d713f0b5753c264680087df44
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 features:
@@ -31,7 +31,7 @@ features:
     oauth2ClientCredentials: 1.1.0
     responseFormat: 0.1.2
     retries: 2.84.2
-    sdkHooks: 0.2.0
+    sdkHooks: 0.3.0
     unions: 2.87.2
 generatedFiles:
   - .gitattributes
@@ -358,6 +358,7 @@ generatedFiles:
   - internal/globals/globals.go
   - internal/hooks/clientcredentials.go
   - internal/hooks/hooks.go
+  - internal/hooks/oauth2scopes.go
   - internal/utils/contenttype.go
   - internal/utils/env.go
   - internal/utils/form.go

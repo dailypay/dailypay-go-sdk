@@ -408,7 +408,7 @@ func (s *People) Update(ctx context.Context, request operations.UpdatePersonRequ
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "updatePerson",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PersonData", "json", `request:"mediaType=application/vnd.api+json"`)

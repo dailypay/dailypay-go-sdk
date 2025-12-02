@@ -76,7 +76,7 @@ func (s *Paychecks) Read(ctx context.Context, request operations.ReadPaycheckReq
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readPaycheck",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -413,7 +413,7 @@ func (s *Paychecks) List(ctx context.Context, request operations.ListPaychecksRe
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "listPaychecks",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
