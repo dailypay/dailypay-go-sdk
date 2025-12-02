@@ -730,7 +730,7 @@ func (s *Accounts) Create(ctx context.Context, request components.AccountDataInp
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createAccount",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/vnd.api+json"`)
