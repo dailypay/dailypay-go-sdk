@@ -32,23 +32,16 @@ func (c *CreateTransferGlobals) GetVersion() *int64 {
 }
 
 type CreateTransferRequest struct {
-	// An idempotency key is a unique string that you provide to ensure a request is only processed once.
-	// Any number of requests with the same idempotency key and payload will return an identical response.
-	//
-	IdempotencyKey string `header:"style=simple,explode=false,name=Idempotency-Key"`
 	// Add related resources to the response.
 	//
 	// The value of the include parameter must be a comma-separated (U+002C COMMA, “,”) list of relationship paths.
 	//
-	Include            *string                       `queryParam:"style=form,explode=true,name=include"`
+	Include *string `queryParam:"style=form,explode=true,name=include"`
+	// An idempotency key is a unique string that you provide to ensure a request is only processed once.
+	// Any number of requests with the same idempotency key and payload will return an identical response.
+	//
+	IdempotencyKey     string                        `header:"style=simple,explode=false,name=Idempotency-Key"`
 	TransferCreateData components.TransferCreateData `request:"mediaType=application/vnd.api+json"`
-}
-
-func (c *CreateTransferRequest) GetIdempotencyKey() string {
-	if c == nil {
-		return ""
-	}
-	return c.IdempotencyKey
 }
 
 func (c *CreateTransferRequest) GetInclude() *string {
@@ -56,6 +49,13 @@ func (c *CreateTransferRequest) GetInclude() *string {
 		return nil
 	}
 	return c.Include
+}
+
+func (c *CreateTransferRequest) GetIdempotencyKey() string {
+	if c == nil {
+		return ""
+	}
+	return c.IdempotencyKey
 }
 
 func (c *CreateTransferRequest) GetTransferCreateData() components.TransferCreateData {

@@ -122,18 +122,15 @@ func main() {
         JobUpdateData: components.JobUpdateData{
             Data: components.Data{
                 ID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
-                Attributes: &components.JobAttributesInput{
-                    ActivationStatus: components.ActivationStatusDeactivated.ToPointer(),
-                },
                 Relationships: &components.JobRelationshipsInput{
                     DirectDepositDefaultDepository: &components.AccountRelationship{
                         Data: components.AccountIdentifier{
-                            ID: "2bc7d781-3247-46f6-b60f-4090d214936a",
+                            ID: "123e4567-e89b-12d3-a456-426614174000",
                         },
                     },
                     DirectDepositDefaultCard: &components.AccountRelationship{
                         Data: components.AccountIdentifier{
-                            ID: "2bc7d781-3247-46f6-b60f-4090d214936a",
+                            ID: "223e4567-e89b-12d3-a456-426614174001",
                         },
                     },
                 },

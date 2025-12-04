@@ -109,6 +109,16 @@ func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -117,11 +127,9 @@ func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
@@ -454,6 +462,16 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -462,11 +480,9 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
@@ -795,6 +811,16 @@ func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opt
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -803,11 +829,9 @@ func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opt
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
