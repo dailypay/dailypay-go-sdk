@@ -73,30 +73,30 @@ func main() {
 	)
 
 	res, err := s.Transfers.Create(ctx, operations.CreateTransferRequest{
+		Include:        dailypay.Pointer("estimated_funding_sources,final_funding_sources"),
 		IdempotencyKey: "e2736aa1-78c4-4cc6-b0a6-848e733f232a",
 		TransferCreateData: components.TransferCreateData{
 			Data: components.TransferCreateResource{
-				ID: dailypay.Pointer("aba332a2-24a2-46de-8257-5040e71ab210"),
 				Attributes: components.TransferAttributesInput{
 					Preview:  dailypay.Pointer(true),
-					Amount:   2500,
+					Amount:   15000,
 					Currency: "USD",
 					Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,
 				},
 				Relationships: components.TransferCreateRelationships{
 					Origin: components.AccountRelationship{
 						Data: components.AccountIdentifier{
-							ID: "2bc7d781-3247-46f6-b60f-4090d214936a",
+							ID: "123e4567-e89b-12d3-a456-426614174000",
 						},
 					},
 					Destination: components.AccountRelationship{
 						Data: components.AccountIdentifier{
-							ID: "2bc7d781-3247-46f6-b60f-4090d214936a",
+							ID: "223e4567-e89b-12d3-a456-426614174001",
 						},
 					},
 					Person: components.PersonRelationship{
 						Data: components.PersonIdentifier{
-							ID: "3fa8f641-5717-4562-b3fc-2c963f66afa6",
+							ID: "aa860051-c411-4709-9685-c1b716df611b",
 						},
 					},
 				},

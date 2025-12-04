@@ -114,6 +114,16 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -122,11 +132,9 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
@@ -455,6 +463,16 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -463,11 +481,9 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
@@ -774,6 +790,16 @@ func (s *Accounts) Create(ctx context.Context, request components.AccountDataInp
 	if retryConfig == nil {
 		if globalRetryConfig != nil {
 			retryConfig = globalRetryConfig
+		} else {
+			retryConfig = &retry.Config{
+				Strategy: "backoff", Backoff: &retry.BackoffStrategy{
+					InitialInterval: 500,
+					MaxInterval:     60000,
+					Exponent:        1.25,
+					MaxElapsedTime:  30000,
+				},
+				RetryConnectionErrors: true,
+			}
 		}
 	}
 
@@ -782,11 +808,9 @@ func (s *Accounts) Create(ctx context.Context, request components.AccountDataInp
 		httpRes, err = utils.Retry(ctx, utils.Retries{
 			Config: retryConfig,
 			StatusCodes: []string{
-				"429",
-				"500",
-				"502",
-				"503",
-				"504",
+				"408",
+				"409",
+				"5XX",
 			},
 		}, func() (*http.Response, error) {
 			if req.Body != nil && req.Body != http.NoBody && req.GetBody != nil {
