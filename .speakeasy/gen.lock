@@ -1,19 +1,23 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: f269138b0e973280a923a1bfc44e98ad
-  docVersion: 3.0.0-beta98
-  speakeasyVersion: 1.668.0
-  generationVersion: 2.770.0
-  releaseVersion: 0.6.1
-  configChecksum: 630510c3a106ffc28b284d7497408266
+  docChecksum: 71d191bbedde29f582cd843b6ec04f46
+  docVersion: 3.0.0-beta99
+  speakeasyVersion: 1.674.0
+  generationVersion: 2.778.0
+  releaseVersion: 0.6.2
+  configChecksum: efe7e31bfad8be3f7bcb895a8ba00ea7
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
+persistentEdits:
+  generation_id: 8c4f4def-7422-4b12-b90d-bed2faeb62d6
+  pristine_commit_hash: 6dc20042a1c92cbcb5ccfcd9023cd5452c889166
+  pristine_tree_hash: 7804d7689094061811bd18ab621f8820e126c908
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.5
+    core: 3.13.6
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -33,6 +37,1898 @@ features:
     retries: 2.84.2
     sdkHooks: 0.3.0
     unions: 2.87.2
+trackedFiles:
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:84b0115789fc3ea52e31df701d8a27f76077e29f
+    pristine_git_object: e6a994416d0f527912d2d272e2583458f4fc9bcb
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:4acc4a7289408033fdb302a92f414b53f1e7c58d
+    pristine_git_object: edb0f44af0e1faee491cd02f28dbdece358f9fa8
+  accounts.go:
+    id: c7bd7b26c9d3
+    last_write_checksum: sha1:0ca6e1371dbad7bd45dc677dccc6e68d79abe336
+    pristine_git_object: 420850102be41130ac3a844bbf89728664ac519c
+  cardtokenization.go:
+    id: 8bbcb59e370e
+    last_write_checksum: sha1:10d07acda1d9ec25d3be3658420521f080b0ea24
+    pristine_git_object: 63f423b6b37ca767888f5d90d7baad637b173293
+  docs/models/apierrors/accountcreateerror.md:
+    id: 7fef2715c1db
+    last_write_checksum: sha1:c92a6c7dd5dc3a204caf8fd06a81f3613640efae
+    pristine_git_object: 43bcb4eaab567e9d3678532162c824bcd362a2df
+  docs/models/apierrors/errorbadrequest.md:
+    id: fba3ca2ea06a
+    last_write_checksum: sha1:ab5cccc0832f92dc14e859c4f6c16c764ce30975
+    pristine_git_object: fec76c253a93ceab353db8a2cb23cbb2410cb754
+  docs/models/apierrors/errorconflict.md:
+    id: bbc9ab31ea52
+    last_write_checksum: sha1:38b34d2e21d0fff0200a8850bd269ef7c04c46de
+    pristine_git_object: c3ac5bf31a2f6004cad913b2360d1d6cdad620ac
+  docs/models/apierrors/errorforbidden.md:
+    id: ab15f0946557
+    last_write_checksum: sha1:31aa2fb66b7ebfa55df3f8676e406582488f823b
+    pristine_git_object: 849d06614b22f17c4795d2205524b9ec12babc4b
+  docs/models/apierrors/errornotfound.md:
+    id: 60a9ff3f3446
+    last_write_checksum: sha1:f86d93e3f15a99f4be40643786c372595779908d
+    pristine_git_object: a7684392fa00cd012c4111d3cae9657cb5e2c348
+  docs/models/apierrors/errorunauthorized.md:
+    id: cd7370630f44
+    last_write_checksum: sha1:cb8cb77b2fbb30178ebd2ce70fed640cc2e10e90
+    pristine_git_object: 7e16a33d6b6d8f6beda80a106d6adc7229b8fcf3
+  docs/models/apierrors/errorunexpected.md:
+    id: 5db22df4c7de
+    last_write_checksum: sha1:9097ee05ebf3496aa47b41be226aa3801f991cb5
+    pristine_git_object: 2adb9e655bd742fdcd65ac3333a9907b23dd2957
+  docs/models/apierrors/jobupdateerror.md:
+    id: 62bd5084e6f7
+    last_write_checksum: sha1:35c348206de7cda87d7028d31477d365672980e7
+    pristine_git_object: 08d240918555bf05eae2686a9194e60aa7c5a790
+  docs/models/apierrors/transfercreateerror.md:
+    id: e1f0ff8808d7
+    last_write_checksum: sha1:2ebbdc2dcc2e8b5c68dd3fb43f8dab8efdb125dd
+    pristine_git_object: ca225e40f8c631f0368c1ffc27cb83e3b1e66359
+  docs/models/components/accountattributescardaccountbalances.md:
+    id: 258cd1943efc
+    last_write_checksum: sha1:c0660e7f0c5891b7b85a42397f5a46672568e6a6
+    pristine_git_object: 904496a3ca1b88708c9c5ab6474ee4048ca9fd63
+  docs/models/components/accountattributescardaccountcapabilities.md:
+    id: 4eeef3600d48
+    last_write_checksum: sha1:49773f8dbeb756be7112e2b529e263c9fc2010f6
+    pristine_git_object: ef101ee02121b704e007dd9a7e994ddb4878c9d8
+  docs/models/components/accountattributescardsubtype.md:
+    id: 2edbeaca7619
+    last_write_checksum: sha1:c87270e8c5f49dd67be829114c3c95fb043bbfb2
+    pristine_git_object: 221456cd086babc1b971029d833ab23844b7cfc6
+  docs/models/components/accountattributescardverificationstatus.md:
+    id: ebd88681363b
+    last_write_checksum: sha1:87563f4d52bc2bd8feebe5072f978c582fd53679
+    pristine_git_object: d57380f81e5077bc7690f7c16c580096cfe6f4b0
+  docs/models/components/accountattributesdepositoryaccountbalances.md:
+    id: "334435533e64"
+    last_write_checksum: sha1:71c29675f0d623a01bfca1dbb3f3a81fe8719ad7
+    pristine_git_object: 153608d889fda721f5218e579ee912a6230a1076
+  docs/models/components/accountattributesdepositoryaccountcapabilities.md:
+    id: 88b05fccd3d1
+    last_write_checksum: sha1:5d4f8ee50eb0cd5764fd3f3709d93a7d077123ae
+    pristine_git_object: 2f62586ed6f9796573c9abd631127dc674dbdf21
+  docs/models/components/accountattributesdepositorysubtype.md:
+    id: 516faf8b5a4a
+    last_write_checksum: sha1:8cd189a0416a6ae6d42bc1dc0b8552453f95277a
+    pristine_git_object: 9c46e686f8502eeb9270b7ffbec2ab5011986de8
+  docs/models/components/accountattributesdepositoryverificationstatus.md:
+    id: 23ae7fb2d63b
+    last_write_checksum: sha1:b496081582a70a2a758728dde7209c38ac872b20
+    pristine_git_object: 6c71425841a1149f915a2a7009f714ae6a3f3fb3
+  docs/models/components/accountattributesearningsbalanceaccountbalances.md:
+    id: 00c8a0f59f2e
+    last_write_checksum: sha1:2e951b380943b03fafddfefee6ec1e359bd6dd5c
+    pristine_git_object: 0ef142fe3be378f3b9c0a0d32abb79274defa326
+  docs/models/components/accountattributesearningsbalanceaccountcapabilities.md:
+    id: 806600d93e85
+    last_write_checksum: sha1:7ddb122e225013ffdd819b2ed13ef26fbe201de2
+    pristine_git_object: 58ebb8002b7474ca3a1f62f7f1f4dff0237b504c
+  docs/models/components/accountattributesearningsbalanceverificationstatus.md:
+    id: ab7615220e2f
+    last_write_checksum: sha1:152ad626265f8a792976baca73ed8931ee1bd2e8
+    pristine_git_object: a91bdd7bc9850ac5f775e64f352ca0b88641a4f8
+  docs/models/components/accountattributesinput.md:
+    id: a950bb480ce6
+    last_write_checksum: sha1:5c29304603e241c4d70459a12d6a16c475c1a9e8
+    pristine_git_object: af0f8386c4162503c5a64c490e8567dc05672050
+  docs/models/components/accountattributesoutput.md:
+    id: aeff5872f0a5
+    last_write_checksum: sha1:4a69eeb53696ebc719940732568dfd8b2dd81bca
+    pristine_git_object: efb1776760013445e4bace90f03d4091b67b46c3
+  docs/models/components/accountdatainput.md:
+    id: 92c9baddaa9f
+    last_write_checksum: sha1:6c413756febc8d6d604c5366f0401b9552a12c9f
+    pristine_git_object: f76f9adc758a24195bf64086f01b0a99fde2a1e6
+  docs/models/components/accountdataoutput.md:
+    id: c582bcc0c24e
+    last_write_checksum: sha1:2e4ca1f2a8be42df59a6440314571627dfa7005b
+    pristine_git_object: 39a5d1d58ec75ecae7d3c3ef7617d629cd63164c
+  docs/models/components/accountidentifier.md:
+    id: f5b00db76cbf
+    last_write_checksum: sha1:4636c91d37de7856e533e47898a6db379883f56d
+    pristine_git_object: 88f92008e6c8842a7f2ec3420da749b2417c5c05
+  docs/models/components/accountlinks.md:
+    id: c4781fb9e695
+    last_write_checksum: sha1:2e71384f6e265dda4b8f3635b39654876eb9ec7f
+    pristine_git_object: d33efb1d73b981115d81184c5b5722eb74f4431d
+  docs/models/components/accountrelationship.md:
+    id: 3821b4711dec
+    last_write_checksum: sha1:73aeae87a93015314419d097e90f6d85ace45367
+    pristine_git_object: 8eff4f6e42fbe7d331f92fcd0b706dbb2844a9bc
+  docs/models/components/accountrelationships.md:
+    id: 6f4cdaa9e162
+    last_write_checksum: sha1:722b899bc4939ea605b07d68de9e844f5fb4fba5
+    pristine_git_object: b29af60167f165a9cc98584555043553b05afcf9
+  docs/models/components/accountresourceinput.md:
+    id: 90fe7791ed22
+    last_write_checksum: sha1:603da2aa91635a9baff03379c4b717d90b217605
+    pristine_git_object: 5c976a53138942f5e512dcb936f78a8f835bc228
+  docs/models/components/accountresourceoutput.md:
+    id: 8930ff67a433
+    last_write_checksum: sha1:6cf57915392609a2cadb328e1eb5075ec37fe649
+    pristine_git_object: c23933a956b33dbfcc8377e55d452468f4a9c388
+  docs/models/components/accountsdata.md:
+    id: 9431e604d0d1
+    last_write_checksum: sha1:b4ac08a3eba292d765a85eea01083de81d551b8b
+    pristine_git_object: 7b10d83d58054acf19b480fe577583afe1e3ce9e
+  docs/models/components/activationstatus.md:
+    id: b6297b5e029d
+    last_write_checksum: sha1:c6254b2537fc3b5bf842c2fe91a17daacf9894ba
+    pristine_git_object: f0401bf9b62da64f84360d3f7d3976a544eb2302
+  docs/models/components/cardaccountdetailsinput.md:
+    id: c3839b127cbd
+    last_write_checksum: sha1:d591fe4795e8a768c0bd55180aca9f9bd25e34c2
+    pristine_git_object: bf4053f76998cbb0f179e77854d38d530b67cccd
+  docs/models/components/cardaccountdetailsoutput.md:
+    id: 51e41130824e
+    last_write_checksum: sha1:d4dd80b8284fbb61856d82bf94867c79d05a1c34
+    pristine_git_object: 28bc9c3e9bdad8dda32d547a66fbde0611960414
+  docs/models/components/cardinput.md:
+    id: 364474b49bb4
+    last_write_checksum: sha1:640a260623a0a51fc1aff656dde808513f79d5c1
+    pristine_git_object: 2728da28e326584b5e9382de091bff6ad15070fb
+  docs/models/components/cardoutput.md:
+    id: a3ab4b587c25
+    last_write_checksum: sha1:04fc5e3aee0da7fe3f3f1d81580c0d9e78f1a2a2
+    pristine_git_object: 4f09718f311f5375ec5d993fd949f859b8713f39
+  docs/models/components/dailypaycardproductentitlement.md:
+    id: 81f45e369f39
+    last_write_checksum: sha1:5070db83e49f3f8aefa59e7c9a29c409a8be7ce4
+    pristine_git_object: 49d548d54a2cf1fe7feacc17aceba879fb3f18cc
+  docs/models/components/data.md:
+    id: 3f89c52c2b17
+    last_write_checksum: sha1:860e354c2ecb4bad4b62a7a2b0bf5a9d45212c51
+    pristine_git_object: b3dd8a92709252c8d6e97e53e1715822916cb095
+  docs/models/components/depository.md:
+    id: a1ac0bba331b
+    last_write_checksum: sha1:f21a6300180572c3247131d3dd598664ddeb27ab
+    pristine_git_object: 651e2eac9ff97ec665ca8df8393ce73f24b44d14
+  docs/models/components/depositoryaccountdetails.md:
+    id: 27a5c04a2cd4
+    last_write_checksum: sha1:8ff7e8b229726a3da90c72003123be0b47471f98
+    pristine_git_object: 7628d1c5a6f8a62c5f844e624403576f62fe74ec
+  docs/models/components/depositoryinput.md:
+    id: e7e10dd2e339
+    last_write_checksum: sha1:4347423abd9f6b7ee72e306d3961f7c3d98988e2
+    pristine_git_object: b67eeecdd276210a5f8a42222b52c1c9e38ca122
+  docs/models/components/details.md:
+    id: 77e2686696cf
+    last_write_checksum: sha1:bed32a1c0cd2f1d483c977802729d005728b9199
+    pristine_git_object: dd3e62f99aa1c48c4bd8bec82c20b070db9f5ffe
+  docs/models/components/directdepositstatus.md:
+    id: 6db054ee38fc
+    last_write_checksum: sha1:0004c99e1b5da64409ecb827fba1347faf599fcb
+    pristine_git_object: d7785651269704f99a37c053989d5f8bd9c4dab4
+  docs/models/components/disallowreason.md:
+    id: c707072dc2d8
+    last_write_checksum: sha1:560a36d881075388942a9ce1e1965ee7b7efdb88
+    pristine_git_object: c32dc53e91e4de4d5e14182e641ffc1b53f32faf
+  docs/models/components/earningsbalancereadonly.md:
+    id: 3dc27157665e
+    last_write_checksum: sha1:1dc54fea944d7ac6cb96afd78bdd94021e6929a5
+    pristine_git_object: b3a9911ec2c8f8ceff2e3f03da8b728d6a32811c
+  docs/models/components/earningsbalancereadonlyinput.md:
+    id: c189db1dedea
+    last_write_checksum: sha1:2082d280f09598646c50f2c7f4669bbed75858f1
+    pristine_git_object: 5d6d2a008c828e957e95630b8c5bf18d8cbb39df
+  docs/models/components/erroraccountcreateerror.md:
+    id: acd939b51475
+    last_write_checksum: sha1:b9e67ffcfa92a107f7c7dc497ff795f31b3c3b1d
+    pristine_git_object: 833ff2f659f448cd8bafe88add1d3830fc31854f
+  docs/models/components/erroraccountcreateerrorlinks.md:
+    id: f850f481d773
+    last_write_checksum: sha1:2eb62677d19746964a0b841dea78c0b12631df3e
+    pristine_git_object: 9208af79cc150983bac3f2fe6efdcfe7105a4dcc
+  docs/models/components/erroraccountcreateerrormeta.md:
+    id: 8fbdddecbf21
+    last_write_checksum: sha1:55c386f004a28abefa7544baff4b8a73c457e30e
+    pristine_git_object: 05c360efe968ba922e1c59b45529c42afa318c31
+  docs/models/components/erroraccountcreateerrorsource.md:
+    id: 87bdf51aa895
+    last_write_checksum: sha1:430975050c8970b60d0300d758b8d98d4beac822
+    pristine_git_object: cc749200847ee8f4992ff6dff87e07fd1afafd42
+  docs/models/components/errorbadrequesterror.md:
+    id: 182b81d062ba
+    last_write_checksum: sha1:4a297481c8e14a009f8e5827d4dddb82680cc3c5
+    pristine_git_object: 3f148309d3f6c9a17aacbd7a2c7f9277e56a538a
+  docs/models/components/errorbadrequesterrorlinks.md:
+    id: fb3c0acd8f92
+    last_write_checksum: sha1:55dcf5ee050a3e92e4829269c2a261cb21551ca4
+    pristine_git_object: 88bc348e4224efcde7afaf3ebe378dea86377835
+  docs/models/components/errorbadrequesterrormeta.md:
+    id: 5f3c6dc7016c
+    last_write_checksum: sha1:ed44671d2598cfd32e554f4df80e417503db6e42
+    pristine_git_object: c61f2fe05512ba4843cd344583e45f58d5d072f0
+  docs/models/components/errorbadrequesterrorsource.md:
+    id: c8b90cb22698
+    last_write_checksum: sha1:c39c93408b0e240842f9970f93a0c804e403413f
+    pristine_git_object: b7b81a65d05ea2146f79d32e987f5d21d444898f
+  docs/models/components/errorconflicterror.md:
+    id: e8dfcc966716
+    last_write_checksum: sha1:5dba13b9e14e5b73cb9d4579eedac06f1b1b378f
+    pristine_git_object: 8f0b11f24c284c8fd035e0eaf0a38968fc2766b1
+  docs/models/components/errorconflicterrorlinks.md:
+    id: 75ee86d8c1f2
+    last_write_checksum: sha1:eadf283ea407d45072af3b9c472067161d3ab740
+    pristine_git_object: 46a5c4221772df2f583f5f052ebc7cd9839f287f
+  docs/models/components/errorconflicterrormeta.md:
+    id: f373a22f7756
+    last_write_checksum: sha1:cdee09b75dc86fb49e99c6c35eac5a46d3bcfa26
+    pristine_git_object: 618aecb35ad2a10ad6a821934ffbf93b08c71191
+  docs/models/components/errorconflicterrorsource.md:
+    id: ba5669f23fbe
+    last_write_checksum: sha1:a31ef68431f2f01078d6b688658865b0ff9c7364
+    pristine_git_object: 648ccae77d1caa9593133850556d8a150e4280fd
+  docs/models/components/errorforbiddenerror.md:
+    id: 7e9e79fca6d0
+    last_write_checksum: sha1:6414c41899750446cfcd3127dc9eb604ec38ca64
+    pristine_git_object: 4b232c465ea89026a95f554ecb581e078a98f209
+  docs/models/components/errorforbiddenerrorcode.md:
+    id: 2adc5f23114f
+    last_write_checksum: sha1:2b76a3926c2698335aeb205ec2ffa998e48faa9e
+    pristine_git_object: 18712d84c3c40579f0a3bbd9d439ac2efe1a72c8
+  docs/models/components/errorforbiddenerrorlinks.md:
+    id: 98ad7c7c9e63
+    last_write_checksum: sha1:1353598ce7c5ca1023335e180e88b46342a0393a
+    pristine_git_object: 649e95d611394e2f25832a129c02efec011b090e
+  docs/models/components/errorforbiddenerrormeta.md:
+    id: "971402421254"
+    last_write_checksum: sha1:d87960a64461d3a02aa2a2e47d010a85a391905e
+    pristine_git_object: 1a67bacf85157969a45cf99ba095abc2da26cbc6
+  docs/models/components/errorforbiddenerrorsource.md:
+    id: e92a69c36745
+    last_write_checksum: sha1:dc0fd26e949f20dc9ca23dc0ad48b76e7b776481
+    pristine_git_object: aeffed29f00a9552b149098cf8589e07bf37e2a5
+  docs/models/components/errorjobupdateerror.md:
+    id: cad5b9ede23f
+    last_write_checksum: sha1:a6ea5b9adef992a88a01af20b244d8c130a5c32e
+    pristine_git_object: f1836f2b8068444c9ff225f23a93b94dc9f4975d
+  docs/models/components/errorjobupdateerrorlinks.md:
+    id: ee9f99af8e81
+    last_write_checksum: sha1:5d28dca39c82c8b548d76c39cd0648f7c6cf4792
+    pristine_git_object: db684f52e5cf0182f3efc4b5a306be00196b58ec
+  docs/models/components/errorjobupdateerrormeta.md:
+    id: 093b2837117f
+    last_write_checksum: sha1:d8c52615df7824935af1c399bed43169d83885dd
+    pristine_git_object: 90c66172fa757e2718322f8d6ae2e3dcc19cb213
+  docs/models/components/errorjobupdateerrorsource.md:
+    id: 9995d275fce5
+    last_write_checksum: sha1:79cb48f291a82bc24a5d34109e0aa15131b901ab
+    pristine_git_object: edaeba0a4aaab76cbf32c2e39385df6b04e9012f
+  docs/models/components/errornotfounderror.md:
+    id: dd8d1af13143
+    last_write_checksum: sha1:140814556a4608d6801755e6ac71351d8f081a79
+    pristine_git_object: 419f1b4fcc509240817355d61a150db19a4c00cf
+  docs/models/components/errornotfounderrorcode.md:
+    id: d5914eaee04b
+    last_write_checksum: sha1:90c637bebf618d06916f7ae1dc56004b7c3faf20
+    pristine_git_object: 75526f77fd3bf950702626664b12acd3b8c538e4
+  docs/models/components/errornotfounderrorlinks.md:
+    id: f16aa97a7918
+    last_write_checksum: sha1:071ead8509e9b44c7c162827d38138fe9ecf9f4b
+    pristine_git_object: 7f172c76f82b3d5eef055df0c1b6de5f6f4d6ecf
+  docs/models/components/errornotfounderrormeta.md:
+    id: b348479f4ed7
+    last_write_checksum: sha1:ebe74de9c726bef1d2cd1dd101fe871420ca7a9a
+    pristine_git_object: 900c715fac4232f1c6294babc1564c82982ccc37
+  docs/models/components/errornotfounderrorsource.md:
+    id: 145754df76de
+    last_write_checksum: sha1:03db9b2237877000d95a76ccd37ad9c5e99f763f
+    pristine_git_object: 940ed136e7e8b0f37a91c8332e3badd9cce9d4bc
+  docs/models/components/errortransfercreateerror.md:
+    id: f79fdacb05cb
+    last_write_checksum: sha1:1cd71bc233e24259256a86a70709146df0c65a25
+    pristine_git_object: ed3f173eebc12f577c7684bb7ac221f59ebe3045
+  docs/models/components/errortransfercreateerrorlinks.md:
+    id: 1dfa4b25d568
+    last_write_checksum: sha1:85582fbb7e81f4ba227cd24af51adb768a4b5fa1
+    pristine_git_object: dc88c403508c3d6a8d9120e6de586395b6a108a6
+  docs/models/components/errortransfercreateerrormeta.md:
+    id: fb383d980d61
+    last_write_checksum: sha1:45e95c18c75d349559796ccab0841fafe7c02811
+    pristine_git_object: 3ec97fc1385a7b1800ab74e998db94edfdc4eba6
+  docs/models/components/errortransfercreateerrorsource.md:
+    id: b3cc449b5651
+    last_write_checksum: sha1:f14e8d75ce6cfec811fca295a05bf2959d2325e7
+    pristine_git_object: 493008feae543678c0fed2584a243460b7121fe5
+  docs/models/components/errorunauthorizederror.md:
+    id: 72db60e28a9d
+    last_write_checksum: sha1:e6432ebce460bb3aff92583a9de84d4b213812c3
+    pristine_git_object: da89305742b2d6177afa3d967d14c8e7520b6816
+  docs/models/components/errorunauthorizederrorcode.md:
+    id: 572326c1f599
+    last_write_checksum: sha1:3e6a8b4a76e9f9567c338eb276c2de6b22b35cd7
+    pristine_git_object: 90eacf5283a4cdae78fdaca9db6b8139f6f2c1a8
+  docs/models/components/errorunauthorizederrorlinks.md:
+    id: 310cff7f2e21
+    last_write_checksum: sha1:824cfda70dc4cfe5f82cbda7a9adf7c859b35e80
+    pristine_git_object: 0d98fc4513439909c540ecf4245c203a2999b740
+  docs/models/components/errorunauthorizederrormeta.md:
+    id: 9f95d38f5323
+    last_write_checksum: sha1:015fbcb4b87c238892712d0a084e20d539e40f9b
+    pristine_git_object: 09101a5bff16735659934d10c5b2246e86b443cc
+  docs/models/components/errorunauthorizederrorsource.md:
+    id: 94c3611bd9c4
+    last_write_checksum: sha1:89acf55e41d1c7b1adebf86bd5392ade5398cb60
+    pristine_git_object: 127c06fddc40f63ddb2ddb667b9a9343ee9a5b2e
+  docs/models/components/errorunexpectederror.md:
+    id: 0dcafe911207
+    last_write_checksum: sha1:f9ac4bee0100efb159332689e5ede4e1d372d388
+    pristine_git_object: b22b0bc44f409a9fc23062791bc7efb9dabc21a5
+  docs/models/components/errorunexpectederrorcode.md:
+    id: e9eedb8ae025
+    last_write_checksum: sha1:4654b9ee6624c9af7ec638c4f9e6a34623fd08bb
+    pristine_git_object: f507b7e7f8c96b2edcbc5901507bbb22d04f1975
+  docs/models/components/errorunexpectederrorlinks.md:
+    id: fffe5fe8bedb
+    last_write_checksum: sha1:3183fc8bddb5af12fc39069b2dc0279dcd7c96a2
+    pristine_git_object: a72c9ae8c12b71f6a2da964acd0935ccdb0fb756
+  docs/models/components/errorunexpectederrormeta.md:
+    id: ddda11873d06
+    last_write_checksum: sha1:09cafc4c002da5e6ce52839784fad97b10570cc1
+    pristine_git_object: b8a562b558529ab5075e2e4fdb84037cf0e5d9d4
+  docs/models/components/errorunexpectederrorsource.md:
+    id: 01ac90da7759
+    last_write_checksum: sha1:698ea358de7ee4d09a142448930d3e696956b809
+    pristine_git_object: 9f03ba2c103b9b220bd6eaae92b87c5a1224b8dc
+  docs/models/components/filteraccounttype.md:
+    id: 3b1cf01b23ef
+    last_write_checksum: sha1:fc6ce28adfa1a122b94ac60c5b8b62b1adae6f0f
+    pristine_git_object: 517fb6b27204bcba3716d3a778e04adf808eb046
+  docs/models/components/filterpaycheckstatus.md:
+    id: 0f037f1cad68
+    last_write_checksum: sha1:c96b5971e7175b432c43faf6f3a14e23ef5c579b
+    pristine_git_object: e00354298d035e97ca2bade6bcdcdd3bb188ad51
+  docs/models/components/frequency.md:
+    id: 924b589b931a
+    last_write_checksum: sha1:f9c280606bb030773e928dfe2d314a35c21d1121
+    pristine_git_object: 1004c36d16af92e1c787fbebebcd703e3e1a9b99
+  docs/models/components/fundingsourceattributes.md:
+    id: c88525f6aa0d
+    last_write_checksum: sha1:9c26a93d538304428a5db61ecc152e5b81933d26
+    pristine_git_object: dce6bf2649f44cb3eb2a5cb05e59b8cf15930985
+  docs/models/components/fundingsourceidentifier.md:
+    id: 2b2d8b7576e7
+    last_write_checksum: sha1:8f16a9bb84644ad3fb8c0456764d01665dfaa38b
+    pristine_git_object: ab268f0bcd7dce0406ff03bf6bf73a5c9f3f61bf
+  docs/models/components/fundingsourcerelationships.md:
+    id: dcf88bb21f16
+    last_write_checksum: sha1:a3b3474381ffc89a78d39460053e6b3efad004e9
+    pristine_git_object: 73034150982b00b011421e45f05e2c5b1864e1eb
+  docs/models/components/fundingsourceresource.md:
+    id: eb73d4126385
+    last_write_checksum: sha1:c3296a2329e88cde50ff15f17bbab1e38fd64c2c
+    pristine_git_object: a8c525f91449820451431f4511991f8d71033ab0
+  docs/models/components/fundingsourcesrelationship.md:
+    id: 013b10b4a8d3
+    last_write_checksum: sha1:1ed2c9fbac207d5a08c04a9f6814c7b6508e49f6
+    pristine_git_object: d6ad47d50d8ee97bd7862044ac4a392c8205f3d5
+  docs/models/components/health200.md:
+    id: bd76097b1bed
+    last_write_checksum: sha1:ca34dbb942e2f5a55df2e5fb26d504353ef6f042
+    pristine_git_object: 63b2cf037a13e79101c9908ea9b763191960ed23
+  docs/models/components/httpmetadata.md:
+    id: 728948c70168
+    last_write_checksum: sha1:7c40945dac218ce5e5e11e7c907d27a3ea14c417
+    pristine_git_object: df1fdd59f3c85e4ba70573ff7954b12ac1d33d08
+  docs/models/components/jobattributes.md:
+    id: 2da6b0a916bb
+    last_write_checksum: sha1:cc68d1b5d5fac1cd2585ca45a4d63635c1f5a79c
+    pristine_git_object: 2ec262567accc0436f6f7ff165ad8ad94be08d3e
+  docs/models/components/jobattributesinput.md:
+    id: b04b28d35781
+    last_write_checksum: sha1:1acac7e9650ff687741ee06a8f85352ebbf5143b
+    pristine_git_object: d34adcc2e4626273f601cc5baadd5986ee3effd2
+  docs/models/components/jobdata.md:
+    id: f5caebac9019
+    last_write_checksum: sha1:e52a1cb05a9d48bb2ba591ae30725618487b7a23
+    pristine_git_object: 1b8bef14d9201ea0187940dd0b6439ed33ddbfe3
+  docs/models/components/jobidentifier.md:
+    id: 65525856a2b5
+    last_write_checksum: sha1:77ca32a22ac217450af1defc7ec9924b557555f9
+    pristine_git_object: cad63bb2bad7a7ab2470c2a37f1e4f87b686bf59
+  docs/models/components/joblinks.md:
+    id: be55c0b28ef9
+    last_write_checksum: sha1:703edb8bf20515cbd7347617729b118130c18cbb
+    pristine_git_object: 31ba5ba5286948c9877c923f1f38ba430619e6ee
+  docs/models/components/jobrelationship.md:
+    id: 28d65b4d36ed
+    last_write_checksum: sha1:c0efe0ca64600f680581e86ff0d9943670de4c62
+    pristine_git_object: e367d96b2dfa60a166c58abfad79f1eeab2a6bb5
+  docs/models/components/jobrelationships.md:
+    id: 5ac734137eca
+    last_write_checksum: sha1:82689714d4deea57e70ffbf735e5f93225c6a382
+    pristine_git_object: e1e50e46a0dae081588846de84e1bdd876ad1a2e
+  docs/models/components/jobrelationshipsinput.md:
+    id: 7e9bb4a58d00
+    last_write_checksum: sha1:03b219c38bf98110ef765ad5caa49b3fd7365dd1
+    pristine_git_object: cbb64a0b58cc789b272d9ff09b4cc7d5ffab8015
+  docs/models/components/jobresource.md:
+    id: 153922061f9c
+    last_write_checksum: sha1:ddad4a4595ed711c7faa65860f91da389e722dfa
+    pristine_git_object: 69ea5ce0b4ed73b758ababf55abd724832a82619
+  docs/models/components/jobsdata.md:
+    id: 31d2c22005a9
+    last_write_checksum: sha1:9918214eafed305c73cb9cb06cf12088aee3ac9b
+    pristine_git_object: 3068caecd793ea7ef70811fc118fbe0859590f8e
+  docs/models/components/jobupdatedata.md:
+    id: 5a8bc56f1443
+    last_write_checksum: sha1:6071aac8b41f050f2a74e6cff4e716218c55b837
+    pristine_git_object: 63388110d78566e549ec516989825e0163b42add
+  docs/models/components/organizationattributes.md:
+    id: 101512d715f4
+    last_write_checksum: sha1:187e9314079c55447437a6a4ff771b016a6e4c3e
+    pristine_git_object: bd5e28b5081a5fda53fdeda0a96f35f39e6d2bce
+  docs/models/components/organizationdata.md:
+    id: 73f992106d50
+    last_write_checksum: sha1:34437c4a77ac0409c4dd00fa1db142cfec0c1107
+    pristine_git_object: 169defee8ba0651c5460d1e198b0739c69f79c5f
+  docs/models/components/organizationidentifier.md:
+    id: 4c38ae5a1126
+    last_write_checksum: sha1:e41a9cb63dfb0d49e26be9366f3f9167ef8847e6
+    pristine_git_object: 461e6ab00cb0038fc084d83e60c31ed65317925e
+  docs/models/components/organizationlinks.md:
+    id: 056f7add00ca
+    last_write_checksum: sha1:f07d08395df6ff4847d7c7b1bc71e1647650e6df
+    pristine_git_object: bbbd67a7c207623240e33c9d9b062918ac5d5c04
+  docs/models/components/organizationrelationship.md:
+    id: 574b2a7629b5
+    last_write_checksum: sha1:4530a10e3483e4fd4173cbacda19f2c0034bff8a
+    pristine_git_object: 5ccad8800631bca3e2d0d4c9cdf6fb3b3e01655f
+  docs/models/components/organizationresource.md:
+    id: 65081b98723e
+    last_write_checksum: sha1:b0aa2a25e5f1625939ad05ea2371484335990a1d
+    pristine_git_object: f0393e9e6e73d934bd79d5a6acde04d664a930c5
+  docs/models/components/organizationsdata.md:
+    id: 6a7fb07a5d20
+    last_write_checksum: sha1:7204868a3b38cbdc879d15b4813b1fe38f655856
+    pristine_git_object: f9f61f9f8d4fb37cf24c0d454e4026546f753782
+  docs/models/components/origin.md:
+    id: 722ea99cc7dc
+    last_write_checksum: sha1:2cb70c61ee6a7055ea154e57b22e424fb93f7861
+    pristine_git_object: 6365aef9f8270a96727235683629ffdce64a2c91
+  docs/models/components/paycheckattributes.md:
+    id: 5cb6dd66b698
+    last_write_checksum: sha1:2add926d3b862599f8284c01cea39ea17bdc56dc
+    pristine_git_object: 1b94a6da32dd321fed694ebcdeb039f46e5294c0
+  docs/models/components/paycheckattributesstatus.md:
+    id: 23cae81ce887
+    last_write_checksum: sha1:d6b69e7df7b88a60520ad936018b6ba7a66dea4f
+    pristine_git_object: d22ec65902e9470f5273e25aa5bb1688a3d3f52e
+  docs/models/components/paycheckdata.md:
+    id: b23717b5ee47
+    last_write_checksum: sha1:b27f3c4882fedc9728bf7ed90e2db3dbc7366e55
+    pristine_git_object: 55a31d1ba50a493dc7006bd64d0aff2c1377078e
+  docs/models/components/paycheckidentifier.md:
+    id: 6d4c44f398e5
+    last_write_checksum: sha1:a286bdf45d64509012098878cff472504ca673e7
+    pristine_git_object: 6252a970a5fa348592cad4cae9dd0685edc3da43
+  docs/models/components/paychecklinks.md:
+    id: 8df6529f28d7
+    last_write_checksum: sha1:29ade8d16d71c20e9650b0b40d827ac047c22cb9
+    pristine_git_object: 0867bd1efe45e6b87f07d72170b9d0a84367616c
+  docs/models/components/paycheckrelationship.md:
+    id: 7df0bb5fb5ab
+    last_write_checksum: sha1:bb72033919d31dfbef280acfa2f5187283d75352
+    pristine_git_object: 4a61669749255ee5cd81b19cc5005d3e2670058c
+  docs/models/components/paycheckrelationships.md:
+    id: f2c91e8905b8
+    last_write_checksum: sha1:0f762f3a30788ee95ec41ddff178fd30f3453b08
+    pristine_git_object: a99469a8c76f24af4b38c96dc6e9f92483c102ed
+  docs/models/components/paycheckresource.md:
+    id: 03ae6f5e5354
+    last_write_checksum: sha1:c750b3f5f4e1a2287d77252aec77a1eac6c6367e
+    pristine_git_object: ecbc92ce375447655c239cb021ee72f1fccc6faf
+  docs/models/components/paychecksdata.md:
+    id: da8be516eb3c
+    last_write_checksum: sha1:e394b9f6f506104ca141ea782c4951d84663ece7
+    pristine_git_object: 31281120467bbddd4046ad6d164abc0addd16cf2
+  docs/models/components/personattributes.md:
+    id: aa64a3633996
+    last_write_checksum: sha1:8b927819a2e6201d5ecef9c1999624b64f16bb01
+    pristine_git_object: 8b38adcdd6c10d071ec098f1284140b58842a1e6
+  docs/models/components/personattributesinput.md:
+    id: 6ec253e8bc26
+    last_write_checksum: sha1:b299a4c2a2071fd002f6cc152446e65b6c548e00
+    pristine_git_object: 673bce3d38d35106fca6da864b4935db0050db56
+  docs/models/components/persondata.md:
+    id: 16be38d9ce64
+    last_write_checksum: sha1:be9d49d2337da86673696b78ee4bdddafc1c8793
+    pristine_git_object: db2cb7d33e53b317a36c01dd8e4f9cc109728e3a
+  docs/models/components/persondatainput.md:
+    id: 1678a9e16a8e
+    last_write_checksum: sha1:323f0ca8ec534c634cb9da1e9256d3ab3ad8e0aa
+    pristine_git_object: d069baac01d7896aad5d54108fa1139cb27b4067
+  docs/models/components/personidentifier.md:
+    id: 6a8a4bdaef51
+    last_write_checksum: sha1:5ee9803a0439cb1b4f782142b6cbb6f3e7ae6662
+    pristine_git_object: 94f7263c2df4e64de85b3faacec3375e0ed3dc21
+  docs/models/components/personlinks.md:
+    id: f8146f1bc038
+    last_write_checksum: sha1:74d90fb53118dac25e88e904c0813963ddd78a6a
+    pristine_git_object: ff3eb029cf10db335876fd6b1828e8d2cfd64a32
+  docs/models/components/personrelationship.md:
+    id: de510d617f3a
+    last_write_checksum: sha1:ca672a70313232565f351dc955fe9191677d2640
+    pristine_git_object: 03ee70f377b5dd70fd0405e31754ce3f63105c73
+  docs/models/components/personrelationshipreadonly.md:
+    id: 05634344998a
+    last_write_checksum: sha1:50e8b62ce1189fe8147fcc2c9551e844945426ac
+    pristine_git_object: 41b7d61c59592c648594375eff42b3f8534b14de
+  docs/models/components/personresource.md:
+    id: 44746dd1c452
+    last_write_checksum: sha1:1edbb64a580d6ad6b59ccc06ad40aefec7456a95
+    pristine_git_object: c0640cb39d2a34ced8cff1005c90f65f3114c2eb
+  docs/models/components/personresourceinput.md:
+    id: fa9074f0246e
+    last_write_checksum: sha1:2c0f64d0a4a6b6fbdad3dfb8e481eec5b53d670a
+    pristine_git_object: 36cfc2d242e358a165e064a1ace928a9f69b8945
+  docs/models/components/products.md:
+    id: 95e3ddef05c8
+    last_write_checksum: sha1:2f528a218d66acc6ef5d3ec02cc051f170f5e6b3
+    pristine_git_object: 97bdfc9f901eecaca8e13b19a68b630810f4b23c
+  docs/models/components/schemeoauthclientcredentialstoken.md:
+    id: e546d7275fc2
+    last_write_checksum: sha1:b82f678bbd2d76df88f1285cbb8b6ae65ae13577
+    pristine_git_object: 7d27333ab2a0cefc0f03bcedfca3a61131a9cb81
+  docs/models/components/security.md:
+    id: 54906b49ea28
+    last_write_checksum: sha1:efc2f6e2664ab0c538741836d85ffcb49475a673
+    pristine_git_object: 13afccf527cef1524d81d8c5b2086e547acd7ea3
+  docs/models/components/transferattributes.md:
+    id: 7063c175f49f
+    last_write_checksum: sha1:45a07cb77baebbeec0cb57a60d823e9683575182
+    pristine_git_object: 962ba0151d8544bae63e89d0b77b3dd43f3e274e
+  docs/models/components/transferattributesinput.md:
+    id: 4205792f9914
+    last_write_checksum: sha1:acbbb2b8bd7c74d9fb5330c77ea08d6f7bd8be62
+    pristine_git_object: 2a640efcbbc8769a49fb5886184376b60ca09de6
+  docs/models/components/transferattributesschedule.md:
+    id: 86c3e0e4ce24
+    last_write_checksum: sha1:7cf176f4d64db7715cc52c4e9e9b061b8eddf100
+    pristine_git_object: 56bf7eb93ab387150ecede3003cd907ffaeea372
+  docs/models/components/transferattributesstatus.md:
+    id: 89b00480fb9b
+    last_write_checksum: sha1:05c6ff6102621005b5b71bafb645ec730dcda870
+    pristine_git_object: b3da81fb847de6021755291384759f5205608abc
+  docs/models/components/transfercreatedata.md:
+    id: 4528d47fc1e3
+    last_write_checksum: sha1:4512fc74fdd5957cca530f6d562d057ece91e52d
+    pristine_git_object: 82765fd918e3fe34517c5c0026155d16d3bd243d
+  docs/models/components/transfercreaterelationships.md:
+    id: 994bf5ab3284
+    last_write_checksum: sha1:50cb461bf196305198ddde1c8e60bd2e750741a6
+    pristine_git_object: 4b68ca6a39bad6e0ce93d83e5bc8e012b88fd6bc
+  docs/models/components/transfercreateresource.md:
+    id: c66e4727b9f3
+    last_write_checksum: sha1:be63d536cc4021ee9a535ef48234ed81f71a6d97
+    pristine_git_object: d07c7354929d03097ee2d6738b6827d39d63ef8d
+  docs/models/components/transferdata.md:
+    id: 7e110418b9e0
+    last_write_checksum: sha1:6710e618794749b4ac46d546908db3a6ff1fd424
+    pristine_git_object: 44ed12288ad423b20508ee0d51bb73a81a4cbfb0
+  docs/models/components/transferdestinationcapability.md:
+    id: e340fe987ebf
+    last_write_checksum: sha1:8cc2fb52e064d3b5974f172205b17712f9cb3f29
+    pristine_git_object: fbaee34849872d84e5182f3b648c11db1bca4bf7
+  docs/models/components/transferdestinationcapabilityschedule.md:
+    id: 9feb2d3430cc
+    last_write_checksum: sha1:3302574492d4a7d2d30466c7a1ab3abf1e57b1e3
+    pristine_git_object: 083047d4bac4a6e4f2930477584c0887e0440939
+  docs/models/components/transferidentifier.md:
+    id: 2f8d6d937f87
+    last_write_checksum: sha1:b02a1adefb1d5d82946f555c5d622a4cae1609a4
+    pristine_git_object: 92e30d741e6f8652932137bb8ca780a84e14c4a4
+  docs/models/components/transferlinks.md:
+    id: 6c5f64d2b54a
+    last_write_checksum: sha1:9c2c5f8ad30890f60d4e1a29fee8d613aeb61278
+    pristine_git_object: e8ee3bbe80049d78f4134df1a53ad445bd101fd5
+  docs/models/components/transferrelationship.md:
+    id: 76042ff4535b
+    last_write_checksum: sha1:09179a79274a82d7b56a63697682154bbae4f897
+    pristine_git_object: 2d95bd9eca576f455d6610b41f0c3d71250a90d4
+  docs/models/components/transferrelationships.md:
+    id: 1a1a482fd4ed
+    last_write_checksum: sha1:564869661c9a365b469dd259fc0875f23496d5a8
+    pristine_git_object: ea2cf0c7e447e7cdc4887e2745891d0481acd503
+  docs/models/components/transferresource.md:
+    id: 850078b67e60
+    last_write_checksum: sha1:7f7ae6fdb939061fd4a5cbab0c6575a76f4f270a
+    pristine_git_object: e6dd1da89d0c3be260f20d9a40a27ba73310cda7
+  docs/models/components/transfersdata.md:
+    id: f6eb6bafa4ba
+    last_write_checksum: sha1:97a1345b116aeef87951fc508a5bd8450c3729af
+    pristine_git_object: ec875de5926b27d9373e17f35feca9117e5a4e09
+  docs/models/components/wagerate.md:
+    id: a0057ccb7428
+    last_write_checksum: sha1:d86b7adff84999dfe48002362dd3247f32c91fba
+    pristine_git_object: ba14df7b3f2570d3c970262df462a85b0e80fce9
+  docs/models/operations/createaccountglobals.md:
+    id: b4075cc5d2ec
+    last_write_checksum: sha1:8b8a8c7383460356e616e62cdecb5579f1fdbe42
+    pristine_git_object: cff37cb7f862f12e4d84de7ec1a5c15417251310
+  docs/models/operations/createaccountresponse.md:
+    id: cec4b6790c70
+    last_write_checksum: sha1:60c018bab3589cad69285c488a85c21df448d904
+    pristine_git_object: 1cb2afdd7391dcb5d373bdd33ca5db2aaa4b7b4d
+  docs/models/operations/creategenericcardtokenrequest.md:
+    id: 2f5261bf4049
+    last_write_checksum: sha1:3254c1c1829f34a037e62e3b4c6742815747ca37
+    pristine_git_object: 2b621b19f6490af83c590b1011dd621fc54c1271
+  docs/models/operations/creategenericcardtokenresponse.md:
+    id: 7b6bd5c5ead9
+    last_write_checksum: sha1:7ed89e0e95b63a58f6f57b09daccb88b8025a788
+    pristine_git_object: 773bd579865d04edc06591ea3e1ce9801a9b4737
+  docs/models/operations/creategenericcardtokenresponsebody.md:
+    id: 10723e30f315
+    last_write_checksum: sha1:1759ae69537790b5496d8117126e3dd9e0cc1c27
+    pristine_git_object: d8ec06d8f2db6b28fcb4bbf273e8aba16eb96436
+  docs/models/operations/createtransferglobals.md:
+    id: df0b20b27eb2
+    last_write_checksum: sha1:08bec9eda9c82f8d7eedc9a07c75ed021b7ef0da
+    pristine_git_object: 9d96ff852763b8f722b2d8754b6004ce638987e7
+  docs/models/operations/createtransferrequest.md:
+    id: 479572132ed9
+    last_write_checksum: sha1:bb7cdeb111620625c9b90c6a91d0080663f574fa
+    pristine_git_object: 8a8da6a286d59ebb82437de3315ab1bf057f9566
+  docs/models/operations/createtransferresponse.md:
+    id: 1fdce9316bfb
+    last_write_checksum: sha1:995c29bf37a0914cdfea4f5360f34ef62651c367
+    pristine_git_object: cf83274282dfac67a34942fa48095ecd6b477492
+  docs/models/operations/gethealthresponse.md:
+    id: fa06383d6e10
+    last_write_checksum: sha1:51f0a994998e9a2b59ab9cf61522f3bc0249cfeb
+    pristine_git_object: bc467f5859763af74433f98e6d92dcd7583cf1b9
+  docs/models/operations/listaccountsglobals.md:
+    id: 603fb442d8b7
+    last_write_checksum: sha1:c867205c162cb0456b92a2764c734bf2bd6e58e3
+    pristine_git_object: 37bebf179d754488393bc94922dce78f07f55267
+  docs/models/operations/listaccountsrequest.md:
+    id: c2c88852f4c4
+    last_write_checksum: sha1:6689e1169394579081dd2ed80aacf9cb5a5557a5
+    pristine_git_object: 91efe30ab1bd0b2cac5b0e99d3db404889a010de
+  docs/models/operations/listaccountsresponse.md:
+    id: a492e14034cd
+    last_write_checksum: sha1:44ac7810c3cfa816b8fccb9c624c29d2db9a3f87
+    pristine_git_object: fbf45a84551657a7165eaedc121876e5a41b554d
+  docs/models/operations/listjobsglobals.md:
+    id: 0b566c82ce41
+    last_write_checksum: sha1:a524523f03909c18a15e9542cb4926066870a1a6
+    pristine_git_object: 950bd8d68d9ab54fef9ba80fcccf90b7b57ace6f
+  docs/models/operations/listjobsrequest.md:
+    id: d92b0955f958
+    last_write_checksum: sha1:980cf49cd0d6ec5a8eaae5f0d8d20a20eafa1346
+    pristine_git_object: 688ed0d79d389bdb6e2599155879fd506aa794f2
+  docs/models/operations/listjobsresponse.md:
+    id: dacdac5608ca
+    last_write_checksum: sha1:b313fc89e9658c4db32df559f291fe4584f66e11
+    pristine_git_object: b2f756b729d14db3b2785f73fcf8f69e63a4ab5a
+  docs/models/operations/listorganizationsglobals.md:
+    id: 42d763bbe516
+    last_write_checksum: sha1:874a3332041406b70236b60bc0ea9f3d3bf98fae
+    pristine_git_object: 1ed01e52901efad9f89dc583e35f9e6c17b12f0b
+  docs/models/operations/listorganizationsrequest.md:
+    id: 656820540c33
+    last_write_checksum: sha1:bf32aaaaef649a2c4357b25faf1cc18e542fc45f
+    pristine_git_object: a7cfc7ffb5dec5dc2ec85f4228fe43eeb7b406f7
+  docs/models/operations/listorganizationsresponse.md:
+    id: c32888db1e5d
+    last_write_checksum: sha1:9f53747fb3448604a34f3390e4586eab07a92cca
+    pristine_git_object: b9b7c1bfae11359fb054e33f6e426790aca9aaf0
+  docs/models/operations/listpaychecksglobals.md:
+    id: 4338047b059b
+    last_write_checksum: sha1:6cbfa5fe179672944b9f5bcda72a3cad53e9f18d
+    pristine_git_object: fef7fef9e24e7f030d9f55b2b360f0eaf822f438
+  docs/models/operations/listpaychecksrequest.md:
+    id: 10b0f72d719c
+    last_write_checksum: sha1:82a05e68ebae22e6aac515c4f77a7a36c9f56f10
+    pristine_git_object: 6a96e2d87b0ed56e2439b8c61ed6209bbc66d0b4
+  docs/models/operations/listpaychecksresponse.md:
+    id: d5358ab67f97
+    last_write_checksum: sha1:2beefc713fd2571dc3405f115f06503554485315
+    pristine_git_object: 5aec2277b98237c8582ff6c4615a9f9e9637d410
+  docs/models/operations/listtransfersglobals.md:
+    id: bd01302a9709
+    last_write_checksum: sha1:edfee16edab890cc2006bc1944d6101bbf5d8294
+    pristine_git_object: 86a7cc0bb57261dcbfd58d8d80e72c445f97370f
+  docs/models/operations/listtransfersrequest.md:
+    id: 4c25992bb06a
+    last_write_checksum: sha1:591094a80a0644417737f669bc0bb0b639581657
+    pristine_git_object: 232fcd20ada611883b58e1bcc0027bae7f0a3f0e
+  docs/models/operations/listtransfersresponse.md:
+    id: ea85d18650ae
+    last_write_checksum: sha1:55f352a5a8d8ffc04f625573a416246c02c24878
+    pristine_git_object: e2c2620de77e9e1f2f0a9c84024112e01c11e06d
+  docs/models/operations/option.md:
+    id: 2ac1bd52a5fb
+    last_write_checksum: sha1:08cfee5d266c9d82987e448f6c98a143aa42c5f8
+    pristine_git_object: 35d8a1e2ad48a64702c6a654ac8880dabec053b0
+  docs/models/operations/readaccountglobals.md:
+    id: 84fcd28f38b1
+    last_write_checksum: sha1:4eedf00ffd5c3a5b62a5b86da7369d5ab11caad5
+    pristine_git_object: 4bcb3a1e53bec5212c5bccf3d38d368b82182ebc
+  docs/models/operations/readaccountrequest.md:
+    id: f6e0ef6af40a
+    last_write_checksum: sha1:ea411f17bc0a07f7f64008d3171f83db5bd78871
+    pristine_git_object: d36bef53ffa666375d2172dbe1c54040a8dc6c0f
+  docs/models/operations/readaccountresponse.md:
+    id: 86722cd0e789
+    last_write_checksum: sha1:402eba1d73d7577bd99e0b4da6903639cf03ca63
+    pristine_git_object: ce324f1ca11b8f5a7c1c2ac798f4ddb814e2bc41
+  docs/models/operations/readjobglobals.md:
+    id: 603e83cd85ae
+    last_write_checksum: sha1:f4ea97892d5a83b8495321417bae48a454f45a51
+    pristine_git_object: e1e48a896a4c1cc2cb329eec8b328bfe79abab4e
+  docs/models/operations/readjobrequest.md:
+    id: 89a0afa301b5
+    last_write_checksum: sha1:1f4e7eb1e49c30293d772e8c3c32c963878d47a9
+    pristine_git_object: aa466ca50dd23887a1ec1c3ec35e2a5826253920
+  docs/models/operations/readjobresponse.md:
+    id: d6b8483a7014
+    last_write_checksum: sha1:557035a1ff057579aa7761bab937fbfe120cb017
+    pristine_git_object: 7716125e415cfc8a919b49d7ee63b7dc731c15fa
+  docs/models/operations/readorganizationglobals.md:
+    id: 73fc9030076b
+    last_write_checksum: sha1:d4dc559d0755ea3b5927efa9eca67b4c1c5a6794
+    pristine_git_object: e530941ffa3ef0b2b61dd4c366a2aed1d2ab0f42
+  docs/models/operations/readorganizationrequest.md:
+    id: 955b32552b26
+    last_write_checksum: sha1:d5763bf5734784325f1961c355fc1340ed3035cf
+    pristine_git_object: 4c44a0ae9d49b911f136ddbbe246a2c44370096f
+  docs/models/operations/readorganizationresponse.md:
+    id: e8f0be366cc6
+    last_write_checksum: sha1:91fb6ce884e3eca0b2b15755343afa7595d38c9b
+    pristine_git_object: 542cc5c2bad990fc2b45ee2a0615e17abec5b8e4
+  docs/models/operations/readpaycheckglobals.md:
+    id: 34f190222720
+    last_write_checksum: sha1:0d9e5e97cc16f4d05f886a19738ac8120626ce47
+    pristine_git_object: 03136ee4340a161a033c5dda068c33f44e11e168
+  docs/models/operations/readpaycheckrequest.md:
+    id: bbe97f1d6e51
+    last_write_checksum: sha1:733f047456dbdd80239b869c82eaed69eea3cd20
+    pristine_git_object: 1146e3f7946839831202752e7e869bca105943e4
+  docs/models/operations/readpaycheckresponse.md:
+    id: 82eaec5aa00b
+    last_write_checksum: sha1:88e427e26f20e5331bc33e067f58ee86131e2a85
+    pristine_git_object: a2b8ebde54da4d99560013f4d86681e8b1f8fe83
+  docs/models/operations/readpersonglobals.md:
+    id: 833932396aca
+    last_write_checksum: sha1:d47c34db0b47cab129d50f7cadebbfceafa7ab76
+    pristine_git_object: 8ec8368e23ecd14c43799aa6e8fa61de6f9b3c39
+  docs/models/operations/readpersonrequest.md:
+    id: 27e7bfbf361f
+    last_write_checksum: sha1:6fe69e8a661eab0c7d3d276935fea54150548a0c
+    pristine_git_object: a5c1c09d506d2d51aa3a6a27866d9ca0f7c32928
+  docs/models/operations/readpersonresponse.md:
+    id: 8b05cf3e3204
+    last_write_checksum: sha1:410716211983f2c300fa8e1dbe2ddb901d6f3769
+    pristine_git_object: d61b3b40f047923b93253c9e58f5a69006a274c3
+  docs/models/operations/readtransferglobals.md:
+    id: 4dfb52c467bf
+    last_write_checksum: sha1:3bccee241665934f7b2feb39d7d8db59b589adfb
+    pristine_git_object: 1458ebce29f571c05a9d89de388885856295e021
+  docs/models/operations/readtransferrequest.md:
+    id: 96766560c3ef
+    last_write_checksum: sha1:d042f1a1c877fb313ae67b175fee7f3ffdd65cb1
+    pristine_git_object: b9217b8b904621a042d0c3e9fba2dab71e08eb25
+  docs/models/operations/readtransferresponse.md:
+    id: 968f18aa274c
+    last_write_checksum: sha1:27c1bcf84c6660803f82c78c7d706b1ca3e0dcd8
+    pristine_git_object: c33d2134d6ff5aee1c60d7a5899546e54e7cf873
+  docs/models/operations/updatejobglobals.md:
+    id: 6580b4ac5d9f
+    last_write_checksum: sha1:d7124f4639c6ef73b5c1c18c6692fb7512bed5c2
+    pristine_git_object: 5677c1fa9485c2a35f452b1bc82fbabee8220024
+  docs/models/operations/updatejobrequest.md:
+    id: 55704ea6c85a
+    last_write_checksum: sha1:4f82ddb9d05cfd5b940419318697df796efcfb21
+    pristine_git_object: 6ab8b4755bd752a4da22a13a9c295596420babc6
+  docs/models/operations/updatejobresponse.md:
+    id: 2a7e643b9a37
+    last_write_checksum: sha1:35d6462e1ff9cd970aa5b5d63e134770712caf4d
+    pristine_git_object: de5cc45df640dfbec303fd96139bd824378225cf
+  docs/models/operations/updatepersonglobals.md:
+    id: 33f6f36cc50e
+    last_write_checksum: sha1:099a7ced91c33cd22dfaa222acce0a72cd0f36ef
+    pristine_git_object: fc21ac9898d0d8d39a053ee8f49e79f52cd70e1c
+  docs/models/operations/updatepersonrequest.md:
+    id: b1390a72d47f
+    last_write_checksum: sha1:adc24ffd32978bbd7e1a4ae3cbac008b62c8c80f
+    pristine_git_object: 2fe593dc632ef41e27a40fc8ec0b03836cffaef2
+  docs/models/operations/updatepersonresponse.md:
+    id: 6adddccd11de
+    last_write_checksum: sha1:fb0cb7e4fbe55530a58d150508a95f3fd2400c08
+    pristine_git_object: 1f71e28522355b690ea6295eb33f574d98ffd25d
+  docs/sdks/accounts/README.md:
+    id: d6c754b1ca96
+    last_write_checksum: sha1:8877a502592282ef46a153455435d51f859e1cae
+    pristine_git_object: 787a3f39f64de7239e4d97f0d4e8a1ff2ef56514
+  docs/sdks/cardtokenization/README.md:
+    id: 43823e4558a8
+    last_write_checksum: sha1:fa7879c9ebea81be280117de77d4ca9ad775b922
+    pristine_git_object: b6425877a54c30e5c6eb587269fbc49addfd2d8f
+  docs/sdks/health/README.md:
+    id: 5082c50d5e82
+    last_write_checksum: sha1:78333ebfac2d7f24a08588a16c7ff22f5d5ae04c
+    pristine_git_object: 4549008b52c473b69b4bd6644e53d7b6a8e97c66
+  docs/sdks/jobs/README.md:
+    id: 7371cdc8b89a
+    last_write_checksum: sha1:e8a989cf480df9dcc444ec645448016ca9e1a02c
+    pristine_git_object: 236a9354fe46ce2a905ce999c4b64518933f7495
+  docs/sdks/organizations/README.md:
+    id: 3425667a2db5
+    last_write_checksum: sha1:1a76fa4d8fbf64c4f66789e1555cb02dc85eaae8
+    pristine_git_object: e20f8607e3456b98c157c4ee3b7fd2ea333b11dd
+  docs/sdks/paychecks/README.md:
+    id: 796bffa29cb1
+    last_write_checksum: sha1:f20daedbbe9bf88e9e7c4b784ea45fe7457f3139
+    pristine_git_object: 8a29660634212a9cb47307aa59daab5f4dff79bb
+  docs/sdks/people/README.md:
+    id: ff7b3ee21c2b
+    last_write_checksum: sha1:adfd6065c976ec370fce5a9bdb461331c47ee2c4
+    pristine_git_object: 4eda8f60c94f5314295e75895345245ab44a5567
+  docs/sdks/transfers/README.md:
+    id: f56918861798
+    last_write_checksum: sha1:c76d4993a4f53e79807550d57e6ca070cb459947
+    pristine_git_object: 2f2e8a522f9cf0d678b3137ccab30e9d314ce033
+  go.mod:
+    id: c47645c391ad
+    last_write_checksum: sha1:e87ff3e3d126a25273cebe6b06e6d178d4f13941
+    pristine_git_object: b1fd625fe0b9a977ef9c06234320d43912903a63
+  health.go:
+    id: ca291aa88e47
+    last_write_checksum: sha1:5a98d8f0b3d7aadbfb868d4b18d0d55c56d060c0
+    pristine_git_object: 1e3749c55876bea2fe8c068dad965ca9a91c8e82
+  internal/config/sdkconfiguration.go:
+    id: 33b8bfac5265
+    last_write_checksum: sha1:a0532665b15f13f640d4b15e7f36b94b4fb2dce8
+    pristine_git_object: 502069114649f9ddf385e0b672baf0e4582f953d
+  internal/globals/globals.go:
+    id: 9b8514db7dc7
+    last_write_checksum: sha1:e997f12981302cab5946cda8d573108d9da0222c
+    pristine_git_object: 200983b8c0f1d78eb577085011a38bbcc4fc3251
+  internal/hooks/clientcredentials.go:
+    id: b56b5e7f2d63
+    last_write_checksum: sha1:f30bc11838721832ee447a8e8b8a25de243f0948
+    pristine_git_object: 8b145f92174e14d977a10b5033af87ff3a665155
+  internal/hooks/hooks.go:
+    id: 336be70ed5c0
+    last_write_checksum: sha1:370e6761e7b85d77a1c9edcadb18b518208a8a75
+    pristine_git_object: 5f2fd7bfb42adf7d975f22ac4bb90d92b5904c65
+  internal/hooks/oauth2scopes.go:
+    id: 3ec4b8158405
+    last_write_checksum: sha1:263a655be0a39a149d2f5a69aaa7a284aea919a0
+    pristine_git_object: 6828d875380439f54f0adbb2012166c51e12f85c
+  internal/utils/contenttype.go:
+    id: 928a56fe6755
+    last_write_checksum: sha1:ab5cfd860d02c6e6a37f89e2b5649a9859947fb1
+    pristine_git_object: f6487e01eb987c0aa49e7aa50b5ff24830314c63
+  internal/utils/env.go:
+    id: ac8bab30c73d
+    last_write_checksum: sha1:1e0bcb2d2caed9f3657f1dbc99b55811bed0298c
+    pristine_git_object: 110d464eacf2387b347bad1cb903666354a339e9
+  internal/utils/form.go:
+    id: 8ea133d76535
+    last_write_checksum: sha1:4b3f1ceb6da6ac4caa1efc5e27b61dac09c94e4b
+    pristine_git_object: 267c2525fd04c7a5f3b7e5dbec1db383651304d2
+  internal/utils/headers.go:
+    id: 90d4f18d4adf
+    last_write_checksum: sha1:5297fdd694ac8dec79ad1d2f04938ba31d502a0f
+    pristine_git_object: 09a853f9fba712005415e65f8594e6bd6b97839a
+  internal/utils/json.go:
+    id: ad03e3c502d8
+    last_write_checksum: sha1:39697c8972010a179bfbdb888c6af5c18844ab2e
+    pristine_git_object: 2f13e54942f9937e0390bc14ecb65af0b5b4e317
+  internal/utils/oauth2_credentials.go:
+    id: 633b88c0d3ff
+    last_write_checksum: sha1:f9218b6b3dbd11494cc353bf22eb37f0ca654a7d
+    pristine_git_object: 85eb9933d806fe3f332fcfac00aef92380317244
+  internal/utils/oauth2_sessions.go:
+    id: 633fa458699d
+    last_write_checksum: sha1:f4d0f3fc02f9cab7278cde18b039ee79a124fa54
+    pristine_git_object: 4bde1b17cacddfedb1fbfefb60a5c916bcf43956
+  internal/utils/pathparams.go:
+    id: 1f3e0c30fd90
+    last_write_checksum: sha1:6dedc465958ce6956005c87305bb74bb8aff5e09
+    pristine_git_object: 99b57f66ac55b20389583e98e4c7416bd4549d9f
+  internal/utils/queryparams.go:
+    id: e7f604e65a58
+    last_write_checksum: sha1:fcf3ef73166c56e785c02277f08e14923012f233
+    pristine_git_object: 609181dacabd15c9a385df561f834c58562487e9
+  internal/utils/requestbody.go:
+    id: 22445ec1c044
+    last_write_checksum: sha1:297e266e64a6c14e0eac82b883799251dd9d227d
+    pristine_git_object: 0a864296e11b79d6749215b070522d814014594d
+  internal/utils/retries.go:
+    id: b5e011d15c2d
+    last_write_checksum: sha1:32f30becc3ced16be5749c97edcf6aa32883afbd
+    pristine_git_object: 2452b377eaf541880adc2e0a00cac417ea0f5a42
+  internal/utils/security.go:
+    id: eeb54c55241b
+    last_write_checksum: sha1:bb9cc1870101f6d2a990766f3eb0ea37292f7507
+    pristine_git_object: 19dfa6f4607dea64b1dd61c211e072212e7a3cb2
+  internal/utils/union.go:
+    id: db86c85746b6
+    last_write_checksum: sha1:a4e5cc07bf5889479882402081ced7e42ec73c4f
+    pristine_git_object: aa0a1c804e80b4a97d4df6511fabde26b05f35c9
+  internal/utils/union_test.go:
+    id: 4b56247171bd
+    last_write_checksum: sha1:83ac73c1901de4c6db90f65cf5879163f3d47a00
+    pristine_git_object: f66814c73ace94d8e71d785fd6161fb405745754
+  internal/utils/utils.go:
+    id: 1133b2a27019
+    last_write_checksum: sha1:d88d96cc244301d137581432095043f27a3e17b0
+    pristine_git_object: 0415b536598baa76c5d1a8fc32816ed1b83f9137
+  jobs.go:
+    id: de984cfd1827
+    last_write_checksum: sha1:9054acbc403273c65291af19f387ce640f493d20
+    pristine_git_object: a826ec4bd4807943b50d3019b846a77b5bbd0d5e
+  models/apierrors/accountcreateerror.go:
+    id: 4c38a31f96c6
+    last_write_checksum: sha1:233dfe31a47f65608b7d8331cc68c210d03eb80d
+    pristine_git_object: 1d893cda5680a5f85c1179a130003e41dac7b8a2
+  models/apierrors/apiexception.go:
+    id: 57a3ba8d58d8
+    last_write_checksum: sha1:05e353ef8cd56204018f22d1fddbb1116da0d098
+    pristine_git_object: 920b11bbf19139d79da79a6dfc2fad552b2945e7
+  models/apierrors/errorbadrequest.go:
+    id: dd0db7a4ae15
+    last_write_checksum: sha1:0a93d46e3b535570da482b71eca7b19fcc942565
+    pristine_git_object: 297403fce205736ecf00083d56aff66efd7f6252
+  models/apierrors/errorconflict.go:
+    id: 1052186a4c33
+    last_write_checksum: sha1:c2eb55d6da5968b3474f44cbdbde66471c538982
+    pristine_git_object: 81f77e8dc72691ca59d668e985b6cf5b900ba3d7
+  models/apierrors/errorforbidden.go:
+    id: 06b794a9d33e
+    last_write_checksum: sha1:9db59b95229596e728133916a4ce33a758dd3550
+    pristine_git_object: 5033e679028c33020da67ac81da45c6690b00b5c
+  models/apierrors/errornotfound.go:
+    id: d01c2ed14edf
+    last_write_checksum: sha1:c56ac22932fcfa91dff339720900054ceec1b7f7
+    pristine_git_object: 92e2eb6a487af1e67e965e2c2f3dd9a940b25337
+  models/apierrors/errorunauthorized.go:
+    id: 93c19a02c0ab
+    last_write_checksum: sha1:8431fdb984e84e136d8274d8392d6361d3ff0efe
+    pristine_git_object: 11b3b77bf16b8bc29821bbd1990428e08cf0f0a6
+  models/apierrors/errorunexpected.go:
+    id: ff40fc47f7d6
+    last_write_checksum: sha1:5998211d03c5ed97fb002727ccae476018e17b59
+    pristine_git_object: e66886f37aa084f8ddfe8e99a1a5e7af8d86f2bf
+  models/apierrors/jobupdateerror.go:
+    id: 1c31f4416e84
+    last_write_checksum: sha1:e5e22e28d0466b4e71f39bec6fc2441f2a72da50
+    pristine_git_object: bc624bc627c0770a35e9d7ce52b9e8c608cd5170
+  models/apierrors/transfercreateerror.go:
+    id: d2d8d4c5e95f
+    last_write_checksum: sha1:1e9174ade6eca7aec228689b79545b914ac28d37
+    pristine_git_object: 4aec283c8e9e03c135275d7ca624c7e911750be9
+  models/components/accountattributesoutput.go:
+    id: 3e565e5c1eab
+    last_write_checksum: sha1:bd99e87bd023f63902316fcd0fd20f29980f63d0
+    pristine_git_object: 0272fce517fbc50771201f8e3fe5e505eb8a224f
+  models/components/accountdatainput.go:
+    id: 1d4224fe7011
+    last_write_checksum: sha1:231c25987601e28524511679714216eca886b4f8
+    pristine_git_object: 89a53c693ec0e5b4515fa92595ff5ee620551b8a
+  models/components/accountdataoutput.go:
+    id: 6c317ca7d957
+    last_write_checksum: sha1:a07e7938f1fd3897501c773087bae240c5c9cf1d
+    pristine_git_object: 6a1c8cce7ed0703d0c7356a0f4d690df1af668f1
+  models/components/accountidentifier.go:
+    id: 91dd25c2ffce
+    last_write_checksum: sha1:b002c2fbd3e46595db10171e8504d88bfa0fbf03
+    pristine_git_object: 2193b6055fedfc4a5f548cb30ade0a2a188671bd
+  models/components/accountlinks.go:
+    id: 31d5c0975938
+    last_write_checksum: sha1:2aa1aebb48e345014ac84dcfa97f6c713176262f
+    pristine_git_object: 23eb709e21dd0fb823692298b90c2c4c2511c28a
+  models/components/accountrelationship.go:
+    id: 461fb09d7a3c
+    last_write_checksum: sha1:66117401d47b482427bb81d81f3618654cee9b9a
+    pristine_git_object: 3a169e31155e0329bcd17e3daf77f4a79fecabdf
+  models/components/accountrelationships.go:
+    id: d0c94ebc36fd
+    last_write_checksum: sha1:d7bab3a807375bdb3454631aa7d0456327eca74b
+    pristine_git_object: 64bf8f69436f75e1961cfe8f99f5d611a1598d8d
+  models/components/accountresourceinput.go:
+    id: 92cbfe4d75a5
+    last_write_checksum: sha1:7bf12235f0aa95f8b8e22e1d0a4c505a010a4117
+    pristine_git_object: 550bf6fef0ad5db13c3262564dc96e430622782b
+  models/components/accountresourceoutput.go:
+    id: 1308d162b1f3
+    last_write_checksum: sha1:6f98e5611c6545997d925c70fa319ba60f9c83d7
+    pristine_git_object: 556d5cbdb81b81e25b7a95615e073efa8ac72e99
+  models/components/accountsdata.go:
+    id: 5aa5bb8c6f79
+    last_write_checksum: sha1:e80a306722e8fd3fe45714991428155da701c5d1
+    pristine_git_object: 033a4f664ddfc1c72ee1960aaa1c18c8a4fb8e32
+  models/components/erroraccountcreateerror.go:
+    id: a70e9e356876
+    last_write_checksum: sha1:9a6da6707367a643777a65b24ed519c27176a5ae
+    pristine_git_object: 3aeb8713b824a7efe24795faa0f30cfb726b71fb
+  models/components/errorbadrequesterror.go:
+    id: f74e334254e9
+    last_write_checksum: sha1:ce4442a41ac7d8ade1bd45d754b63fbb2b759af4
+    pristine_git_object: 0aad7e29144dcc596883879ea8b1e5417387d32d
+  models/components/errorconflicterror.go:
+    id: 8eb1df38a593
+    last_write_checksum: sha1:c8747bc3edef390f2af583cb26934573fc2e5d15
+    pristine_git_object: 7bbae922234bfd024cad46df5f85ffe6f3ff3896
+  models/components/errorforbiddenerror.go:
+    id: 9552c8cd1c07
+    last_write_checksum: sha1:707255d0b9869d45e56119219d267b2af98a7bec
+    pristine_git_object: 7e6757c2af3e41c60dfa1e2ad72a8df88dc0e5cf
+  models/components/errorjobupdateerror.go:
+    id: ee53fe3fa781
+    last_write_checksum: sha1:5cbacb75815a4fd329db84f65b66285c419d8adf
+    pristine_git_object: 6222a071117810673e547022171edf748efe8384
+  models/components/errornotfounderror.go:
+    id: 8c771e6fa422
+    last_write_checksum: sha1:cd15d604ddcc3ecfd1d9ec8594cd2da3c0340c64
+    pristine_git_object: e3ef2dbc39a6963b3a5f418db771f8299c887159
+  models/components/errortransfercreateerror.go:
+    id: bd8528fac82a
+    last_write_checksum: sha1:a07b2cc37ac205d9fd1958a17cd05bb62c91a458
+    pristine_git_object: 5c99c720d991ee27712fa9ddd6d4efeb4da5a605
+  models/components/errorunauthorizederror.go:
+    id: 6e2d8af9299e
+    last_write_checksum: sha1:383d642e2f5085e3efdc84a27fc93d91230bbf78
+    pristine_git_object: 53ed5d0cc079039a982b07d323b4cb53da77e546
+  models/components/errorunexpectederror.go:
+    id: fb5c7da87442
+    last_write_checksum: sha1:b47ee4cdbeffec12883bf5018482ec9adad428b3
+    pristine_git_object: 563fe3086c56ed5cf5cd73f55335b00c8542d2b5
+  models/components/filteraccounttype.go:
+    id: 22d3b50e6b9c
+    last_write_checksum: sha1:587e11d9ff1a1c746ac68a3d05251494c71f9b4b
+    pristine_git_object: 8ea6027ccba2526de84a1e9b5dccb9caa5e1d39e
+  models/components/filterpaycheckstatus.go:
+    id: d693c55ab623
+    last_write_checksum: sha1:f9fc3eb59a9371c03e081969bb273a039c1a392c
+    pristine_git_object: 9c8b982abe0781fd5441ec5d04f164210b5f598e
+  models/components/fundingsourceattributes.go:
+    id: 6ede35a98031
+    last_write_checksum: sha1:d05403d4d8fb2b7b9118b11cac0d60216de4764b
+    pristine_git_object: b8123144cb1bfa86c24c4e97ad81d4e9852f92fb
+  models/components/fundingsourceidentifier.go:
+    id: 574ebff45fe1
+    last_write_checksum: sha1:ce904bc0ce86c8647e2fd416b0b8e7e2ca1acf47
+    pristine_git_object: fc8683a045fd8850c870e32df2ded1c164feb25f
+  models/components/fundingsourcerelationships.go:
+    id: 34362466c3e9
+    last_write_checksum: sha1:a403b094c2e74845dd4f0eec93a3d046292f668b
+    pristine_git_object: bf960686582c30b9cb1c616f4c987c318a6d6aa8
+  models/components/fundingsourceresource.go:
+    id: a89e4e368255
+    last_write_checksum: sha1:1f8099a5d563574fb1e4522cb470da50a5cfd3ad
+    pristine_git_object: 232f8dc566ba2952f304033c057bbda215bb2356
+  models/components/fundingsourcesrelationship.go:
+    id: 5f3111beabf9
+    last_write_checksum: sha1:e9b8222eb94f55290d33f4aaffbebfac92551063
+    pristine_git_object: 45db745a85780b58f168c7e0362336e622d988f7
+  models/components/health200.go:
+    id: 0385bf0ab92e
+    last_write_checksum: sha1:02fe2832868d908d32109e99e013f3aff598a854
+    pristine_git_object: d0548e3e64692af97f72e9c099efaf4b4d5d51e2
+  models/components/httpmetadata.go:
+    id: 790bad4a7abb
+    last_write_checksum: sha1:01a20fcff33179809ff9920ee431c7adabbd98f1
+    pristine_git_object: 148ec47fb2dea6c188ec68eb3532d93169608168
+  models/components/jobattributes.go:
+    id: ea00ebda5aa4
+    last_write_checksum: sha1:a1ac42347a668afea1e67b5326445036f30fab75
+    pristine_git_object: 8809151543ce67bb87abeda203d9fa8543932f2b
+  models/components/jobdata.go:
+    id: c86841224a64
+    last_write_checksum: sha1:784c7fe82699464cb1fa76537cfc7873c09f002e
+    pristine_git_object: 4245a1563532aa2e1428155809e8da9969b9ddc1
+  models/components/jobidentifier.go:
+    id: 89ba8e83a9f3
+    last_write_checksum: sha1:915845e284d5e130cedec883c9b3542c5e7030f4
+    pristine_git_object: d52a1982aa6720996ccbd5638555085539d51042
+  models/components/joblinks.go:
+    id: b87a6ceedd4b
+    last_write_checksum: sha1:ce68264bda8cb252c0cc2b9880e70f69fc383db6
+    pristine_git_object: df2bb1a88ed5145b77f06a034fe7a5f53cdf3a33
+  models/components/jobrelationship.go:
+    id: 12cb77b3dd7a
+    last_write_checksum: sha1:fb216c5b53c77c443e24512d234e70804f237952
+    pristine_git_object: 32d51feedde4e1d02b01a0596bbb6267ba3e66cf
+  models/components/jobrelationships.go:
+    id: 2a328d1fcd68
+    last_write_checksum: sha1:08c7997d424ee720a47bf2ae5f797551b35b474b
+    pristine_git_object: d0fe023f6f8bf2af233e2cde94887081e262de7e
+  models/components/jobrelationshipsinput.go:
+    id: 9e8c88879577
+    last_write_checksum: sha1:acbef8b4a8c0354deac2e8da87c2411389f0d210
+    pristine_git_object: cece33acfa52d73476ea42182f92864612d065ab
+  models/components/jobresource.go:
+    id: 0e33d96b4216
+    last_write_checksum: sha1:82b515219972eacee877a01c0ab825f5a3d7c330
+    pristine_git_object: eff770574c5e888122c50827c6097ad98afb15c7
+  models/components/jobsdata.go:
+    id: 7eaa2ff90074
+    last_write_checksum: sha1:50186c54e32e61dd097008b0101a0bc2ab71555a
+    pristine_git_object: e3a977f822c63d0de3b47ecd613657ff7761a222
+  models/components/jobupdatedata.go:
+    id: 03ceacbd8441
+    last_write_checksum: sha1:e18b5dfafac2d788eb00e66dd5666c6e5635c08e
+    pristine_git_object: 6a53b99ce47b6914201aaff75fb8f20351dcd512
+  models/components/organizationattributes.go:
+    id: 032fb8ba0d6d
+    last_write_checksum: sha1:dcc98705012d6b11ff3cc1d3bd1c7accd9e478a3
+    pristine_git_object: a32423c0bde8111ecde98e989eaae08b03be6203
+  models/components/organizationdata.go:
+    id: 046c1b05c938
+    last_write_checksum: sha1:2cf56200944df05fe5481ef7ee670d4ed8428bab
+    pristine_git_object: 9091d56837a894da6c515e61d5c10f5c19c9e138
+  models/components/organizationidentifier.go:
+    id: 59ff0e4395ee
+    last_write_checksum: sha1:55f4a0f053f2b824b5e5284bf449da2b7862d3f6
+    pristine_git_object: d23c57898cb4d8fda55cebec8372dcc88afdef73
+  models/components/organizationlinks.go:
+    id: 8d0251e1a254
+    last_write_checksum: sha1:ce689d4c53114e3756874b72dcbedffb1daecb87
+    pristine_git_object: 38d499caa0c4e17fd36af51c919ba967b21cee25
+  models/components/organizationrelationship.go:
+    id: fd90c7861955
+    last_write_checksum: sha1:f1787a0dc65e55eda75e3bff7035efcac5436fdd
+    pristine_git_object: 4df0b02219c84a0c8f7ff2c93d370d1454b66dd4
+  models/components/organizationresource.go:
+    id: 821b9a43594b
+    last_write_checksum: sha1:fe76b59bc04241b1edbce45a20b77caf74077e0a
+    pristine_git_object: e819ad882faa73ab91f42f7928e85de44d2000a3
+  models/components/organizationsdata.go:
+    id: b2c0a96f5e22
+    last_write_checksum: sha1:e66cd349e2ed88cd72f7c9415649272146e79bfe
+    pristine_git_object: 4ed31fbcedbcb3765934f31c328e32f0f3142f0c
+  models/components/paycheckattributes.go:
+    id: 06d648a3d08f
+    last_write_checksum: sha1:97f7360115f3fcfd57142a29e61945a47f965a86
+    pristine_git_object: cf544b213fba1a9d7ade6de57cda72e9cbb50308
+  models/components/paycheckdata.go:
+    id: 97065683f39f
+    last_write_checksum: sha1:3030d5fbcef2488b02749e9c69be3cbac419ce48
+    pristine_git_object: 4f944bce910ffddc259e25d5eb15a9728fcc3c13
+  models/components/paycheckidentifier.go:
+    id: ec4507b2c205
+    last_write_checksum: sha1:93554cffa6f803b10d35295749570c18f943092d
+    pristine_git_object: 137aa842fee9c5a2743312b3c7a1a3bdc93879cb
+  models/components/paychecklinks.go:
+    id: 6550f7feddf5
+    last_write_checksum: sha1:8649fcab694e319d91ff0f8ba0775262e8ae9a95
+    pristine_git_object: 8953747433b7f7660653f057ef8ba611219a22e9
+  models/components/paycheckrelationship.go:
+    id: 1a602b44af58
+    last_write_checksum: sha1:8b37a4f68a5a3cf1164dd1a664b07c37e114464d
+    pristine_git_object: d4082dc006a916496d687d8175ca989eeec5973f
+  models/components/paycheckrelationships.go:
+    id: 874adac38299
+    last_write_checksum: sha1:cfe78f79e533f0a09eb9fc7ac326ed81240b7d24
+    pristine_git_object: a62900d5abac0ea680a93738638d7e186e617af6
+  models/components/paycheckresource.go:
+    id: 2f8ec909334c
+    last_write_checksum: sha1:2dc511f7fa23a8353cf64e8d312cd809e7cd9c7e
+    pristine_git_object: 19750d4cb5a250a840cc09d8f36a0e6ea2007f52
+  models/components/paychecksdata.go:
+    id: f10f93b56930
+    last_write_checksum: sha1:5413a6a5a9982c5483b173df332b23a3bc540feb
+    pristine_git_object: 15b4178644b3dd4b4bb65590a7a4464796c1997a
+  models/components/personattributes.go:
+    id: f6dbb6e4861a
+    last_write_checksum: sha1:1df53134969a0b30e4a299348cac3f251d84cbd3
+    pristine_git_object: a10e44efd8bea6fac2b366d8996b45b9901711d3
+  models/components/personattributesinput.go:
+    id: b986ec793e26
+    last_write_checksum: sha1:15891ffa3b51b3736b5c8ec4da01d7e198a9ef0b
+    pristine_git_object: 55f2878cd2fd0cf80d647fd3ee9f72af69ea0109
+  models/components/persondata.go:
+    id: c6c6425ecaa8
+    last_write_checksum: sha1:e6ca91f80405c4c397580c4577ca5f8d3101396b
+    pristine_git_object: 9b091d3418557c277cdc0767a9408418e70c995f
+  models/components/persondatainput.go:
+    id: 165744eaa19e
+    last_write_checksum: sha1:c60fc1cbf97c1f40c8e294b6023ef47e5fc43c4e
+    pristine_git_object: 0790ec7f7c0d2ec2b334b6a07f11498f203c727a
+  models/components/personidentifier.go:
+    id: a0c7df9116af
+    last_write_checksum: sha1:7824feaa54e78593e496f8caf8dc40dbd53a33ba
+    pristine_git_object: 773de69a3da78d193ee57deaf395da6fa4849f60
+  models/components/personlinks.go:
+    id: 2ba700fcac1c
+    last_write_checksum: sha1:f8a50c34535c13ba344e0754edc8405f4faa5a9a
+    pristine_git_object: 22e21047011668ace2ef8e3382803d0c26d56a90
+  models/components/personrelationship.go:
+    id: 14b60807ab4f
+    last_write_checksum: sha1:88f2462ce2aca66a51980754ed7b500deaf657f0
+    pristine_git_object: cfa7a26caaccfc9dab05ec04e25bf2764b995eda
+  models/components/personrelationshipreadonly.go:
+    id: d8730d87473d
+    last_write_checksum: sha1:3deb7bac4f2edf182df9ac80339c0a050028675b
+    pristine_git_object: c63790c1abfc38eed41fdb83e6599bc6990c3f5f
+  models/components/personresource.go:
+    id: 87a30f1be39a
+    last_write_checksum: sha1:24783c227b40724906407dde27421dd20ccd6949
+    pristine_git_object: c1e6be2def8c6a5689a56aacaa99ec2f8231e00e
+  models/components/personresourceinput.go:
+    id: ef9f8be5c464
+    last_write_checksum: sha1:b07e00076edeabae25554fd43837385da24d5d33
+    pristine_git_object: 93b3317cb6141dba4ef9677cfaeeae91a21a0fef
+  models/components/schemeoauthclientcredentialstoken.go:
+    id: 351a9db5d6a5
+    last_write_checksum: sha1:1c4c969eac9cd75e5fff63c2840c77f53eb06966
+    pristine_git_object: 5a9d4cd61e778d18350231950e9e544c6b43467c
+  models/components/security.go:
+    id: 3a5eba5fe9e0
+    last_write_checksum: sha1:5b2c1a33c209f827293f3b644a9077fe9bba209b
+    pristine_git_object: 1bbd3acd41cd4c437c84f09bf349bedd878ec204
+  models/components/transferattributes.go:
+    id: d8dc62b2181f
+    last_write_checksum: sha1:72ca1f663bed83f6176b3ddf61a474600d31a70e
+    pristine_git_object: 46c57019b5126826cc04d7127aa17dadd6625f92
+  models/components/transfercreatedata.go:
+    id: 5906613a28a8
+    last_write_checksum: sha1:96d92e21810099aaccef864afd10507ea62f0bca
+    pristine_git_object: ef92298822d65089d2a9aa314bcdd210cfacb8f8
+  models/components/transfercreaterelationships.go:
+    id: cb4bcc141e2f
+    last_write_checksum: sha1:3d21622f28808bcea6e8eb1606308777ef76ce48
+    pristine_git_object: bd64e2408a10ff68c361c43d89b9e03c67234c8b
+  models/components/transfercreateresource.go:
+    id: 1a9aa1f17207
+    last_write_checksum: sha1:e6796062f754f94795de9ec54bb147c0b1855b66
+    pristine_git_object: 717da010db0f6968db99751458607b4616d6f4b3
+  models/components/transferdata.go:
+    id: e3d590dfd0d1
+    last_write_checksum: sha1:443aeb1149e159d49e745741d036e539aa2bf87a
+    pristine_git_object: f7418e8be1b847e3ff1ee1a0a7b4ea34f6224d8c
+  models/components/transferdestinationcapability.go:
+    id: 15d18ce43ccc
+    last_write_checksum: sha1:b338822b04ba2982e5c98dc3c98a5053c1a08469
+    pristine_git_object: 915a70d61e34cd940426e3fe828fc3eb217c89c3
+  models/components/transferidentifier.go:
+    id: 46adef67faeb
+    last_write_checksum: sha1:3bc5018613969fb31835bda17237dc8b81e29cb3
+    pristine_git_object: f24168a7f291e68527020cfa841abe31a0306991
+  models/components/transferlinks.go:
+    id: b7c9cd87c07a
+    last_write_checksum: sha1:3c9ba36a8d4ab24ae8bab574b86ad5164a880396
+    pristine_git_object: 67e964ad48107d74edccacb1d78dd7f6909b2172
+  models/components/transferrelationship.go:
+    id: 804e4e8ff6d8
+    last_write_checksum: sha1:a61a93c4c2f19577b7e0cb4f647f5b43627e6f01
+    pristine_git_object: a2550462c024defeea48d273e2670173f46ff7d6
+  models/components/transferrelationships.go:
+    id: b7926cb116d8
+    last_write_checksum: sha1:2dd1d40f169b6d1a7745266308a095b5d76749da
+    pristine_git_object: 5e86c000d8b2385d366f8786ed4edfade149cd6f
+  models/components/transferresource.go:
+    id: c0d113aaaaad
+    last_write_checksum: sha1:eb3cc8c879a9980412ba28d0ef853dacfb0e7fec
+    pristine_git_object: 3bf861feb2628b25db2d3258da1f7984faa988c3
+  models/components/transfersdata.go:
+    id: af5685205d4f
+    last_write_checksum: sha1:18e85f8d4f77b737e49b7258f5389db34e059d90
+    pristine_git_object: b9a965708a3f71e13bc58121c94439a68831f7c3
+  models/operations/createaccount.go:
+    id: 4749bdcf7e68
+    last_write_checksum: sha1:690de137f9c83329436a6d16e6fe42fb4ab22d11
+    pristine_git_object: d0966f81e9cf11643ddf09f2204b4b25dc69f178
+  models/operations/creategenericcardtoken.go:
+    id: c5533b1e9b61
+    last_write_checksum: sha1:0b78db2744f02c7cb27ac50b2d44f262145108eb
+    pristine_git_object: c568d0cf5f0655a3e59944b3a1873a934e8b690e
+  models/operations/createtransfer.go:
+    id: f210f5365145
+    last_write_checksum: sha1:0a1d0c6cc833efbe2cf21f581123cdce0991988f
+    pristine_git_object: bd00d44867a7f44acce88b7a36ee837e3b181a2f
+  models/operations/gethealth.go:
+    id: 215314edcc7b
+    last_write_checksum: sha1:71567c3d11f3dd01f9d0ff1dbf56969144cb0731
+    pristine_git_object: 0e243cce46723b95ae3d06fc0fc11c0e8ed6abf8
+  models/operations/listaccounts.go:
+    id: 2e977080f97f
+    last_write_checksum: sha1:4f0f424b8afd7f16d91414eccde73e2a6cb23bc1
+    pristine_git_object: 02befc3bf04a61743915f3d3d18f07f33d702ad9
+  models/operations/listjobs.go:
+    id: 5db773692bfb
+    last_write_checksum: sha1:49b360d83718680c472ffc2cc86c39b970b1f996
+    pristine_git_object: 5445d317002881dec9e193ccfef5670ce96c64f1
+  models/operations/listorganizations.go:
+    id: 40a05c896d0e
+    last_write_checksum: sha1:e2e1256fa45429d7cb0b68c40f41d562d430f00e
+    pristine_git_object: eecebea4d8c2b62bba3b2f78e8f5989a955c56bf
+  models/operations/listpaychecks.go:
+    id: 3ea07f24a891
+    last_write_checksum: sha1:b8a77b3fe4856438e45e6490126fe0d9267f8470
+    pristine_git_object: 119c2d2708d68fd64cc0cc3a6556e2fa32f49629
+  models/operations/listtransfers.go:
+    id: c954e43ca5d6
+    last_write_checksum: sha1:0cd8dd4bcaf8dea00f3d24fca48d70398fd9dba5
+    pristine_git_object: 6d2a14ac76157f5c872bc74837515516443a6a83
+  models/operations/options.go:
+    id: d20dd4db9865
+    last_write_checksum: sha1:cc26c102650983ae9fa1ae113c0f389dceac3554
+    pristine_git_object: 1fc67d70750617a2ae49b3c8115f334e2a754729
+  models/operations/readaccount.go:
+    id: 1d2cc44fb136
+    last_write_checksum: sha1:cc17b4b336285466601adb428d7d32646fc2f40d
+    pristine_git_object: a6b79e7280a843bb1b2983c6d50d70557a00d257
+  models/operations/readjob.go:
+    id: a541799b62c8
+    last_write_checksum: sha1:70f9b0d696240ce39f2ac5e3d75b4bfed59cc6ef
+    pristine_git_object: 1ce2608b270c85ebd0da5e404e3f16f35688c4c4
+  models/operations/readorganization.go:
+    id: 9e9d620a8e29
+    last_write_checksum: sha1:458367e9d2860f99b1a5a63edafa85fd5d070d36
+    pristine_git_object: 5927bea32ce2d89f0409b651a40e326482528226
+  models/operations/readpaycheck.go:
+    id: 57d855231cad
+    last_write_checksum: sha1:0de77087c406d253cb1cd17641eb37f0c0c354fb
+    pristine_git_object: 50d986189fb7cbd492aac1e0936d5da41a8a0fd8
+  models/operations/readperson.go:
+    id: fffab94fdcce
+    last_write_checksum: sha1:25b36db53880d73d9e379fe3c45416cbf2a819ba
+    pristine_git_object: e156237b4a7382e79a66282487ab25025cf08843
+  models/operations/readtransfer.go:
+    id: 0171661b5965
+    last_write_checksum: sha1:c5db733586dc70568c755710fe4ee50a17d381b9
+    pristine_git_object: 2bbe67be05affd465e020f52afe0d7e38df7e2f1
+  models/operations/updatejob.go:
+    id: c6fcef25a100
+    last_write_checksum: sha1:24d29d51b3624ef08f8cd96a68b4bb7db7857660
+    pristine_git_object: d2dc6f39383e036d37f086f255bdeb7b64ab54ea
+  models/operations/updateperson.go:
+    id: 88f9da915636
+    last_write_checksum: sha1:27ba757da9176462d29576576d7638fe59578724
+    pristine_git_object: 0bcc39706aa11908764c04985a797b21a06de10d
+  optionalnullable/optionalnullable.go:
+    id: ce60f259ead3
+    last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
+    pristine_git_object: c6739be0619b6726565e0f11855ffe44b0e5607e
+  optionalnullable/optionalnullable_test.go:
+    id: ad67101ebca3
+    last_write_checksum: sha1:2e9433eff1651ac77d6678ea76880d9a4980cbc2
+    pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
+  organizations.go:
+    id: c466ebb9a97c
+    last_write_checksum: sha1:4654a34035e44a4e25581b46ebdd89d721331ac4
+    pristine_git_object: 5d675b355c18b70f45a98c087c8589667fdc02ec
+  paychecks.go:
+    id: 68fe17e9c8b6
+    last_write_checksum: sha1:8dd1e23c879265910bce9644922453866b5a149f
+    pristine_git_object: 4b2a1dc2215971d2dd5c27aded58198c131421ef
+  people.go:
+    id: 7ce8ac6ba500
+    last_write_checksum: sha1:1417dbd8d6f8c5c9764933f42386bfa694557401
+    pristine_git_object: 9bdd7ec2a7672e876321d1f4bbec10cc472def4e
+  retry/config.go:
+    id: 82d673cb0389
+    last_write_checksum: sha1:f565273be789ffe0e3c160de1ac72a63cfe67fbe
+    pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
+  sdk.go:
+    id: 8db9b9536b0a
+    last_write_checksum: sha1:d7bfa3b63524ba395daf063412fe286302b27510
+    pristine_git_object: baa00e1be9981fcbb9d1bf3cba27cc7f089a7483
+  transfers.go:
+    id: a45ada44323b
+    last_write_checksum: sha1:df843daefb77131d824a3c8d13284966c11f1742
+    pristine_git_object: b9cf35c29c8de8e02a419b5d0f14bfaa0e2c1dfc
+  types/bigint.go:
+    id: 6f911e1a03c3
+    last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
+    pristine_git_object: 9c6a086d51595888a6ff787ebcb8693559afee95
+  types/date.go:
+    id: 231a623ce1b7
+    last_write_checksum: sha1:3036a2e1ed15a1d484c093367eba000c38f384d0
+    pristine_git_object: 5b2782f219efe6bfbce46fc2dec68998eb759438
+  types/datetime.go:
+    id: 5023aac30a47
+    last_write_checksum: sha1:196d050af6450669214e9ae4fd28e56263ae2b5d
+    pristine_git_object: 3eff332daa04e34cec5ffb10add670bafd8ac454
+  types/pointers.go:
+    id: 6d0d0a6cb6f3
+    last_write_checksum: sha1:fc2275ea006257ba9ba4ff6f2a2cdb6205371eef
+    pristine_git_object: 35c439d2661e08fcb6a854096fd7b9a8561b3938
+examples:
+  readJob:
+    speakeasy-default-read-job:
+      parameters:
+        path:
+          job_id: "aa860051-c411-4709-9685-c1b716df611b"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  updateJob:
+    speakeasy-default-update-job:
+      parameters:
+        path:
+          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"activation_status": "DEACTIVATED"}, "relationships": {"direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
+        "500":
+          application/vnd.api+json: {"errors": []}
+    DirectDeposit:
+      parameters:
+        path:
+          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "relationships": {"direct_deposit_default_depository": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
+        "500":
+          application/vnd.api+json: {"errors": []}
+    Deactivate:
+      parameters:
+        path:
+          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"activation_status": "DEACTIVATED"}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  listJobs:
+    speakeasy-default-list-jobs:
+      parameters:
+        query:
+          filter[external_identifiers.primary_identifier]: "PRIMARY_ID_98765"
+          filter[external_identifiers.employee_id]: "EMP123456"
+          filter[external_identifiers.group]: "12345"
+          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
+          filter[organization.id]: "f0b30634-108c-439c-a8c1-c6a91197f022"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": [{"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  readAccount:
+    speakeasy-default-read-account:
+      parameters:
+        path:
+          account_id: "2bc7d781-3247-46f6-b60f-4090d214936a"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  listAccounts:
+    speakeasy-default-list-accounts:
+      parameters:
+        query:
+          filter[account_type]: "EARNINGS_BALANCE"
+          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
+          filter[subtype]: "ODP"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": []}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+    ODPAccounts:
+      parameters:
+        query:
+          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
+          filter[account_type]: "EARNINGS_BALANCE"
+          filter[subtype]: "ODP"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": [{"id": "fa8f641-5717-4562-b3fc-2c963f66afa6", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 7250, "current": 0, "currency": "USD"}, "capabilities": {"transfer_destination": []}, "name": "DailyPay On-Demand Pay Balance", "account_type": "EARNINGS_BALANCE", "subtype": "ODP", "details": {}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}]}
+    AllAccounts:
+      parameters:
+        query:
+          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
+          filter[account_type]: "EARNINGS_BALANCE"
+          filter[subtype]: "ODP"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": [{"id": "fa8f641-5717-4562-b3fc-2c963f66afa6", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 7250, "current": 0, "currency": "USD"}, "capabilities": {"transfer_destination": []}, "name": "DailyPay On-Demand Pay Balance", "account_type": "EARNINGS_BALANCE", "subtype": "ODP", "details": {}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}, {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": null, "current": null, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "NEXT_BUSINESS_DAY", "fee": 299, "currency": "USD"}]}, "name": "Acme Bank Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}]}
+  createAccount:
+    Depository:
+      parameters:
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+    Card:
+      parameters:
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Debit Card", "account_type": "CARD", "subtype": "DEBIT", "details": {"token": "abc.efg.123", "first_name": "Edith", "last_name": "Clarke", "expiration_month": "02", "expiration_year": "2027", "address_line_one": "123 Kebly Street", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "72374", "address_country": "US"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+  readTransfer:
+    speakeasy-default-read-transfer:
+      parameters:
+        path:
+          transfer_id: "aba332a2-24a2-46de-8257-5040e71ab210"
+        query:
+          include: "estimated_funding_sources,final_funding_sources"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "SETTLED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": []}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  listTransfers:
+    speakeasy-default-list-transfers:
+      parameters:
+        query:
+          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
+          include: "estimated_funding_sources,final_funding_sources"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": [], "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+  createTransfer:
+    speakeasy-default-create-transfer:
+      parameters:
+        header:
+          DailyPay-API-Version: 3
+          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "schedule": "WITHIN_THIRTY_MINUTES"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": []}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+        "409":
+          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+    Instant:
+      parameters:
+        query:
+          include: "estimated_funding_sources,final_funding_sources"
+        header:
+          DailyPay-API-Version: 3
+          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "transfers", "attributes": {"preview": true, "amount": 15000, "currency": "USD", "schedule": "WITHIN_THIRTY_MINUTES"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "destination": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}, "person": {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "409":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+    NextDay:
+      parameters:
+        query:
+          include: "estimated_funding_sources,final_funding_sources"
+        header:
+          DailyPay-API-Version: 3
+          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "transfers", "attributes": {"preview": true, "amount": 15000, "currency": "USD", "schedule": "NEXT_BUSINESS_DAY"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "destination": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}, "person": {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b"}}}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "409":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  readPaycheck:
+    speakeasy-default-read-paycheck:
+      parameters:
+        path:
+          paycheck_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "paychecks", "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "attributes": {"status": "PROCESSING", "pay_period_ends_at": "2023-03-15T04:00:00Z", "pay_period_starts_at": "2023-03-15T04:00:00Z", "deposit_expected_at": "2023-03-15T04:00:00Z", "total_debited": 0, "gross_earnings": 0, "employer_withholdings": 0, "net_earnings": 0, "currency": "USD"}, "links": {"self": "https://api.dailypay.com/rest/paychecks/f4e2fd6c-b567-447c-a003-b7315b8d22d2"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "job": {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}}}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  listPaychecks:
+    speakeasy-default-list-paychecks:
+      parameters:
+        query:
+          filter[deposit_expected_at__gte]: "2023-03-15T04:00:00Z"
+          filter[deposit_expected_at__lt]: "2023-03-15T04:00:00Z"
+          filter[pay_period_ends_at__gte]: "2023-03-15T04:00:00Z"
+          filter[pay_period_ends_at__lt]: "2023-03-15T04:00:00Z"
+          filter[pay_period_starts_at__gte]: "2023-03-15T04:00:00Z"
+          filter[pay_period_starts_at__lt]: "2023-03-15T04:00:00Z"
+          filter[job.id]: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
+          filter[status]: "DEPOSITED"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": []}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+  readOrganization:
+    speakeasy-default-read-organization:
+      parameters:
+        path:
+          organization_id: "123e4567-e89b-12d3-a456-426614174000"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022", "attributes": {"name": "DailyPay", "products": ["ODP", "DAILYPAY_CARD"]}, "links": {"self": "https://api.dailypay.com/rest/organizations/f0b30634-108c-439c-a8c1-c6a91197f022"}}}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  listOrganizations:
+    speakeasy-default-list-organizations:
+      parameters:
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": []}
+        "400":
+          application/vnd.api+json: {"errors": []}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+  readPerson:
+    speakeasy-default-read-person:
+      parameters:
+        path:
+          person_id: "aa860051-c411-4709-9685-c1b716df611b"
+        header:
+          DailyPay-API-Version: 3
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+  updatePerson:
+    speakeasy-default-update-person:
+      parameters:
+        path:
+          person_id: "aa860051-c411-4709-9685-c1b716df611b"
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"state_of_residence": "NY"}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+    StateOfResidence:
+      parameters:
+        path:
+          person_id: "aa860051-c411-4709-9685-c1b716df611b"
+        header:
+          DailyPay-API-Version: 3
+      requestBody:
+        application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"state_of_residence": "NY"}}}
+      responses:
+        "200":
+          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
+        "400":
+          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
+        "401":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
+        "403":
+          application/vnd.api+json: {"errors": []}
+        "404":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+  createGenericCardToken:
+    speakeasy-default-create-generic-card-token:
+      requestBody:
+        application/json: {"first_name": "Edith", "last_name": "Clarke", "card_number": "4007589999999912", "expiration_year": "2027", "expiration_month": "02", "cvv": "123", "address_line_one": "123 Kebly Street", "address_line_two": "Unit C", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "07237", "address_country": "US"}
+      responses:
+        "200":
+          application/json: {"token": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkExMjhHQ00ifQ.ZR3Eq5MAuS_03RopT9QWK1MUiFFIOoZoDgwkiDWzz-7S6Zeda0JdvzwI51lHxuvi6EFdXLi7-1thIpPt49JMiLtzZgcf7UCJrVOZTf88JhIL5X5rvmnpO2NADfR9PVzrSV2AwxLCRy6vRfgCHGJZy1o5AZzwaaMLCRzqb3vdCaXn9gKvGPmvHKg9PkR-Zrfs9XDsRHeCVtfvu8PBzMNO5r_Dfo-fo3l3cyV4pKFtbvjlJXm--Ko5XiJPxffnBofmlYabXHku5yuo6IsVTnd9ETksMu1tnfr4T9AC14fiZew0FJetIayf_-kmiR1t7_aU3Q_A8Uwy7kTmxrFTvu6Cgw.yT7WptQfjKXswG_N.DY77q22ZGV5efeh6LNI6bWRmhZikY0dLAyIDVrK7nite1B7T_4IL9XdM7Luf9BOpXHTscu9y6Zqun-687bclLnzOYB7nNpV_DZM-5stWz2MuQeLiokqTfrF5jfXtpLDaDEiwAY9HHTBrKoD91Wkp5aX1CsB4jFBTfFDES0BQbTrRXqLTMIItZqKFbh5btqFCskfl7JKtozo3UgMNj__HnNiF5GUN-QgiOrYZKn7d2hXPpUABPmYGFkpXSXTnnCRGTVoZHoyh5L-4Apr8yVRUxUX1rrMFjOurr8VqmQPg-9-2Z7zxmwp5joms19JdgV2FhgJnbKilwFY4IQrYbhfLdfuApHgpptvrODLdPB5DJnT6tAfsJM_-LuFC7cg9kg6Xm6G-8jGEuO56sd-Og3cvK-jnhSR6Vu9O6nSGKZ1X3H0O_EHgMhHV-WTtf8KfrUHdVsSBIZvA6J_5gmOAB53KPaCPy8AU8XQBUgPVBt35h9J4HLuWq3HGRKEw5nHNNdSSjgWXfpC9X8OXgric1540nZz5A-zBP3XNOZuD26yPNDg2g7jCzVZs1TfRgX9DXqZHUkugPuyXN82FMT3bxKAZzH5OsmVSnir8f75OAx18hVG-jheEBTYzbx4yh6YwlaWKkekKKwGAAdEnUg5cQxNNmeOpTzQiSyMCnFOtQyn67qSk9I3e5ig9l5ElSoX-MhL9g2liAKbX6_fl4wJ1elvrhy0w6Xuf6V74UrwKP5deKxtGLbWoSVC-v0k5lrweP8SbD1R62DyfdcdgZSPDmiiSgF8YuHO_8fW96xQeOD_fJ59qf4-qvfuToM39X52s5vH7Qj53v5kp-Tg23Ki2C-ENPIqa6hKl0BaTHltIKwZt1ll4l7ho1vMxPdPVq47FmTzPyliB0JuK6VoQIaR4ej4CCSrQmRTXMohXnbIaVubm-kLyK5RebvnJFJr5J2YswT5ZnUuEb5MbkNaeqJ0CUaQ8Z_vRXI-UaZOuGI_BPYsuIDmBKsfihoGUHau6WBNqqCDBRQsHlLRc3pUBfLLWQyO8pdB2JHjco_8wh2SuxLrD9abLNwjt9NNNmQdW8Qzm-E7aG-DnLN0y6z1T1dTr-YiUO4TBw1sPNysVX6v2Pz5jN7xQ6ukZ59rXgJ4Rozci5ip0V28whvs5Aw8oiOY9Uo0qS9UEHjILCDdhPuBgt7v_v6ylsIPEy9ZL8Z0F-Dh_SqqJl9H4TSKVbalk4PJ8f2TGywbB7b2l5t5wHPZexuhkZZ1X_lChvi7nistQQ9952S6quPhT8OZntWqHe2X63THSVweupbe0D21tftdNsiZFP4rptJ6SfkmcEiS4CDA233CjCTy5sMALIYMsATL5dQxG5myUc3hiDQqpT_n7pIMhSuVrMcFi0bfpLSVYtLShmhQno8wqrm1p5aqahY1YQQmMM4VLT-05Fz53cTlJsEqnu6_2tg6v_j4cWYnHnP4IAvtJmw4BRQ.3yAMw37rs8X_gfRMqpYD1w"}
+  getHealth:
+    speakeasy-default-get-health:
+      responses:
+        "200":
+          application/json: {"status": "UP", "version": "3.0.0"}
+        "401":
+          application/vnd.api+json: {"errors": []}
+        "500":
+          application/vnd.api+json: {"errors": []}
+examplesVersion: 1.0.2
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
@@ -387,474 +2283,3 @@ generatedFiles:
   - types/date.go
   - types/datetime.go
   - types/pointers.go
-examples:
-  readJob:
-    speakeasy-default-read-job:
-      parameters:
-        path:
-          job_id: "aa860051-c411-4709-9685-c1b716df611b"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  updateJob:
-    speakeasy-default-update-job:
-      parameters:
-        path:
-          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"activation_status": "DEACTIVATED"}, "relationships": {"direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
-        "500":
-          application/vnd.api+json: {"errors": []}
-    DirectDeposit:
-      parameters:
-        path:
-          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "relationships": {"direct_deposit_default_depository": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
-        "500":
-          application/vnd.api+json: {"errors": []}
-    Deactivate:
-      parameters:
-        path:
-          job_id: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"activation_status": "DEACTIVATED"}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  listJobs:
-    speakeasy-default-list-jobs:
-      parameters:
-        query:
-          filter[external_identifiers.primary_identifier]: "PRIMARY_ID_98765"
-          filter[external_identifiers.employee_id]: "EMP123456"
-          filter[external_identifiers.group]: "12345"
-          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
-          filter[organization.id]: "f0b30634-108c-439c-a8c1-c6a91197f022"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": [{"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f", "attributes": {"external_identifiers": {"primary_identifier": "0123456789"}, "first_name": "Edith", "last_name": "Clarke", "activation_status": "DEACTIVATED", "wage_rate": {"amount": 2500, "currency": "USD", "frequency": "HOURLY"}, "title": "Computer", "department": "Finance", "location": "New York, New York", "direct_deposit_status": "SETUP_COMPLETE"}, "links": {"self": "https://api.dailypay.com/rest/jobs/e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "organization": {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022"}}, "direct_deposit_default_depository": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "direct_deposit_default_card": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  readAccount:
-    speakeasy-default-read-account:
-      parameters:
-        path:
-          account_id: "2bc7d781-3247-46f6-b60f-4090d214936a"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  listAccounts:
-    speakeasy-default-list-accounts:
-      parameters:
-        query:
-          filter[account_type]: "EARNINGS_BALANCE"
-          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
-          filter[subtype]: "ODP"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": []}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-    ODPAccounts:
-      parameters:
-        query:
-          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
-          filter[account_type]: "EARNINGS_BALANCE"
-          filter[subtype]: "ODP"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": [{"id": "fa8f641-5717-4562-b3fc-2c963f66afa6", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 7250, "current": 0, "currency": "USD"}, "capabilities": {"transfer_destination": []}, "name": "DailyPay On-Demand Pay Balance", "account_type": "EARNINGS_BALANCE", "subtype": "ODP", "details": {}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}]}
-    AllAccounts:
-      parameters:
-        query:
-          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
-          filter[account_type]: "EARNINGS_BALANCE"
-          filter[subtype]: "ODP"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": [{"id": "fa8f641-5717-4562-b3fc-2c963f66afa6", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 7250, "current": 0, "currency": "USD"}, "capabilities": {"transfer_destination": []}, "name": "DailyPay On-Demand Pay Balance", "account_type": "EARNINGS_BALANCE", "subtype": "ODP", "details": {}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}, {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": null, "current": null, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "NEXT_BUSINESS_DAY", "fee": 299, "currency": "USD"}]}, "name": "Acme Bank Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/accounts/fa8f641-5717-4562-b3fc-2c963f66afa6"}, "relationships": {"person": {"data": {"type": "people", "id": "fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}]}
-  createAccount:
-    Depository:
-      parameters:
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-    Card:
-      parameters:
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Debit Card", "account_type": "CARD", "subtype": "DEBIT", "details": {"token": "abc.efg.123", "first_name": "Edith", "last_name": "Clarke", "expiration_month": "02", "expiration_year": "2027", "address_line_one": "123 Kebly Street", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "72374", "address_country": "US"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-  readTransfer:
-    speakeasy-default-read-transfer:
-      parameters:
-        path:
-          transfer_id: "aba332a2-24a2-46de-8257-5040e71ab210"
-        query:
-          include: "estimated_funding_sources,final_funding_sources"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "SETTLED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": []}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "RECORD_NOT_FOUND"}]}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  listTransfers:
-    speakeasy-default-list-transfers:
-      parameters:
-        query:
-          filter[person.id]: "aa860051-c411-4709-9685-c1b716df611b"
-          include: "estimated_funding_sources,final_funding_sources"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": [], "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-  createTransfer:
-    speakeasy-default-create-transfer:
-      parameters:
-        header:
-          DailyPay-API-Version: 3
-          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "schedule": "WITHIN_THIRTY_MINUTES"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": []}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-        "409":
-          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-    Instant:
-      parameters:
-        query:
-          include: "estimated_funding_sources,final_funding_sources"
-        header:
-          DailyPay-API-Version: 3
-          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "transfers", "attributes": {"preview": true, "amount": 15000, "currency": "USD", "schedule": "WITHIN_THIRTY_MINUTES"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "destination": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}, "person": {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "409":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-    NextDay:
-      parameters:
-        query:
-          include: "estimated_funding_sources,final_funding_sources"
-        header:
-          DailyPay-API-Version: 3
-          Idempotency-Key: "e2736aa1-78c4-4cc6-b0a6-848e733f232a"
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "transfers", "attributes": {"preview": true, "amount": 15000, "currency": "USD", "schedule": "NEXT_BUSINESS_DAY"}, "relationships": {"origin": {"data": {"type": "accounts", "id": "123e4567-e89b-12d3-a456-426614174000"}}, "destination": {"data": {"type": "accounts", "id": "223e4567-e89b-12d3-a456-426614174001"}}, "person": {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b"}}}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210", "attributes": {"preview": true, "amount": 2500, "currency": "USD", "status": "FAILED", "schedule": "WITHIN_THIRTY_MINUTES", "submitted_at": "2021-04-21T21:30:58.051Z", "resolved_at": "2021-04-21T21:30:58.051Z", "fee": 0}, "links": {"self": "https://api.dailypay.com/rest/transfers/aba332a2-24a2-46de-8257-5040e71ab210"}, "relationships": {"origin": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "destination": {"data": {"type": "accounts", "id": "2bc7d781-3247-46f6-b60f-4090d214936a"}}, "person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "estimated_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}, "final_funding_sources": {"data": [{"type": "funding_sources", "id": "b5393c00b7c113fc2e5ae3e80c785bb2"}]}}}, "included": [{"id": "b5393c00b7c113fc2e5ae3e80c785bb2", "type": "funding_sources", "attributes": {"amount": 2500, "currency": "USD"}, "relationships": {"source": {"data": {"type": "paychecks", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "transfer": {"data": {"type": "transfers", "id": "aba332a2-24a2-46de-8257-5040e71ab210"}}}}]}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "409":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  readPaycheck:
-    speakeasy-default-read-paycheck:
-      parameters:
-        path:
-          paycheck_id: "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "paychecks", "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "attributes": {"status": "PROCESSING", "pay_period_ends_at": "2023-03-15T04:00:00Z", "pay_period_starts_at": "2023-03-15T04:00:00Z", "deposit_expected_at": "2023-03-15T04:00:00Z", "total_debited": 0, "gross_earnings": 0, "employer_withholdings": 0, "net_earnings": 0, "currency": "USD"}, "links": {"self": "https://api.dailypay.com/rest/paychecks/f4e2fd6c-b567-447c-a003-b7315b8d22d2"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}, "job": {"data": {"type": "jobs", "id": "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"}}}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  listPaychecks:
-    speakeasy-default-list-paychecks:
-      parameters:
-        query:
-          filter[deposit_expected_at__gte]: "2023-03-15T04:00:00Z"
-          filter[deposit_expected_at__lt]: "2023-03-15T04:00:00Z"
-          filter[pay_period_ends_at__gte]: "2023-03-15T04:00:00Z"
-          filter[pay_period_ends_at__lt]: "2023-03-15T04:00:00Z"
-          filter[pay_period_starts_at__gte]: "2023-03-15T04:00:00Z"
-          filter[pay_period_starts_at__lt]: "2023-03-15T04:00:00Z"
-          filter[job.id]: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f"
-          filter[status]: "DEPOSITED"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": []}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-  readOrganization:
-    speakeasy-default-read-organization:
-      parameters:
-        path:
-          organization_id: "123e4567-e89b-12d3-a456-426614174000"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "organizations", "id": "f0b30634-108c-439c-a8c1-c6a91197f022", "attributes": {"name": "DailyPay", "products": ["ODP", "DAILYPAY_CARD"]}, "links": {"self": "https://api.dailypay.com/rest/organizations/f0b30634-108c-439c-a8c1-c6a91197f022"}}}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "FORBIDDEN"}]}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  listOrganizations:
-    speakeasy-default-list-organizations:
-      parameters:
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": []}
-        "400":
-          application/vnd.api+json: {"errors": []}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-  readPerson:
-    speakeasy-default-read-person:
-      parameters:
-        path:
-          person_id: "aa860051-c411-4709-9685-c1b716df611b"
-        header:
-          DailyPay-API-Version: 3
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-  updatePerson:
-    speakeasy-default-update-person:
-      parameters:
-        path:
-          person_id: "aa860051-c411-4709-9685-c1b716df611b"
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"state_of_residence": "NY"}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-    StateOfResidence:
-      parameters:
-        path:
-          person_id: "aa860051-c411-4709-9685-c1b716df611b"
-        header:
-          DailyPay-API-Version: 3
-      requestBody:
-        application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"state_of_residence": "NY"}}}
-      responses:
-        "200":
-          application/vnd.api+json: {"data": {"type": "people", "id": "aa860051-c411-4709-9685-c1b716df611b", "attributes": {"disallow_reason": null, "state_of_residence": "NY", "products": {"dailypay_card": {"eligible": true, "enrolled": false}}}, "links": {"self": "https://api.dailypay.com/rest/people/aa860051-c411-4709-9685-c1b716df611b"}}}
-        "400":
-          application/vnd.api+json: {"errors": [{"code": "INVALID_PARAMETERS", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
-        "401":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "INVALID_TOKEN"}]}
-        "403":
-          application/vnd.api+json: {"errors": []}
-        "404":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
-  createGenericCardToken:
-    speakeasy-default-create-generic-card-token:
-      requestBody:
-        application/json: {"first_name": "Edith", "last_name": "Clarke", "card_number": "4007589999999912", "expiration_year": "2027", "expiration_month": "02", "cvv": "123", "address_line_one": "123 Kebly Street", "address_line_two": "Unit C", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "07237", "address_country": "US"}
-      responses:
-        "200":
-          application/json: {"token": "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkExMjhHQ00ifQ.ZR3Eq5MAuS_03RopT9QWK1MUiFFIOoZoDgwkiDWzz-7S6Zeda0JdvzwI51lHxuvi6EFdXLi7-1thIpPt49JMiLtzZgcf7UCJrVOZTf88JhIL5X5rvmnpO2NADfR9PVzrSV2AwxLCRy6vRfgCHGJZy1o5AZzwaaMLCRzqb3vdCaXn9gKvGPmvHKg9PkR-Zrfs9XDsRHeCVtfvu8PBzMNO5r_Dfo-fo3l3cyV4pKFtbvjlJXm--Ko5XiJPxffnBofmlYabXHku5yuo6IsVTnd9ETksMu1tnfr4T9AC14fiZew0FJetIayf_-kmiR1t7_aU3Q_A8Uwy7kTmxrFTvu6Cgw.yT7WptQfjKXswG_N.DY77q22ZGV5efeh6LNI6bWRmhZikY0dLAyIDVrK7nite1B7T_4IL9XdM7Luf9BOpXHTscu9y6Zqun-687bclLnzOYB7nNpV_DZM-5stWz2MuQeLiokqTfrF5jfXtpLDaDEiwAY9HHTBrKoD91Wkp5aX1CsB4jFBTfFDES0BQbTrRXqLTMIItZqKFbh5btqFCskfl7JKtozo3UgMNj__HnNiF5GUN-QgiOrYZKn7d2hXPpUABPmYGFkpXSXTnnCRGTVoZHoyh5L-4Apr8yVRUxUX1rrMFjOurr8VqmQPg-9-2Z7zxmwp5joms19JdgV2FhgJnbKilwFY4IQrYbhfLdfuApHgpptvrODLdPB5DJnT6tAfsJM_-LuFC7cg9kg6Xm6G-8jGEuO56sd-Og3cvK-jnhSR6Vu9O6nSGKZ1X3H0O_EHgMhHV-WTtf8KfrUHdVsSBIZvA6J_5gmOAB53KPaCPy8AU8XQBUgPVBt35h9J4HLuWq3HGRKEw5nHNNdSSjgWXfpC9X8OXgric1540nZz5A-zBP3XNOZuD26yPNDg2g7jCzVZs1TfRgX9DXqZHUkugPuyXN82FMT3bxKAZzH5OsmVSnir8f75OAx18hVG-jheEBTYzbx4yh6YwlaWKkekKKwGAAdEnUg5cQxNNmeOpTzQiSyMCnFOtQyn67qSk9I3e5ig9l5ElSoX-MhL9g2liAKbX6_fl4wJ1elvrhy0w6Xuf6V74UrwKP5deKxtGLbWoSVC-v0k5lrweP8SbD1R62DyfdcdgZSPDmiiSgF8YuHO_8fW96xQeOD_fJ59qf4-qvfuToM39X52s5vH7Qj53v5kp-Tg23Ki2C-ENPIqa6hKl0BaTHltIKwZt1ll4l7ho1vMxPdPVq47FmTzPyliB0JuK6VoQIaR4ej4CCSrQmRTXMohXnbIaVubm-kLyK5RebvnJFJr5J2YswT5ZnUuEb5MbkNaeqJ0CUaQ8Z_vRXI-UaZOuGI_BPYsuIDmBKsfihoGUHau6WBNqqCDBRQsHlLRc3pUBfLLWQyO8pdB2JHjco_8wh2SuxLrD9abLNwjt9NNNmQdW8Qzm-E7aG-DnLN0y6z1T1dTr-YiUO4TBw1sPNysVX6v2Pz5jN7xQ6ukZ59rXgJ4Rozci5ip0V28whvs5Aw8oiOY9Uo0qS9UEHjILCDdhPuBgt7v_v6ylsIPEy9ZL8Z0F-Dh_SqqJl9H4TSKVbalk4PJ8f2TGywbB7b2l5t5wHPZexuhkZZ1X_lChvi7nistQQ9952S6quPhT8OZntWqHe2X63THSVweupbe0D21tftdNsiZFP4rptJ6SfkmcEiS4CDA233CjCTy5sMALIYMsATL5dQxG5myUc3hiDQqpT_n7pIMhSuVrMcFi0bfpLSVYtLShmhQno8wqrm1p5aqahY1YQQmMM4VLT-05Fz53cTlJsEqnu6_2tg6v_j4cWYnHnP4IAvtJmw4BRQ.3yAMw37rs8X_gfRMqpYD1w"}
-  getHealth:
-    speakeasy-default-get-health:
-      responses:
-        "200":
-          application/json: {"status": "UP", "version": "3.0.0"}
-        "401":
-          application/vnd.api+json: {"errors": []}
-        "500":
-          application/vnd.api+json: {"errors": []}
-examplesVersion: 1.0.2

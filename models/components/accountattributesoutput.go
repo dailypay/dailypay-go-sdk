@@ -769,9 +769,9 @@ const (
 
 // AccountAttributesOutput - The details of the account.
 type AccountAttributesOutput struct {
-	CardOutput              *CardOutput              `queryParam:"inline,name=AccountAttributes"`
-	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline,name=AccountAttributes"`
-	Depository              *Depository              `queryParam:"inline,name=AccountAttributes"`
+	CardOutput              *CardOutput              `queryParam:"inline,name=AccountAttributes" union:"member"`
+	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline,name=AccountAttributes" union:"member"`
+	Depository              *Depository              `queryParam:"inline,name=AccountAttributes" union:"member"`
 
 	Type AccountAttributesOutputType
 }
@@ -1080,9 +1080,9 @@ const (
 
 // AccountAttributesInput - The details of the account.
 type AccountAttributesInput struct {
-	CardInput                    *CardInput                    `queryParam:"inline,name=AccountAttributes"`
-	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline,name=AccountAttributes"`
-	DepositoryInput              *DepositoryInput              `queryParam:"inline,name=AccountAttributes"`
+	CardInput                    *CardInput                    `queryParam:"inline,name=AccountAttributes" union:"member"`
+	EarningsBalanceReadOnlyInput *EarningsBalanceReadOnlyInput `queryParam:"inline,name=AccountAttributes" union:"member"`
+	DepositoryInput              *DepositoryInput              `queryParam:"inline,name=AccountAttributes" union:"member"`
 
 	Type AccountAttributesInputType
 }

@@ -16,7 +16,7 @@ func (t TransferIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (t *TransferIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, []string{"type", "id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
 		return err
 	}
 	return nil

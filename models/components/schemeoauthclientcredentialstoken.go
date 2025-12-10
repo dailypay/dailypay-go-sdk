@@ -17,7 +17,7 @@ func (s SchemeOauthClientCredentialsToken) MarshalJSON() ([]byte, error) {
 }
 
 func (s *SchemeOauthClientCredentialsToken) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &s, "", false, []string{"clientID", "clientSecret", "tokenURL"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &s, "", false, nil); err != nil {
 		return err
 	}
 	return nil
