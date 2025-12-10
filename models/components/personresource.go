@@ -19,7 +19,7 @@ func (p PersonResource) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PersonResource) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"type", "id", "attributes", "links"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, nil); err != nil {
 		return err
 	}
 	return nil

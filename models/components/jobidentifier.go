@@ -16,7 +16,7 @@ func (j JobIdentifier) MarshalJSON() ([]byte, error) {
 }
 
 func (j *JobIdentifier) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &j, "", false, []string{"type", "id"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &j, "", false, nil); err != nil {
 		return err
 	}
 	return nil

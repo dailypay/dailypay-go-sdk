@@ -68,7 +68,7 @@ func (p PaycheckAttributes) MarshalJSON() ([]byte, error) {
 }
 
 func (p *PaycheckAttributes) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, []string{"status", "pay_period_ends_at", "pay_period_starts_at", "deposit_expected_at", "gross_earnings", "currency"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &p, "", false, nil); err != nil {
 		return err
 	}
 	return nil
