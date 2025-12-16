@@ -112,13 +112,13 @@ actions:
                     }),
                 )
 
-                res, err := s.Accounts.Create(ctx, components.AccountDataInput{
-                    Data: components.AccountResourceInput{
-                        Attributes: components.CreateAccountAttributesInputDepositoryInput(
-                            components.DepositoryInput{
+                res, err := s.Accounts.Create(ctx, components.AccountCreateData{
+                    Data: components.AccountCreateResource{
+                        Attributes: components.CreateAccountCreateAttributesAccountCreateAttributesDepository(
+                            components.AccountCreateAttributesDepository{
                                 Name: "Acme Bank Checking Account",
-                                Subtype: components.AccountAttributesDepositorySubtypeChecking,
-                                DepositoryAccountDetails: components.DepositoryAccountDetails{
+                                Subtype: components.AccountCreateAttributesDepositorySubtypeChecking,
+                                DepositoryAccountDetails: components.AccountCreateAttributesDepositoryDepositoryAccountDetails{
                                     FirstName: "Edith",
                                     LastName: "Clarke",
                                     RoutingNumber: "XXXXX2021",
@@ -330,9 +330,9 @@ actions:
                 res, err := s.Jobs.Update(ctx, operations.UpdateJobRequest{
                     JobID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
                     JobUpdateData: components.JobUpdateData{
-                        Data: components.Data{
+                        JobUpdateResource: components.JobUpdateResource{
                             ID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
-                            Relationships: &components.JobRelationshipsInput{
+                            JobUpdateRelationships: &components.JobUpdateRelationships{
                                 DirectDepositDefaultDepository: &components.AccountRelationship{
                                     Data: components.AccountIdentifier{
                                         ID: "123e4567-e89b-12d3-a456-426614174000",
@@ -586,11 +586,11 @@ actions:
 
                 res, err := s.People.Update(ctx, operations.UpdatePersonRequest{
                     PersonID: "aa860051-c411-4709-9685-c1b716df611b",
-                    PersonData: components.PersonDataInput{
-                        Data: components.PersonResourceInput{
+                    PersonUpdateData: components.PersonUpdateData{
+                        PersonUpdateResource: components.PersonUpdateResource{
                             ID: "aa860051-c411-4709-9685-c1b716df611b",
-                            Attributes: components.PersonAttributesInput{
-                                StateOfResidence: dailypay.Pointer("NY"),
+                            PersonUpdateAttributes: components.PersonUpdateAttributes{
+                                StateOfResidence: "NY",
                             },
                         },
                     },
@@ -676,11 +676,11 @@ actions:
                     IdempotencyKey: "e2736aa1-78c4-4cc6-b0a6-848e733f232a",
                     TransferCreateData: components.TransferCreateData{
                         Data: components.TransferCreateResource{
-                            Attributes: components.TransferAttributesInput{
+                            Attributes: components.TransferCreateAttributes{
                                 Preview: dailypay.Pointer(true),
                                 Amount: 15000,
                                 Currency: "USD",
-                                Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,
+                                Schedule: components.TransferCreateAttributesScheduleWithinThirtyMinutes,
                             },
                             Relationships: components.TransferCreateRelationships{
                                 Origin: components.AccountRelationship{
@@ -688,12 +688,12 @@ actions:
                                         ID: "123e4567-e89b-12d3-a456-426614174000",
                                     },
                                 },
-                                Destination: components.AccountRelationship{
+                                Destination: &components.AccountRelationship{
                                     Data: components.AccountIdentifier{
                                         ID: "223e4567-e89b-12d3-a456-426614174001",
                                     },
                                 },
-                                Person: components.PersonRelationship{
+                                Person: &components.PersonRelationship{
                                     Data: components.PersonIdentifier{
                                         ID: "aa860051-c411-4709-9685-c1b716df611b",
                                     },

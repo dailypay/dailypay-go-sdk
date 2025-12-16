@@ -9,6 +9,34 @@ import (
 	"time"
 )
 
+// TransferAttributesSchedule - Set the schedule for the transfer. If not set, the transfer will be processed immediately.
+// A preview transfer will never send.
+type TransferAttributesSchedule string
+
+const (
+	TransferAttributesScheduleWithinThirtyMinutes TransferAttributesSchedule = "WITHIN_THIRTY_MINUTES"
+	TransferAttributesScheduleNextBusinessDay     TransferAttributesSchedule = "NEXT_BUSINESS_DAY"
+)
+
+func (e TransferAttributesSchedule) ToPointer() *TransferAttributesSchedule {
+	return &e
+}
+func (e *TransferAttributesSchedule) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "WITHIN_THIRTY_MINUTES":
+		fallthrough
+	case "NEXT_BUSINESS_DAY":
+		*e = TransferAttributesSchedule(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for TransferAttributesSchedule: %v", v)
+	}
+}
+
 // TransferAttributesStatus - The status of the transfer.
 type TransferAttributesStatus string
 
@@ -39,34 +67,6 @@ func (e *TransferAttributesStatus) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// TransferAttributesSchedule - Set the schedule for the transfer. If not set, the transfer will be processed immediately.
-// A preview transfer will never send.
-type TransferAttributesSchedule string
-
-const (
-	TransferAttributesScheduleWithinThirtyMinutes TransferAttributesSchedule = "WITHIN_THIRTY_MINUTES"
-	TransferAttributesScheduleNextBusinessDay     TransferAttributesSchedule = "NEXT_BUSINESS_DAY"
-)
-
-func (e TransferAttributesSchedule) ToPointer() *TransferAttributesSchedule {
-	return &e
-}
-func (e *TransferAttributesSchedule) UnmarshalJSON(data []byte) error {
-	var v string
-	if err := json.Unmarshal(data, &v); err != nil {
-		return err
-	}
-	switch v {
-	case "WITHIN_THIRTY_MINUTES":
-		fallthrough
-	case "NEXT_BUSINESS_DAY":
-		*e = TransferAttributesSchedule(v)
-		return nil
-	default:
-		return fmt.Errorf("invalid value for TransferAttributesSchedule: %v", v)
-	}
-}
-
 // TransferAttributes - An object representing a transfer of money from one account to another.
 // Created when a person takes an advance against a future paycheck, or on a daily basis
 // when we update estimated earnings based on current employment.
@@ -79,12 +79,12 @@ type TransferAttributes struct {
 	Amount int64 `json:"amount"`
 	// A three-letter ISO 4217 currency code. For example, `USD` for US Dollars, `EUR` for Euros, or `JPY` for Japanese Yen.
 	Currency string `json:"currency"`
-	// The status of the transfer.
-	Status TransferAttributesStatus `json:"status"`
 	// Set the schedule for the transfer. If not set, the transfer will be processed immediately.
 	// A preview transfer will never send.
 	//
 	Schedule TransferAttributesSchedule `json:"schedule"`
+	// The status of the transfer.
+	Status TransferAttributesStatus `json:"status"`
 	// An ISO 8601 timestamp denoting the receipt for the request.
 	SubmittedAt time.Time `json:"submitted_at"`
 	// An ISO 8601 date denoting a successful or unsuccessful resolution for the request.
@@ -126,18 +126,18 @@ func (t *TransferAttributes) GetCurrency() string {
 	return t.Currency
 }
 
-func (t *TransferAttributes) GetStatus() TransferAttributesStatus {
-	if t == nil {
-		return TransferAttributesStatus("")
-	}
-	return t.Status
-}
-
 func (t *TransferAttributes) GetSchedule() TransferAttributesSchedule {
 	if t == nil {
 		return TransferAttributesSchedule("")
 	}
 	return t.Schedule
+}
+
+func (t *TransferAttributes) GetStatus() TransferAttributesStatus {
+	if t == nil {
+		return TransferAttributesStatus("")
+	}
+	return t.Status
 }
 
 func (t *TransferAttributes) GetSubmittedAt() time.Time {
@@ -159,61 +159,4 @@ func (t *TransferAttributes) GetFee() int64 {
 		return 0
 	}
 	return t.Fee
-}
-
-// TransferAttributesInput - An object representing a transfer of money from one account to another.
-// Created when a person takes an advance against a future paycheck, or on a daily basis
-// when we update estimated earnings based on current employment.
-type TransferAttributesInput struct {
-	// Include this field to preview a transfer without sending it, to see, for example, the fee that would be charged. This will return the same response as a typical transfer request.
-	// When the preview field is true in the response to creating a transfer, that indicates no transfer was created.
-	//
-	Preview *bool `default:"false" json:"preview"`
-	// A monetary quantity expressed in units of the lowest denomination in the associated currency. For example, `{ amount: 7250, currency: 'USD' }` resolves to $72.50.
-	Amount int64 `json:"amount"`
-	// A three-letter ISO 4217 currency code. For example, `USD` for US Dollars, `EUR` for Euros, or `JPY` for Japanese Yen.
-	Currency string `json:"currency"`
-	// Set the schedule for the transfer. If not set, the transfer will be processed immediately.
-	// A preview transfer will never send.
-	//
-	Schedule TransferAttributesSchedule `json:"schedule"`
-}
-
-func (t TransferAttributesInput) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(t, "", false)
-}
-
-func (t *TransferAttributesInput) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &t, "", false, nil); err != nil {
-		return err
-	}
-	return nil
-}
-
-func (t *TransferAttributesInput) GetPreview() *bool {
-	if t == nil {
-		return nil
-	}
-	return t.Preview
-}
-
-func (t *TransferAttributesInput) GetAmount() int64 {
-	if t == nil {
-		return 0
-	}
-	return t.Amount
-}
-
-func (t *TransferAttributesInput) GetCurrency() string {
-	if t == nil {
-		return ""
-	}
-	return t.Currency
-}
-
-func (t *TransferAttributesInput) GetSchedule() TransferAttributesSchedule {
-	if t == nil {
-		return TransferAttributesSchedule("")
-	}
-	return t.Schedule
 }

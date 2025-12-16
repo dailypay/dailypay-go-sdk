@@ -4,12 +4,12 @@ package components
 
 // AccountsData - Returns the account object.
 type AccountsData struct {
-	Data []AccountResourceOutput `json:"data"`
+	Data []AccountResource `json:"data"`
 }
 
-func (a *AccountsData) GetData() []AccountResourceOutput {
+func (a *AccountsData) GetData() []AccountResource {
 	if a == nil {
-		return []AccountResourceOutput{}
+		return []AccountResource{}
 	}
 	return a.Data
 }

@@ -34,7 +34,7 @@ func (c *CreateAccountGlobals) GetVersion() *int64 {
 type CreateAccountResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Returns the account object.
-	AccountData *components.AccountDataOutput
+	AccountData *components.AccountData
 }
 
 func (c *CreateAccountResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -44,7 +44,7 @@ func (c *CreateAccountResponse) GetHTTPMeta() components.HTTPMetadata {
 	return c.HTTPMeta
 }
 
-func (c *CreateAccountResponse) GetAccountData() *components.AccountDataOutput {
+func (c *CreateAccountResponse) GetAccountData() *components.AccountData {
 	if c == nil {
 		return nil
 	}

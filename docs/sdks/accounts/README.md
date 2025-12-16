@@ -188,13 +188,13 @@ func main() {
         }),
     )
 
-    res, err := s.Accounts.Create(ctx, components.AccountDataInput{
-        Data: components.AccountResourceInput{
-            Attributes: components.CreateAccountAttributesInputDepositoryInput(
-                components.DepositoryInput{
+    res, err := s.Accounts.Create(ctx, components.AccountCreateData{
+        Data: components.AccountCreateResource{
+            Attributes: components.CreateAccountCreateAttributesAccountCreateAttributesDepository(
+                components.AccountCreateAttributesDepository{
                     Name: "Acme Bank Checking Account",
-                    Subtype: components.AccountAttributesDepositorySubtypeChecking,
-                    DepositoryAccountDetails: components.DepositoryAccountDetails{
+                    Subtype: components.AccountCreateAttributesDepositorySubtypeChecking,
+                    DepositoryAccountDetails: components.AccountCreateAttributesDepositoryDepositoryAccountDetails{
                         FirstName: "Edith",
                         LastName: "Clarke",
                         RoutingNumber: "XXXXX2021",
@@ -222,11 +222,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
-| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
-| `request`                                                                  | [components.AccountDataInput](../../models/components/accountdatainput.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
-| `opts`                                                                     | [][operations.Option](../../models/operations/option.md)                   | :heavy_minus_sign:                                                         | The options for this request.                                              |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
+| `request`                                                                    | [components.AccountCreateData](../../models/components/accountcreatedata.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `opts`                                                                       | [][operations.Option](../../models/operations/option.md)                     | :heavy_minus_sign:                                                           | The options for this request.                                                |
 
 ### Response
 

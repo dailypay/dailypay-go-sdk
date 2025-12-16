@@ -7,23 +7,23 @@ import (
 	"fmt"
 )
 
-// ActivationStatus - Activation is the process of verifying that data is available for a Job,  and that a person has verified their identity as the Person associated with the Job. Only paychecks from Jobs with `activated` status will contribute to an earnings balance account.
+// JobAttributesActivationStatus - Activation is the process of verifying that data is available for a Job,  and that a person has verified their identity as the Person associated with the Job. Only paychecks from Jobs with `activated` status will contribute to an earnings balance account.
 //
 // To deactivate a job, update activation_status to `DEACTIVATED`.
-type ActivationStatus string
+type JobAttributesActivationStatus string
 
 const (
-	ActivationStatusDeactivated           ActivationStatus = "DEACTIVATED"
-	ActivationStatusDeactivationPending   ActivationStatus = "DEACTIVATION_PENDING"
-	ActivationStatusActivationRequired    ActivationStatus = "ACTIVATION_REQUIRED"
-	ActivationStatusActivationUnderReview ActivationStatus = "ACTIVATION_UNDER_REVIEW"
-	ActivationStatusActivated             ActivationStatus = "ACTIVATED"
+	JobAttributesActivationStatusDeactivated           JobAttributesActivationStatus = "DEACTIVATED"
+	JobAttributesActivationStatusDeactivationPending   JobAttributesActivationStatus = "DEACTIVATION_PENDING"
+	JobAttributesActivationStatusActivationRequired    JobAttributesActivationStatus = "ACTIVATION_REQUIRED"
+	JobAttributesActivationStatusActivationUnderReview JobAttributesActivationStatus = "ACTIVATION_UNDER_REVIEW"
+	JobAttributesActivationStatusActivated             JobAttributesActivationStatus = "ACTIVATED"
 )
 
-func (e ActivationStatus) ToPointer() *ActivationStatus {
+func (e JobAttributesActivationStatus) ToPointer() *JobAttributesActivationStatus {
 	return &e
 }
-func (e *ActivationStatus) UnmarshalJSON(data []byte) error {
+func (e *JobAttributesActivationStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -38,10 +38,10 @@ func (e *ActivationStatus) UnmarshalJSON(data []byte) error {
 	case "ACTIVATION_UNDER_REVIEW":
 		fallthrough
 	case "ACTIVATED":
-		*e = ActivationStatus(v)
+		*e = JobAttributesActivationStatus(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ActivationStatus: %v", v)
+		return fmt.Errorf("invalid value for JobAttributesActivationStatus: %v", v)
 	}
 }
 
@@ -155,11 +155,11 @@ type JobAttributes struct {
 	//
 	// To deactivate a job, update activation_status to `DEACTIVATED`.
 	//
-	ActivationStatus *ActivationStatus `json:"activation_status,omitempty"`
-	WageRate         WageRate          `json:"wage_rate"`
-	Title            *string           `json:"title,omitempty"`
-	Department       *string           `json:"department,omitempty"`
-	Location         *string           `json:"location,omitempty"`
+	ActivationStatus JobAttributesActivationStatus `json:"activation_status"`
+	WageRate         WageRate                      `json:"wage_rate"`
+	Title            *string                       `json:"title,omitempty"`
+	Department       *string                       `json:"department,omitempty"`
+	Location         *string                       `json:"location,omitempty"`
 	// - `SETUP_REQUIRED` Direct deposit is not set up for this Job. Update this resource's relationships to set up direct deposit.
 	// - `SETUP_PENDING` A system action is still pending.
 	// - `SETUP_COMPLETE` Direct deposit is set up for this Job.
@@ -188,9 +188,9 @@ func (j *JobAttributes) GetLastName() *string {
 	return j.LastName
 }
 
-func (j *JobAttributes) GetActivationStatus() *ActivationStatus {
+func (j *JobAttributes) GetActivationStatus() JobAttributesActivationStatus {
 	if j == nil {
-		return nil
+		return JobAttributesActivationStatus("")
 	}
 	return j.ActivationStatus
 }
@@ -228,19 +228,4 @@ func (j *JobAttributes) GetDirectDepositStatus() DirectDepositStatus {
 		return DirectDepositStatus("")
 	}
 	return j.DirectDepositStatus
-}
-
-type JobAttributesInput struct {
-	// Activation is the process of verifying that data is available for a Job,  and that a person has verified their identity as the Person associated with the Job. Only paychecks from Jobs with `activated` status will contribute to an earnings balance account.
-	//
-	// To deactivate a job, update activation_status to `DEACTIVATED`.
-	//
-	ActivationStatus *ActivationStatus `json:"activation_status,omitempty"`
-}
-
-func (j *JobAttributesInput) GetActivationStatus() *ActivationStatus {
-	if j == nil {
-		return nil
-	}
-	return j.ActivationStatus
 }

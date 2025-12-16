@@ -419,7 +419,7 @@ func (s *People) Update(ctx context.Context, request operations.UpdatePersonRequ
 		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PersonData", "json", `request:"mediaType=application/vnd.api+json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PersonUpdateData", "json", `request:"mediaType=application/vnd.api+json"`)
 	if err != nil {
 		return nil, err
 	}

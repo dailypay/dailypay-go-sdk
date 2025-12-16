@@ -77,7 +77,6 @@ func (u Origin) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type Origin: all fields are null")
 }
 
-// TransferRelationships - The relationships between the transfer and other resources, including the destination account, the origination account, and the person who initiated the transfer.
 type TransferRelationships struct {
 	// Origin may be a reference to either a Paycheck or an Account.
 	//

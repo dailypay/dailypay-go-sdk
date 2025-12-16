@@ -7,12 +7,8 @@ import (
 )
 
 type TransferResource struct {
-	type_ string `const:"transfers" json:"type"`
-	ID    string `json:"id"`
-	// An object representing a transfer of money from one account to another.
-	// Created when a person takes an advance against a future paycheck, or on a daily basis
-	// when we update estimated earnings based on current employment.
-	//
+	type_         string                `const:"transfers" json:"type"`
+	ID            string                `json:"id"`
 	Attributes    TransferAttributes    `json:"attributes"`
 	Links         TransferLinks         `json:"links"`
 	Relationships TransferRelationships `json:"relationships"`

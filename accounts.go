@@ -224,7 +224,7 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 				return nil, err
 			}
 
-			var out components.AccountDataOutput
+			var out components.AccountData
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -712,7 +712,7 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 
 // Create an Account object
 // Create an account object to store a person's bank or card information as a destination for funds.
-func (s *Accounts) Create(ctx context.Context, request components.AccountDataInput, opts ...operations.Option) (*operations.CreateAccountResponse, error) {
+func (s *Accounts) Create(ctx context.Context, request components.AccountCreateData, opts ...operations.Option) (*operations.CreateAccountResponse, error) {
 	globals := operations.CreateAccountGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
 	}
@@ -900,7 +900,7 @@ func (s *Accounts) Create(ctx context.Context, request components.AccountDataInp
 				return nil, err
 			}
 
-			var out components.AccountDataOutput
+			var out components.AccountData
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

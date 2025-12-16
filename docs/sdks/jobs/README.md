@@ -119,9 +119,9 @@ func main() {
     res, err := s.Jobs.Update(ctx, operations.UpdateJobRequest{
         JobID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
         JobUpdateData: components.JobUpdateData{
-            Data: components.Data{
+            JobUpdateResource: components.JobUpdateResource{
                 ID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
-                Relationships: &components.JobRelationshipsInput{
+                JobUpdateRelationships: &components.JobUpdateRelationships{
                     DirectDepositDefaultDepository: &components.AccountRelationship{
                         Data: components.AccountIdentifier{
                             ID: "123e4567-e89b-12d3-a456-426614174000",

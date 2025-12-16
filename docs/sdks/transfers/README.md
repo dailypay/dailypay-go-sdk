@@ -193,11 +193,11 @@ func main() {
         IdempotencyKey: "e2736aa1-78c4-4cc6-b0a6-848e733f232a",
         TransferCreateData: components.TransferCreateData{
             Data: components.TransferCreateResource{
-                Attributes: components.TransferAttributesInput{
+                Attributes: components.TransferCreateAttributes{
                     Preview: dailypay.Pointer(true),
                     Amount: 15000,
                     Currency: "USD",
-                    Schedule: components.TransferAttributesScheduleWithinThirtyMinutes,
+                    Schedule: components.TransferCreateAttributesScheduleWithinThirtyMinutes,
                 },
                 Relationships: components.TransferCreateRelationships{
                     Origin: components.AccountRelationship{
@@ -205,12 +205,12 @@ func main() {
                             ID: "123e4567-e89b-12d3-a456-426614174000",
                         },
                     },
-                    Destination: components.AccountRelationship{
+                    Destination: &components.AccountRelationship{
                         Data: components.AccountIdentifier{
                             ID: "223e4567-e89b-12d3-a456-426614174001",
                         },
                     },
-                    Person: components.PersonRelationship{
+                    Person: &components.PersonRelationship{
                         Data: components.PersonIdentifier{
                             ID: "aa860051-c411-4709-9685-c1b716df611b",
                         },
