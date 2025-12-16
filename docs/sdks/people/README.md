@@ -115,11 +115,11 @@ func main() {
 
     res, err := s.People.Update(ctx, operations.UpdatePersonRequest{
         PersonID: "aa860051-c411-4709-9685-c1b716df611b",
-        PersonData: components.PersonDataInput{
-            Data: components.PersonResourceInput{
+        PersonUpdateData: components.PersonUpdateData{
+            PersonUpdateResource: components.PersonUpdateResource{
                 ID: "aa860051-c411-4709-9685-c1b716df611b",
-                Attributes: components.PersonAttributesInput{
-                    StateOfResidence: dailypay.Pointer("NY"),
+                PersonUpdateAttributes: components.PersonUpdateAttributes{
+                    StateOfResidence: "NY",
                 },
             },
         },

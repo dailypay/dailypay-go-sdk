@@ -33,8 +33,8 @@ func (u *UpdatePersonGlobals) GetVersion() *int64 {
 
 type UpdatePersonRequest struct {
 	// Unique ID of the person
-	PersonID   string                     `pathParam:"style=simple,explode=false,name=person_id"`
-	PersonData components.PersonDataInput `request:"mediaType=application/vnd.api+json"`
+	PersonID         string                      `pathParam:"style=simple,explode=false,name=person_id"`
+	PersonUpdateData components.PersonUpdateData `request:"mediaType=application/vnd.api+json"`
 }
 
 func (u *UpdatePersonRequest) GetPersonID() string {
@@ -44,11 +44,11 @@ func (u *UpdatePersonRequest) GetPersonID() string {
 	return u.PersonID
 }
 
-func (u *UpdatePersonRequest) GetPersonData() components.PersonDataInput {
+func (u *UpdatePersonRequest) GetPersonUpdateData() components.PersonUpdateData {
 	if u == nil {
-		return components.PersonDataInput{}
+		return components.PersonUpdateData{}
 	}
-	return u.PersonData
+	return u.PersonUpdateData
 }
 
 type UpdatePersonResponse struct {

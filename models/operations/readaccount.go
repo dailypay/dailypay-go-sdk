@@ -46,7 +46,7 @@ func (r *ReadAccountRequest) GetAccountID() string {
 type ReadAccountResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Returns the account object.
-	AccountData *components.AccountDataOutput
+	AccountData *components.AccountData
 }
 
 func (r *ReadAccountResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -56,7 +56,7 @@ func (r *ReadAccountResponse) GetHTTPMeta() components.HTTPMetadata {
 	return r.HTTPMeta
 }
 
-func (r *ReadAccountResponse) GetAccountData() *components.AccountDataOutput {
+func (r *ReadAccountResponse) GetAccountData() *components.AccountData {
 	if r == nil {
 		return nil
 	}

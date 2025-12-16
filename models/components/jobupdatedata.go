@@ -3,62 +3,137 @@
 package components
 
 import (
+	"encoding/json"
+	"fmt"
 	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 )
 
-// Data - A job describes the financial relationship between a person and an organization.
-type Data struct {
-	type_      string              `const:"jobs" json:"type"`
-	ID         string              `json:"id"`
-	Attributes *JobAttributesInput `json:"attributes,omitempty"`
+// JobUpdateRelationships - The relationships between the job and other resources, including the accounts to which paychecks from this job are deposited.
+type JobUpdateRelationships struct {
+	DirectDepositDefaultDepository *AccountRelationship `json:"direct_deposit_default_depository,omitempty"`
+	DirectDepositDefaultCard       *AccountRelationship `json:"direct_deposit_default_card,omitempty"`
+}
+
+func (j *JobUpdateRelationships) GetDirectDepositDefaultDepository() *AccountRelationship {
+	if j == nil {
+		return nil
+	}
+	return j.DirectDepositDefaultDepository
+}
+
+func (j *JobUpdateRelationships) GetDirectDepositDefaultCard() *AccountRelationship {
+	if j == nil {
+		return nil
+	}
+	return j.DirectDepositDefaultCard
+}
+
+// JobUpdateDataActivationStatus - Activation is the process of verifying that data is available for a Job,  and that a person has verified their identity as the Person associated with the Job. Only paychecks from Jobs with `activated` status will contribute to an earnings balance account.
+//
+// To deactivate a job, update activation_status to `DEACTIVATED`.
+type JobUpdateDataActivationStatus string
+
+const (
+	JobUpdateDataActivationStatusDeactivated           JobUpdateDataActivationStatus = "DEACTIVATED"
+	JobUpdateDataActivationStatusDeactivationPending   JobUpdateDataActivationStatus = "DEACTIVATION_PENDING"
+	JobUpdateDataActivationStatusActivationRequired    JobUpdateDataActivationStatus = "ACTIVATION_REQUIRED"
+	JobUpdateDataActivationStatusActivationUnderReview JobUpdateDataActivationStatus = "ACTIVATION_UNDER_REVIEW"
+	JobUpdateDataActivationStatusActivated             JobUpdateDataActivationStatus = "ACTIVATED"
+)
+
+func (e JobUpdateDataActivationStatus) ToPointer() *JobUpdateDataActivationStatus {
+	return &e
+}
+func (e *JobUpdateDataActivationStatus) UnmarshalJSON(data []byte) error {
+	var v string
+	if err := json.Unmarshal(data, &v); err != nil {
+		return err
+	}
+	switch v {
+	case "DEACTIVATED":
+		fallthrough
+	case "DEACTIVATION_PENDING":
+		fallthrough
+	case "ACTIVATION_REQUIRED":
+		fallthrough
+	case "ACTIVATION_UNDER_REVIEW":
+		fallthrough
+	case "ACTIVATED":
+		*e = JobUpdateDataActivationStatus(v)
+		return nil
+	default:
+		return fmt.Errorf("invalid value for JobUpdateDataActivationStatus: %v", v)
+	}
+}
+
+type JobUpdateAttributes struct {
+	// Activation is the process of verifying that data is available for a Job,  and that a person has verified their identity as the Person associated with the Job. Only paychecks from Jobs with `activated` status will contribute to an earnings balance account.
+	//
+	// To deactivate a job, update activation_status to `DEACTIVATED`.
+	//
+	ActivationStatus *JobUpdateDataActivationStatus `json:"activation_status,omitempty"`
+}
+
+func (j *JobUpdateAttributes) GetActivationStatus() *JobUpdateDataActivationStatus {
+	if j == nil {
+		return nil
+	}
+	return j.ActivationStatus
+}
+
+// JobUpdateResource - A job describes the financial relationship between a person and an organization.
+type JobUpdateResource struct {
+	type_ string `const:"jobs" json:"type"`
+	ID    string `json:"id"`
 	// The relationships between the job and other resources, including the accounts to which paychecks from this job are deposited.
-	Relationships *JobRelationshipsInput `json:"relationships,omitempty"`
+	JobUpdateRelationships *JobUpdateRelationships `json:"relationships,omitempty"`
+	JobUpdateAttributes    *JobUpdateAttributes    `json:"attributes,omitempty"`
 }
 
-func (d Data) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(d, "", false)
+func (j JobUpdateResource) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(j, "", false)
 }
 
-func (d *Data) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &d, "", false, nil); err != nil {
+func (j *JobUpdateResource) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &j, "", false, nil); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (d *Data) GetType() string {
+func (j *JobUpdateResource) GetType() string {
 	return "jobs"
 }
 
-func (d *Data) GetID() string {
-	if d == nil {
+func (j *JobUpdateResource) GetID() string {
+	if j == nil {
 		return ""
 	}
-	return d.ID
+	return j.ID
 }
 
-func (d *Data) GetAttributes() *JobAttributesInput {
-	if d == nil {
+func (j *JobUpdateResource) GetJobUpdateRelationships() *JobUpdateRelationships {
+	if j == nil {
 		return nil
 	}
-	return d.Attributes
+	return j.JobUpdateRelationships
 }
 
-func (d *Data) GetRelationships() *JobRelationshipsInput {
-	if d == nil {
+func (j *JobUpdateResource) GetJobUpdateAttributes() *JobUpdateAttributes {
+	if j == nil {
 		return nil
 	}
-	return d.Relationships
+	return j.JobUpdateAttributes
 }
 
 type JobUpdateData struct {
 	// A job describes the financial relationship between a person and an organization.
-	Data Data `json:"data"`
+	JobUpdateResource JobUpdateResource `json:"data"`
 }
 
-func (j *JobUpdateData) GetData() Data {
+func (j *JobUpdateData) GetJobUpdateResource() JobUpdateResource {
 	if j == nil {
-		return Data{}
+		return JobUpdateResource{}
 	}
-	return j.Data
+	return j.JobUpdateResource
 }
