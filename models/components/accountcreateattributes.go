@@ -17,8 +17,8 @@ const (
 
 // AccountCreateAttributes - The details of the account.
 type AccountCreateAttributes struct {
-	AccountCreateAttributesCard       *AccountCreateAttributesCard       `queryParam:"inline,name=AccountCreateAttributes" union:"member"`
-	AccountCreateAttributesDepository *AccountCreateAttributesDepository `queryParam:"inline,name=AccountCreateAttributes" union:"member"`
+	AccountCreateAttributesCard       *AccountCreateAttributesCard       `queryParam:"inline" union:"member"`
+	AccountCreateAttributesDepository *AccountCreateAttributesDepository `queryParam:"inline" union:"member"`
 
 	Type AccountCreateAttributesType
 }

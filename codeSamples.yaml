@@ -633,7 +633,6 @@ actions:
 
                 res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{
                     Include: dailypay.Pointer("estimated_funding_sources,final_funding_sources"),
-                    FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
                 })
                 if err != nil {
                     log.Fatal(err)

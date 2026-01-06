@@ -769,9 +769,9 @@ const (
 
 // AccountAttributes - The details of the account.
 type AccountAttributes struct {
-	Card                    *Card                    `queryParam:"inline,name=AccountAttributes" union:"member"`
-	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline,name=AccountAttributes" union:"member"`
-	Depository              *Depository              `queryParam:"inline,name=AccountAttributes" union:"member"`
+	Card                    *Card                    `queryParam:"inline" union:"member"`
+	EarningsBalanceReadOnly *EarningsBalanceReadOnly `queryParam:"inline" union:"member"`
+	Depository              *Depository              `queryParam:"inline" union:"member"`
 
 	Type AccountAttributesType
 }

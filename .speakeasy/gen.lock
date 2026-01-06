@@ -1,23 +1,23 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 6bf8cb412f1767b3378994c193a5fe83
-  docVersion: 3.0.0-beta100
-  speakeasyVersion: 1.680.12
-  generationVersion: 2.788.15
-  releaseVersion: 0.7.1
-  configChecksum: 3ad23bbadaecdb5dea10a2cfe12a4a65
+  docChecksum: b4b4afed41fc2541348fd83dac29734d
+  docVersion: 3.0.0-beta101
+  speakeasyVersion: 1.682.0
+  generationVersion: 2.791.1
+  releaseVersion: 0.7.2
+  configChecksum: b5679d89cfef9b16f1248d9b20a85bdd
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: a8e899cc-132e-4443-92d6-7a137a49e977
-  pristine_commit_hash: 978270bbe97c09461d83b9cadfb010c390f28785
-  pristine_tree_hash: bddc5112a5ef0809931d657e9ea4875706f2b5ff
+  generation_id: af39e685-ef4f-48c8-9934-bfdfb6089436
+  pristine_commit_hash: d3684dbe3df77c64b3eb0ff9a28538f0cf313820
+  pristine_tree_hash: 79b09c200dc9b8ddd6f0fd3dcafcd2ec714cf125
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.13.7
+    core: 3.13.8
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -771,8 +771,8 @@ trackedFiles:
     pristine_git_object: 86a7cc0bb57261dcbfd58d8d80e72c445f97370f
   docs/models/operations/listtransfersrequest.md:
     id: 4c25992bb06a
-    last_write_checksum: sha1:591094a80a0644417737f669bc0bb0b639581657
-    pristine_git_object: 232fcd20ada611883b58e1bcc0027bae7f0a3f0e
+    last_write_checksum: sha1:b36d3dc78132a8f9cefff29e32cc3c7956857a45
+    pristine_git_object: ffcddbbee314f91521092aa6227f2a1ee8f274cf
   docs/models/operations/listtransfersresponse.md:
     id: ea85d18650ae
     last_write_checksum: sha1:55f352a5a8d8ffc04f625573a416246c02c24878
@@ -907,8 +907,8 @@ trackedFiles:
     pristine_git_object: acd1c0a6111a874adda58a0177a12185ffc64a3b
   docs/sdks/transfers/README.md:
     id: f56918861798
-    last_write_checksum: sha1:dc02586596c6a8f606589bd080a9e251ce7c8816
-    pristine_git_object: d1b945290ea0ee02aab7941ef4712a50cbcbcab2
+    last_write_checksum: sha1:e48c2327dc567fe890cffc3b257c0c1cf04dccda
+    pristine_git_object: 1d6d9f384723ac95cec9603686eec071a2a82ca5
   go.mod:
     id: c47645c391ad
     last_write_checksum: sha1:9b3d8e0ec5d77788821151d3e38570c0a66ff29a
@@ -971,8 +971,8 @@ trackedFiles:
     pristine_git_object: 99b57f66ac55b20389583e98e4c7416bd4549d9f
   internal/utils/queryparams.go:
     id: e7f604e65a58
-    last_write_checksum: sha1:fcf3ef73166c56e785c02277f08e14923012f233
-    pristine_git_object: 609181dacabd15c9a385df561f834c58562487e9
+    last_write_checksum: sha1:5299f84ae0feb40fa00bc79735c25c1d014803ef
+    pristine_git_object: 05bbbd69222f52c86b3c6e90c3d60b85109f4d06
   internal/utils/requestbody.go:
     id: 22445ec1c044
     last_write_checksum: sha1:297e266e64a6c14e0eac82b883799251dd9d227d
@@ -1043,12 +1043,12 @@ trackedFiles:
     pristine_git_object: 4aec283c8e9e03c135275d7ca624c7e911750be9
   models/components/accountattributes.go:
     id: 1316c0aad402
-    last_write_checksum: sha1:026a7c4f15eae73773e6975f5d571389e4c801bd
-    pristine_git_object: 9f533528bde397203481bbbeac2af0616fd321b0
+    last_write_checksum: sha1:bb7e749bed6fa0bdefffe456cc6157ce8b548fc1
+    pristine_git_object: 106a4cf599260103d3fa4d1453e9d71981629419
   models/components/accountcreateattributes.go:
     id: 50a6ce7dec30
-    last_write_checksum: sha1:1513234d73d827c981d91d7ffa72fb68f5fb71c7
-    pristine_git_object: f0f15c68d2ecce5adc21bef8569d973d45f10807
+    last_write_checksum: sha1:fce2240103f507b00d87a5f020128870c84c217b
+    pristine_git_object: 8a18a7aec5dd7957daeee9ad755b5c88f6d7ba56
   models/components/accountcreateattributescard.go:
     id: e1bb1461aca7
     last_write_checksum: sha1:5298bf7948758fdd847b39d5465a071b6897cbd6
@@ -1339,8 +1339,8 @@ trackedFiles:
     pristine_git_object: a2550462c024defeea48d273e2670173f46ff7d6
   models/components/transferrelationships.go:
     id: b7926cb116d8
-    last_write_checksum: sha1:7b792bc8bdece92c142e5ee40cbb85fb1390a237
-    pristine_git_object: 9a8d208bd56f1e78a170fcf18347076b0831d434
+    last_write_checksum: sha1:9967ada677f0d1528afb3b41177f97c146f598f3
+    pristine_git_object: f27d9ff3d307094732b4e0a9f9678dc4bc700ce4
   models/components/transferresource.go:
     id: c0d113aaaaad
     last_write_checksum: sha1:1fc5e2d8b7f6c9fb419151c2b863634104d0fe66
@@ -1383,8 +1383,8 @@ trackedFiles:
     pristine_git_object: 119c2d2708d68fd64cc0cc3a6556e2fa32f49629
   models/operations/listtransfers.go:
     id: c954e43ca5d6
-    last_write_checksum: sha1:0cd8dd4bcaf8dea00f3d24fca48d70398fd9dba5
-    pristine_git_object: 6d2a14ac76157f5c872bc74837515516443a6a83
+    last_write_checksum: sha1:5cc05aa934ad8eebd359d857a723808678d966ac
+    pristine_git_object: 1ab2b6c95aaba95ff72eeb3522dfc590a8467b81
   models/operations/options.go:
     id: d20dd4db9865
     last_write_checksum: sha1:cc26c102650983ae9fa1ae113c0f389dceac3554
@@ -1447,12 +1447,12 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:7f611d71f5b2e8f847a37b9e06ec014b1fbd8873
-    pristine_git_object: 5f47017d35cb05002de349b9d40e0dd9cbfd20d2
+    last_write_checksum: sha1:0426b17b7ded444e16cf0dd3931589386e552cd1
+    pristine_git_object: 2930d35e5b2223d2cd96cdf84e6fb79e5db15187
   transfers.go:
     id: a45ada44323b
-    last_write_checksum: sha1:df843daefb77131d824a3c8d13284966c11f1742
-    pristine_git_object: b9cf35c29c8de8e02a419b5d0f14bfaa0e2c1dfc
+    last_write_checksum: sha1:6d646a5c21a846721d3e4b2f8bd96852fa9b3577
+    pristine_git_object: b148f8157e7abf6a6f37ee8b240ddaecad611df2
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
@@ -1940,6 +1940,7 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
+releaseNotes: "## Go SDK Changes:\n* `Sdk.Transfers.List()`: \n  *  `request.Request.Filter[person.id]` **Removed** **Breaking** :warning:\n"
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
