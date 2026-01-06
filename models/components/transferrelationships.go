@@ -22,8 +22,8 @@ const (
 // A transfer that originates from a Paycheck is a
 // system-created record that describes a credit of earnings to an account with `account_type` `EARNINGS_BALANCE`.
 type Origin struct {
-	AccountRelationship  *AccountRelationship  `queryParam:"inline,name=origin" union:"member"`
-	PaycheckRelationship *PaycheckRelationship `queryParam:"inline,name=origin" union:"member"`
+	AccountRelationship  *AccountRelationship  `queryParam:"inline" union:"member"`
+	PaycheckRelationship *PaycheckRelationship `queryParam:"inline" union:"member"`
 
 	Type OriginType
 }

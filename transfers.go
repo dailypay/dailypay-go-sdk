@@ -74,7 +74,7 @@ func (s *Transfers) Read(ctx context.Context, request operations.ReadTransferReq
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "readTransfer",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
@@ -423,7 +423,7 @@ func (s *Transfers) List(ctx context.Context, request operations.ListTransfersRe
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "listTransfers",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   s.sdkConfiguration.Security,
 	}
 
