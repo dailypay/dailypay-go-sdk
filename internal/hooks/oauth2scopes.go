@@ -2,7 +2,7 @@
 
 package hooks
 
-// OauthClientCredentialsTokenOAuth2Scope - Available scopes for the  OAuth 2.0 scheme (clientCredentials flow).
+// OauthClientCredentialsTokenOAuth2Scope - Available scopes for the oauth_client_credentials_token OAuth 2.0 scheme (clientCredentials flow).
 type OauthClientCredentialsTokenOAuth2Scope string
 
 const (
@@ -11,7 +11,7 @@ const (
 	OauthClientCredentialsTokenOAuth2ScopeClientLookup OauthClientCredentialsTokenOAuth2Scope = "client:lookup"
 )
 
-// OauthUserTokenOAuth2Scope - Available scopes for the  OAuth 2.0 scheme (authorizationCode flow).
+// OauthUserTokenOAuth2Scope - Available scopes for the oauth_user_token OAuth 2.0 scheme (authorizationCode flow).
 type OauthUserTokenOAuth2Scope string
 
 const (

@@ -5,6 +5,7 @@ package operations
 import (
 	"github.com/dailypay/dailypay-go-sdk/internal/utils"
 	"github.com/dailypay/dailypay-go-sdk/models/components"
+	"time"
 )
 
 type ListTransfersGlobals struct {
@@ -37,8 +38,21 @@ type ListTransfersRequest struct {
 	// The value of the include parameter must be a comma-separated (U+002C COMMA, “,”) list of relationship paths.
 	//
 	Include *string `queryParam:"style=form,explode=true,name=include"`
+	// Limit the results to documents submitted after this date.
+	FilterSubmittedAtGt *time.Time `queryParam:"style=form,explode=true,name=filter[submitted_at__gt]"`
 	// Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
 	FilterBy *string `queryParam:"style=form,explode=true,name=filter"`
+}
+
+func (l ListTransfersRequest) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(l, "", false)
+}
+
+func (l *ListTransfersRequest) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &l, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (l *ListTransfersRequest) GetInclude() *string {
@@ -46,6 +60,13 @@ func (l *ListTransfersRequest) GetInclude() *string {
 		return nil
 	}
 	return l.Include
+}
+
+func (l *ListTransfersRequest) GetFilterSubmittedAtGt() *time.Time {
+	if l == nil {
+		return nil
+	}
+	return l.FilterSubmittedAtGt
 }
 
 func (l *ListTransfersRequest) GetFilterBy() *string {

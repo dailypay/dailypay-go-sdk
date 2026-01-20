@@ -53,7 +53,7 @@ func (u *UpdateJobRequest) GetJobUpdateData() components.JobUpdateData {
 
 type UpdateJobResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
-	// Returns the job object.
+	// Returns the updated Job object
 	JobData *components.JobData
 }
 
