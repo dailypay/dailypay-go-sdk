@@ -59,8 +59,6 @@ type CreateCardAccountDetails struct {
 	AddressZipCode string `json:"address_zip_code"`
 	// The country code of the address for the card.
 	AddressCountry string `json:"address_country"`
-	// The issuer of the card.
-	Issuer string `json:"issuer"`
 }
 
 func (c CreateCardAccountDetails) MarshalJSON() ([]byte, error) {
@@ -68,7 +66,7 @@ func (c CreateCardAccountDetails) MarshalJSON() ([]byte, error) {
 }
 
 func (c *CreateCardAccountDetails) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country", "issuer"}); err != nil {
+	if err := utils.UnmarshalJSON(data, &c, "", false, []string{"token", "first_name", "last_name", "expiration_month", "expiration_year", "address_line_one", "address_city", "address_state", "address_zip_code", "address_country"}); err != nil {
 		return err
 	}
 	return nil
@@ -149,13 +147,6 @@ func (c *CreateCardAccountDetails) GetAddressCountry() string {
 		return ""
 	}
 	return c.AddressCountry
-}
-
-func (c *CreateCardAccountDetails) GetIssuer() string {
-	if c == nil {
-		return ""
-	}
-	return c.Issuer
 }
 
 // AccountCreateAttributesCard - An account with type `CARD` and subtype `DAILYPAY` or `DEBIT`.
