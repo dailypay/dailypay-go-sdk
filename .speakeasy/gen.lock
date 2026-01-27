@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: b4b4afed41fc2541348fd83dac29734d
-  docVersion: 3.0.0-beta101
-  speakeasyVersion: 1.692.0
-  generationVersion: 2.797.1
-  releaseVersion: 0.7.4
-  configChecksum: e9daef714b196985ab232776917df9a0
+  docChecksum: eb888d4ca70504493fe2bb8bf788876e
+  docVersion: 3.0.0-beta103
+  speakeasyVersion: 1.698.0
+  generationVersion: 2.801.0
+  releaseVersion: 0.7.5
+  configChecksum: 0877186a5efb4c90f5319ed259e57f92
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: cbf0e809-4616-414d-83b2-68d1ccd8ba70
-  pristine_commit_hash: 710eb7f33f0eee6229e4ac42f21eef1d7ca63749
-  pristine_tree_hash: ba33756fe3cfa5cfc5cf9fc3f023725c7af10336
+  generation_id: 3365ca64-9dba-4432-8102-e68db4eabc2a
+  pristine_commit_hash: 766b800f5878ded04ab1bda25fa10359148c5e56
+  pristine_tree_hash: 65f287d6ffb8a94a48a01427a7c41995d837a75d
 features:
   go:
     additionalDependencies: 0.1.0
@@ -211,8 +211,8 @@ trackedFiles:
     pristine_git_object: 1104c1f7feaf9c14ed29c1a72c8e475effcd06bd
   docs/models/components/createcardaccountdetails.md:
     id: d4017ee799d2
-    last_write_checksum: sha1:8953f8d5129b44fe27c1e408b1b726c2979654cc
-    pristine_git_object: fdc337e8f157bc3fc73b12327a5152ea524ed93c
+    last_write_checksum: sha1:569b78308486d801487d2f5f53673d6c74c0597c
+    pristine_git_object: 7abc960051682407b0e030fdff743d41a5f21a24
   docs/models/components/dailypaycardproductentitlement.md:
     id: 81f45e369f39
     last_write_checksum: sha1:5070db83e49f3f8aefa59e7c9a29c409a8be7ce4
@@ -771,8 +771,8 @@ trackedFiles:
     pristine_git_object: 86a7cc0bb57261dcbfd58d8d80e72c445f97370f
   docs/models/operations/listtransfersrequest.md:
     id: 4c25992bb06a
-    last_write_checksum: sha1:b36d3dc78132a8f9cefff29e32cc3c7956857a45
-    pristine_git_object: ffcddbbee314f91521092aa6227f2a1ee8f274cf
+    last_write_checksum: sha1:1478f54d26853d7a0858c940563a9eed360ad3b9
+    pristine_git_object: a214deadd2f120d2582aa0ec437fa34e593c30c5
   docs/models/operations/listtransfersresponse.md:
     id: ea85d18650ae
     last_write_checksum: sha1:55f352a5a8d8ffc04f625573a416246c02c24878
@@ -907,8 +907,8 @@ trackedFiles:
     pristine_git_object: acd1c0a6111a874adda58a0177a12185ffc64a3b
   docs/sdks/transfers/README.md:
     id: f56918861798
-    last_write_checksum: sha1:e48c2327dc567fe890cffc3b257c0c1cf04dccda
-    pristine_git_object: 1d6d9f384723ac95cec9603686eec071a2a82ca5
+    last_write_checksum: sha1:9c103841c66e01ab20692e3628e4ffd11e7df91c
+    pristine_git_object: 1d2f262f05d9cb58612c4e4ab24a41733ca7e659
   go.mod:
     id: c47645c391ad
     last_write_checksum: sha1:9b3d8e0ec5d77788821151d3e38570c0a66ff29a
@@ -1051,8 +1051,8 @@ trackedFiles:
     pristine_git_object: 8a18a7aec5dd7957daeee9ad755b5c88f6d7ba56
   models/components/accountcreateattributescard.go:
     id: e1bb1461aca7
-    last_write_checksum: sha1:5298bf7948758fdd847b39d5465a071b6897cbd6
-    pristine_git_object: e434f7008b7a7e0edbc9ed8ee2fbe03aaa8f273f
+    last_write_checksum: sha1:dc94a7811154ffb773b2f6be5ed83d59622a4cf7
+    pristine_git_object: eb2259c17f3ab6c36215d041cf9c351ea58eefac
   models/components/accountcreateattributesdepository.go:
     id: 4e72af9bd9c4
     last_write_checksum: sha1:6608c27646d2b67cd023a263df6477c7d182d652
@@ -1383,8 +1383,8 @@ trackedFiles:
     pristine_git_object: 119c2d2708d68fd64cc0cc3a6556e2fa32f49629
   models/operations/listtransfers.go:
     id: c954e43ca5d6
-    last_write_checksum: sha1:5cc05aa934ad8eebd359d857a723808678d966ac
-    pristine_git_object: 1ab2b6c95aaba95ff72eeb3522dfc590a8467b81
+    last_write_checksum: sha1:90a471ea22d52899a197fa9092bdd27e85ce0e10
+    pristine_git_object: 8bb99d2a2fc394160d06473d9586a54c221a24b0
   models/operations/options.go:
     id: d20dd4db9865
     last_write_checksum: sha1:cc26c102650983ae9fa1ae113c0f389dceac3554
@@ -1447,8 +1447,8 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:c292b0e547e3e3270c25b41ef694270fc0a92cc9
-    pristine_git_object: 936383176b541678ed6207f01f08940d405998b0
+    last_write_checksum: sha1:4da8f6a15cf09e08d7613373be4b6fc7c74f4ed8
+    pristine_git_object: a13fe09318ce42d43f73d290d7d9f1a3b8e31a0e
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:6d646a5c21a846721d3e4b2f8bd96852fa9b3577
@@ -1661,7 +1661,7 @@ examples:
         header:
           DailyPay-API-Version: 3
       requestBody:
-        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Debit Card", "account_type": "CARD", "subtype": "DEBIT", "details": {"token": "abc.efg.123", "first_name": "Edith", "last_name": "Clarke", "expiration_month": "02", "expiration_year": "2027", "address_line_one": "123 Kebly Street", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "72374", "address_country": "US"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
+        application/vnd.api+json: {"data": {"type": "accounts", "attributes": {"name": "Acme Bank Debit Card", "account_type": "CARD", "subtype": "DEBIT", "details": {"token": "abc.efg.123", "first_name": "Edith", "last_name": "Clarke", "expiration_month": "02", "expiration_year": "2027", "address_line_one": "123 Kebly Street", "address_city": "Fort Lee", "address_state": "NJ", "address_zip_code": "72374", "address_country": "US", "issuer": "411600"}}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
       responses:
         "200":
           application/vnd.api+json: {"data": {"id": "2bc7d781-3247-46f6-b60f-4090d214936a", "type": "accounts", "attributes": {"verification_status": "VERIFIED", "balances": {"available": 12000, "current": 50000, "currency": "USD"}, "capabilities": {"transfer_destination": [{"schedule": "WITHIN_THIRTY_MINUTES", "fee": 300, "currency": "USD"}, {"schedule": "NEXT_BUSINESS_DAY", "fee": 0, "currency": "USD"}]}, "name": "Checking Account", "account_type": "DEPOSITORY", "subtype": "CHECKING", "details": {"first_name": "Edith", "last_name": "Clarke", "routing_number": "XXXXX2021", "account_number": "XXXXXX4321"}}, "links": {"self": "https://api.dailypay.com/rest/accounts/2bc7d781-3247-46f6-b60f-4090d214936a"}, "relationships": {"person": {"data": {"type": "people", "id": "3fa8f641-5717-4562-b3fc-2c963f66afa6"}}}}}
@@ -1960,7 +1960,7 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
-releaseNotes: "## Go SDK Changes:\n* `Sdk.Accounts.Create()`: \n  *  `request.Request.Data.Attributes.[accountCreateAttributesCard].CreateCardAccountDetails.Issuer` **Removed** **Breaking** :warning:\n* `Sdk.Transfers.List()`: \n  *  `request.Request.Filter[submittedAtGt]` **Removed** **Breaking** :warning:\n"
+releaseNotes: "## Go SDK Changes:\n* `Sdk.Accounts.Create()`: \n  *  `request.Request.Data.Attributes.union(AccountCreateAttributes_Card).CreateCardAccountDetails.Issuer` **Added** **Breaking** ⚠️\n* `Sdk.Transfers.List()`: \n  *  `request.Request.Filter[submittedAtGt]` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
