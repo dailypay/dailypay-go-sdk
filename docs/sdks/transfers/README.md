@@ -101,6 +101,7 @@ import(
 	"context"
 	"github.com/dailypay/dailypay-go-sdk/models/components"
 	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/types"
 	"github.com/dailypay/dailypay-go-sdk/models/operations"
 	"log"
 )
@@ -121,6 +122,7 @@ func main() {
 
     res, err := s.Transfers.List(ctx, operations.ListTransfersRequest{
         Include: dailypay.Pointer("estimated_funding_sources,final_funding_sources"),
+        FilterSubmittedAtGt: types.MustNewTimeFromString("2023-03-15T04:00:00Z"),
     })
     if err != nil {
         log.Fatal(err)
