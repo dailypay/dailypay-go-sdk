@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: eb888d4ca70504493fe2bb8bf788876e
-  docVersion: 3.0.0-beta103
-  speakeasyVersion: 1.698.0
-  generationVersion: 2.801.0
-  releaseVersion: 0.7.5
-  configChecksum: 0877186a5efb4c90f5319ed259e57f92
+  docChecksum: 90116ac8fecdf431f2ac3c93b30ccade
+  docVersion: 3.0.0-beta104
+  speakeasyVersion: 1.700.2
+  generationVersion: 2.801.2
+  releaseVersion: 0.7.6
+  configChecksum: 87a1fe69c34765a986832feed6abff3c
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: 3365ca64-9dba-4432-8102-e68db4eabc2a
-  pristine_commit_hash: 766b800f5878ded04ab1bda25fa10359148c5e56
-  pristine_tree_hash: 65f287d6ffb8a94a48a01427a7c41995d837a75d
+  generation_id: 41a2501a-851e-47b2-bbe6-20df07cb6bed
+  pristine_commit_hash: 60a1f751bf08fabc96c581a62a150b4e9b14b3e3
+  pristine_tree_hash: cac7e943c79f7873d2a32063b1962acc93887d1d
 features:
   go:
     additionalDependencies: 0.1.0
@@ -1447,8 +1447,8 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:4da8f6a15cf09e08d7613373be4b6fc7c74f4ed8
-    pristine_git_object: a13fe09318ce42d43f73d290d7d9f1a3b8e31a0e
+    last_write_checksum: sha1:536055f3fa343c938f9b193460b02b0b99b58b7b
+    pristine_git_object: 9ec7b144abccfbe76a027d919bfdacafa450cf5a
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:6d646a5c21a846721d3e4b2f8bd96852fa9b3577
@@ -1960,7 +1960,6 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
-releaseNotes: "## Go SDK Changes:\n* `Sdk.Accounts.Create()`: \n  *  `request.Request.Data.Attributes.union(AccountCreateAttributes_Card).CreateCardAccountDetails.Issuer` **Added** **Breaking** ⚠️\n* `Sdk.Transfers.List()`: \n  *  `request.Request.Filter[submittedAtGt]` **Added**\n"
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
