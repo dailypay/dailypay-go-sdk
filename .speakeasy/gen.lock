@@ -1,28 +1,28 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 90116ac8fecdf431f2ac3c93b30ccade
-  docVersion: 3.0.0-beta104
-  speakeasyVersion: 1.700.2
-  generationVersion: 2.801.2
-  releaseVersion: 0.7.6
-  configChecksum: 87a1fe69c34765a986832feed6abff3c
+  docChecksum: 9a654fb99df27c574a738f9b13c8d269
+  docVersion: 3.0.0-beta105
+  speakeasyVersion: 1.705.0
+  generationVersion: 2.808.1
+  releaseVersion: 0.7.7
+  configChecksum: bcd5f88e7426b7bf9c98737bf4a743f8
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: 41a2501a-851e-47b2-bbe6-20df07cb6bed
-  pristine_commit_hash: 60a1f751bf08fabc96c581a62a150b4e9b14b3e3
-  pristine_tree_hash: cac7e943c79f7873d2a32063b1962acc93887d1d
+  generation_id: 4a8aed5d-1699-49f3-8b59-0065b48c462d
+  pristine_commit_hash: 6ea371e5ec46a75a3f5e3f93677c762552ae4d8b
+  pristine_tree_hash: d5638ef4cb66cd878e6c1140b82cd0df01cb0cc0
 features:
   go:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.12
-    core: 3.13.10
+    constsAndDefaults: 0.1.13
+    core: 3.13.12
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
     examples: 2.81.5
-    globalSecurity: 2.82.12
+    globalSecurity: 2.82.13
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.83.0
     globals: 2.82.2
@@ -35,7 +35,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.2
     sdkHooks: 0.3.0
-    unions: 2.87.2
+    unions: 2.87.3
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -983,8 +983,8 @@ trackedFiles:
     pristine_git_object: 2452b377eaf541880adc2e0a00cac417ea0f5a42
   internal/utils/security.go:
     id: eeb54c55241b
-    last_write_checksum: sha1:bb9cc1870101f6d2a990766f3eb0ea37292f7507
-    pristine_git_object: 19dfa6f4607dea64b1dd61c211e072212e7a3cb2
+    last_write_checksum: sha1:573140faaff017cb3bd31e579c6b3949f3d8365b
+    pristine_git_object: 77566aa2c1127569d9de4a1782b58f852d926d0a
   internal/utils/union.go:
     id: db86c85746b6
     last_write_checksum: sha1:a4e5cc07bf5889479882402081ced7e42ec73c4f
@@ -1447,8 +1447,8 @@ trackedFiles:
     pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:536055f3fa343c938f9b193460b02b0b99b58b7b
-    pristine_git_object: 9ec7b144abccfbe76a027d919bfdacafa450cf5a
+    last_write_checksum: sha1:c30416691d96cba423bbbe631267bb8229c6bcd0
+    pristine_git_object: bb883007abd966ffb532d6e56caf1df5afc57e2b
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:6d646a5c21a846721d3e4b2f8bd96852fa9b3577
