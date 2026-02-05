@@ -22,13 +22,14 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  versioningStrategy: automatic
   persistentEdits: {}
   tests:
     generateTests: false
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.7.6
+  version: 0.7.7
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -54,6 +55,7 @@ go:
   nullableOptionalWrapper: false
   outputModelSuffix: output
   respectRequiredFields: false
+  respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sdkPackageName: dailypay
   unionStrategy: left-to-right
