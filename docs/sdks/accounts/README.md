@@ -93,9 +93,50 @@ func main() {
 Returns a list of account objects. An account object represents a person's bank accounts, debit and pay cards, and earnings balance accounts.
 
 
-### Example Usage
+### Example Usage: AllAccounts
 
-<!-- UsageSnippet language="go" operationID="listAccounts" method="get" path="/rest/accounts" -->
+<!-- UsageSnippet language="go" operationID="listAccounts" method="get" path="/rest/accounts" example="AllAccounts" -->
+```go
+package main
+
+import(
+	"context"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := dailypay.New(
+        dailypay.WithVersion(3),
+        dailypay.WithSecurity(components.Security{
+            OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                ClientID: "<YOUR_CLIENT_ID_HERE>",
+                ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                TokenURL: "<YOUR_TOKEN_URL_HERE>",
+            },
+        }),
+    )
+
+    res, err := s.Accounts.List(ctx, operations.ListAccountsRequest{
+        FilterPersonID: dailypay.Pointer("aa860051-c411-4709-9685-c1b716df611b"),
+        FilterAccountType: components.FilterAccountTypeEarningsBalance.ToPointer(),
+        FilterSubtype: dailypay.Pointer("ODP"),
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountsData != nil {
+        // handle response
+    }
+}
+```
+### Example Usage: ODPAccounts
+
+<!-- UsageSnippet language="go" operationID="listAccounts" method="get" path="/rest/accounts" example="ODPAccounts" -->
 ```go
 package main
 
@@ -161,9 +202,74 @@ func main() {
 
 Create an account object to store a person's bank or card information as a destination for funds.
 
-### Example Usage
+### Example Usage: Card
 
-<!-- UsageSnippet language="go" operationID="createAccount" method="post" path="/rest/accounts" -->
+<!-- UsageSnippet language="go" operationID="createAccount" method="post" path="/rest/accounts" example="Card" -->
+```go
+package main
+
+import(
+	"context"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := dailypay.New(
+        dailypay.WithVersion(3),
+        dailypay.WithSecurity(components.Security{
+            OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                ClientID: "<YOUR_CLIENT_ID_HERE>",
+                ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                TokenURL: "<YOUR_TOKEN_URL_HERE>",
+            },
+        }),
+    )
+
+    res, err := s.Accounts.Create(ctx, components.AccountCreateData{
+        Data: components.AccountCreateResource{
+            Attributes: components.CreateAccountCreateAttributesAccountCreateAttributesCard(
+                components.AccountCreateAttributesCard{
+                    Name: "Acme Bank Debit Card",
+                    Subtype: components.AccountCreateAttributesCardSubtypeDebit,
+                    CreateCardAccountDetails: components.CreateCardAccountDetails{
+                        Token: "abc.efg.123",
+                        FirstName: "Edith",
+                        LastName: "Clarke",
+                        ExpirationMonth: "02",
+                        ExpirationYear: "2027",
+                        AddressLineOne: "123 Kebly Street",
+                        AddressCity: "Fort Lee",
+                        AddressState: "NJ",
+                        AddressZipCode: "72374",
+                        AddressCountry: "US",
+                        Issuer: "411600",
+                    },
+                },
+            ),
+            Relationships: components.AccountRelationships{
+                Person: components.PersonRelationship{
+                    Data: components.PersonIdentifier{
+                        ID: "3fa8f641-5717-4562-b3fc-2c963f66afa6",
+                    },
+                },
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AccountData != nil {
+        // handle response
+    }
+}
+```
+### Example Usage: Depository
+
+<!-- UsageSnippet language="go" operationID="createAccount" method="post" path="/rest/accounts" example="Depository" -->
 ```go
 package main
 

@@ -88,9 +88,56 @@ Update this job to set where pay should be deposited for paychecks related to th
 Returns the job object if the update succeeded. Returns an error if update parameters are invalid.
 
 
-### Example Usage
+### Example Usage: Deactivate
 
-<!-- UsageSnippet language="go" operationID="updateJob" method="patch" path="/rest/jobs/{job_id}" -->
+<!-- UsageSnippet language="go" operationID="updateJob" method="patch" path="/rest/jobs/{job_id}" example="Deactivate" -->
+```go
+package main
+
+import(
+	"context"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := dailypay.New(
+        dailypay.WithVersion(3),
+        dailypay.WithSecurity(components.Security{
+            OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
+                ClientID: "<YOUR_CLIENT_ID_HERE>",
+                ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
+                TokenURL: "<YOUR_TOKEN_URL_HERE>",
+            },
+        }),
+    )
+
+    res, err := s.Jobs.Update(ctx, operations.UpdateJobRequest{
+        JobID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
+        JobUpdateData: components.JobUpdateData{
+            JobUpdateResource: components.JobUpdateResource{
+                ID: "e9d84b0d-92ba-43c9-93bf-7c993313fa6f",
+                JobUpdateAttributes: &components.JobUpdateAttributes{
+                    ActivationStatus: components.JobUpdateDataActivationStatusDeactivated.ToPointer(),
+                },
+            },
+        },
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.JobData != nil {
+        // handle response
+    }
+}
+```
+### Example Usage: DirectDeposit
+
+<!-- UsageSnippet language="go" operationID="updateJob" method="patch" path="/rest/jobs/{job_id}" example="DirectDeposit" -->
 ```go
 package main
 
