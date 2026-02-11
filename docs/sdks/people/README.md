@@ -87,7 +87,7 @@ Update a person object.
 
 ### Example Usage
 
-<!-- UsageSnippet language="go" operationID="updatePerson" method="patch" path="/rest/people/{person_id}" -->
+<!-- UsageSnippet language="go" operationID="updatePerson" method="patch" path="/rest/people/{person_id}" example="StateOfResidence" -->
 ```go
 package main
 
