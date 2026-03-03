@@ -63,7 +63,7 @@ func (s *CardTokenization) Create(ctx context.Context, request operations.Create
 		BaseURL:          baseURL,
 		Context:          ctx,
 		OperationID:      "createGenericCardToken",
-		OAuth2Scopes:     []string{"client:admin"},
+		OAuth2Scopes:     nil,
 		SecuritySource:   nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
