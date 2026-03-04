@@ -2,7 +2,7 @@
 
 package dailypay
 
-// Generated from OpenAPI doc version 3.0.0-beta106 and generator version 2.818.4
+// Generated from OpenAPI doc version 3.0.0-beta107 and generator version 2.846.4
 
 import (
 	"context"
@@ -121,7 +121,7 @@ type SDK struct {
 
 type SDKOption func(*SDK)
 
-// WithServerURL allows the overriding of the default server URL
+// WithServerURL allows providing an alternative server URL
 func WithServerURL(serverURL string) SDKOption {
 	return func(sdk *SDK) {
 		sdk.sdkConfiguration.ServerURL = serverURL
@@ -235,9 +235,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.7.8",
+		SDKVersion: "0.7.9",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:  "speakeasy-sdk/go 0.7.8 2.818.4 3.0.0-beta106 github.com/dailypay/dailypay-go-sdk",
+			UserAgent:  "speakeasy-sdk/go 0.7.9 2.846.4 3.0.0-beta107 github.com/dailypay/dailypay-go-sdk",
 			Globals:    globals.Globals{},
 			ServerList: ServerList,
 			ServerVariables: []map[string]string{
