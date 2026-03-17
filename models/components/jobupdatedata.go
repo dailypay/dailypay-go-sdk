@@ -83,6 +83,7 @@ func (j *JobUpdateAttributes) GetActivationStatus() *JobUpdateDataActivationStat
 
 // JobUpdateResource - A job describes the financial relationship between a person and an organization.
 type JobUpdateResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"jobs" json:"type"`
 	ID    string `json:"id"`
 	// The relationships between the job and other resources, including the accounts to which paychecks from this job are deposited.

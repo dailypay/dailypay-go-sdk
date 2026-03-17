@@ -7,6 +7,7 @@ import (
 )
 
 type TransferCreateResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"transfers" json:"type"`
 	// The unique identifier of the transfer. Any UUID version is valid, lower-cased.
 	ID *string `json:"id,omitempty"`

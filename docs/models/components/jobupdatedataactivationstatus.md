@@ -5,6 +5,16 @@ Activation is the process of verifying that data is available for a Job,  and th
 To deactivate a job, update activation_status to `DEACTIVATED`.
 
 
+## Example Usage
+
+```go
+import (
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+)
+
+value := components.JobUpdateDataActivationStatusDeactivated
+```
+
 
 ## Values
 

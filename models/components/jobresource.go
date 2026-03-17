@@ -8,6 +8,7 @@ import (
 
 // JobResource - A job describes the financial relationship between a person and an organization.
 type JobResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_      string        `const:"jobs" json:"type"`
 	ID         string        `json:"id"`
 	Attributes JobAttributes `json:"attributes"`

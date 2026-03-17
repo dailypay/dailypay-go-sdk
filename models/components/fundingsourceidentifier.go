@@ -7,6 +7,7 @@ import (
 )
 
 type FundingSourceIdentifier struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"funding_sources" json:"type"`
 	ID    string `json:"id"`
 }

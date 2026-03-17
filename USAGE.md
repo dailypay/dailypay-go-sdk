@@ -64,11 +64,7 @@ func main() {
 	s := dailypay.New(
 		dailypay.WithVersion(3),
 		dailypay.WithSecurity(components.Security{
-			OauthClientCredentialsToken: &components.SchemeOauthClientCredentialsToken{
-				ClientID:     "<YOUR_CLIENT_ID_HERE>",
-				ClientSecret: "<YOUR_CLIENT_SECRET_HERE>",
-				TokenURL:     "<YOUR_TOKEN_URL_HERE>",
-			},
+			OauthUserToken: dailypay.Pointer("<YOUR_OAUTH_USER_TOKEN_HERE>"),
 		}),
 	)
 

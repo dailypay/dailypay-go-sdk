@@ -23,3 +23,6 @@ func (h *Health200) GetVersion() string {
 	}
 	return h.Version
 }
+
+// #region class-body-health200
+// #endregion class-body-health200

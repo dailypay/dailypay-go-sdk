@@ -7,6 +7,7 @@ import (
 )
 
 type TransferResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_         string                `const:"transfers" json:"type"`
 	ID            string                `json:"id"`
 	Attributes    TransferAttributes    `json:"attributes"`

@@ -21,6 +21,7 @@ func (p *PersonUpdateAttributes) GetStateOfResidence() string {
 }
 
 type PersonUpdateResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"people" json:"type"`
 	ID    string `json:"id"`
 	// A person is a record of someone known to DailyPay. There will only ever be one person record per human being.
