@@ -163,6 +163,7 @@ type AccountCreateAttributesCard struct {
 	// Display name for this account.
 	Name string `json:"name"`
 	// The type of account. It differentiates between depository accounts (e.g. bank account), cards (e.g. debit) and earnings balance type of accounts (e.g. on demand pay).
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	accountType string `const:"CARD" json:"account_type"`
 	// The subtype of the account. Additional subtypes may be added over time
 	Subtype AccountCreateAttributesCardSubtype `json:"subtype"`

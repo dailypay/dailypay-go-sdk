@@ -7,6 +7,7 @@ import (
 )
 
 type PaycheckIdentifier struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"paychecks" json:"type"`
 	ID    string `json:"id"`
 }

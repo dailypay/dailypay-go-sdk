@@ -211,6 +211,7 @@ type Depository struct {
 	// Display name for this account.
 	Name string `json:"name"`
 	// The type of account. It differentiates between depository accounts (e.g. bank account), cards (e.g. debit) and earnings balance type of accounts (e.g. on demand pay).
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	accountType string `const:"DEPOSITORY" json:"account_type"`
 	// The subtype of the account.
 	Subtype AccountAttributesDepositorySubtype `json:"subtype"`
@@ -414,8 +415,10 @@ type EarningsBalanceReadOnly struct {
 	// Display name for this account.
 	Name string `json:"name"`
 	// The type of account. It differentiates between depository accounts (e.g. bank account), cards (e.g. debit) and earnings balance type of accounts (e.g. on demand pay).
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	accountType string `const:"EARNINGS_BALANCE" json:"account_type"`
 	// The subtype of the account.
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	subtype string `const:"ODP" json:"subtype"`
 	// An empty object for earnings balance accounts.
 	Details Details `json:"details"`
@@ -695,6 +698,7 @@ type Card struct {
 	// Display name for this account.
 	Name string `json:"name"`
 	// The type of account. It differentiates between depository accounts (e.g. bank account), cards (e.g. debit) and earnings balance type of accounts (e.g. on demand pay).
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	accountType string `const:"CARD" json:"account_type"`
 	// The subtype of the account. Additional subtypes may be added over time
 	Subtype AccountAttributesCardSubtype `json:"subtype"`

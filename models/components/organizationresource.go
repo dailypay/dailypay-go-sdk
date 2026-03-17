@@ -7,6 +7,7 @@ import (
 )
 
 type OrganizationResource struct {
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"organizations" json:"type"`
 	// String identifier that is unique to this organization. You can safely assume the identifier to never exceed 64 characters.
 	ID         string                 `json:"id"`

@@ -1,5 +1,15 @@
 # Frequency
 
+## Example Usage
+
+```go
+import (
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+)
+
+value := components.FrequencyHourly
+```
+
 
 ## Values
 

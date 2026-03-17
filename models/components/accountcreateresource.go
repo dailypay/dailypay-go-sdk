@@ -8,6 +8,7 @@ import (
 
 type AccountCreateResource struct {
 	// The type of the resource. Always `accounts`.
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_ string `const:"accounts" json:"type"`
 	// The details of the account.
 	Attributes    AccountCreateAttributes `json:"attributes"`

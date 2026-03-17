@@ -7,6 +7,16 @@ The statuses and required actions are:
 - `BANNED` Access has been revoked.
 
 
+## Example Usage
+
+```go
+import (
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+)
+
+value := components.DisallowReasonInactive
+```
+
 
 ## Values
 

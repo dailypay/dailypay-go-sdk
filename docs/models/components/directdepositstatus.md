@@ -5,6 +5,16 @@
 - `SETUP_COMPLETE` Direct deposit is set up for this Job.
 
 
+## Example Usage
+
+```go
+import (
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+)
+
+value := components.DirectDepositStatusSetupRequired
+```
+
 
 ## Values
 

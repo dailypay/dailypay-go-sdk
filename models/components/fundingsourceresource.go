@@ -8,7 +8,8 @@ import (
 
 // FundingSourceResource - A source describes how transfers with an origin of EARNINGS_BALANCE account are funded.
 type FundingSourceResource struct {
-	ID            string                     `json:"id"`
+	ID string `json:"id"`
+	//lint:ignore U1000 accessed via reflection for JSON marshaling
 	type_         string                     `const:"funding_sources" json:"type"`
 	Attributes    FundingSourceAttributes    `json:"attributes"`
 	Relationships FundingSourceRelationships `json:"relationships"`

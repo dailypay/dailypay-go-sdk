@@ -4,6 +4,16 @@ Set the schedule for the transfer. If not set, the transfer will be processed im
 A preview transfer will never send.
 
 
+## Example Usage
+
+```go
+import (
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+)
+
+value := components.TransferAttributesScheduleWithinThirtyMinutes
+```
+
 
 ## Values
 
