@@ -39,6 +39,8 @@ func newOrganizations(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *ho
 
 // Read - Get an organization
 // Lookup organization by ID for a detailed view of single organization.
+//
+// If set, this operation will use [Security.OauthClientCredentialsToken] from the global security.
 func (s *Organizations) Read(ctx context.Context, request operations.ReadOrganizationRequest, opts ...operations.Option) (*operations.ReadOrganizationResponse, error) {
 	globals := operations.ReadOrganizationGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -97,7 +99,7 @@ func (s *Organizations) Read(ctx context.Context, request operations.ReadOrganiz
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken"); err != nil {
 		return nil, err
 	}
 
@@ -384,6 +386,8 @@ func (s *Organizations) Read(ctx context.Context, request operations.ReadOrganiz
 
 // List organizations
 // Get organizations with an optional filter
+//
+// If set, this operation will use [Security.OauthClientCredentialsToken] from the global security.
 func (s *Organizations) List(ctx context.Context, request operations.ListOrganizationsRequest, opts ...operations.Option) (*operations.ListOrganizationsResponse, error) {
 	globals := operations.ListOrganizationsGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -446,7 +450,7 @@ func (s *Organizations) List(ctx context.Context, request operations.ListOrganiz
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken"); err != nil {
 		return nil, err
 	}
 

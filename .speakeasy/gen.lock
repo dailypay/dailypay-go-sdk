@@ -1,28 +1,28 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 50670a67f27e6e6ba82eddf2d2e7a040
-  docVersion: 3.0.0-beta108
-  speakeasyVersion: 1.757.0
-  generationVersion: 2.866.0
-  releaseVersion: 0.7.10
-  configChecksum: 83f9a4225332e5d0c08d85778429a85d
+  docChecksum: ee0a87b419626746255e9c29920dee52
+  docVersion: 3.0.0-beta.109
+  speakeasyVersion: 1.761.5
+  generationVersion: 2.879.13
+  releaseVersion: 0.7.11
+  configChecksum: 14268851a27d0b749cf156ec3fb56446
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: 708c0f2c-4da5-4577-9417-81c757600ab4
-  pristine_commit_hash: 60d5d50f0ca44432eabdf477ff5b7c38f29e8b39
-  pristine_tree_hash: e1198f056ffee9ea3c98b6777800ef50988991fd
+  generation_id: f81410a0-0a82-4bf0-92f5-3a8e8c9b5e1e
+  pristine_commit_hash: 7f2ebf7a82430c5764b0f49d42344651891bdac4
+  pristine_tree_hash: 283dc1ba8a1b9d3d972a4b5b86ece969e41e7c00
 features:
   go:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.14
-    core: 3.13.36
+    core: 3.13.40
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
     examples: 2.81.6
-    globalSecurity: 2.82.13
+    globalSecurity: 2.82.15
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.83.1
     globals: 2.82.2
@@ -47,8 +47,8 @@ trackedFiles:
     pristine_git_object: cb5baed67b333e498d1668e8faf1a8110fedf2c5
   accounts.go:
     id: c7bd7b26c9d3
-    last_write_checksum: sha1:0e76b677e5f2ca5d1ad1a3939db5507d8dbe1ad5
-    pristine_git_object: c2da3c4d1439503855ac79c2d28eb5a688491e29
+    last_write_checksum: sha1:a1069f2017fe54b0593dba5cb580c5dd80ae4f81
+    pristine_git_object: ddcebeae0eb319b17072644d3f4d5025321cacf2
   cardtokenization.go:
     id: 8bbcb59e370e
     last_write_checksum: sha1:80f8689d4b24639ee116fc241dd2abc964c19958
@@ -915,8 +915,8 @@ trackedFiles:
     pristine_git_object: b1c0965a51b7b601275f015a2d7ed3b46e6f7b97
   health.go:
     id: ca291aa88e47
-    last_write_checksum: sha1:5a98d8f0b3d7aadbfb868d4b18d0d55c56d060c0
-    pristine_git_object: 1e3749c55876bea2fe8c068dad965ca9a91c8e82
+    last_write_checksum: sha1:ee1bfe785e270aeac97352c071467bf6feed8a5f
+    pristine_git_object: 365e6f543096d6cd65bbed231214f48090af9152
   internal/config/sdkconfiguration.go:
     id: 33b8bfac5265
     last_write_checksum: sha1:a0532665b15f13f640d4b15e7f36b94b4fb2dce8
@@ -955,8 +955,8 @@ trackedFiles:
     pristine_git_object: 53078d92d5fa914a8fd731a6f765143997bb8711
   internal/utils/json.go:
     id: ad03e3c502d8
-    last_write_checksum: sha1:98b91eaac0e83e48edaf6619dc0a21834cf4a4f4
-    pristine_git_object: 26214fe9602cba49ce564b1544254e6374b7457d
+    last_write_checksum: sha1:864d7c4014f5bcb219a124c8ec2ddf5f3cf2b15a
+    pristine_git_object: e9411068c10b2e431dd0ff545b152a932a0c8b92
   internal/utils/oauth2_credentials.go:
     id: 633b88c0d3ff
     last_write_checksum: sha1:f9218b6b3dbd11494cc353bf22eb37f0ca654a7d
@@ -983,8 +983,8 @@ trackedFiles:
     pristine_git_object: 55c8f341c8432e7e159a24ca638fe194eebe4877
   internal/utils/security.go:
     id: eeb54c55241b
-    last_write_checksum: sha1:573140faaff017cb3bd31e579c6b3949f3d8365b
-    pristine_git_object: 77566aa2c1127569d9de4a1782b58f852d926d0a
+    last_write_checksum: sha1:49fee4e9252239953611e6de36f4682851499ab5
+    pristine_git_object: a2332ee8de013a2121880e4b7be332d3385c6f41
   internal/utils/union.go:
     id: db86c85746b6
     last_write_checksum: sha1:a4e5cc07bf5889479882402081ced7e42ec73c4f
@@ -999,8 +999,8 @@ trackedFiles:
     pristine_git_object: a614e37673d3ea81eabc6139236edfb22a15dc55
   jobs.go:
     id: de984cfd1827
-    last_write_checksum: sha1:9054acbc403273c65291af19f387ce640f493d20
-    pristine_git_object: a826ec4bd4807943b50d3019b846a77b5bbd0d5e
+    last_write_checksum: sha1:f2142cc01a5a7ed5578d9d22baf2976012681970
+    pristine_git_object: af9e9aa15f1eccd41ad798943bace1c37da881b7
   models/apierrors/accountcreateerror.go:
     id: 4c38a31f96c6
     last_write_checksum: sha1:233dfe31a47f65608b7d8331cc68c210d03eb80d
@@ -1431,28 +1431,28 @@ trackedFiles:
     pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
   organizations.go:
     id: c466ebb9a97c
-    last_write_checksum: sha1:4654a34035e44a4e25581b46ebdd89d721331ac4
-    pristine_git_object: 5d675b355c18b70f45a98c087c8589667fdc02ec
+    last_write_checksum: sha1:bcf0021dbb63c6d66a5a5f9f8af0ac4966d5bca0
+    pristine_git_object: b8f08ee79f46bff7fc7df1bf5e2c396592564b38
   paychecks.go:
     id: 68fe17e9c8b6
-    last_write_checksum: sha1:8dd1e23c879265910bce9644922453866b5a149f
-    pristine_git_object: 4b2a1dc2215971d2dd5c27aded58198c131421ef
+    last_write_checksum: sha1:6d7d2356790b7fe60cb09ff56d042cc6181ab41e
+    pristine_git_object: 40a44e5e49d343be34d787afc88f9968a96af119
   people.go:
     id: 7ce8ac6ba500
-    last_write_checksum: sha1:354e9017c6a32a0910523c11632579c616c2f526
-    pristine_git_object: d8b23577931f95efd3ce8cee0053c298db66e9c1
+    last_write_checksum: sha1:c0d539725eeb8c706954735802ca67d2937b1721
+    pristine_git_object: 24924b4b0f20042d26224741866adde22543d09b
   retry/config.go:
     id: 82d673cb0389
     last_write_checksum: sha1:7f7d96b59a18e95bac847ae09c63bbd911ee8432
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:62b7742b9a86d5961222dac80b3dc404e54e6cb3
-    pristine_git_object: 5dc0e03f9a1ce750b73607d91f4b5df5d8baa118
+    last_write_checksum: sha1:3767e6909381b21e6964dca895a2277a71eca343
+    pristine_git_object: d3383be88db48a3fcdc839896c45911bb9a6f278
   transfers.go:
     id: a45ada44323b
-    last_write_checksum: sha1:6d646a5c21a846721d3e4b2f8bd96852fa9b3577
-    pristine_git_object: b148f8157e7abf6a6f37ee8b240ddaecad611df2
+    last_write_checksum: sha1:6312cf19004accbac189e546c36356681abd89f2
+    pristine_git_object: 8a335d87b8da55e6d0ce27009333d4caa36079a4
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31

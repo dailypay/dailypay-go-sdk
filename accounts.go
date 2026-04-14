@@ -43,6 +43,8 @@ func newAccounts(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.H
 
 // Read - Get an Account object
 // Returns details about an account. This object represents a person's bank accounts, debit and pay cards, and earnings balance accounts.
+//
+// If set, this operation will use either [Security.OauthClientCredentialsToken] or [Security.OauthUserToken] from the global security.
 func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountRequest, opts ...operations.Option) (*operations.ReadAccountResponse, error) {
 	globals := operations.ReadAccountGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -101,7 +103,7 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken", "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -388,6 +390,8 @@ func (s *Accounts) Read(ctx context.Context, request operations.ReadAccountReque
 
 // List - Get a list of Account objects
 // Returns a list of account objects. An account object represents a person's bank accounts, debit and pay cards, and earnings balance accounts.
+//
+// If set, this operation will use either [Security.OauthClientCredentialsToken] or [Security.OauthUserToken] from the global security.
 func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequest, opts ...operations.Option) (*operations.ListAccountsResponse, error) {
 	globals := operations.ListAccountsGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -450,7 +454,7 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken", "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -712,6 +716,8 @@ func (s *Accounts) List(ctx context.Context, request operations.ListAccountsRequ
 
 // Create an Account object
 // Create an account object to store a person's bank or card information as a destination for funds.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Accounts) Create(ctx context.Context, request components.AccountCreateData, opts ...operations.Option) (*operations.CreateAccountResponse, error) {
 	globals := operations.CreateAccountGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -777,7 +783,7 @@ func (s *Accounts) Create(ctx context.Context, request components.AccountCreateD
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
