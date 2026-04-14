@@ -40,6 +40,8 @@ func newTransfers(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.
 // Returns details about a transfer of money from one account to another.
 //
 // Created when a person takes an advance against a future paycheck, or on a daily basis when available balance is updated based on current employment.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Transfers) Read(ctx context.Context, request operations.ReadTransferRequest, opts ...operations.Option) (*operations.ReadTransferResponse, error) {
 	globals := operations.ReadTransferGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -102,7 +104,7 @@ func (s *Transfers) Read(ctx context.Context, request operations.ReadTransferReq
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -389,6 +391,8 @@ func (s *Transfers) Read(ctx context.Context, request operations.ReadTransferReq
 
 // List - Get a list of transfers
 // Returns a list of transfer objects.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Transfers) List(ctx context.Context, request operations.ListTransfersRequest, opts ...operations.Option) (*operations.ListTransfersResponse, error) {
 	globals := operations.ListTransfersGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -451,7 +455,7 @@ func (s *Transfers) List(ctx context.Context, request operations.ListTransfersRe
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -714,6 +718,8 @@ func (s *Transfers) List(ctx context.Context, request operations.ListTransfersRe
 // Create - Request a transfer
 // Request transfer of funds from an `EARNINGS_BALANCE` account to a
 // personal `DEPOSITORY` or `CARD` account.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Transfers) Create(ctx context.Context, request operations.CreateTransferRequest, opts ...operations.Option) (*operations.CreateTransferResponse, error) {
 	globals := operations.CreateTransferGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -783,7 +789,7 @@ func (s *Transfers) Create(ctx context.Context, request operations.CreateTransfe
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 

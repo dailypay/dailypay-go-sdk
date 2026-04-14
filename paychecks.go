@@ -42,6 +42,8 @@ func newPaychecks(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.
 
 // Read - Get a Paycheck object
 // Returns details about a paycheck object.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Paychecks) Read(ctx context.Context, request operations.ReadPaycheckRequest, opts ...operations.Option) (*operations.ReadPaycheckResponse, error) {
 	globals := operations.ReadPaycheckGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -100,7 +102,7 @@ func (s *Paychecks) Read(ctx context.Context, request operations.ReadPaycheckReq
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -387,6 +389,8 @@ func (s *Paychecks) Read(ctx context.Context, request operations.ReadPaycheckReq
 
 // List - Get a list of paycheck objects
 // Returns a collection of paycheck objects. This object details a person's pay and pay period.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Paychecks) List(ctx context.Context, request operations.ListPaychecksRequest, opts ...operations.Option) (*operations.ListPaychecksResponse, error) {
 	globals := operations.ListPaychecksGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -449,7 +453,7 @@ func (s *Paychecks) List(ctx context.Context, request operations.ListPaychecksRe
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 

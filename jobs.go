@@ -38,6 +38,8 @@ func newJobs(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hooks
 
 // Read - Get a job object
 // Returns details about a person's employment.
+//
+// If set, this operation will use either [Security.OauthClientCredentialsToken] or [Security.OauthUserToken] from the global security.
 func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts ...operations.Option) (*operations.ReadJobResponse, error) {
 	globals := operations.ReadJobGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -96,7 +98,7 @@ func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken", "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -384,6 +386,8 @@ func (s *Jobs) Read(ctx context.Context, request operations.ReadJobRequest, opts
 // Update paycheck settings or deactivate a job
 // Update this job to set where pay should be deposited for paychecks related to this job,  or deactivate on-demand pay for this job.
 // Returns the job object if the update succeeded. Returns an error if update parameters are invalid.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, opts ...operations.Option) (*operations.UpdateJobResponse, error) {
 	globals := operations.UpdateJobGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -449,7 +453,7 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -736,6 +740,8 @@ func (s *Jobs) Update(ctx context.Context, request operations.UpdateJobRequest, 
 
 // List - Get a list of job objects
 // Returns a collection of job objects. This object represents a person's employment details.
+//
+// If set, this operation will use either [Security.OauthClientCredentialsToken] or [Security.OauthUserToken] from the global security.
 func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opts ...operations.Option) (*operations.ListJobsResponse, error) {
 	globals := operations.ListJobsGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -798,7 +804,7 @@ func (s *Jobs) List(ctx context.Context, request operations.ListJobsRequest, opt
 		return nil, fmt.Errorf("error populating query params: %w", err)
 	}
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken", "OauthUserToken"); err != nil {
 		return nil, err
 	}
 

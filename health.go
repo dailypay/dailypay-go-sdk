@@ -37,6 +37,8 @@ func newHealth(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hoo
 
 // GetHealth - Verify the status of the API
 // Returns a 200 status code if the API is up and running.
+//
+// If set, this operation will use [Security.OauthClientCredentialsToken] from the global security.
 func (s *Health) GetHealth(ctx context.Context, opts ...operations.Option) (*operations.GetHealthResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -89,7 +91,7 @@ func (s *Health) GetHealth(ctx context.Context, opts ...operations.Option) (*ope
 	req.Header.Set("Accept", "application/json")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken"); err != nil {
 		return nil, err
 	}
 

@@ -37,6 +37,8 @@ func newPeople(rootSDK *SDK, sdkConfig config.SDKConfiguration, hooks *hooks.Hoo
 
 // Read - Get a person object
 // Returns details about a person.
+//
+// If set, this operation will use either [Security.OauthClientCredentialsToken] or [Security.OauthUserToken] from the global security.
 func (s *People) Read(ctx context.Context, request operations.ReadPersonRequest, opts ...operations.Option) (*operations.ReadPersonResponse, error) {
 	globals := operations.ReadPersonGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -95,7 +97,7 @@ func (s *People) Read(ctx context.Context, request operations.ReadPersonRequest,
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthClientCredentialsToken", "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
@@ -382,6 +384,8 @@ func (s *People) Read(ctx context.Context, request operations.ReadPersonRequest,
 
 // Update a person
 // Update a person object.
+//
+// If set, this operation will use [Security.OauthUserToken] from the global security.
 func (s *People) Update(ctx context.Context, request operations.UpdatePersonRequest, opts ...operations.Option) (*operations.UpdatePersonResponse, error) {
 	globals := operations.UpdatePersonGlobals{
 		Version: s.sdkConfiguration.Globals.Version,
@@ -447,7 +451,7 @@ func (s *People) Update(ctx context.Context, request operations.UpdatePersonRequ
 
 	utils.PopulateHeaders(ctx, req, request, globals)
 
-	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
+	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security, "OauthUserToken"); err != nil {
 		return nil, err
 	}
 
