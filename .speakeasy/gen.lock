@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: ee0a87b419626746255e9c29920dee52
-  docVersion: 3.0.0-beta.109
-  speakeasyVersion: 1.761.5
-  generationVersion: 2.879.13
-  releaseVersion: 0.7.11
-  configChecksum: 14268851a27d0b749cf156ec3fb56446
+  docChecksum: c2652f051570bf605590936816649535
+  docVersion: 3.0.0-beta.110
+  speakeasyVersion: 1.761.8
+  generationVersion: 2.881.2
+  releaseVersion: 0.7.12
+  configChecksum: 4597c42e6986270c672dd10b48682315
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: f81410a0-0a82-4bf0-92f5-3a8e8c9b5e1e
-  pristine_commit_hash: 7f2ebf7a82430c5764b0f49d42344651891bdac4
-  pristine_tree_hash: 283dc1ba8a1b9d3d972a4b5b86ece969e41e7c00
+  generation_id: 32ec1827-dc5e-41b2-a546-4ebbcfec6e96
+  pristine_commit_hash: 66d0f3b0e746c3edfbff910dae419e7f9b7e0590
+  pristine_tree_hash: f094b09c844f0fb56405bc172abee71952e43402
 features:
   go:
     additionalDependencies: 0.1.0
@@ -47,12 +47,12 @@ trackedFiles:
     pristine_git_object: cb5baed67b333e498d1668e8faf1a8110fedf2c5
   accounts.go:
     id: c7bd7b26c9d3
-    last_write_checksum: sha1:a1069f2017fe54b0593dba5cb580c5dd80ae4f81
-    pristine_git_object: ddcebeae0eb319b17072644d3f4d5025321cacf2
+    last_write_checksum: sha1:0a1c9de9991b1dbe8109b31881fd573f152cbd1a
+    pristine_git_object: 3115eec071fd20be4c74b3af40d9f197d1500331
   cardtokenization.go:
     id: 8bbcb59e370e
-    last_write_checksum: sha1:80f8689d4b24639ee116fc241dd2abc964c19958
-    pristine_git_object: 0178375f2aafd0c4db24fbce69cb05c8b0962649
+    last_write_checksum: sha1:f38c9400b14532eb858760d12dc96bb12794eaef
+    pristine_git_object: 7fd810bbc8921d4156f6314d58a335b6c4711d20
   docs/models/apierrors/accountcreateerror.md:
     id: 7fef2715c1db
     last_write_checksum: sha1:c92a6c7dd5dc3a204caf8fd06a81f3613640efae
@@ -915,8 +915,8 @@ trackedFiles:
     pristine_git_object: b1c0965a51b7b601275f015a2d7ed3b46e6f7b97
   health.go:
     id: ca291aa88e47
-    last_write_checksum: sha1:ee1bfe785e270aeac97352c071467bf6feed8a5f
-    pristine_git_object: 365e6f543096d6cd65bbed231214f48090af9152
+    last_write_checksum: sha1:2df918566d486318a53bbb7dc95ffa023beeedcc
+    pristine_git_object: c61fba0c4305c0c9ec2166e62f5857e63b4e1c54
   internal/config/sdkconfiguration.go:
     id: 33b8bfac5265
     last_write_checksum: sha1:a0532665b15f13f640d4b15e7f36b94b4fb2dce8
@@ -999,8 +999,8 @@ trackedFiles:
     pristine_git_object: a614e37673d3ea81eabc6139236edfb22a15dc55
   jobs.go:
     id: de984cfd1827
-    last_write_checksum: sha1:f2142cc01a5a7ed5578d9d22baf2976012681970
-    pristine_git_object: af9e9aa15f1eccd41ad798943bace1c37da881b7
+    last_write_checksum: sha1:80d3ca37dfc7d40410e0b581de64fd90c80afee9
+    pristine_git_object: 130504ede43542d2e719955f3dfd2608f4567114
   models/apierrors/accountcreateerror.go:
     id: 4c38a31f96c6
     last_write_checksum: sha1:233dfe31a47f65608b7d8331cc68c210d03eb80d
@@ -1431,28 +1431,28 @@ trackedFiles:
     pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
   organizations.go:
     id: c466ebb9a97c
-    last_write_checksum: sha1:bcf0021dbb63c6d66a5a5f9f8af0ac4966d5bca0
-    pristine_git_object: b8f08ee79f46bff7fc7df1bf5e2c396592564b38
+    last_write_checksum: sha1:48a802891d612560fb06f77275265cbc55e87d70
+    pristine_git_object: e10a4127d54167b4d7ca4658bc4a70c56ac48026
   paychecks.go:
     id: 68fe17e9c8b6
-    last_write_checksum: sha1:6d7d2356790b7fe60cb09ff56d042cc6181ab41e
-    pristine_git_object: 40a44e5e49d343be34d787afc88f9968a96af119
+    last_write_checksum: sha1:96579edebd57df5c8764b87f439050f3e2187d99
+    pristine_git_object: d3f2f939a2eefa096b5be46f60d504bc4290d394
   people.go:
     id: 7ce8ac6ba500
-    last_write_checksum: sha1:c0d539725eeb8c706954735802ca67d2937b1721
-    pristine_git_object: 24924b4b0f20042d26224741866adde22543d09b
+    last_write_checksum: sha1:4f0d5e8139bc0673be9748ad823c3f92d073ff0e
+    pristine_git_object: f72ad8d2798d3a0d4c71eb748227d5218db43fd1
   retry/config.go:
     id: 82d673cb0389
     last_write_checksum: sha1:7f7d96b59a18e95bac847ae09c63bbd911ee8432
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:3767e6909381b21e6964dca895a2277a71eca343
-    pristine_git_object: d3383be88db48a3fcdc839896c45911bb9a6f278
+    last_write_checksum: sha1:55931fb19f2ad37dda6100796d6b3f365c98c6e5
+    pristine_git_object: 59b9a1a218ee36474ae63ee430c65d207f4475ea
   transfers.go:
     id: a45ada44323b
-    last_write_checksum: sha1:6312cf19004accbac189e546c36356681abd89f2
-    pristine_git_object: 8a335d87b8da55e6d0ce27009333d4caa36079a4
+    last_write_checksum: sha1:c24092775be6e5d9a0b1d0f29fbfb50db38e4825
+    pristine_git_object: 29608fcfe5ff33e6f9a0376f3dfb08629e6181cf
   types/bigint.go:
     id: 6f911e1a03c3
     last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
