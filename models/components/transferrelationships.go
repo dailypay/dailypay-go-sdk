@@ -85,11 +85,24 @@ type TransferRelationships struct {
 	// A transfer that originates from a Paycheck is a
 	// system-created record that describes a credit of earnings to an account with `account_type` `EARNINGS_BALANCE`.
 	//
-	Origin                  Origin                     `json:"origin"`
-	Destination             AccountRelationship        `json:"destination"`
-	Person                  PersonRelationship         `json:"person"`
+	Origin Origin `json:"origin"`
+	// The account to which funds are transferred.
+	//
+	// User-created transfers should have a destination Account with `account_type` `DEPOSITORY` or `CARD`.
+	//
+	Destination AccountRelationship `json:"destination"`
+	Person      PersonRelationship  `json:"person"`
+	// On user-created transfers, details the paychecks that are likely to be used to reimburse this transfer.
+	//
+	// The paychecks impacted, and final amount allocated from each paycheck is subject to change.
+	// See `final_funding_sources` for the final allocations.
+	//
 	EstimatedFundingSources FundingSourcesRelationship `json:"estimated_funding_sources"`
-	FinalFundingSources     FundingSourcesRelationship `json:"final_funding_sources"`
+	// On user-created transfers, details the paychecks that were used to reimburse this transfer and the amount allocated from each paycheck.
+	//
+	// If this relationship has members, its members and their values are immutable.
+	//
+	FinalFundingSources FundingSourcesRelationship `json:"final_funding_sources"`
 }
 
 func (t *TransferRelationships) GetOrigin() Origin {

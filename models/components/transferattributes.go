@@ -75,7 +75,10 @@ type TransferAttributes struct {
 	// When the preview field is true in the response to creating a transfer, that indicates no transfer was created.
 	//
 	Preview *bool `default:"false" json:"preview"`
+	// The amount of funds requested to move from the origin account to the destination account. Any fees will be subtracted from this amount prior to landing in the destination account.
+	//
 	// A monetary quantity expressed in units of the lowest denomination in the associated currency. For example, `{ amount: 7250, currency: 'USD' }` resolves to $72.50.
+	//
 	Amount int64 `json:"amount"`
 	// A three-letter ISO 4217 currency code. For example, `USD` for US Dollars, `EUR` for Euros, or `JPY` for Japanese Yen.
 	Currency string `json:"currency"`

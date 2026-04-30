@@ -3,7 +3,13 @@
 package components
 
 type TransferCreateRelationships struct {
-	Origin      AccountRelationship  `json:"origin"`
+	// User-created transfers must originate from an Account with `account_type` `EARNINGS_BALANCE`.
+	//
+	Origin AccountRelationship `json:"origin"`
+	// The account to which funds are transferred.
+	//
+	// User-created transfers should have a destination Account with `account_type` `DEPOSITORY` or `CARD`.
+	//
 	Destination *AccountRelationship `json:"destination,omitempty"`
 	Person      *PersonRelationship  `json:"person,omitempty"`
 }

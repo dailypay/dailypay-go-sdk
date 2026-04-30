@@ -3,7 +3,11 @@
 package components
 
 type FundingSourceAttributes struct {
-	// A monetary quantity expressed in units of the lowest denomination in the associated currency. For example, `{ amount: 7250, currency: 'USD' }` resolves to $72.50.
+	// The amount of money from the related paycheck allocated towards funding the related transfer.
+	//
+	// A monetary quantity expressed in units of the lowest denomination in the
+	// associated currency. For example, `{ amount: 7250, currency: 'USD' }` resolves to $72.50.
+	//
 	Amount int64 `json:"amount"`
 	// A three-letter ISO 4217 currency code. For example, `USD` for US Dollars, `EUR` for Euros, or `JPY` for Japanese Yen.
 	Currency string `json:"currency"`
