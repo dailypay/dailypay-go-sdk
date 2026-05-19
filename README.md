@@ -258,6 +258,7 @@ func main() {
 ### [Accounts](docs/sdks/accounts/README.md)
 
 * [Read](docs/sdks/accounts/README.md#read) - Get an Account object
+* [DeleteAccount](docs/sdks/accounts/README.md#deleteaccount) - Delete an Account
 * [List](docs/sdks/accounts/README.md#list) - Get a list of Account objects
 * [Create](docs/sdks/accounts/README.md#create) - Create an Account object
 

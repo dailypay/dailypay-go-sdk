@@ -30,7 +30,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.7.15
+  version: 0.7.16
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
