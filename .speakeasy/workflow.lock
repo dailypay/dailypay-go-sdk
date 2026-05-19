@@ -1,12 +1,12 @@
-speakeasyVersion: 1.762.0
+speakeasyVersion: 1.763.1
 sources:
     cloud:
         sourceNamespace: xapi
-        sourceRevisionDigest: sha256:b379330df3331218178af0ff48c6e4666f454923ca51f605f45f8b534a86cb3c
-        sourceBlobDigest: sha256:49cad4e53a84edc97ab847842e70860f0636f8e389e868c80cf4cbbdd4639b81
+        sourceRevisionDigest: sha256:e0b2630a79344c4b96da9dade83b178b9ccdd1246647257697885223c3c5ff4f
+        sourceBlobDigest: sha256:b68a8609a285a8467a696aede15950f1e217242789c07d6e758af28e5562f541
         tags:
             - latest
-            - 3.0.0-beta.112
+            - 3.0.0-beta.113
     local:
         sourceNamespace: xapi
         sourceRevisionDigest: sha256:22ac5fa45f8a149986459f020e3272b727a32b0c6a7078e5c0b371bf7939e7d6
@@ -19,10 +19,10 @@ targets:
     go:
         source: cloud
         sourceNamespace: xapi
-        sourceRevisionDigest: sha256:b379330df3331218178af0ff48c6e4666f454923ca51f605f45f8b534a86cb3c
-        sourceBlobDigest: sha256:49cad4e53a84edc97ab847842e70860f0636f8e389e868c80cf4cbbdd4639b81
+        sourceRevisionDigest: sha256:e0b2630a79344c4b96da9dade83b178b9ccdd1246647257697885223c3c5ff4f
+        sourceBlobDigest: sha256:b68a8609a285a8467a696aede15950f1e217242789c07d6e758af28e5562f541
         codeSamplesNamespace: xapi-go-code-samples
-        codeSamplesRevisionDigest: sha256:4fe34e42210bbeaeb9b73ee3c65ad8ec6cf858756739fb7bcf810bd103856637
+        codeSamplesRevisionDigest: sha256:cc93712dd5e96ff9905d7e235e968b047e3108d5bec6d4f9634d2ae0342a764a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
