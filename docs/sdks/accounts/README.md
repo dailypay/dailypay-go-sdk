@@ -18,6 +18,7 @@ details associated with each account.
 ### Available Operations
 
 * [Read](#read) - Get an Account object
+* [DeleteAccount](#deleteaccount) - Delete an Account
 * [List](#list) - Get a list of Account objects
 * [Create](#create) - Create an Account object
 
@@ -76,6 +77,69 @@ func main() {
 ### Response
 
 **[*operations.ReadAccountResponse](../../models/operations/readaccountresponse.md), error**
+
+### Errors
+
+| Error Type                  | Status Code                 | Content Type                |
+| --------------------------- | --------------------------- | --------------------------- |
+| apierrors.ErrorBadRequest   | 400                         | application/vnd.api+json    |
+| apierrors.ErrorUnauthorized | 401                         | application/vnd.api+json    |
+| apierrors.ErrorForbidden    | 403                         | application/vnd.api+json    |
+| apierrors.ErrorNotFound     | 404                         | application/vnd.api+json    |
+| apierrors.ErrorUnexpected   | 500                         | application/vnd.api+json    |
+| apierrors.APIException      | 4XX, 5XX                    | \*/\*                       |
+
+## DeleteAccount
+
+Removes a previously added DEPOSITORY or CARD account. EARNINGS_BALANCE accounts cannot be deleted.
+
+### Example Usage
+
+<!-- UsageSnippet language="go" operationID="deleteAccount" method="delete" path="/rest/accounts/{account_id}" -->
+```go
+package main
+
+import(
+	"context"
+	"github.com/dailypay/dailypay-go-sdk/models/components"
+	dailypay "github.com/dailypay/dailypay-go-sdk"
+	"github.com/dailypay/dailypay-go-sdk/models/operations"
+	"log"
+)
+
+func main() {
+    ctx := context.Background()
+
+    s := dailypay.New(
+        dailypay.WithVersion(3),
+        dailypay.WithSecurity(components.Security{
+            OauthUserToken: dailypay.Pointer("<YOUR_OAUTH_USER_TOKEN_HERE>"),
+        }),
+    )
+
+    res, err := s.Accounts.DeleteAccount(ctx, operations.DeleteAccountRequest{
+        AccountID: "2bc7d781-3247-46f6-b60f-4090d214936a",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `ctx`                                                                              | [context.Context](https://pkg.go.dev/context#Context)                              | :heavy_check_mark:                                                                 | The context to use for the request.                                                |
+| `request`                                                                          | [operations.DeleteAccountRequest](../../models/operations/deleteaccountrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `opts`                                                                             | [][operations.Option](../../models/operations/option.md)                           | :heavy_minus_sign:                                                                 | The options for this request.                                                      |
+
+### Response
+
+**[*operations.DeleteAccountResponse](../../models/operations/deleteaccountresponse.md), error**
 
 ### Errors
 
