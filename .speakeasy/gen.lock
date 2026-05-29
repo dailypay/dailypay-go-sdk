@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 1e7084a73367eb4196151f14cf4a5d0e
-  docVersion: 3.0.0-beta.114
+  docChecksum: 211af091eb129b72d967968951955c3c
+  docVersion: 3.0.0-beta.115
   speakeasyVersion: 1.763.3
   generationVersion: 2.884.7
-  releaseVersion: 0.7.16
-  configChecksum: 7b80f6edc83970577bdedc2d50d0cba3
+  releaseVersion: 0.7.17
+  configChecksum: cfeb780d664ee3a4645f587b3252b749
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: fc3b0176-ac28-4582-b48e-2d3d876464c5
-  pristine_commit_hash: 2046ce1dc8710642da91e7ea143221f16d4d05bc
-  pristine_tree_hash: 18d8c45d49746bba498d6efdfc64b99d7de65c32
+  generation_id: caa22f89-acae-419b-8f84-c7bfec47fa8e
+  pristine_commit_hash: 343889463596e9b39ba8e1d523ad2b24a019b4dd
+  pristine_tree_hash: 78b886654b76bed5ebb2c9a1b3c613b2b0027387
 features:
   go:
     additionalDependencies: 0.1.0
@@ -1463,8 +1463,8 @@ trackedFiles:
     pristine_git_object: 5b3dc7c122d8ab08905485342d7474f8f163888d
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:d356e67baba91d711693c0b7b50be1034e9b2da6
-    pristine_git_object: b674274961ff7daed0e571f5ad6b7b16074fd910
+    last_write_checksum: sha1:db6f5ff93139ebb61d4ad9b2afdcda65ec0bf354
+    pristine_git_object: 8141b35d47f0e9e2bec333ad890e7dd2e0e1f705
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:c24092775be6e5d9a0b1d0f29fbfb50db38e4825
@@ -1994,9 +1994,6 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
-releaseNotes: |
-  ## Go SDK Changes:
-  * `Sdk.Accounts.DeleteAccount()`: **Added**
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go
