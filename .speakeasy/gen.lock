@@ -1,18 +1,18 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 1b3cd1e1dd75850ec1df1f3bbe301cab
-  docVersion: 3.0.0-beta.116
-  speakeasyVersion: 1.780.0
-  generationVersion: 2.906.0
-  releaseVersion: 0.7.18
-  configChecksum: 5fee61eae6b014e2521c90a3a7d6c8ee
+  docChecksum: 211af091eb129b72d967968951955c3c
+  docVersion: 3.0.0-beta.115
+  speakeasyVersion: 1.784.0
+  generationVersion: 2.911.0
+  releaseVersion: 0.7.19
+  configChecksum: e004d9db0da48b7efb5b94376f621bd8
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: 9928fe68-5e85-49ab-b537-92d53704867e
-  pristine_commit_hash: cd1ef316210d29a139f53674c7efab6f35515bbc
-  pristine_tree_hash: 834dd7b06ac1357c82959200db8e829cc83f40d1
+  generation_id: e3ea0b8c-bd8f-442c-8fb1-1b9e3abb339e
+  pristine_commit_hash: 005cb155d7cd84492823ff4cecdfc73d3326a17c
+  pristine_tree_hash: 3b6422bb1d6cdeb852c6e8f22539394faad7bf3d
 features:
   go:
     additionalDependencies: 0.1.0
@@ -1463,8 +1463,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:e1460ad8c1e20c5a1c6e4212d15e36cc2f3b027a
-    pristine_git_object: f5d2c8c1260c3443fb20c0a7bfd91cc5f49327a7
+    last_write_checksum: sha1:4749d59286d623bf6b77fde6dce92f0f99acf666
+    pristine_git_object: b7dd86dc101f3f5ea5987b278b8adc6576e84d4d
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:c24092775be6e5d9a0b1d0f29fbfb50db38e4825
