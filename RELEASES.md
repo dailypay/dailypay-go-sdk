@@ -409,3 +409,13 @@ Based on:
 - [go v0.7.21] .
 ### Releases
 - [Go v0.7.21] https://github.com/dailypay/dailypay-go-sdk/releases/tag/v0.7.21 - .
+
+## 2026-07-27 18:52:28
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.791.0 (2.924.0) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.7.22] .
+### Releases
+- [Go v0.7.22] https://github.com/dailypay/dailypay-go-sdk/releases/tag/v0.7.22 - .

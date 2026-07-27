@@ -30,7 +30,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.7.21
+  version: 0.7.22
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -41,6 +41,7 @@ go:
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: false
   forwardCompatibleUnionsByDefault: "false"
+  idiomaticMethodCollisionNames: false
   imports:
     option: openapi
     paths:
@@ -57,9 +58,11 @@ go:
   modulePath: github.com/dailypay/dailypay-go-sdk
   multipartArrayFormat: legacy
   nullableOptionalWrapper: false
+  optionalMethodArguments: pointers
   outputModelSuffix: output
   respectRequiredFields: false
   respectTitlesForPrimitiveUnionMembers: false
   responseFormat: envelope-http
   sdkPackageName: dailypay
+  unionGenerics: false
   unionStrategy: left-to-right
