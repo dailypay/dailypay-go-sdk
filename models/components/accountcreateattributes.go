@@ -41,7 +41,14 @@ func CreateAccountCreateAttributesAccountCreateAttributesDepository(accountCreat
 	}
 }
 
-func (u *AccountCreateAttributes) UnmarshalJSON(data []byte) error {
+func (u *AccountCreateAttributes) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AccountCreateAttributes{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var accountCreateAttributesCard AccountCreateAttributesCard = AccountCreateAttributesCard{}
 	if err := utils.UnmarshalJSON(data, &accountCreateAttributesCard, "", true, nil); err == nil {

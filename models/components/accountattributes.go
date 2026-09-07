@@ -807,7 +807,14 @@ func CreateAccountAttributesDepository(depository Depository) AccountAttributes 
 	}
 }
 
-func (u *AccountAttributes) UnmarshalJSON(data []byte) error {
+func (u *AccountAttributes) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = AccountAttributes{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var card Card = Card{}
 	if err := utils.UnmarshalJSON(data, &card, "", true, nil); err == nil {
