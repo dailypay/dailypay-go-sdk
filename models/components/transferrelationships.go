@@ -46,7 +46,14 @@ func CreateOriginPaycheckRelationship(paycheckRelationship PaycheckRelationship)
 	}
 }
 
-func (u *Origin) UnmarshalJSON(data []byte) error {
+func (u *Origin) UnmarshalJSON(data []byte) (err error) {
+	previous := *u
+	*u = Origin{}
+	defer func() {
+		if err != nil {
+			*u = previous
+		}
+	}()
 
 	var accountRelationship AccountRelationship = AccountRelationship{}
 	if err := utils.UnmarshalJSON(data, &accountRelationship, "", true, nil); err == nil {
