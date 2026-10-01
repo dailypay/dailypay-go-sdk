@@ -237,7 +237,7 @@ func (s *Health) GetHealth(ctx context.Context, opts ...operations.Option) (*ope
 
 			var out apierrors.ErrorUnauthorized
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{
@@ -262,7 +262,7 @@ func (s *Health) GetHealth(ctx context.Context, opts ...operations.Option) (*ope
 
 			var out apierrors.ErrorUnexpected
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
-				return nil, err
+				return nil, apierrors.NewResponseValidationError("response did not match the declared error schema", httpRes.StatusCode, string(rawBody), httpRes, err)
 			}
 
 			out.HTTPMeta = components.HTTPMetadata{

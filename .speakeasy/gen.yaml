@@ -30,7 +30,7 @@ generation:
     generateNewTests: true
     skipResponseBodyAssertions: false
 go:
-  version: 0.7.25
+  version: 0.8.0
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   baseErrorName: DailyPayError
@@ -38,6 +38,8 @@ go:
   defaultErrorName: APIException
   enableCustomCodeRegions: false
   enableSkipDeserialization: false
+  fixFlags:
+    encodePathParams: false
   flattenGlobalSecurity: true
   forwardCompatibleEnumsByDefault: false
   forwardCompatibleUnionsByDefault: "false"
