@@ -1,23 +1,23 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: 159e70a176ca8c983cce973fa89e13ea
-  docVersion: 3.0.0-beta.125
-  speakeasyVersion: 1.802.0
-  generationVersion: 2.948.4
-  releaseVersion: 0.9.0
-  configChecksum: d4a8bd9f2b67191341195f026c563a7b
+  docChecksum: 8b11863dd02c4f2679a2aaa0afe67fba
+  docVersion: 3.0.0-beta.127
+  speakeasyVersion: 1.805.0
+  generationVersion: 2.954.8
+  releaseVersion: 0.9.1
+  configChecksum: 2a4f8bc616e5ee06a0808e47c36ff48b
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: ab441e47-872d-4e99-82d0-803a4c07febf
-  pristine_commit_hash: 820a50aa17677ead48abb2a837d3fa5cfba5b2a2
-  pristine_tree_hash: b3e5fc43861d8d244cb440a301f165e477c11bcc
+  generation_id: 1d962c95-9492-44cf-a078-fe8f51da00ee
+  pristine_commit_hash: 3c3c71774f14391c1c13ddf4ec69bb577a017d8a
+  pristine_tree_hash: 5c3b35e9e3eca1910b5d57bedb9b762df26a9063
 features:
   go:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.14
-    core: 3.16.1
+    constsAndDefaults: 0.1.15
+    core: 3.16.4
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -35,7 +35,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.84.6
     sdkHooks: 0.3.1
-    unions: 2.87.12
+    unions: 2.87.13
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -923,8 +923,8 @@ trackedFiles:
     pristine_git_object: 0373078d24ac2a7787d65f2cee0d36034e705cf3
   go.mod:
     id: c47645c391ad
-    last_write_checksum: sha1:47be9f23a5b42ab8bab39c621749b6c1459426bb
-    pristine_git_object: 6436817a2d5e03bafe9ceb0cda08617fa21f3053
+    last_write_checksum: sha1:8d48a16e32da43c353e723774c9bd30d55327613
+    pristine_git_object: 80839b9dc84af0ff37755dde4e1e8fb143ccf855
   health.go:
     id: ca291aa88e47
     last_write_checksum: sha1:d8d05b259619d2a4db36758bb9d543ad4870945f
@@ -1467,8 +1467,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:323286f1be12b1f74d818bcc7fb31757edd61d12
-    pristine_git_object: 3757f5cd698aeda3bf8b67ef5b3304c99fe6ad34
+    last_write_checksum: sha1:893b9919706bd8479d76cb55d327a265a80eb01c
+    pristine_git_object: 8de358d23b1d122a497a163970360c7c335b50d8
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:474da90681a112fd3d890acd9caff6c70ebbbcef
