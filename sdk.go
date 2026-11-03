@@ -2,7 +2,7 @@
 
 package dailypay
 
-// Generated from OpenAPI doc version 3.0.0-beta.127 and generator version 2.954.8
+// Generated from OpenAPI doc version 3.0.0-beta.128 and generator version 2.954.8
 
 import (
 	"context"
@@ -235,12 +235,12 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.9.1",
+		SDKVersion: "0.9.2",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.9.1 2.954.8 3.0.0-beta.127 github.com/dailypay/dailypay-go-sdk",
-			SDKVersion:        "0.9.1",
+			UserAgent:         "speakeasy-sdk/go 0.9.2 2.954.8 3.0.0-beta.128 github.com/dailypay/dailypay-go-sdk",
+			SDKVersion:        "0.9.2",
 			GenVersion:        "2.954.8",
-			OpenAPIDocVersion: "3.0.0-beta.127",
+			OpenAPIDocVersion: "3.0.0-beta.128",
 			Globals:           globals.Globals{},
 			ServerList:        ServerList,
 			ServerVariables: []map[string]string{
