@@ -401,5 +401,6 @@ func main() {
 | apierrors.AccountCreateError | 400                          | application/vnd.api+json     |
 | apierrors.ErrorUnauthorized  | 401                          | application/vnd.api+json     |
 | apierrors.ErrorForbidden     | 403                          | application/vnd.api+json     |
-| apierrors.ErrorUnexpected    | 500                          | application/vnd.api+json     |
+| apierrors.ErrorConflict      | 409                          | application/vnd.api+json     |
+| apierrors.ErrorUnexpected    | 500, 503                     | application/vnd.api+json     |
 | apierrors.APIException       | 4XX, 5XX                     | \*/\*                        |
