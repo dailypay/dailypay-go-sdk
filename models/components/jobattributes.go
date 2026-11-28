@@ -23,6 +23,17 @@ const (
 func (e JobAttributesActivationStatus) ToPointer() *JobAttributesActivationStatus {
 	return &e
 }
+
+// JobAttributesActivationStatusValues returns every known JobAttributesActivationStatus value in schema order.
+func JobAttributesActivationStatusValues() []JobAttributesActivationStatus {
+	return []JobAttributesActivationStatus{
+		JobAttributesActivationStatusDeactivated,
+		JobAttributesActivationStatusDeactivationPending,
+		JobAttributesActivationStatusActivationRequired,
+		JobAttributesActivationStatusActivationUnderReview,
+		JobAttributesActivationStatusActivated,
+	}
+}
 func (e *JobAttributesActivationStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -58,6 +69,18 @@ const (
 
 func (e Frequency) ToPointer() *Frequency {
 	return &e
+}
+
+// FrequencyValues returns every known Frequency value in schema order.
+func FrequencyValues() []Frequency {
+	return []Frequency{
+		FrequencyHourly,
+		FrequencyWeekly,
+		FrequencyBiweekly,
+		FrequencyTwiceMonthly,
+		FrequencyMonthly,
+		FrequencyAnnually,
+	}
 }
 func (e *Frequency) UnmarshalJSON(data []byte) error {
 	var v string
@@ -125,6 +148,15 @@ const (
 
 func (e DirectDepositStatus) ToPointer() *DirectDepositStatus {
 	return &e
+}
+
+// DirectDepositStatusValues returns every known DirectDepositStatus value in schema order.
+func DirectDepositStatusValues() []DirectDepositStatus {
+	return []DirectDepositStatus{
+		DirectDepositStatusSetupRequired,
+		DirectDepositStatusSetupPending,
+		DirectDepositStatusSetupComplete,
+	}
 }
 func (e *DirectDepositStatus) UnmarshalJSON(data []byte) error {
 	var v string

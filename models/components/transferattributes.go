@@ -21,6 +21,14 @@ const (
 func (e TransferAttributesSchedule) ToPointer() *TransferAttributesSchedule {
 	return &e
 }
+
+// TransferAttributesScheduleValues returns every known TransferAttributesSchedule value in schema order.
+func TransferAttributesScheduleValues() []TransferAttributesSchedule {
+	return []TransferAttributesSchedule{
+		TransferAttributesScheduleWithinThirtyMinutes,
+		TransferAttributesScheduleNextBusinessDay,
+	}
+}
 func (e *TransferAttributesSchedule) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -48,6 +56,15 @@ const (
 
 func (e TransferAttributesStatus) ToPointer() *TransferAttributesStatus {
 	return &e
+}
+
+// TransferAttributesStatusValues returns every known TransferAttributesStatus value in schema order.
+func TransferAttributesStatusValues() []TransferAttributesStatus {
+	return []TransferAttributesStatus{
+		TransferAttributesStatusPending,
+		TransferAttributesStatusSettled,
+		TransferAttributesStatusFailed,
+	}
 }
 func (e *TransferAttributesStatus) UnmarshalJSON(data []byte) error {
 	var v string

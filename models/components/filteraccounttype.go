@@ -18,6 +18,15 @@ const (
 func (e FilterAccountType) ToPointer() *FilterAccountType {
 	return &e
 }
+
+// FilterAccountTypeValues returns every known FilterAccountType value in schema order.
+func FilterAccountTypeValues() []FilterAccountType {
+	return []FilterAccountType{
+		FilterAccountTypeEarningsBalance,
+		FilterAccountTypeDepository,
+		FilterAccountTypeCard,
+	}
+}
 func (e *FilterAccountType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

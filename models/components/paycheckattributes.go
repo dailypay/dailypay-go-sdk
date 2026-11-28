@@ -22,6 +22,16 @@ const (
 func (e PaycheckAttributesStatus) ToPointer() *PaycheckAttributesStatus {
 	return &e
 }
+
+// PaycheckAttributesStatusValues returns every known PaycheckAttributesStatus value in schema order.
+func PaycheckAttributesStatusValues() []PaycheckAttributesStatus {
+	return []PaycheckAttributesStatus{
+		PaycheckAttributesStatusEstimated,
+		PaycheckAttributesStatusProcessing,
+		PaycheckAttributesStatusInTransit,
+		PaycheckAttributesStatusDeposited,
+	}
+}
 func (e *PaycheckAttributesStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

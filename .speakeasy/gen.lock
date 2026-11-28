@@ -1,23 +1,23 @@
 lockVersion: 2.0.0
 id: 076bba32-46fe-4128-8c2b-225112756310
 management:
-  docChecksum: bfb2fa718627bbc3c4bb9642acf28acb
-  docVersion: 3.0.0-beta.128
-  speakeasyVersion: 1.805.0
-  generationVersion: 2.954.8
-  releaseVersion: 0.9.2
-  configChecksum: 8418ff9fd73b3bf4ba569efda934f793
+  docChecksum: e1b5288d7cd9524ff7af88e6b2e3eb8f
+  docVersion: 3.0.0-beta.133
+  speakeasyVersion: 1.813.0
+  generationVersion: 2.969.4
+  releaseVersion: 0.9.3
+  configChecksum: e763cbb7a8768a2f51ec29b5fa57e202
   repoURL: https://github.com/dailypay/dailypay-go-sdk.git
   installationURL: https://github.com/dailypay/dailypay-go-sdk
 persistentEdits:
-  generation_id: efcb5c12-59c9-4b0f-8904-d3883b3cef25
-  pristine_commit_hash: 90af383f63bfac03eb6c73c29dfd9d17a1a2eb3c
-  pristine_tree_hash: 1cb88b26a5d675543916c83cb9f98a1b0c213a6b
+  generation_id: 8911a4c5-c5ee-4015-be74-39df9f42542c
+  pristine_commit_hash: 9f6ce189c5148142aa5b9621ad844c94155b3569
+  pristine_tree_hash: 9fdcd0854a71253cbbb28c304c9576d50204f3f4
 features:
   go:
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.15
-    core: 3.16.4
+    constsAndDefaults: 0.1.16
+    core: 3.16.7
     defaultEnabledRetries: 0.2.0
     deprecations: 2.81.3
     envVarSecurityUsage: 0.3.2
@@ -32,10 +32,10 @@ features:
     nameOverrides: 2.81.4
     nullables: 0.2.2
     oauth2ClientCredentials: 1.1.6
-    responseFormat: 0.1.2
+    responseFormat: 0.1.3
     retries: 2.84.6
     sdkHooks: 0.3.1
-    unions: 2.87.13
+    unions: 2.87.14
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -47,8 +47,8 @@ trackedFiles:
     pristine_git_object: cb5baed67b333e498d1668e8faf1a8110fedf2c5
   accounts.go:
     id: c7bd7b26c9d3
-    last_write_checksum: sha1:cc2dd7d811523983b0c550aee303bf1da30dda8a
-    pristine_git_object: f8b006d25e1e471ca7290b0156752fd2b7233330
+    last_write_checksum: sha1:4737086f00c69a458fe4cdde9b3c2dd872e57812
+    pristine_git_object: 23702d4f7ef01dc65020e8ff907c2af69d80c008
   cardtokenization.go:
     id: 8bbcb59e370e
     last_write_checksum: sha1:f38c9400b14532eb858760d12dc96bb12794eaef
@@ -891,8 +891,8 @@ trackedFiles:
     pristine_git_object: 1f71e28522355b690ea6295eb33f574d98ffd25d
   docs/sdks/accounts/README.md:
     id: d6c754b1ca96
-    last_write_checksum: sha1:39f343c2ba49d017b4560e92d0c0d05bee0ad62a
-    pristine_git_object: 3c91d4d6ca1e5634bf766e66d0ca2a0b97e9207c
+    last_write_checksum: sha1:9f68d21dd5136148dae87b5f0a4bd27bf16b11a2
+    pristine_git_object: 6602dac99dd3003e0a9728cd7e56e6b15a15a357
   docs/sdks/cardtokenization/README.md:
     id: 43823e4558a8
     last_write_checksum: sha1:fa7879c9ebea81be280117de77d4ca9ad775b922
@@ -967,8 +967,8 @@ trackedFiles:
     pristine_git_object: 0e98591b48dbce2f6bf1b38a241961900ecbeb9b
   internal/utils/json.go:
     id: ad03e3c502d8
-    last_write_checksum: sha1:fcba0ce7e232363b606e1af2b35924845f9aa70e
-    pristine_git_object: ff4b19f98481381ad7cbf5674833d397e4103299
+    last_write_checksum: sha1:21af3472f69a449f77c72c82c48c97a9daf676e0
+    pristine_git_object: 963d3d5efe386768d2b88136647212859d8eb0fe
   internal/utils/oauth2_credentials.go:
     id: 633b88c0d3ff
     last_write_checksum: sha1:f9218b6b3dbd11494cc353bf22eb37f0ca654a7d
@@ -979,8 +979,8 @@ trackedFiles:
     pristine_git_object: 237b1a41eb4f38874f1d4dd64fcc3288d1edeb19
   internal/utils/pathparams.go:
     id: 1f3e0c30fd90
-    last_write_checksum: sha1:3125034d99a866b336efe96fb8bd7d8b95a6bff8
-    pristine_git_object: d08d7f9d0b89b76b1645c508a00f27844b444b66
+    last_write_checksum: sha1:771e9d44be53089f55cbda6ea63c5816e4802634
+    pristine_git_object: 92abd4b33eb1a318d5cc0c1e2355cdc008da9f7f
   internal/utils/queryparams.go:
     id: e7f604e65a58
     last_write_checksum: sha1:dd6e0aecce90bf1cdc8a8948a10d92b28a05872e
@@ -1059,20 +1059,20 @@ trackedFiles:
     pristine_git_object: 4aec283c8e9e03c135275d7ca624c7e911750be9
   models/components/accountattributes.go:
     id: 1316c0aad402
-    last_write_checksum: sha1:12ee12cfe4202c4b3902eb321fe2bf7a469bbf68
-    pristine_git_object: bc10230f25dceaec12eacf3f844ff5bc4e2ed5f2
+    last_write_checksum: sha1:cb7f698971c3762c6bb191307f5f220c3eed4db1
+    pristine_git_object: a068724e2385c6517a39caf84b93b233320144db
   models/components/accountcreateattributes.go:
     id: 50a6ce7dec30
     last_write_checksum: sha1:cc8db3caad39e7cf8674c5eb21eb2c623dab279d
     pristine_git_object: 7c5418c4d20db617bbf82bd0d562c8a31d8fe93f
   models/components/accountcreateattributescard.go:
     id: e1bb1461aca7
-    last_write_checksum: sha1:a0e01e4dd72154cf63a93cd24408960451cfae05
-    pristine_git_object: d9cc07d08f06779fc6445039901e8eaf8099cbec
+    last_write_checksum: sha1:ec7ad01e2daa6f3d9d027c3b7f6887d83bd7f2f2
+    pristine_git_object: 1137dfb82a43f7fbb14915c12edbf564d1cb779e
   models/components/accountcreateattributesdepository.go:
     id: 4e72af9bd9c4
-    last_write_checksum: sha1:7a749c006160844b34ecc163ca4094d587ade139
-    pristine_git_object: f24007700adc20ff9d06bf8dfb674b33a1338cf2
+    last_write_checksum: sha1:1209c06c2f9cf6333c60db26f4eb7ab562e771a9
+    pristine_git_object: da898caa3a75fa232ff0ba345796198b6e06f9f6
   models/components/accountcreatedata.go:
     id: 4f4fd1435adf
     last_write_checksum: sha1:5fd50b447e6a5b81642b75fe5aed91a35ecc23b1
@@ -1123,36 +1123,36 @@ trackedFiles:
     pristine_git_object: 7bbae922234bfd024cad46df5f85ffe6f3ff3896
   models/components/errorforbiddenerror.go:
     id: 9552c8cd1c07
-    last_write_checksum: sha1:707255d0b9869d45e56119219d267b2af98a7bec
-    pristine_git_object: 7e6757c2af3e41c60dfa1e2ad72a8df88dc0e5cf
+    last_write_checksum: sha1:3446a7e9cbdff776f1c0a90c719b7ed41fae3f67
+    pristine_git_object: 7b5d9c9468e91ed601caa93833c0f89722214eba
   models/components/errorjobupdateerror.go:
     id: ee53fe3fa781
     last_write_checksum: sha1:5cbacb75815a4fd329db84f65b66285c419d8adf
     pristine_git_object: 6222a071117810673e547022171edf748efe8384
   models/components/errornotfounderror.go:
     id: 8c771e6fa422
-    last_write_checksum: sha1:cd15d604ddcc3ecfd1d9ec8594cd2da3c0340c64
-    pristine_git_object: e3ef2dbc39a6963b3a5f418db771f8299c887159
+    last_write_checksum: sha1:a2b7e3c723027cf9119520cba748a61278e73b78
+    pristine_git_object: ddc39ff28c740f1c97a4f42f4b2df598de739ecc
   models/components/errortransfercreateerror.go:
     id: bd8528fac82a
     last_write_checksum: sha1:a07b2cc37ac205d9fd1958a17cd05bb62c91a458
     pristine_git_object: 5c99c720d991ee27712fa9ddd6d4efeb4da5a605
   models/components/errorunauthorizederror.go:
     id: 6e2d8af9299e
-    last_write_checksum: sha1:383d642e2f5085e3efdc84a27fc93d91230bbf78
-    pristine_git_object: 53ed5d0cc079039a982b07d323b4cb53da77e546
+    last_write_checksum: sha1:7865577e58cad0ee9ac9a64216f3fa7e0c067688
+    pristine_git_object: 2de8e901da5f0348f92580c516247c1b514f384a
   models/components/errorunexpectederror.go:
     id: fb5c7da87442
-    last_write_checksum: sha1:b47ee4cdbeffec12883bf5018482ec9adad428b3
-    pristine_git_object: 563fe3086c56ed5cf5cd73f55335b00c8542d2b5
+    last_write_checksum: sha1:7bdcbd5b78ba5795df230ad296aa0e5c76918573
+    pristine_git_object: 898e0351e25a06c3dc2d4e471c0f6858af97e11d
   models/components/filteraccounttype.go:
     id: 22d3b50e6b9c
-    last_write_checksum: sha1:587e11d9ff1a1c746ac68a3d05251494c71f9b4b
-    pristine_git_object: 8ea6027ccba2526de84a1e9b5dccb9caa5e1d39e
+    last_write_checksum: sha1:8d06875162f3988b816ac6bd6e3495beb6c04409
+    pristine_git_object: 8c64ca29534eb75ed84dc7ae92af5da552b48044
   models/components/filterpaycheckstatus.go:
     id: d693c55ab623
-    last_write_checksum: sha1:f9fc3eb59a9371c03e081969bb273a039c1a392c
-    pristine_git_object: 9c8b982abe0781fd5441ec5d04f164210b5f598e
+    last_write_checksum: sha1:dd542eba084af97bbe97dce6fcc4b8c823246cfa
+    pristine_git_object: f4bf73a4b1284a57afdb3448a79e15eb01b79bdd
   models/components/fundingsourceattributes.go:
     id: 6ede35a98031
     last_write_checksum: sha1:906953e8cae38901965350434982ffaaee8d91f3
@@ -1183,8 +1183,8 @@ trackedFiles:
     pristine_git_object: 148ec47fb2dea6c188ec68eb3532d93169608168
   models/components/jobattributes.go:
     id: ea00ebda5aa4
-    last_write_checksum: sha1:a850072b573e568b9b4063bc975035e2c3433f70
-    pristine_git_object: 495305942103e522a4ea05a17eb85eadc454765b
+    last_write_checksum: sha1:d0e38fa4556c75e8dcd88e66c5b6bb9d553be40f
+    pristine_git_object: c93b1113d94bb30ae302759e9a2a8e4b85739a00
   models/components/jobdata.go:
     id: c86841224a64
     last_write_checksum: sha1:784c7fe82699464cb1fa76537cfc7873c09f002e
@@ -1215,8 +1215,8 @@ trackedFiles:
     pristine_git_object: e3a977f822c63d0de3b47ecd613657ff7761a222
   models/components/jobupdatedata.go:
     id: 03ceacbd8441
-    last_write_checksum: sha1:81f0a8acbff694a1dfa88b132ae8bc55ac84d965
-    pristine_git_object: cf21d0a16bb0b884c41ea4056c795274b92dfe0d
+    last_write_checksum: sha1:94f54a19ebfca8209e6d545132e9bddc4d3b64cc
+    pristine_git_object: 423f140a06faa78f6cd2ea43702dbefb71895761
   models/components/organizationattributes.go:
     id: 032fb8ba0d6d
     last_write_checksum: sha1:dcc98705012d6b11ff3cc1d3bd1c7accd9e478a3
@@ -1247,8 +1247,8 @@ trackedFiles:
     pristine_git_object: 4ed31fbcedbcb3765934f31c328e32f0f3142f0c
   models/components/paycheckattributes.go:
     id: 06d648a3d08f
-    last_write_checksum: sha1:97f7360115f3fcfd57142a29e61945a47f965a86
-    pristine_git_object: cf544b213fba1a9d7ade6de57cda72e9cbb50308
+    last_write_checksum: sha1:f6c27fbd4432b042a202b75549e44ba942c6b022
+    pristine_git_object: c08e71773f5fc8602e3fa2d1f8ee8dc28028180e
   models/components/paycheckdata.go:
     id: 97065683f39f
     last_write_checksum: sha1:3030d5fbcef2488b02749e9c69be3cbac419ce48
@@ -1279,8 +1279,8 @@ trackedFiles:
     pristine_git_object: 15b4178644b3dd4b4bb65590a7a4464796c1997a
   models/components/personattributes.go:
     id: f6dbb6e4861a
-    last_write_checksum: sha1:1df53134969a0b30e4a299348cac3f251d84cbd3
-    pristine_git_object: a10e44efd8bea6fac2b366d8996b45b9901711d3
+    last_write_checksum: sha1:cc500592260a777ef2ad31864807e83a04afe853
+    pristine_git_object: c9448776854f398388202e8814598e0633d41487
   models/components/persondata.go:
     id: c6c6425ecaa8
     last_write_checksum: sha1:e6ca91f80405c4c397580c4577ca5f8d3101396b
@@ -1315,12 +1315,12 @@ trackedFiles:
     pristine_git_object: 1bbd3acd41cd4c437c84f09bf349bedd878ec204
   models/components/transferattributes.go:
     id: d8dc62b2181f
-    last_write_checksum: sha1:a015d2df3289d4e41ec4d27c8b624350792b3ab8
-    pristine_git_object: 201ce489cc3047d314845adcb8f51c3eb0e6b454
+    last_write_checksum: sha1:045d9264e670579e4ef88c21e81ee2e16cca200b
+    pristine_git_object: ce3231a02e0f1f55c9fa87f244bdae2483d6668a
   models/components/transfercreateattributes.go:
     id: c519b3346b6a
-    last_write_checksum: sha1:b98eba88157614e4741ae62d329b772bedab0891
-    pristine_git_object: a8f2bfaec5fb0112814148c26230f28f88190b87
+    last_write_checksum: sha1:5bb742d1673f59b36c09ef7bb791b89948b2c349
+    pristine_git_object: 383748589f8d9d696318dea0007c26b22366ec66
   models/components/transfercreatedata.go:
     id: 5906613a28a8
     last_write_checksum: sha1:96d92e21810099aaccef864afd10507ea62f0bca
@@ -1339,8 +1339,8 @@ trackedFiles:
     pristine_git_object: f7418e8be1b847e3ff1ee1a0a7b4ea34f6224d8c
   models/components/transferdestinationcapability.go:
     id: 15d18ce43ccc
-    last_write_checksum: sha1:b338822b04ba2982e5c98dc3c98a5053c1a08469
-    pristine_git_object: 915a70d61e34cd940426e3fe828fc3eb217c89c3
+    last_write_checksum: sha1:0d5c290033e88b833b2b4cc5373efed686009a61
+    pristine_git_object: d1b715d55c0053dc0e28380bb961d6d114477b02
   models/components/transferidentifier.go:
     id: 46adef67faeb
     last_write_checksum: sha1:044c3519de637275522dc19cd7ab82fdc7c9deb4
@@ -1467,8 +1467,8 @@ trackedFiles:
     pristine_git_object: 767002c7898128324d8741ce9c534bd466492169
   sdk.go:
     id: 8db9b9536b0a
-    last_write_checksum: sha1:7124ca1e655ba2c6ddef3415626aa093fd704aaa
-    pristine_git_object: 0ed55b0bef7302b0b403772b5feae17e87bccda0
+    last_write_checksum: sha1:08cba9dbd471b424d67cedf009328c2871684871
+    pristine_git_object: a692da86007251820ba1b6325904f452856f9466
   transfers.go:
     id: a45ada44323b
     last_write_checksum: sha1:474da90681a112fd3d890acd9caff6c70ebbbcef
@@ -1676,6 +1676,8 @@ examples:
           application/vnd.api+json: {"errors": []}
         "500":
           application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+        "409":
+          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
     Card:
       parameters:
         header:
@@ -1693,6 +1695,8 @@ examples:
           application/vnd.api+json: {"errors": []}
         "500":
           application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+        "409":
+          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
     speakeasy-default-create-account:
       parameters:
         header:
@@ -1710,6 +1714,8 @@ examples:
           application/vnd.api+json: {"errors": []}
         "500":
           application/vnd.api+json: {"errors": [{"status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}, "code": "UNEXPECTED_ERROR"}]}
+        "409":
+          application/vnd.api+json: {"errors": [{"code": "IDEMPOTENCY_KEY_LOCKED", "status": "400", "detail": "The request failed because it was not in the correct format or did not contain valid data.", "links": {"about": "https://developer.dailypay.com/tag/Errors"}, "source": {"parameter": "filter[first_name]", "pointer": "/data/attributes/first_name", "header": "Accept"}, "meta": {"request_id": "3c526bf4-f3c0-4c4a-a4cb-95f7db8b3bbe", "trace_id": "4016616108459136584"}}]}
   readTransfer:
     speakeasy-default-read-transfer:
       parameters:
@@ -1998,6 +2004,9 @@ examples:
         "500":
           application/vnd.api+json: {"errors": []}
 examplesVersion: 1.0.2
+releaseNotes: |
+  ## Go SDK Changes:
+  * `Sdk.Accounts.Create()`:  `error` **Changed**
 generatedFiles:
   - .gitattributes
   - /models/apierrors/accountcreateerror.go

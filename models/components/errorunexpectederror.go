@@ -82,6 +82,13 @@ const (
 func (e ErrorUnexpectedErrorCode) ToPointer() *ErrorUnexpectedErrorCode {
 	return &e
 }
+
+// ErrorUnexpectedErrorCodeValues returns every known ErrorUnexpectedErrorCode value in schema order.
+func ErrorUnexpectedErrorCodeValues() []ErrorUnexpectedErrorCode {
+	return []ErrorUnexpectedErrorCode{
+		ErrorUnexpectedErrorCodeUnexpectedError,
+	}
+}
 func (e *ErrorUnexpectedErrorCode) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
