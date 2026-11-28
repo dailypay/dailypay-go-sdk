@@ -19,6 +19,16 @@ const (
 func (e FilterPaycheckStatus) ToPointer() *FilterPaycheckStatus {
 	return &e
 }
+
+// FilterPaycheckStatusValues returns every known FilterPaycheckStatus value in schema order.
+func FilterPaycheckStatusValues() []FilterPaycheckStatus {
+	return []FilterPaycheckStatus{
+		FilterPaycheckStatusEstimated,
+		FilterPaycheckStatusProcessing,
+		FilterPaycheckStatusInTransit,
+		FilterPaycheckStatusDeposited,
+	}
+}
 func (e *FilterPaycheckStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

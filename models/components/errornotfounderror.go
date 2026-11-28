@@ -83,6 +83,14 @@ const (
 func (e ErrorNotFoundErrorCode) ToPointer() *ErrorNotFoundErrorCode {
 	return &e
 }
+
+// ErrorNotFoundErrorCodeValues returns every known ErrorNotFoundErrorCode value in schema order.
+func ErrorNotFoundErrorCodeValues() []ErrorNotFoundErrorCode {
+	return []ErrorNotFoundErrorCode{
+		ErrorNotFoundErrorCodeRecordNotFound,
+		ErrorNotFoundErrorCodeNotFound,
+	}
+}
 func (e *ErrorNotFoundErrorCode) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

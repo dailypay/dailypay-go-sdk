@@ -2,7 +2,7 @@
 
 package dailypay
 
-// Generated from OpenAPI doc version 3.0.0-beta.128 and generator version 2.954.8
+// Generated from OpenAPI doc version 3.0.0-beta.133 and generator version 2.969.4
 
 import (
 	"context"
@@ -160,6 +160,14 @@ const (
 func (e ServerEnvironment) ToPointer() *ServerEnvironment {
 	return &e
 }
+
+// ServerEnvironmentValues returns every known ServerEnvironment value in schema order.
+func ServerEnvironmentValues() []ServerEnvironment {
+	return []ServerEnvironment{
+		ServerEnvironmentDailypay,
+		ServerEnvironmentDailypayuat,
+	}
+}
 func (e *ServerEnvironment) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -235,12 +243,12 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided options
 func New(opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.9.2",
+		SDKVersion: "0.9.3",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent:         "speakeasy-sdk/go 0.9.2 2.954.8 3.0.0-beta.128 github.com/dailypay/dailypay-go-sdk",
-			SDKVersion:        "0.9.2",
-			GenVersion:        "2.954.8",
-			OpenAPIDocVersion: "3.0.0-beta.128",
+			UserAgent:         "speakeasy-sdk/go 0.9.3 2.969.4 3.0.0-beta.133 github.com/dailypay/dailypay-go-sdk",
+			SDKVersion:        "0.9.3",
+			GenVersion:        "2.969.4",
+			OpenAPIDocVersion: "3.0.0-beta.133",
 			Globals:           globals.Globals{},
 			ServerList:        ServerList,
 			ServerVariables: []map[string]string{

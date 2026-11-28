@@ -19,6 +19,14 @@ const (
 func (e AccountCreateAttributesCardSubtype) ToPointer() *AccountCreateAttributesCardSubtype {
 	return &e
 }
+
+// AccountCreateAttributesCardSubtypeValues returns every known AccountCreateAttributesCardSubtype value in schema order.
+func AccountCreateAttributesCardSubtypeValues() []AccountCreateAttributesCardSubtype {
+	return []AccountCreateAttributesCardSubtype{
+		AccountCreateAttributesCardSubtypeDebit,
+		AccountCreateAttributesCardSubtypeDailypay,
+	}
+}
 func (e *AccountCreateAttributesCardSubtype) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

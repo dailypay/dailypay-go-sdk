@@ -19,6 +19,14 @@ const (
 func (e AccountCreateAttributesDepositorySubtype) ToPointer() *AccountCreateAttributesDepositorySubtype {
 	return &e
 }
+
+// AccountCreateAttributesDepositorySubtypeValues returns every known AccountCreateAttributesDepositorySubtype value in schema order.
+func AccountCreateAttributesDepositorySubtypeValues() []AccountCreateAttributesDepositorySubtype {
+	return []AccountCreateAttributesDepositorySubtype{
+		AccountCreateAttributesDepositorySubtypeSavings,
+		AccountCreateAttributesDepositorySubtypeChecking,
+	}
+}
 func (e *AccountCreateAttributesDepositorySubtype) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

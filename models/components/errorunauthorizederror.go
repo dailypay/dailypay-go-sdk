@@ -83,6 +83,14 @@ const (
 func (e ErrorUnauthorizedErrorCode) ToPointer() *ErrorUnauthorizedErrorCode {
 	return &e
 }
+
+// ErrorUnauthorizedErrorCodeValues returns every known ErrorUnauthorizedErrorCode value in schema order.
+func ErrorUnauthorizedErrorCodeValues() []ErrorUnauthorizedErrorCode {
+	return []ErrorUnauthorizedErrorCode{
+		ErrorUnauthorizedErrorCodeInvalidToken,
+		ErrorUnauthorizedErrorCodeUnauthorized,
+	}
+}
 func (e *ErrorUnauthorizedErrorCode) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -20,6 +20,14 @@ const (
 func (e TransferCreateAttributesSchedule) ToPointer() *TransferCreateAttributesSchedule {
 	return &e
 }
+
+// TransferCreateAttributesScheduleValues returns every known TransferCreateAttributesSchedule value in schema order.
+func TransferCreateAttributesScheduleValues() []TransferCreateAttributesSchedule {
+	return []TransferCreateAttributesSchedule{
+		TransferCreateAttributesScheduleWithinThirtyMinutes,
+		TransferCreateAttributesScheduleNextBusinessDay,
+	}
+}
 func (e *TransferCreateAttributesSchedule) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

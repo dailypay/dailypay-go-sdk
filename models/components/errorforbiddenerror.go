@@ -82,6 +82,13 @@ const (
 func (e ErrorForbiddenErrorCode) ToPointer() *ErrorForbiddenErrorCode {
 	return &e
 }
+
+// ErrorForbiddenErrorCodeValues returns every known ErrorForbiddenErrorCode value in schema order.
+func ErrorForbiddenErrorCodeValues() []ErrorForbiddenErrorCode {
+	return []ErrorForbiddenErrorCode{
+		ErrorForbiddenErrorCodeForbidden,
+	}
+}
 func (e *ErrorForbiddenErrorCode) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

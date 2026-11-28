@@ -23,6 +23,15 @@ const (
 func (e DisallowReason) ToPointer() *DisallowReason {
 	return &e
 }
+
+// DisallowReasonValues returns every known DisallowReason value in schema order.
+func DisallowReasonValues() []DisallowReason {
+	return []DisallowReason{
+		DisallowReasonInactive,
+		DisallowReasonDelinquent,
+		DisallowReasonBanned,
+	}
+}
 func (e *DisallowReason) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {

@@ -21,6 +21,15 @@ const (
 func (e AccountAttributesDepositoryAccountVerificationStatus) ToPointer() *AccountAttributesDepositoryAccountVerificationStatus {
 	return &e
 }
+
+// AccountAttributesDepositoryAccountVerificationStatusValues returns every known AccountAttributesDepositoryAccountVerificationStatus value in schema order.
+func AccountAttributesDepositoryAccountVerificationStatusValues() []AccountAttributesDepositoryAccountVerificationStatus {
+	return []AccountAttributesDepositoryAccountVerificationStatus{
+		AccountAttributesDepositoryAccountVerificationStatusVerificationPending,
+		AccountAttributesDepositoryAccountVerificationStatusVerificationFailed,
+		AccountAttributesDepositoryAccountVerificationStatusVerified,
+	}
+}
 func (e *AccountAttributesDepositoryAccountVerificationStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -134,6 +143,14 @@ const (
 
 func (e AccountAttributesDepositorySubtype) ToPointer() *AccountAttributesDepositorySubtype {
 	return &e
+}
+
+// AccountAttributesDepositorySubtypeValues returns every known AccountAttributesDepositorySubtype value in schema order.
+func AccountAttributesDepositorySubtypeValues() []AccountAttributesDepositorySubtype {
+	return []AccountAttributesDepositorySubtype{
+		AccountAttributesDepositorySubtypeSavings,
+		AccountAttributesDepositorySubtypeChecking,
+	}
 }
 func (e *AccountAttributesDepositorySubtype) UnmarshalJSON(data []byte) error {
 	var v string
@@ -287,6 +304,15 @@ const (
 
 func (e AccountAttributesEarningsBalanceAccountVerificationStatus) ToPointer() *AccountAttributesEarningsBalanceAccountVerificationStatus {
 	return &e
+}
+
+// AccountAttributesEarningsBalanceAccountVerificationStatusValues returns every known AccountAttributesEarningsBalanceAccountVerificationStatus value in schema order.
+func AccountAttributesEarningsBalanceAccountVerificationStatusValues() []AccountAttributesEarningsBalanceAccountVerificationStatus {
+	return []AccountAttributesEarningsBalanceAccountVerificationStatus{
+		AccountAttributesEarningsBalanceAccountVerificationStatusVerificationPending,
+		AccountAttributesEarningsBalanceAccountVerificationStatusVerificationFailed,
+		AccountAttributesEarningsBalanceAccountVerificationStatusVerified,
+	}
 }
 func (e *AccountAttributesEarningsBalanceAccountVerificationStatus) UnmarshalJSON(data []byte) error {
 	var v string
@@ -490,6 +516,15 @@ const (
 func (e AccountAttributesCardAccountVerificationStatus) ToPointer() *AccountAttributesCardAccountVerificationStatus {
 	return &e
 }
+
+// AccountAttributesCardAccountVerificationStatusValues returns every known AccountAttributesCardAccountVerificationStatus value in schema order.
+func AccountAttributesCardAccountVerificationStatusValues() []AccountAttributesCardAccountVerificationStatus {
+	return []AccountAttributesCardAccountVerificationStatus{
+		AccountAttributesCardAccountVerificationStatusVerificationPending,
+		AccountAttributesCardAccountVerificationStatusVerificationFailed,
+		AccountAttributesCardAccountVerificationStatusVerified,
+	}
+}
 func (e *AccountAttributesCardAccountVerificationStatus) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
@@ -603,6 +638,14 @@ const (
 
 func (e AccountAttributesCardSubtype) ToPointer() *AccountAttributesCardSubtype {
 	return &e
+}
+
+// AccountAttributesCardSubtypeValues returns every known AccountAttributesCardSubtype value in schema order.
+func AccountAttributesCardSubtypeValues() []AccountAttributesCardSubtype {
+	return []AccountAttributesCardSubtype{
+		AccountAttributesCardSubtypeDebit,
+		AccountAttributesCardSubtypeDailypay,
+	}
 }
 func (e *AccountAttributesCardSubtype) UnmarshalJSON(data []byte) error {
 	var v string
